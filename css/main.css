@@ -571,11 +571,11 @@ button.big-white:active {
 }
 
 .main-header {
-  padding: 46px 0;
+  padding: 30px 0 0 5;
 }
 .main-header .main-header-right {
   text-align: right;
-  margin-top: 9px;
+  margin-top: 0px;
 }
 .main-header .search-form {
   display: inline-block;
