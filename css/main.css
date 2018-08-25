@@ -571,7 +571,7 @@ button.big-white:active {
 }
 
 .main-header {
-  padding: 30px 0 0 5;
+  padding: 30px 5px 5px 5px;
 }
 .main-header .main-header-right {
   text-align: right;
