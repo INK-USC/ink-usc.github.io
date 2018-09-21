@@ -3956,3 +3956,89 @@
 			}
 
 		}
+
+
+		.logo-usc-responsive {
+			/* margin: 1.15rem 0; */
+			/* max-width: 20rem; */
+			max-height: 4.5rem;
+			/* position: absolute */
+		  }
+		  
+		  @media screen and (max-width: 63.9375em) {
+			.logo-usc-responsive {
+				top: 1rem;
+				right: 0;
+				margin-top: 0;
+				margin-right: -3.75rem;
+				max-width: 11rem;
+				max-height: 2.75rem
+			}
+		  }
+		  
+		  .logo-usc-responsive .text-usc-full {
+			opacity: 1;
+			fill: #fff
+		  }
+		  
+		  @media screen and (max-width: 63.9375em) {
+			.logo-usc-responsive .text-usc-full {
+				opacity: 0
+			}
+		  }
+		  
+		  .logo-usc-responsive .text-usc-acronym, .logo-usc-responsive .text-usc-acronym-large {
+			fill: #fc0
+		  }
+		  
+		  .logo-usc-responsive .text-usc-acronym {
+			opacity: 1
+		  }
+		  
+		  @media screen and (max-width: 63.9375em) {
+			.logo-usc-responsive .text-usc-acronym {
+				opacity: 0
+			}
+		  }
+		  
+		  .logo-usc-responsive .text-usc-acronym-large {
+			opacity: 0
+		  }
+		  
+		  @media screen and (max-width: 63.9375em) {
+			.logo-usc-responsive .text-usc-acronym-large {
+				opacity: 1
+			}
+		  }
+		  
+		  .logo-usc-responsive .icon-shield {
+			fill: #fff
+		  }
+		  
+		  .logo-usc-responsive .invert .text-usc-acronym, .logo-usc-responsive .invert .text-usc-acronym-large {
+			fill: #900
+		  }
+		  
+		  .logo-usc-responsive .invert .text-usc-full {
+			fill: #000
+		  }
+		  
+		  .logo-usc-responsive .invert .icon-shield {
+			fill: #000
+		  }
+		  
+		  @media print {
+			.logo-usc-responsive .text-usc-acronym, .logo-usc-responsive .text-usc-acronym-large {
+				fill: #900
+			}
+		  
+			.logo-usc-responsive .text-usc-full {
+				fill: #000
+			}
+		  
+			.logo-usc-responsive .icon-shield {
+				fill: #000
+			}
+		  }
+		  
+		  
