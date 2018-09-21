@@ -3363,7 +3363,7 @@
 	#banner {
 		background-color: #990000;
 		color: #f2a3a5;
-		padding: 13em 0 11em 0;
+		padding: 1em 0 1em 0;
 		background-color: #0c0c0c;
 		background-image: url("../../images/banner_blue.jpg");
 		background-size: cover;
@@ -3507,7 +3507,7 @@
 
 		#banner h1 {
 			font-size: 2em;
-			margin: 0 0 1em 0;
+			margin: 0 0 0em 0;
 			padding: 0;
 			letter-spacing: 3px;
 			font-weight: 700;
@@ -3524,7 +3524,7 @@
 		@media screen and (max-width: 1680px) {
 
 			#banner {
-				padding: 5em 0 7em 0;
+				padding: 3em 0 4em 0;
 			}
 
 		}
