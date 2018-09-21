@@ -3602,9 +3602,9 @@
 	#two {
 		padding: 2em 0 4em 0;
 		background: #f3f3f3;
-		background: -moz-linear-gradient(left, #f3f3f3 0%, #f3f3f3 50%, #f7f7f7 0%, #f7f7f7 100%);
+		/* background: -moz-linear-gradient(left, #f3f3f3 0%, #f3f3f3 50%, #f7f7f7 0%, #f7f7f7 100%);
 		background: -webkit-linear-gradient(left, #f3f3f3 0%, #f3f3f3 50%, #f7f7f7 0%, #f7f7f7 100%);
-		background: linear-gradient(to right, #f3f3f3 0%, #f3f3f3 50%, #f7f7f7 0%, #f7f7f7 100%);
+		background: linear-gradient(to right, #f3f3f3 0%, #f3f3f3 50%, #f7f7f7 0%, #f7f7f7 100%); */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f7f7f7',GradientType=1 );
 	}
 
