@@ -1663,7 +1663,6 @@
 		font-weight: 700;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1849,14 +1848,13 @@
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
-		font-size: .8em;
+		font-size: 1em;
 		font-weight: 700;
 		height: 3.5em;
 		line-height: 3.65em;
 		padding: 0 2.25em;
 		text-align: center;
 		text-decoration: none;
-		text-transform: uppercase;
 		white-space: nowrap;
 	}
 
@@ -2008,6 +2006,37 @@
 			button.special:active,
 			.button.special:active {
 				background-color: #e23135;
+			}
+
+		input[type="submit"].pub,
+		input[type="reset"].pub,
+		input[type="button"].pub,
+		button.pub,
+		.button.pub {
+			border-radius: 5px;
+			background: #BF5700;
+			color: #FFFFFF;
+			padding: 1px 4px 1px 4px; 
+			font-size: 11px;
+			color: #ffffff !important;
+			height: 2em;
+			line-height: 1.9em;
+		}
+
+			input[type="submit"].pub:hover,
+			input[type="reset"].pub:hover,
+			input[type="button"].pub:hover,
+			button.pub:hover,
+			.button.pub:hover {
+				background-color: #9E4600;
+			}
+
+			input[type="submit"].pub:active,
+			input[type="reset"].pub:active,
+			input[type="button"].pub:active,
+			button.pub:active,
+			.button.pub:active {
+				background-color: #BF5700;
 			}
 
 /* Form */

@@ -1094,7 +1094,7 @@ a.flex-prev {
   color: #6b9262;
 }
 .cause-list .cause-content p {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .cause-list .cause-thumb {
