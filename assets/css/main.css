@@ -3581,7 +3581,7 @@
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 4em 0 2em 0;
+				padding: 4em 0 10em 0;
 			}
 
 				#banner h1 {
@@ -3593,7 +3593,7 @@
 		@media screen and (max-width: 480px) {
 
 			#banner {
-				padding: 5em 0 3em 0;
+				padding: 5em 0 10em 0;
 			}
 
 				#banner ul {
