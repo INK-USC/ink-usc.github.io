@@ -3221,7 +3221,7 @@
 		display: inline-block;
 	}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1280px) {
 
 			#nav {
 				display: none;
@@ -3259,10 +3259,24 @@
 			width: 3.5em;
 		}
 
-		@media screen and (max-width: 980px) {
+		.usclogo{
+			width: 150px; 
+			position:fixed; 
+			top:25px;
+			right:20px;
+		}
+
+		@media screen and (max-width: 1280px) {
 
 			.navPanelToggle {
 				display: block;
+			}
+			
+			.usclogo{
+				width: 150px; 
+				position:fixed; 
+				top:25px;
+				right:150px;
 			}
 
 		}
@@ -3271,6 +3285,13 @@
 
 			.navPanelToggle {
 				right: 1em;
+			}
+
+			.usclogo{
+				width: 150px; 
+				position:fixed; 
+				top:25px;
+				right:70px;
 			}
 
 		}
@@ -3379,7 +3400,7 @@
 				color: inherit;
 			}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1280px) {
 
 			#navPanel {
 				display: block;
