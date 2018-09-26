@@ -30,11 +30,85 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-	<style>
-		html, body {
-min-width: 1080px !important;
+ 
+    <style>
+    
+    table { 
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  table-layout: fixed;
 }
-	</style>
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr { 
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr { 
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td { 
+    display: block;
+    font-size: .8em;
+    text-align: center;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+</style>
 	</head>
 	<body>
 
@@ -94,32 +168,35 @@ min-width: 1080px !important;
 							<div class="content">
 								<header>
 									<h3>Ph.D. Students</h3>
-								</header> 
-								<table>
-									<tr>
-											<td> 
-													<div style="width:130px; "><span class="image fit">
-															<img src="memberpic/Woojeong.png" alt="">
-															<span><a class="button alt fit"  href="http://woojeongjin.com/" target="_blank" >Woojeong Jin</a></span>
-													</span> 
-													</div>  
-									</td>
-										<td> 
-														<div style="width:130px"><span class="image fit">
-																<img src="memberpic/Yuchen.jpg" alt="">
-																<span><a class="button alt fit" href="http://yuchenlin.xyz" target="_blank" >(Bill) Yuchen Lin</a></span>
-														</span> 
-														</div>  
-										</td>
-										<td> 
-														<div style="width:130px"><span class="image fit">
-																<img src="memberpic/Wenxuan.jpg" alt="">
-																<span><a class="button alt fit">Wenxuan Zhou</a></span>
-														</span> 
-														</div>  
-										</td>
-									</tr>
-								</table>
+                                </header>  
+                                <table>
+                                        <tr>
+                                                <td> 
+                                                        <div style="width:130px; "><span class="image fit">
+                                                                <img src="memberpic/Woojeong.png" alt="">
+                                                                <span><a class="button alt fit"  href="http://woojeongjin.com/" target="_blank" >Woojeong Jin</a></span>
+                                                        </span> 
+                                                        </div>  
+                                        </td>
+                                            <td> 
+                                                            <div style="width:130px"><span class="image fit">
+                                                                    <img src="memberpic/Yuchen.jpg" alt="">
+                                                                    <span><a class="button alt fit" href="http://yuchenlin.xyz" target="_blank" >(Bill) Yuchen Lin</a></span>
+                                                            </span> 
+                                                            </div>  
+                                            </td>
+                                            <td> 
+                                                            <div style="width:130px"><span class="image fit">
+                                                                    <img src="memberpic/Wenxuan.jpg" alt="">
+                                                                    <span><a class="button alt fit">Wenxuan Zhou</a></span>
+                                                            </span> 
+                                                            </div>  
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table> 
+								
 							</div>  
 					</div> 
 					<div class="inner"> 
@@ -185,7 +262,9 @@ min-width: 1080px !important;
 												</span> 
 												</div>  
 											</td>
- 
+                                            
+                                            <td></td>
+                                            <td></td>
 											 
 										</tr>
 									</table>
