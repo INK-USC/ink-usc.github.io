@@ -3219,7 +3219,17 @@
 
 	#nav {
 		display: inline-block;
+		padding: 0  3em 0 0
 	}
+
+
+		@media screen and (max-width: 1440px) {
+
+			#nav {
+				padding: 0  3em 0 0
+			}
+
+		}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3264,6 +3274,17 @@
 			position:fixed; 
 			top:25px;
 			right:20px;
+		}
+
+		@media screen and (max-width: 1440px) { 
+			
+			.usclogo{
+				width: 150px; 
+				position:fixed; 
+				top:25px;
+				right:20px;
+			}
+
 		}
 
 		@media screen and (max-width: 1280px) {
