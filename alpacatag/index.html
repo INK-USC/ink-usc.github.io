@@ -1,8 +1,168 @@
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html>
-  <head>
-    <meta http-equiv="Refresh" content="0; url=//inklab.usc.edu/AlpacaTag" />
-  </head>
-  <body>
-    <p>Please follow <a href="//inklab.usc.edu/AlpacaTag">http://inklab.usc.edu/AlpacaTag</a>.</p>
-  </body>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34679733-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-34679733-4');
+	</script>
+
+	<title>AlpacaTag Framework - INK Research Lab - USC Computer Science</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="AlpacaTag Annotation Framework for Sequence Tagging (ACL 2019 Demo) from INK Research Lab @ USC ">
+        <meta name="author" content="AlpacaTag Framework INK Research Lab @ USC ">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="main.css" /> 
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"> <img width="55" style="padding: 0.5em 0 0 0" src="../images/logo.png"> </a>
+					<nav id="nav">
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="../index.html">Home</a>
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="../people.html">People</a>
+							<!-- <a href="elements.html">Resources</a> -->
+                        <a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="../publications.html">Publications</a>
+												<a style="color:#FF0433;" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="../software.html"><u>Software</u></a>
+												<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="../sponsors.html">Sponsors</a>
+						<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="../teaching.html">Teaching</a>
+						<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="../contact.html">Join Us</a>
+					</nav>
+					<div class="inner">
+						<img class="usclogo" src="../images/usc-shield-name-white.png" >
+					</div>	
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<section id="banner" style="height:4em; background-image: linear-gradient(to bottom, #3a0008, #3a0008, #3a0008, #3a0008, #3a0008);"  >
+				<div class="inner" style="height:4em">
+					<h1 style="padding: 0.5em 0em 0.5em 0em"><b>AlpacaTag:</b> <span style="font-size: 20px;"> <em>Active Learning-based Crowd Annotation Framework for Sequence Tagging </em></span></h1>
+					
+					<!-- <h4>View on Github.com</h4> -->
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<table border="" style="width: 100%;">
+						<tbody>
+							<tr style="width: 100%;">
+								<td style="width: 50%;">
+									<img class="scale" width="80%" src="overall.gif">
+								</td>
+								<td style="width: 50%;">
+									<img class="scale" width="110%" src="api.gif">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<span><a href="https://github.com/INK-USC/AlpacaTag" target="_blank" style="text-decoration: underline;"><b>View on Github</b></a></span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span><a href="https://github.com/INK-USC/AlpacaTag/wiki" target="_blank" style="text-decoration: underline;"><b>Documents</b></a></span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span><a href="http://ink-ron.usc.edu:22033/login" target="_blank" style="text-decoration: underline;"><b>Live Demo</b></a></span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span><a href="acl2019alpaca.pdf" target="_blank" style="text-decoration: underline;"><b>Paper</b></a></span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<span><a href="poster.pdf" target="_blank" style="text-decoration: underline;"><b>Poster</b></a></span>
+					<div class="row">
+					<div class="6u 12u$(xsmall)" >
+							<p style="font-size:19px; padding: 0em 0em 0em 0em" >
+									<p>
+            <b>AlpacaTag</b> is an open-source web-based data annotation framework for sequence tagging tasks, such as named-entity recognition (NER).
+            It is based on the awesome UI fraemwork <a href="https://github.com/chakki-works/doccano" target="_blank"> doccano</a>, while enjoys three distinctive novel features:
+              <ul>
+                  <li><b>Active intelligent recommendation:</b>
+                  	<br>It dynamically suggests tagging annotations samples the most informative unlabeled instances, with a back-end active learned model.
+            </li>
+                  <li>
+              <b>Automatic crowd consolidation:</b> <br>It enhances real-time interannotator agreement by merging inconsistent labels from multiple annotators.
+            </li>
+                  <li>
+              <b>Real-time model deployment:</b> <br>Users can deploy their models in downstream systems while new annotations are being made.
+            </li>
+              </ul>
+			</p>
+			<h4>Documentations</h4> 
+							<ul style="font-size:18px">
+								<li><a href="https://github.com/INK-USC/AlpacaTag/wiki/Installation" target="_blank" >Installation</a></li>
+								<li><a href="https://github.com/INK-USC/AlpacaTag/wiki/Annotation-Tutorial" target="_blank">Annotation Tutorial</a></li>
+								<li><a href="https://github.com/INK-USC/AlpacaTag/wiki/Framework-Customization" target="_blank">Framework Customization</a></li>
+								<li><a href="https://github.com/INK-USC/AlpacaTag/wiki/Model-Server-API" target="_blank">Model Server APIs</a></li>
+							</ul> 
+					</div>
+					<div class="6u$ 12u$(xsmall)" > 
+							<img width="80%" src="overview.png" />
+							<br><br><br><br>
+							<img width="80%" src="single.gif" />
+					</div>
+
+
+				</div>
+					<!-- <table>
+						<tr>
+							<td width="60%" style="padding: 0em 0em 0em 0em">
+									<p style="font-size:18px; padding: 0em 0em 0em 0em" >
+											The Intelligence and Knowledge Discovery (INK) Lab at <a href="https://www.usc.edu" target="_target">USC</a> is a group of reseachers working on next-generation techniques for knowledge acquisition, reasoning, and knowledge-guided machine learning. Our research spans over machine learning, natural language processing and data mining, with a focus on human effort-light approaches for modeling natural-language text data and graph-structured data. We are excited about both developing computational models and building practical systems for real-world applications.
+					Led by <a href="http://www-bcf.usc.edu/~xiangren/" target="_target">Prof. Xiang Ren</a>,  the INK lab is also part of <a href="http://mascle.usc.edu/" target="_blank">USC Machine Learning Center</a>, <a href="https://cl.usc.edu" target="_blank">NLP Community@USC</a>, and <a href="http://usc-isi-i2.github.io/home/" target="_blank">ISI Center on Knowledge Graphs</a>. 
+					</p>
+							</td>
+							<td width="40%"  style="padding: 0em 0em 0em 0em">
+									 <img width="300" src="images/viterbi.png" />
+							</td>
+						</tr>
+					</table> -->
+
+				
+						<!-- <hr /> -->
+
+					
+				</div> 
+								
+			</section>
+
+		<!-- Footer -->
+			<section id="footer" >
+				<div class="inner" style="padding: 0 0 0 0;">  
+								<div class="copyright" style="height: 0pt;" style="padding: 0 0 0 0;">
+									<div class="row" style="padding: 0 0 0 0;">
+										<div class="col-md-6 col-sm-6" style="padding: 0 0 0 0;">
+											<p class="small-text" style="color:white">&nbsp;&nbsp;&nbsp;Copyright 2018 &copy;. INK Lab @ USC/ISI</p>
+										</div> <!-- /.col-md-6 --> 
+									</div> <!-- /.row -->
+								</div> <!-- /.copyright -->
+							</div> <!-- /.container --> 
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
 </html>
