@@ -215,6 +215,23 @@
 
 	}
 
+	.scale {
+	  transform: scale(1);
+	  -webkit-transform: scale(1);
+	  -moz-transform: scale(1);
+	  -ms-transform: scale(1);
+	  -o-transform: scale(1);
+	  position: relative;
+	}
+	.scale:hover {
+	  transform: scale(1.7);
+	  -webkit-transform: scale(1.7);
+	  -moz-transform: scale(1.7);
+	  -ms-transform: scale(1.7);
+	  -o-transform: scale(1.7);
+	  position: relative;
+      z-index: 2;
+	}
 /* Grid */
 
 	.row {
@@ -2016,7 +2033,7 @@
 			border-radius: 5px;
 			background: #BF5700;
 			color: #FFFFFF;
-			padding: 1px 4px 1px 4px; 
+			padding: 1px 4px 1px 4px;
 			font-size: 11px;
 			color: #ffffff !important;
 			height: 2em;
@@ -2601,18 +2618,22 @@
 	}
 
 	table {
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 		width: 100%;
+		padding: 0px;
+		border-collapse: collapse;
 	}
 
 		table tbody tr {
 			border: solid 0px;
 			border-left: 0;
 			border-right: 0;
+			padding: 0px;
+		    border-collapse: collapse;
 		}
 
 		table td {
-			padding: 0.75em 2.75em;
+			padding: 0.25em 0.25em;
 		}
 
 		table th {
@@ -3270,17 +3291,17 @@
 		}
 
 		.usclogo{
-			width: 150px; 
-			position:fixed; 
+			width: 150px;
+			position:fixed;
 			top:25px;
 			right:20px;
 		}
 
-		@media screen and (max-width: 1440px) { 
-			
+		@media screen and (max-width: 1440px) {
+
 			.usclogo{
-				width: 150px; 
-				position:fixed; 
+				width: 150px;
+				position:fixed;
 				top:25px;
 				right:20px;
 			}
@@ -3292,10 +3313,10 @@
 			.navPanelToggle {
 				display: block;
 			}
-			
+
 			.usclogo{
-				width: 150px; 
-				position:fixed; 
+				width: 150px;
+				position:fixed;
 				top:25px;
 				right:150px;
 			}
@@ -3309,8 +3330,8 @@
 			}
 
 			.usclogo{
-				width: 150px; 
-				position:fixed; 
+				width: 150px;
+				position:fixed;
 				top:25px;
 				right:70px;
 			}
@@ -4035,7 +4056,7 @@
 			max-height: 4.5rem;
 			/* position: absolute */
 		  }
-		  
+
 		  @media screen and (max-width: 63.9375em) {
 			.logo-usc-responsive {
 				top: 1rem;
@@ -4046,70 +4067,69 @@
 				max-height: 2.75rem
 			}
 		  }
-		  
+
 		  .logo-usc-responsive .text-usc-full {
 			opacity: 1;
 			fill: #fff
 		  }
-		  
+
 		  @media screen and (max-width: 63.9375em) {
 			.logo-usc-responsive .text-usc-full {
 				opacity: 0
 			}
 		  }
-		  
+
 		  .logo-usc-responsive .text-usc-acronym, .logo-usc-responsive .text-usc-acronym-large {
 			fill: #fc0
 		  }
-		  
+
 		  .logo-usc-responsive .text-usc-acronym {
 			opacity: 1
 		  }
-		  
+
 		  @media screen and (max-width: 63.9375em) {
 			.logo-usc-responsive .text-usc-acronym {
 				opacity: 0
 			}
 		  }
-		  
+
 		  .logo-usc-responsive .text-usc-acronym-large {
 			opacity: 0
 		  }
-		  
+
 		  @media screen and (max-width: 63.9375em) {
 			.logo-usc-responsive .text-usc-acronym-large {
 				opacity: 1
 			}
 		  }
-		  
+
 		  .logo-usc-responsive .icon-shield {
 			fill: #fff
 		  }
-		  
+
 		  .logo-usc-responsive .invert .text-usc-acronym, .logo-usc-responsive .invert .text-usc-acronym-large {
 			fill: #900
 		  }
-		  
+
 		  .logo-usc-responsive .invert .text-usc-full {
 			fill: #000
 		  }
-		  
+
 		  .logo-usc-responsive .invert .icon-shield {
 			fill: #000
 		  }
-		  
+
 		  @media print {
 			.logo-usc-responsive .text-usc-acronym, .logo-usc-responsive .text-usc-acronym-large {
 				fill: #900
 			}
-		  
+
 			.logo-usc-responsive .text-usc-full {
 				fill: #000
 			}
-		  
+
 			.logo-usc-responsive .icon-shield {
 				fill: #000
 			}
 		  }
-		  
-		  
+
