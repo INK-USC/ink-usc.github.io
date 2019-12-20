@@ -22,6 +22,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" /> 
+	<link rel="stylesheet" href="assets/css/slideshow.css"/>
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -58,7 +59,8 @@
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 		<!-- Banner -->
-			<section id="banner" style="height:1.3em; background-image: linear-gradient(to bottom, #3a0008, #530718, #6e1224, #8a1e30, #a72a3d);"  >
+			<!-- <section id="banner" style="height:1.3em; background-image: linear-gradient(to bottom, #3a0008, #530718, #6e1224, #8a1e30, #a72a3d);"  > -->
+				<section id="banner" style="height:1.3em; background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/viterbi.png'); background-position: 0% 40%;" >
 				<div class="inner" style="height:1.2em">
 					<h1 style="padding: 0.5em 0 0 0">Intelligence and Knowledge Discovery Research Lab @ USC</h1>
 				</div>
@@ -73,13 +75,44 @@
 
 					<div class="row">
 					<div class="6u 12u$(xsmall)" >
-							<p style="font-size:19px; padding: 0em 0em 0em 0em" >
+							<p style="font-size:19px; padding: 0em 0em 0em 0em;" >
 									The Intelligence and Knowledge Discovery (INK) Lab at <a href="https://www.usc.edu" target="_target">USC</a> is a group of reseachers working on next-generation machine intelligence techniques for knowledge-guided machine learning, information extraction, and knowledge graph reasoning. Our research spans across machine learning, natural language processing and data mining, with a focus on weak-supervision methods for modeling natural-language text data and graph-structured data. We are excited about both developing computational models and building practical systems for real-world applications.
 			Led by <a href="http://www-bcf.usc.edu/~xiangren/" target="_target">Prof. Xiang Ren</a>,  the INK lab is also part of <a href="http://mascle.usc.edu/" target="_blank">USC Machine Learning Center</a>, <a href="https://cl.usc.edu" target="_blank">NLP Community@USC</a>, and <a href="http://usc-isi-i2.github.io/home/" target="_blank">ISI Center on Knowledge Graphs</a>. 
 			</p>
 					</div>
 					<div class="6u$ 12u$(xsmall)" > 
-							<img width="100%" src="images/viterbi.png" />
+						<div class="mySlides">							
+							<div class="fade">
+							  <div class="img-container">
+								  <img src="images/paper_gists/kagnet.png" style="width:100%;">
+								</div>
+							  <div class="text">KagNet: Knowledge-Aware Graph Networks for Commonsense Reasoning (EMNLP-IJCNLP 2019)</div>
+							</div>
+							
+							<div class="fade">
+							  <div class="img-container">
+								  <img src="images/paper_gists/shift_label_dist.png" style="width:100%">
+							  </div>
+							  <div class="text">Looking Beyond Label Noise: Shifted Label Distribution Matters in Distantly Supervised Relation Extraction (EMNLP-IJCNLP 2019)</div>
+							</div>
+							
+							<div class="fade">
+								<div class="img-container">
+									<img src="images/paper_gists/learning_from_explanations.png" style="width:100%">
+								</div>
+								<div class="text">Learning from Explanations with Neural Module Execution Tree (ICLR 2020)</div>
+							</div>
+							
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							<!-- <div style="text-align:center">
+								<span class="dot" onclick="currentSlide(1)"></span>
+								<span class="dot" onclick="currentSlide(2)"></span>
+								<span class="dot" onclick="currentSlide(3)"></span>
+							</div>
+							 -->
+						</div>
 					</div>
 				</div>
 					<!-- <table>
@@ -127,7 +160,7 @@
 										 </li>
 								<li> <b>Aug 2018</b>: Prof. Xiang Ren is co-organizer of <a href="http://www.akbc.ws/2019/" target="_target">AKBC 2019</a>. Please submit your workshop proposals.</a> 
 										 </li>
-		<li> <b>Aug 2018</b>: Congrats to <a href="http://yuchenlin.xyz/" target="_target">Yuchen</a> on his two papers accepted to EMNLP!</a> 
+								<li> <b>Aug 2018</b>: Congrats to <a href="http://yuchenlin.xyz/" target="_target">Yuchen</a> on his two papers accepted to EMNLP!</a> 
 										 </li>
 								<li> <b>July 2018</b>: Xiang's <a href="https://www.morganclaypool.com/doi/10.2200/S00860ED1V01Y201806DMK015" target="_target">research monograph</a> on Effort-Light (WeakSupervision) approaches for Information Extraction is published by Morgan & Claypool Publishers. 
 										 </li> 
@@ -225,6 +258,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/slideshow.js"></script>
 
 	</body>
 </html>
