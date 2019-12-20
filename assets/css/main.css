@@ -2558,6 +2558,10 @@
 		margin: 0 auto;
 	}
 
+	section .news.inner {
+        	max-width: 40em;
+	}
+
 		@media screen and (max-width: 480px) {
 
 			section .inner {
