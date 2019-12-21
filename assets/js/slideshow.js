@@ -10,7 +10,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-var timer = setInterval("plusSlides(1)", 5000);
+var timer = setInterval("plusSlides(1)", 7000);
 
 function reset_timer(){
   clearInterval(timer);
@@ -25,6 +25,11 @@ function initialize_slides(){
   for (i = 0; i < slides.length; ++i){
     slides[i].getElementsByClassName("numbertext")[0].innerHTML = (i + 1) + " / " + slides.length;
   }
+
+  // var intro = document.getElementById("div-intro");
+  // var slides = document.getElementById("div-slides");
+  // slides.style.marginTop = (intro.clientHeight - slides.clientHeight) / 2 + 'px';
+
 }
 
 function showSlides(slideIndex) {
