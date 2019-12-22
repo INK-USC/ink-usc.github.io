@@ -5,6 +5,12 @@
     margin: auto;
   }
 
+@media screen and (max-width: 480px){
+  .mySlides{
+    height: 550px;
+  }
+}
+
 .mySlides .img-container{
   height: 400px;
 }
