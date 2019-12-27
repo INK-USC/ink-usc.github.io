@@ -74,15 +74,15 @@
 				</div> -->
 				<div class="inner"> 
 						<div class="content">
-							
-							<p style="font-size:19px; padding: 0em 0em 0em 0em" >
-
-<h3 style="margin: 0em 0em 0em 0em">Learning from distant, high-level human supervision</h3>
+<h2 style="margin: 0em 0em 0em 0em">Learning from distant, high-level human supervision</h2>
 <hr style="margin: 0em 0em 1em 0em">
 
 <div style="margin-left: 0" class="row">
-	<img class="3u 12u$(xsmall)" style="border:1px solid #ddd; padding: 0;" src="images/paper_gists/alpeca.gif"/>
-	<div class="9u$ 12u$(xsmall)">
+	<div  class="6u 12u$(xsmall)">
+		<p>State-of-the-art neural models have achieved impressive results on a range of NLP tasks but are still quite data hungry to build. Training (or fine tuning) these models towards a specific task or domain may require hundreds of thousands of labeled examples. This puts huge labor burden and time cost on manual data annotation. Going beyond the standard instance-label training data design, we aim to develop next-generation training paradigms for building neural models in NLP systems. The key ideas are to translate high-level human supervisions into machine-executable, modularized programs for model training, and to reference pre-existing knowledge resources for automatic data annotation. We focus on building new datasets and algorithms for digesting high-level human supervision and making use of distant supervision, in order to accelerate the model construction process and  improve the label efficiency for the NLP systems.</p>
+		<img style="max-width:100%; border:1px solid #ddd; padding: 0;" src="images/paper_gists/treenet.gif"/>
+	</div>
+	<div class="6u$ 12u$(xsmall)">
 		<ul style="font-size:16px; line-height:25px">
 			<p><b><a href="https://openreview.net/forum?id=rJlUt0EYwS" target="_blank">Learning from Explanations with Neural Module Execution Tree</a></b><br />
 				Ziqi Wang*, Yujia Qin*, Wenxuan Zhou, Jun Yan, Qinyuan Ye, Leonardo Neves, Zhiyuan Liu, Xiang Ren. <i>ICLR 2020 (poster).</i><br />
@@ -124,12 +124,16 @@
 	</div>
 </div>
 
-<h3 style="margin: 0em 0em 0em 0em">Learning with Structured Inductive Bias</h3>
+<h2 style="margin: 0em 0em 0em 0em">Learning with Structured Inductive Bias</h2>
 <hr style="margin: 0em 0em 1em 0em">  
 
-<div style="margin-left: 0" class="row">
-	<img class="3u 12u$(xsmall)" style="border:1px solid #ddd; padding: 0;" src="https://github.com/INK-USC/KagNet/raw/master/figures/kagnet.png"/>
-	<div class="9u$ 12u$(xsmall)">
+<div style="margin-left: 0" class="row">	
+	<div  class="6u 12u$(xsmall)">
+		<p>Deep neural networks have demonstrated strong capability in fitting large dataset towards mastering a task, but at the same time also showing poor generalization ability in terms of task/domain transferability. One main reason is because the common mechanisms shared between the tasks, such as model components and constraints, are not explicitly specified in the models (i.e., inductive biases). We are exploring various ways of designing structural inductive biases that are task-general and human readable, and developing novel model architectures and learning algorithms to impose such inductive biases. This can yield NLP systems that run effectively under low data regime while demonstrating good task/domain transferability. 
+		</p>
+		<img style="max-width:100%; border:1px solid #ddd; padding: 0;" src="https://github.com/INK-USC/KagNet/raw/master/figures/kagnet.png"/>
+	</div>
+	<div class="6u$ 12u$(xsmall)">
 		<ul style="font-size:16px; line-height:25px">
 			<p><b><a href="papers/emnlp19_kagnet.pdf" target="_blank">KagNet: Knowledge-Aware Graph Networks for Commonsense Reasoning</a></b><br />
 				Bill Yuchen Lin, Xinyue Chen, Jamin Chen, Xiang Ren. <i>EMNLP 2019 (long).</i><br />
@@ -152,12 +156,18 @@
 	</div>
 </div>
 
-<h3 style="margin: 0em 0em 0em 0em">Knowledge Reasoning</h3>
+<br> <br>
+
+<h2 style="margin: 0em 0em 0em 0em">Knowledge Reasoning</h2>
 <hr style="margin: 0em 0em 1em 0em">  
 
 <div style="margin-left: 0"  class="row">
-	<img class="3u 12u$(xsmall)" style="border:1px solid #ddd; padding: 0;" src="https://github.com/INK-USC/RE-Net/raw/master/figs/renet.png"/>
-	<div class="9u$ 12u$(xsmall)">
+	<div  class="6u 12u$(xsmall)">
+		<p>Rule-based symbolic reasoning systems have the advantage of precise grounding and induction but are short for the fuzzy matching and uncertainty. In contrast, embedding-based reasoning methods are built on data-driven machine learning paradigm and can fit an effective model with large amount of data, while lacking the strength of good generalization. We are working on neural-symbolic reasoning methods to combine fuzzy reasoning with good generalization, and extending the reasoning target from static, graph-structured data to heterogeneous sources such as time-variant graph structures and unstructured text data.
+		</p>
+		<img style="max-width:100%; border:1px solid #ddd; padding: 0;" src="images/paper_gists/cpl.gif"/>
+	</div>
+	<div class="6u$ 12u$(xsmall)">
 		<ul style="font-size:16px; line-height:25px">
 			<p><b><a href="https://arxiv.org/abs/1909.00230" target="_blank">Collaborative Policy Learning for Open Knowledge Graph Reasoning</a></b><br />
 				Cong Fu, Tong Chen, Meng Qu, Woojeong Jin, Xiang Ren. <i>EMNLP 2019 (long).</i><br />
