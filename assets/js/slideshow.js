@@ -58,11 +58,5 @@ function showSlides(slideIndex) {
 
 $(document).ready(function() {
   initialize_slides();
-  var _leftheight = $("#div-intro").height();
-  var _rightheight = $("#div-slides").height();
-  if (_leftheight > _rightheight) {
-      $("#div-slides").height(_leftheight);
-  } else {
-      $("#div").height(_rightheight);
-  }
+
 });
