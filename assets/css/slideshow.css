@@ -1,8 +1,16 @@
 /* Slideshow container */
+.intro.text {
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 480px){
+  .intro.text {
+    padding-right: 0px;
+  }
+}
+
 .mySlides {
     position: relative;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 
 @media screen and (max-width: 480px){
@@ -12,7 +20,7 @@
 }
 
 .mySlides .img-container{
-  height: 320px;
+  height: 400px;
 }
 
 .mySlides .img-container img{
