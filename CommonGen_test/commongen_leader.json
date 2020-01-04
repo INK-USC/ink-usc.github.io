@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "date": 2019-12-09,
         "name": "Mean Seq.",
         "rouge2": 19.35,
@@ -11,6 +12,7 @@
         "pivotbert": 1.47,
     },
     {
+        "id": 2,
         "date": 2019-12-09,
         "name": "BiRNN",
         "rouge2": 19.35,
@@ -22,6 +24,7 @@
         "pivotbert": 1.47,
     },
     {
+        "id": 3,
         "date": 2019-12-09,
         "name": "Transformer",
         "rouge2": 19.35,
@@ -33,6 +36,7 @@
         "pivotbert": 1.47,
     },
     {
+        "id": 4,
         "date": 2019-12-09,
         "name": "Set-Transformer",
         "rouge2": 19.35,
@@ -44,6 +48,7 @@
         "pivotbert": 1.47,
     },
     {
+        "id": 5,
         "date": 2019-12-09,
         "name": "Levenshtein Transformer",
         "rouge2": 19.35,
@@ -55,6 +60,7 @@
         "pivotbert": 1.47,
     },
     {
+        "id": 6,
         "date": 2019-12-09,
         "name": "UniLM",
         "rouge2": 19.35,
