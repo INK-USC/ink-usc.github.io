@@ -39,17 +39,37 @@
 			 if (lText == '[show more]') { link.innerHTML = '[hide more]'; d.style.display = 'block'; }
 			 else { link.innerHTML = '[show more]'; d.style.display = 'none'; } }
 			   </script>
+<script>
+$(document).ready(function () {
+$('#dtBasicExample').DataTable();
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
 
-		<!-- <link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet">
+<link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet">
 
-		<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script> -->
+<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
 
+<style type="text/css">
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}
+</style>
 		<!-- <link rel="stylesheet" id="usc-homepage-2017-style-css" href="https://www.usc.edu/wp-content/themes/usc-homepage-2017/assets/css/usc-homepage-2017.css?ver=4.1.0" type="text/css" media="screen,print"> -->
 		<link href="style.css" rel="stylesheet" media="screen">
 		<!-- MDBootstrap Datatables  -->
-		
+		<link href="css/addons/datatables.min.css" rel="stylesheet">
 		<!-- MDBootstrap Datatables  -->
-		
+		<script type="text/javascript" src="js/addons/datatables.min.js"></script>
         <!-- Favicons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -65,11 +85,10 @@
             <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" alt="" /></a>
         </div>
 		<![endif]-->
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+		<link href="js/bootstrap-table.min.css" rel="stylesheet">
 
+<script src="js/bootstrap-table.min.js"></script>
+		
     </head>
     <body>
 	
@@ -79,11 +98,10 @@
 			<div class="menu-open">
 				<nav>
 						<ul class="sf-menu">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li ><a href="#motivation">Motivation</a></li> 
-								<li ><a href="#stat">Statistics</a></li>
-								<li ><a href="#leaderboard">Leaderboard</a></li>
-								<li ><a href="#pub">Conclusion</a></li>
+								<li ><a href="#about">Introduction</a></li> 
+								<li ><a href="#exp">Leaderboard</a></li>
+								<li ><a href="#ana">Analysis</a></li>
+								<li ><a href="#misc">Misc.</a></li>
 								<!-- <li ><a href="#blog">Blogs</a></li>  -->
 								<!-- <li><a href="#contact">Contact</a></li> -->
 							</ul>
@@ -97,7 +115,7 @@
 				<div class="main-header">
 					<div class="row">
 						
-						<div class="col-md-5 col-sm-4">
+						<div class="col-md-5 col-sm-4" id="top">
 							<h1 style="color: white"><b>CommonGen</b></em></h1>
 							<span style="color:aliceblue; font-size: 15pt; font-family: Roboto, Helvetica, Arial, Heveltica Neue, sans-serif"> A Constrained Text Generation Challenge <br> Towards Generative Commonsense Reasoning</span> <br><br>
 						</div> 
@@ -116,12 +134,11 @@
 						<div class="row">
 							<div class="col-md-12 main-menu">
 								<nav>
-									<ul class="sf-menu">
-										<li class="active"><a href="index.html">Home</a></li>
-								<li ><a href="#about">About</a></li> 
-								<li ><a href="#edu">Statistics</a></li>
+									<ul class="sf-menu"> 
+								<li ><a href="#about">Introduction</a></li> 
 								<li ><a href="#exp">Leaderboard</a></li>
-								<li ><a href="#pub">Conclusion</a></li>
+								<li ><a href="#ana">Analysis</a></li>
+								<li ><a href="#misc">Misc.</a></li>
 										<!-- <li ><a href="#blog">Blogs</a></li>  -->
 										<!-- <li><a href="#contact">Contact</a></li> -->
 									</ul>
@@ -141,19 +158,20 @@
  
 
 			<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="box-content">
 							<div class="row">
 								<div class="col-md-12" id="about">
 									<!-- <h2 class="widget-title">(Bill) Yuchen Lin</h2> -->
-								<h4 class="widget-title"><span><a href="#bill" ><b><em>Motivation</em></b></a></span></h4>
-								<div align="center"> 
-								<p style="font-size:15px">
-									
-								</p></div>
-								<p style="font-size:16px"> 
+								<h4 class="widget-title"><span><a href="#about" ><b><em>Introduction</em></b></a></span></h4>
+
+								<div class="col-md-5"> 
+									<p style="font-size:15px"> 
+
 									<b>CommonGen</b> is a new <em>constrained text generation</em> dataset that requires different kinds of commonsense to generate sentences about everyday scenarios.
-									<p style="font-size:16px">
+									</p>
+
+									<p style="font-size:15px">
 									For instance, given a collection of concepts (or. concept-set) <em>“{apple (noun), bag (noun), pick (verb), place (verb), tree (noun)}”</em>, what sentences could we come up that both use all the words in the concept-set and are general enough to be considered an everyday scenario? 
 									Humans can easily come up with sentences that fit this criteria, for example: “a boy picks some apples from a tree and places them into a bag”. 
 									However, it is non-trivial for a machine. 
@@ -161,34 +179,30 @@
 									<p style="font-size:16px">
 									The process of generating these sentences requires humans to use commonsense knowledge, and we denote this ability as <b>generative commonsense reasoning</b>. We believe the proposed task and benchmark dataset can benefit future research in generative commonsense reasoning and downstream NLG applications that require commonsense knowledge and complex reasoning.
 									</p>
-								 </p>
-							</p>
+
+									<p style="text-align: left;"> 
+											 	<b>Links:</b> &nbsp; 
+									
+									<a target="_blank" href="https://arxiv.org/abs/1911.03705">[Paper (outdated)]</a> &nbsp; 
+									<a target="_blank" href="commongen_v1.0.zip">[Download]</a> &nbsp; 
+									<a target="_blank" href="https://github.com/INK-USC/CommonGen">[Github]</a> &nbsp;  
+											<a target="_blank" href="http://inklab.usc.edu/">[INK Lab]</a> &nbsp; 
+									</p>  
+									
+								</div>
+								<div class="col-md-7"> <img width="95%" src="intro.png" alt="USC/ISI">
+								 </div>
+									</div>
+
+								<div  class="col-md-12">
+								
+								</div>
 								</div>
 								
 								</div>
 								
 								</div>
-								
-								</div>
-								<div class="col-md-6">
-										<div class="box-content" id="news">
-												<!-- <h4 class="widget-title"><span><b>News</b></span></h4>  -->
-												<br>
-												<img width="510" src="intro.png" alt="USC/ISI">
-												<!-- <br> <button onclick="show_more_news()">Show more.</button>  -->
-											  
-											
-											<!-- <a title="show/hide" id="more_news_link" href="javascript: void(0);" onclick="toggle(this, 'more_news');"  style="text-decoration: none; color: #900; ">[hide more]</a>
-											 <script language="javascript">toggle(getObject('more_news_link'), 'more_news');</script> -->
-											 <p style="text-align: center;"> 
-											 	<b>Useful links:</b> &nbsp; &nbsp;
-									<a target="_blank" href="http://inklab.usc.edu/">[INK Lab]</a> &nbsp; &nbsp;
-									<a target="_blank" href="https://arxiv.org/abs/1911.03705">[Paper]</a> &nbsp; &nbsp;
-									<a target="_blank" href="http://yuchenlin.xyz/resume.pdf">[Download]</a> &nbsp; &nbsp;
-									<a target="_blank" href="https://scholar.google.com/citations?hl=en&user=7hVk87IAAAAJ&view_op=list_works&sortby=pubdate">[Github]</a> &nbsp;  &nbsp;
-											 </p>
-												</div>
-										</div> <!-- /.box-content -->
+								 
 									</div> <!-- /.col-md-4 -->
 								</div>
 								
@@ -198,34 +212,33 @@
 				<div class="col-md-12">
 					<div class="box-content">
 						<div class="row">
-							<div class="col-md-12" id="pub">
+							<div class="col-md-12" id="exp">
 								<h4 class="widget-title"><span><b><a><em>Leaderboard</em></a></b></span></h4>
 <div style="font-size:15px">
 <table
   id="table"
   data-toggle="table"
-  data-height="460"
+  data-height=""
   data-url="exp.json"
+  data-sort-name="pivotbert"
+  data-sort-order="desc" 
+  style="font-size:15px; color: black"
   >
-  <thead>
+  <thead theadClasses="thead-light">
   <tr>
-  	<th data-field="id" data-sortable="true">ID</th>
-    <th data-field="date" data-sortable="true">Date</th>
-    <th data-field="name" data-sortable="true">Model Name</th>
-    <!-- <th data-field="bleu4" data-sortable="true">BLEU-4</th>
+     <th data-field="date" data-sortable="true">Date</th>
+    <th data-field="model" data-sortable="false">Model</th>
+    <th data-field="bleu4" data-sortable="true" data-formatter="%s">BLEU-4</th>
     <th data-field="rouge2" data-sortable="true">ROUGE-2</th>
     <th data-field="meter" data-sortable="true">METER</th>
     <th data-field="cider" data-sortable="true">CIDEr</th>
     <th data-field="spice" data-sortable="true">SPICE</th>
     <th data-field="coverage" data-sortable="true">Coverage</th>
-    <th data-field="pivotbert" data-sortable="true">PivotBERT</th> -->
+    <th data-field="pivotbert" data-sortable="true">PivotBERT</th>
   </tr>
-  </thead>
+  </thead> 
 </table>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+
 
 </div>
 							</div>
@@ -234,22 +247,70 @@
 					</div> <!-- /.box-content -->
 					<div class="box-content">
 							<div class="row">
+								<div class="col-md-12" id="ana">
+									<h4 class="widget-title"><span><b><a><em>Data Analysis</em></a></b></span></h4>
+
+										<h4><span><b>Basic Statistics</b></span></h4>
+	 								<div class="col-md-6" id="ser">
+
+	 								
+	 									We use the AMT platform for collecting such sentences for covered the top-ranked 2,500 concept-sets in the sampled results from large visual caption copora.
+										Each of them is assigned to at least three different workers. 
+										Furthermore, we use the remaining concept-sets as the training examples, for which we use the associated captions as the target outputs.
+									    Note that we explicitly control the overlap between the training and dev/test examples by filtering training concept-sets that have more than two overlapping concepts with any example in the dev/test set.
+										There are on average 4 sentences for each example in dev and test sets, which provide a more diverse test-bed for further automatic and manual evaluation.
+										Note that there are about 12/15% of concepts in dev/test set that are unseen in the training set, which can thus assess the generalization ability.
+									</div>
+
+									<div class="col-md-6" id="ser">
+										<img width="80%" src="stat.png" alt="USC/ISI">
+									</div>
+								</div>
+
+
+								<br><br>
+
+
 								<div class="col-md-12" id="ser">
-									<h4 class="widget-title"><span><b>Statistics</b></span></h4>
+									<h4><span><b>Connectivity Distribution of Concept-Sets</b></span></h4>
+										<div class="col-md-6" id="ser">
+										We here introduce deeper analysis of the dataset by utilizing the largest commonsense knowledge graph (KG), ConceptNet, as an tool to study connectivity and relation types.
+	 								Obviously, if the concepts inside a concept-set is more densely connected with each other on the KG, then it is easier to write a scene about them.
+	 								In each 5-concept-set (i.e. a concept-set consists of five concepts), 
+								    there are 10 unique pairs of concepts, the connections of which we are interested in. 
+								    If we look at the one-hop links on the KG, about 60% of the 5-concept-sets have less than one link among all concept-pairs.
+								    On the other hand, if we consider two-hop links, then nearly 50% of them are almost fully connected (i.e. each pair of concepts has connections).
+								    These two observations together suggest that the CommonGen has a reasonable difficulty: the concepts are not too distant or too close, and reasoning about the associated scenes is thus neither too difficult nor too trivial. 
+									</div>
+
+									<div class="col-md-6" id="ser">
+										<img width="90%" src="dist.png" alt="USC/ISI">
+										<div class="col-md-10" style="text-align: center;">Connectivity on ConceptNet between concepts in 5-size-concepts in the CommonGen test set.</div>
+									</div>
+
+								</div>
+
+
+								<br><br>
+								<div class="col-md-12" id="ser">
+									<h4><span><b>Relation Distribution of Concept-Sets</b></span></h4>
+										<div class="col-md-12" id="ser">
+ Furthermore, the relation types of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.
+    We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.
+    In both cases, we find most frequent relation types are about 1) spatial knowledge(e.g. AtLocation, LocatedNear), 2) object properties (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) human behavior and social conventions (e.g. CauseDesire, Motivated), 4) temporal knowledge (e.g. First/Last-SubEvent, Perquisite), and 5) other general commonsense (e.g. RelatedTo, HasContext, IsA). 
+									</div>
+
+									<div class="col-md-12" id="ser">
+										<img width="95%" src="relation.png" alt="One/two-hop relation frequency in the \textsc{CommonGen} dev.\&test sets on ConceptNet.">
+										<div class="col-md-12" style="text-align: center;">One/two-hop relation frequency in the CommonGen dev. & test sets on ConceptNet.</div>
+									</div>
+
 								</div>
 							</div>
 							
 						</div> <!-- /.box-content -->
 
-						<div class="box-content">
-								<div class="row">
-									<div class="col-md-12" id="hon">
-										<h4 class="widget-title"><span><b>Honors & Awards</b></span></h4>
-		
-	</div>
-</div>
-
-</div> <!-- /.box-content -->
+						 
 						
 				</div> <!-- /.col-md-8 -->
 				
@@ -257,22 +318,40 @@
 
 			</div> <!-- /.row -->
 
+<div class="box-content">
+								<div class="row">
+									<div class="col-md-12" id="misc">
+										<h4 class="widget-title"><span><b>Misc.</b></span></h4>
+		<div style="font-size:15px"> 
+			 <h4><b>Citation</b></h4>
+
+@InProceedings{lin2019comgen, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;  author    = {Bill Yuchen Lin and Ming Shen and Yu Xing and Pei Zhou and Xiang Ren}, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;  title     = {CommonGen: A Constrained Text Generation Dataset Towards Generative Commonsense Reasoning}, <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; journal = {CoRR},,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; volume = {abs/1911.03705},,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;year      = {2019} <br>
+}
+		</div>
+	</div>
+</div>
+
+</div>
+
 		</div> <!-- /.container -->
 
-		
+
+		 
 		<footer class="site-footer">
 			<div class="main-footer">
-				<div class="container">
-					<div class="row">
-					</div> <!-- /.row -->
+
+				<div class="container"> 
+					<p class="small-text">Copyright 2020 &copy;.  USC INK  Lab 
+								</p> 
 					<div class="copyright">
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
-								<p class="small-text">Copyright 2020 &copy;.  USC INK  Lab
-										<h5><!-- 
-												 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278218365'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278218365%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script> -->
-												</h5>
-								</p>
+								
 							</div> <!-- /.col-md-6 -->
 
 						</div> <!-- /.row -->
@@ -281,13 +360,13 @@
 			</div> <!-- /.main-footer -->
 		</footer> <!-- /.site-footer -->
 
-		<a href="#top" id="top-link" class="fa fa-angle-up"></a>
-		
+		<a href="#about" id="top-link" class="fa fa-angle-up"></a>
+	
         <!-- JavaScripts -->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/min/plugins.min.js"></script>
         <script src="js/min/custom.min.js"></script>
-
-			
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261461194'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261461194%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+		
     </body>
 </html>
