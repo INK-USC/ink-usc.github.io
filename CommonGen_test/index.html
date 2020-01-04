@@ -39,37 +39,17 @@
 			 if (lText == '[show more]') { link.innerHTML = '[hide more]'; d.style.display = 'block'; }
 			 else { link.innerHTML = '[show more]'; d.style.display = 'none'; } }
 			   </script>
-<script>
-$(document).ready(function () {
-$('#dtBasicExample').DataTable();
-$('.dataTables_length').addClass('bs-select');
-});
-</script>
 
 <link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet">
 
 <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
 
-<style type="text/css">
-table.dataTable thead .sorting:after,
-table.dataTable thead .sorting:before,
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_asc:before,
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_asc_disabled:before,
-table.dataTable thead .sorting_desc:after,
-table.dataTable thead .sorting_desc:before,
-table.dataTable thead .sorting_desc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:before {
-bottom: .5em;
-}
-</style>
 		<!-- <link rel="stylesheet" id="usc-homepage-2017-style-css" href="https://www.usc.edu/wp-content/themes/usc-homepage-2017/assets/css/usc-homepage-2017.css?ver=4.1.0" type="text/css" media="screen,print"> -->
 		<link href="style.css" rel="stylesheet" media="screen">
 		<!-- MDBootstrap Datatables  -->
-		<link href="css/addons/datatables.min.css" rel="stylesheet">
+		
 		<!-- MDBootstrap Datatables  -->
-		<script type="text/javascript" src="js/addons/datatables.min.js"></script>
+		
         <!-- Favicons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -99,9 +79,9 @@ bottom: .5em;
 				<nav>
 						<ul class="sf-menu">
 								<li class="active"><a href="index.html">Home</a></li>
-								<li ><a href="#about">About</a></li> 
-								<li ><a href="#edu">Statistics</a></li>
-								<li ><a href="#exp">Leaderboard</a></li>
+								<li ><a href="#motivation">Motivation</a></li> 
+								<li ><a href="#stat">Statistics</a></li>
+								<li ><a href="#leaderboard">Leaderboard</a></li>
 								<li ><a href="#pub">Conclusion</a></li>
 								<!-- <li ><a href="#blog">Blogs</a></li>  -->
 								<!-- <li><a href="#contact">Contact</a></li> -->
@@ -228,9 +208,15 @@ bottom: .5em;
   >
   <thead>
   <tr>
-    <th data-field="id" data-sortable="true">ID</th>
-    <th data-field="name" data-sortable="true">Item Name</th>
-    <th data-field="price">Item Price</th>
+    <th data-field="date" data-sortable="true">Date</th>
+    <th data-field="name" data-sortable="true">Model Name</th>
+    <th data-field="bleu4" data-sortable="true">BLEU-4</th>
+    <th data-field="rouge2" data-sortable="true">ROUGE-2</th>
+    <th data-field="meter" data-sortable="true">METER</th>
+    <th data-field="cider" data-sortable="true">CIDEr</th>
+    <th data-field="spice" data-sortable="true">SPICE</th>
+    <th data-field="coverage" data-sortable="true">Coverage</th>
+    <th data-field="pivotbert" data-sortable="true">PivotBERT</th>
   </tr>
   </thead>
 </table>
@@ -244,16 +230,7 @@ bottom: .5em;
 					<div class="box-content">
 							<div class="row">
 								<div class="col-md-12" id="ser">
-									<h4 class="widget-title"><span><b>Services</b></span></h4>
-	<div style="font-size:15px"> 
-		PC Member/Reviewer:
-			<ul>
-    	
-					<li>Main conferences: <em>IJCAI 2020, ACL 2020, AAAI 2020, EMNLP 2019, IJCAI 2019, EMNLP 2018, NLPCC 2019</em> </li>
-					<li>Workshops: <em>EMNLP 2019 DeepLo, ACL 2019 RepL4NLP, ACL 2019 SRW, ICLR 2019 LLD</em> </li>
-					</ul> 
-		Student Volunteer: <em>ACL 2018</em>
-	</div>
+									<h4 class="widget-title"><span><b>Statistics</b></span></h4>
 								</div>
 							</div>
 							
@@ -263,18 +240,7 @@ bottom: .5em;
 								<div class="row">
 									<div class="col-md-12" id="hon">
 										<h4 class="widget-title"><span><b>Honors & Awards</b></span></h4>
-		<div style="font-size:15px"> 
-				<ol>
-						<li> <em>Travel Support for ACL2018</em>, <a href="https://www.aclweb.org/portal/node/2597" target="_blank">ACL Walker Fund</a>, 2018 </li>
-						<li> <em>Best Bachelor Thesis Award</em> (Top 1% at SJTU & 1st in the CSE Department), Shanghai Jiao Tong University, 2018 </li>
-						<li> <em>Annenberg Fellowship Award</em>, University of Southern California, 2018 </li>
-						<li> <em>Yuanqing Yang's Scholarship (CNY 25k),</em> the foundation of Class 1988 in CS@Shanghai Jiao Tong University, 2018 </li>
-						<li> <em>Qide Scholarship</em>, Shanghai Jiao Tong University, 2018 </li>
-						<li> <em>Shanghai Scholarship</em>, Shanghai Municipal People's Government, 2016-2017 </li>
-						<li> <em>Academic Excellence Scholarship</em>, Shanghai Jiao Tong University, 2016-2017 </li>
-						<li> <em>Academic Progress Scholarship</em>, Shanghai Jiao Tong University, 2016-2017 </li>
-					  </ol>
-		</div>
+		
 	</div>
 </div>
 
@@ -299,7 +265,7 @@ bottom: .5em;
 							<div class="col-md-6 col-sm-6">
 								<p class="small-text">Copyright 2020 &copy;.  USC INK  Lab
 										<h5>
-												<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261461194'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261461194%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+												 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278218365'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278218365%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 												</h5>
 								</p>
 							</div> <!-- /.col-md-6 -->
