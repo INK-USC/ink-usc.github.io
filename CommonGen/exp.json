@@ -39,7 +39,7 @@
 
     {
 		"date": "20191209",
-		"model": "Levenshtein Transformer (<a href=\"https://arxiv.org/abs/1911.03705\" target=\"_blank\">Gu et al. 2019</a>)",
+		"model": "Levenshtein Transformer (<a href=\"https://arxiv.org/abs/1905.11006\" target=\"_blank\">Gu et al. 2019</a>)",
 		"rouge2": 5.74,
 		"bleu4": "4.00",
 		"meter": "13.30",
@@ -51,7 +51,7 @@
 
     {
 		"date": "20191209",
-		"model": "UniLM  (<a href=\"https://arxiv.org/abs/1911.03705\" target=\"_blank\">Dong et al. 2019</a>)",
+		"model": "UniLM  (<a href=\"https://arxiv.org/abs/1905.03197\" target=\"_blank\">Dong et al. 2019</a>)",
 		"rouge2": 21.57,
 		"bleu4": "27.50",
 		"meter": "29.40",
