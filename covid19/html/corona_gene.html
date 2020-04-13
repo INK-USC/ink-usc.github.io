@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html style="height: 100%"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   </head>
+   <body style="height: 100%; margin: 0" data-gr-c-s-loaded="true">
+       <div id="container" style="height: 80%; -webkit-tap-highlight-color: transparent; user-select: none;" _echarts_instance_="ec_1586584676601">
+           <div style="position: relative; width: 1660px; height: 500px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+               <canvas data-zr-dom-id="zr_0" width="3320" height="1764" style="position: absolute; left: 0px; top: 0px; width: 1660px; height: 882px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+               <div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; left: 0px !important; top: 0px !important; right: auto !important; bottom: auto !important;"></div><div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; right: 0px !important; top: 0px !important; left: auto !important; bottom: auto !important;"></div><div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; left: 0px !important; bottom: 0px !important; right: auto !important; top: auto !important;"></div><div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; right: 0px !important; bottom: 0px !important; left: auto !important; top: auto !important;"></div></div></div>
+       <script type="text/javascript" src="https://www.echartsjs.com/examples/vendors/echarts/echarts.min.js?_v_=1584687926098"></script>
+       <script type="text/javascript" src="https://www.echartsjs.com/examples/vendors/echarts-stat/ecStat.min.js?_v_=1584687926098"></script>
+       <script type="text/javascript" src="https://www.echartsjs.com/examples/vendors/echarts/extension/dataTool.js?_v_=1584687926098"></script>
+       <script type="text/javascript" src="https://www.echartsjs.com/examples/vendors/echarts/extension/bmap.js?_v_=1584687926098"></script>
+       <script type="text/javascript" src="https://www.echartsjs.com/examples/vendors/jquery/jquery.js"></script>
+       <script>
+        $(function(){
+          $("#tablecontent").load("corona_gene_table.html");
+        });
+       </script>
+       <script type="text/javascript">
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            var app = {};
+            option = null;
+            myChart.showLoading();
+            $.get('./corona_gene.gexf', function (xml) {
+                myChart.hideLoading();
+
+                var graph = echarts.dataTool.gexf.parse(xml);
+                var categories = [];
+
+                // categories[0] = {name: 'Coronavirus Infections'};
+                // categories[1] = {name: 'Enteritis, Transmissible, of Turkeys'};
+                // categories[2] = {name: 'Feline Infectious Peritonitis'};
+                // categories[3] = {name: 'Gastroenteritis, Transmissible, of Swine'};
+                categories[0] = {name: 'COVID-19'};
+                categories[1] = {name: 'SARS'};
+                categories[2] = {name: 'ACE2'};
+                categories[3] = {name: 'furin'};
+                categories[4] = {name: 'TMPRSS2'};
+                categories[5] = {name: 'cathepsin'};
+                categories[6] = {name: 'mannose-binding-protein'};
+
+                graph.nodes.forEach(function (node) {
+                    node.itemStyle = null;
+                    node.category = node.attributes[0];
+                    node.value = node.attributes[1];
+                });
+
+                graph.nodes[0].label = {show: true};
+                graph.nodes[1].label = {show: true};
+                // graph.nodes[2].label = {show: true};
+                // graph.nodes[3].label = {show: true};
+                // graph.nodes[4].label = {show: true};
+                // graph.nodes[5].label = {show: true};
+
+                option = {
+                    title: {
+                        text: 'Is there any relation between COVID-19/SARS/MERS and ACE2/furin/TMPRSS2/capthesin/mannose binding?',
+                        left: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{b} <br/> {c}"
+                    },
+                    legend: [{
+                        title:'asdf',
+                        orient:'vertical',
+                        left: 200,
+                        y: 50,
+                        data: categories.slice(0,2).map(function (a) {
+                            return a.name;
+                        })
+
+                    },{
+                        orient:'vertical',
+                        right: 200,
+                        y: 50,
+                        data: categories.slice(2,7).map(function (a) {
+                            return a.name;
+                        })
+
+                    }],
+                    animationDuration: 1500,
+                    animationEasingUpdate: 'quinticInOut',
+                    series : [
+                        {
+                            name: 'COVID19-GENE',
+                            type: 'graph',
+                            layout: 'force',
+                            animation: false,
+                            layoutAnimation: false,
+                            edgeSymbol: ['none', 'arrow'],
+                            edgeSymbolSize: [0, 5],
+                            edgeLabel: {
+                                normal: {
+                                    show: false,
+                                },
+                                emphasis: {
+                                        position: 'right',
+                                        show: true
+                                }
+                            },
+
+                            draggable: true,
+                            data: graph.nodes,
+                            links: graph.links,
+                            categories: categories,
+                            label: {
+                                emphasis: {
+                                    position: 'right',
+                                    show: true
+                                }
+                            },
+                            force: {
+                                edgeLength: 250,
+                                repulsion: 150,
+                                gravity: 0.05
+                            },
+                            roam: true,
+                            focusNodeAdjacency: true,
+                            itemStyle: {
+                                borderColor: '#fff',
+                                borderWidth: 1,
+                                shadowBlur: 10,
+                                shadowColor: 'rgba(0, 0, 0, 0.3)'
+                            },
+
+                            lineStyle: {
+                                color: 'source',
+                                curveness: 0.3
+                            },
+                            emphasis: {
+                                lineStyle: {
+                                    width: 10
+                                }
+                            }
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+            }, 'xml');
+       </script>
+
+<style type="text/css">
+.tg  {margin-left: auto; margin-right: auto;border-collapse:collapse;border-spacing:0;horizontal-align:middle;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-cly1{text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:center;vertical-align:top}
+</style>
+<div id="tablecontent"></div>
+   </body></html>

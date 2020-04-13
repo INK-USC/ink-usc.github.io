@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2020-04-12">
+    <creator>NetworkX 2.4</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes class="node" mode="static">
+      <attribute id="0" title="modularity_class" type="long" />
+      <attribute id="1" title="sid" type="string" />
+    </attributes>
+    <nodes>
+      <node id="0" label="SARS">
+        <viz:size value="100.0" />
+        <attvalues>
+          <attvalue for="0" value="0" />
+          <attvalue for="1" value="MESH:D045169" />
+        </attvalues>
+      </node>
+      <node id="1" label="COVID-19">
+        <viz:size value="100.0" />
+        <attvalues>
+          <attvalue for="0" value="1" />
+          <attvalue for="1" value="MESH:C000657245" />
+        </attvalues>
+      </node>
+      <node id="2" label="angiotensin I converting enzyme 2">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="2" />
+          <attvalue for="1" value="59272" />
+        </attvalues>
+      </node>
+      <node id="3" label="phosphofurin acidic cluster sorting protein 2">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="3" />
+          <attvalue for="1" value="23241" />
+        </attvalues>
+      </node>
+      <node id="4" label="cathepsin B">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="1508" />
+        </attvalues>
+      </node>
+      <node id="5" label="cathepsin C">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="1075" />
+        </attvalues>
+      </node>
+      <node id="6" label="cathepsin D">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="1509" />
+        </attvalues>
+      </node>
+      <node id="7" label="cathepsin K">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="1513" />
+        </attvalues>
+      </node>
+      <node id="8" label="cathepsin L">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="1514" />
+        </attvalues>
+      </node>
+      <node id="9" label="cathepsin La">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="321453" />
+        </attvalues>
+      </node>
+      <node id="10" label="cathepsin S, ortholog2, tandem duplicate 1">
+        <viz:size value="40.0" />
+        <attvalues>
+          <attvalue for="0" value="5" />
+          <attvalue for="1" value="554157" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="0" target="2" weight="2" />
+      <edge id="1" source="0" target="4" weight="2" />
+      <edge id="2" source="0" target="6" weight="2" />
+      <edge id="3" source="0" target="7" weight="2" />
+      <edge id="4" source="0" target="8" weight="2" />
+      <edge id="5" source="1" target="2" weight="2" />
+      <edge id="6" source="1" target="3" weight="1" />
+      <edge id="7" source="1" target="4" weight="2" />
+      <edge id="8" source="1" target="5" weight="1" />
+      <edge id="9" source="1" target="6" weight="2" />
+      <edge id="10" source="1" target="7" weight="2" />
+      <edge id="11" source="1" target="8" weight="2" />
+      <edge id="12" source="1" target="9" weight="1" />
+      <edge id="13" source="1" target="10" weight="1" />
+    </edges>
+  </graph>
+</gexf>
