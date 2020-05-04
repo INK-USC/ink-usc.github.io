@@ -182,6 +182,7 @@ label.checkbox {
 
 .small-text {
   font-size: 12px;
+
 }
 
 h3.widget-title {
@@ -512,7 +513,7 @@ button.big-white:active {
 [ 2. HEADER ]
 -------------------------------------------------------------------*/
 .site-header {
-  background-color: rgba(63, 20, 45, 0.90);
+  background-color: rgba(23, 55, 128, 0.9);
   color: #FFCC00;
   font-size: 13px;
   border-bottom: 4px solid #dddddd;
@@ -638,7 +639,7 @@ button.big-white:active {
   background-color: rgba(0, 0, 0, 0);
 }
 .menu-wrapper .inner-menu {
-  background-color: #363833;
+  background-color: #949494;
   padding: 0 10px 0 0;
 }
 .menu-wrapper .main-menu {
@@ -649,11 +650,11 @@ button.big-white:active {
   display: inline-block;
   float: left;
   padding: 0 25px;
-  border-right: 1px solid #484b44;
+  border-right: 1px solid #9a9e95;
 }
 .menu-wrapper .main-menu ul.sf-menu > li a {
   line-height: 54px;
-  color: #aaaaaa;
+  color: #f5f5f5;
   font-size: 16px;
 }
 .menu-wrapper .main-menu ul.sf-menu > li a i {
@@ -2037,6 +2038,7 @@ ul.post-gallery li:hover img {
   border-top: 4px solid #dddddd;
   background: url(../images/map.png) no-repeat top center;
   margin-top: 30px;
+
 }
 .site-footer a {
   color: #aaaaaa;
@@ -2098,8 +2100,9 @@ ul.footer-social li a {
 }
 
 .main-footer {
-  background-color: rgba(33, 35, 32, 0.96);
+  background-color: rgb(148, 148, 148);
   padding-top: 40px;
+  color: white;
 }
 
 .footer-gallery {
@@ -2166,7 +2169,7 @@ ul.footer-social li a {
 }
 
 .logo-usc-responsive .text-usc-acronym, .logo-usc-responsive .text-usc-acronym-large {
-  fill: #fc0
+  fill: #fc0;
 }
 
 .logo-usc-responsive .text-usc-acronym {
@@ -2615,4 +2618,41 @@ html[xmlns] .slides {
     background-size: 24px 24px;
     /*The size of the normal image, half the size of the hi-res image*/
   }
+}
+
+button{
+  width:100%;
+  background-color: white;
+  border: 1px gray solid;
+}
+
+.card{
+  border: 1px gray solid;
+  margin-bottom: 2%;
+}
+
+select{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  margin-top: 10px;
+  min-height: 60px;
+  width: 100px;
+  text-indent: 10px;
+}
+
+
+.check-answer{
+  text-align: center;
+  font-size: 17px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#align{
+  width: 1170px;
+  margin-left: 15px;
 }
