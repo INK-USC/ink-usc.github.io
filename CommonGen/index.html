@@ -116,7 +116,7 @@ bottom: .5em;
 						
 						<div class="col-md-5 col-sm-4" id="top">
 							<h1 style="color: white"><b>CommonGen</b></em></h1>
-							<span style="color:aliceblue; font-size: 15pt; font-family: Roboto, Helvetica, Arial, Heveltica Neue, sans-serif"> A Constrained Text Generation Challenge <br> Towards Generative Commonsense Reasoning</span> <br><br>
+							<span style="color:aliceblue; font-size: 15pt; font-family: Roboto, Helvetica, Arial, Heveltica Neue, sans-serif"> A Constrained Text Generation Challenge <br> for Generative Commonsense Reasoning</span> <br><br>
 						</div> 
 						<div class="col-md-7 main-header-right">
 							
@@ -165,25 +165,23 @@ bottom: .5em;
 								<h4 class="widget-title"><span><a href="#about" ><b><em>Introduction</em></b></a></span></h4>
 
 								<div class="col-md-5"> 
-									<p style="font-size:15px"> 
-
-									<b>CommonGen</b> is a new <em>constrained text generation</em> dataset that requires different kinds of commonsense to generate sentences about everyday scenarios, and thus targets generative commonsense reasoning.
-									</p>
-
-									<p style="font-size:15px">
-									For instance, given a collection of concepts (or. concept-set) <em>“{apple (noun), bag (noun), pick (verb), place (verb), tree (noun)}”</em>, what sentences could we come up that both use all the words in the concept-set and are general enough to be considered an everyday scenario? 
-									Humans can easily come up with sentences that fit this criteria, for example: “a boy picks some apples from a tree and places them into a bag”. 
-									However, it is non-trivial for a machine. 
-									</p>
 									<p style="font-size:16px">
-									The process of generating these sentences requires humans to use commonsense knowledge, and we denote this ability as <b>generative commonsense reasoning</b>. We believe the proposed task and benchmark dataset can benefit future research in generative commonsense reasoning and downstream NLG applications that require commonsense knowledge and complex reasoning.
+
+									Building machines with commonsense to compose realistically plausible sentences is challenging.
+									CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.
+										Given a set of common concepts; the task is to generate a coherent sentence describing an everyday sce- nario using these concepts.
+<br> <br>
+CommonGen is challenging because it inherently requires 1) relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to work on unseen concept combinations. Our dataset, constructed through a combination of crowd-sourcing from AMT and existing caption corpora, consists of 30k concept-sets and 50k sentences in total.
 									</p>
+
+
+
 
 									<p style="text-align: left;"> 
 											 	<b>Links:</b> &nbsp; 
 									
-									<a target="_blank" href="commongen_acl20.pdf">[Paper]</a> &nbsp; 
-									<a target="_blank" href="commongen_v1.0.zip">[Data]</a> &nbsp; 
+									<a target="_blank" href="commongen_arxiv.pdf">[Paper]</a> &nbsp;
+									<a target="_blank" href="#">[Data]</a> &nbsp;
 									<a target="_blank" href="https://github.com/INK-USC/CommonGen">[Github]</a> &nbsp;  
 											<a target="_blank" href="http://inklab.usc.edu/">[INK Lab]</a> &nbsp; 
 									</p>  
@@ -246,19 +244,38 @@ bottom: .5em;
 					</div> <!-- /.box-content -->
 					<div class="box-content">
 							<div class="row">
-								<div class="col-md-12" id="ana">
-									<h4 class="widget-title"><span><b><a><em>Data Analysis</em></a></b></span></h4>
+								<h4 class="widget-title"><span><b><a><em>Data Analysis</em></a></b></span></h4>
+								<div class="col-md-12" id="ser">
+									<h3><span><b>A Case Study</b></span></h3>
+<!--										<div class="col-md-12" id="ser" style="font-size: 17px">-->
+<!-- Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.-->
+<!--    We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.-->
+<!--    In both cases, we find most frequent relation types are about 1) <b>spatial knowledge</b> (e.g. AtLocation, LocatedNear), 2) <b>object properties</b> (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) <b>human behavior and social conventions</b> (e.g. CauseDesire, Motivated), 4) <b>temporal knowledge</b> (e.g. First/Last-SubEvent, Perquisite), and 5) <b>other general commonsense</b> (e.g. RelatedTo, HasContext, IsA).-->
+<!--									</div>-->
 
-										<h4><span><b>Basic Statistics</b></span></h4>
+									<div class="col-md-12" id="ser"  align="center">
+										<img width="95%" src="case.png" alt="One/two-hop relation frequency in the \textsc{CommonGen} dev.\&test sets on ConceptNet.">
+										<div class="col-md-12" style="text-align: center;">A case study with a concept-set {give, lay, massage, table} for qualitative analysis of machine generations.</div>
+									</div>
+
+								</div>
+								<div class="col-md-12" id="ana">
+
+
+
+
+
+
+										<h3><span><b>Statistics</b></span></h3>
 	 								<div class="col-md-6" id="ser">
 
-	 								
+	 								<p style="font-size: 17px">
 	 									We use the <a href="https://www.mturk.com/" target="_blank">AMT</a> platform for collecting such sentences for covered the top-ranked 2,500 concept-sets in the sampled results from large visual caption copora.
 										Each of them is assigned to at least three different workers. 
 										Furthermore, we use the remaining concept-sets as the training examples, for which we use the associated captions as the target outputs.
 									    Note that we explicitly control the overlap between the training and dev/test examples by filtering training concept-sets that have more than two overlapping concepts with any example in the dev/test set.
-										There are on average 4 sentences for each example in dev and test sets, which provide a more diverse test-bed for further automatic and manual evaluation.
-										Note that there are about 12/15% of concepts in dev/test set that are unseen in the training set, which can thus assess the generalization ability.
+										There are on average 4 sentences for each example in dev and test sets, which provide a more diverse test-bed for further automatic and manual evaluation.  We highlight the ratio of novel concept compositions (i.e., concept, concept-pair, and concept-triple) in dev/test, which never (co-)occur in training examples. This makes CommonGen challenging in terms of compositional generalization ability.
+									</p>
 									</div>
 
 									<div class="col-md-6" id="ser"  align="center">
@@ -271,8 +288,8 @@ bottom: .5em;
 
 
 								<div class="col-md-12" id="ser">
-									<h4><span><b>Connectivity Distribution of Concept-Sets</b></span></h4>
-										<div class="col-md-6" id="ser">
+									<h3><span><b>Connectivity Distribution of Concept-Sets</b></span></h3>
+										<div class="col-md-6" id="ser" style="font-size: 17px">
 										We here introduce deeper analysis of the dataset by utilizing the largest commonsense knowledge graph (KG), <a href="http://conceptnet.io/" target="_blank">ConceptNet</a> as an tool to study connectivity and relation types.
 	 								Obviously, if the concepts inside a concept-set is more densely connected with each other on the KG, then it is easier to write a scene about them.
 	 								In each 5-concept-set (i.e. a concept-set consists of five concepts), 
@@ -292,8 +309,9 @@ bottom: .5em;
 
 								<br><br>
 								<div class="col-md-12" id="ser">
-									<h4><span><b>Relation Distribution of Concept-Sets</b></span></h4>
-										<div class="col-md-12" id="ser">
+									<br><br>
+									<h3><span><b>Relation Distribution of Concept-Sets</b></span></h3>
+										<div class="col-md-12" id="ser" style="font-size: 17px">
  Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.
     We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.
     In both cases, we find most frequent relation types are about 1) <b>spatial knowledge</b> (e.g. AtLocation, LocatedNear), 2) <b>object properties</b> (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) <b>human behavior and social conventions</b> (e.g. CauseDesire, Motivated), 4) <b>temporal knowledge</b> (e.g. First/Last-SubEvent, Perquisite), and 5) <b>other general commonsense</b> (e.g. RelatedTo, HasContext, IsA). 
@@ -306,7 +324,8 @@ bottom: .5em;
 
 								</div>
 							</div>
-							
+							<br><br>
+
 						</div> <!-- /.box-content -->
 
 						 
@@ -325,8 +344,8 @@ bottom: .5em;
 			 <h4><b>Citation</b></h4>
 
 @article{lin2019comgen, <br>
-&nbsp;&nbsp;&nbsp;&nbsp;  author    = {Bill Yuchen Lin and Ming Shen and Yu Xing and Pei Zhou and Xiang Ren}, <br>
-&nbsp;&nbsp;&nbsp;&nbsp;  title     = {CommonGen: A Constrained Text Generation Dataset Towards Generative Commonsense Reasoning}, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;  author    = {Bill Yuchen Lin and Ming Shen and Wangchunshu Zhou and Pei Zhou and Chandra Bhagavatula and Yejin Choi and Xiang Ren}, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;  title     = {CommonGen: A Constrained Text Generation Challenge for Generative Commonsense Reasoning}, <br>
   &nbsp;&nbsp;&nbsp;&nbsp; journal = {CoRR},<br>
   &nbsp;&nbsp;&nbsp;&nbsp; volume = {abs/1911.03705},<br>
   &nbsp;&nbsp;&nbsp;&nbsp;year      = {2019} <br>
