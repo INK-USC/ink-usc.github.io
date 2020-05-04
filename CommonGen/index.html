@@ -216,33 +216,37 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 						<div class="row">
 							<div class="col-md-12" id="exp">
 								<h4 class="widget-title"><span><b><a><em>Leaderboard</em></a></b></span></h4>
-<div style="font-size:15px">
-<table
-  id="table"
-  data-toggle="table"
-  data-height=""
-  data-url="exp.json"
-  data-sort-name="pivotbert"
-  data-sort-order="desc" 
-  style="font-size:15px; color: black"
-  >
-  <thead theadClasses="thead-light">
-  <tr>
-     <th data-field="date" data-sortable="true">Date</th>
-    <th data-field="model" data-sortable="false">Model</th>
-    <th data-field="bleu4" data-sortable="true" data-formatter="%s">BLEU-4</th>
-    <th data-field="rouge2" data-sortable="true">ROUGE-2</th>
-    <th data-field="meter" data-sortable="true">METER</th>
-    <th data-field="cider" data-sortable="true">CIDEr</th>
-    <th data-field="spice" data-sortable="true">SPICE</th>
-    <th data-field="coverage" data-sortable="true">Coverage</th>
-    <th data-field="pivotbert" data-sortable="true">PivotBERT</th>
-  </tr>
-  </thead> 
-</table>
+<!--<div style="font-size:15px">-->
+<!--<table-->
+<!--  id="table"-->
+<!--  data-toggle="table"-->
+<!--  data-height=""-->
+<!--  data-url="exp.json"-->
+<!--  data-sort-name="pivotbert"-->
+<!--  data-sort-order="desc" -->
+<!--  style="font-size:15px; color: black"-->
+<!--  >-->
+<!--  <thead theadClasses="thead-light">-->
+<!--  <tr>-->
+<!--     <th data-field="date" data-sortable="true">Date</th>-->
+<!--    <th data-field="model" data-sortable="false">Model</th>-->
+<!--    <th data-field="bleu4" data-sortable="true" data-formatter="%s">BLEU-4</th>-->
+<!--    <th data-field="rouge2" data-sortable="true">ROUGE-2</th>-->
+<!--    <th data-field="meter" data-sortable="true">METER</th>-->
+<!--    <th data-field="cider" data-sortable="true">CIDEr</th>-->
+<!--    <th data-field="spice" data-sortable="true">SPICE</th>-->
+<!--    <th data-field="coverage" data-sortable="true">Coverage</th>-->
+<!--    <th data-field="pivotbert" data-sortable="true">PivotBERT</th>-->
+<!--  </tr>-->
+<!--  </thead> -->
+<!--</table>-->
 
 
-</div>
+<!--</div>-->
+								<div class="col-md-12" id="ser"  align="center">
+										<img width="95%" src="exp.png" alt="One/two-hop relation frequency in the \textsc{CommonGen} dev.\&test sets on ConceptNet.">
+
+									</div>
 							</div>
 						</div>
 						
@@ -260,7 +264,7 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 
 									<div class="col-md-12" id="ser"  align="center">
 										<img width="95%" src="case.png" alt="One/two-hop relation frequency in the \textsc{CommonGen} dev.\&test sets on ConceptNet.">
-										<div class="col-md-12" style="text-align: center;">A case study with a concept-set {give, lay, massage, table} for qualitative analysis of machine generations.</div>
+										<div class="col-md-12" style="text-align: center; font-size: 17px">A case study with a concept-set {give, lay, massage, table} for qualitative analysis of machine generations.</div>
 									</div>
 
 								</div>
@@ -306,7 +310,7 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 
 									<div class="col-md-6" id="ser"  align="center">
 										<img width="90%" src="dist.png" alt="USC/ISI">
-										<div class="col-md-10" style="text-align: center;">Connectivity on ConceptNet between concepts in 5-size-concepts in the CommonGen test set.</div>
+
 									</div>
 
 								</div>
@@ -316,15 +320,21 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 								<div class="col-md-12" id="ser">
 									<br><br>
 									<h3><span><b>Relation Distribution of Concept-Sets</b></span></h3>
-										<div class="col-md-12" id="ser" style="font-size: 17px">
+										<div class="col-md-6" id="ser" style="font-size: 17px">
  Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.
     We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.
+											<br><br>
     In both cases, we find most frequent relation types are about 1) <b>spatial knowledge</b> (e.g. AtLocation, LocatedNear), 2) <b>object properties</b> (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) <b>human behavior and social conventions</b> (e.g. CauseDesire, Motivated), 4) <b>temporal knowledge</b> (e.g. First/Last-SubEvent, Perquisite), and 5) <b>other general commonsense</b> (e.g. RelatedTo, HasContext, IsA). 
+									</div>
+
+									<div class="col-md-6" id="ser"  align="center">
+										<img width=85%" src="rel_cat.png" alt="USC/ISI">
+
 									</div>
 
 									<div class="col-md-12" id="ser"  align="center">
 										<img width="95%" src="relation.png" alt="One/two-hop relation frequency in the \textsc{CommonGen} dev.\&test sets on ConceptNet.">
-										<div class="col-md-12" style="text-align: center;">One/two-hop relation frequency in the CommonGen dev. & test sets on ConceptNet.</div>
+
 									</div>
 
 								</div>
