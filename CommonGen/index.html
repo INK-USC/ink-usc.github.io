@@ -211,7 +211,64 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 
 
 			<div class="row">
+			
 				<div class="col-md-12">
+				<div class="box-content">
+						<div class="row">
+							<div class="col-md-12" id="exp">
+								<h4 class="widget-title"><span><b><a><em>Two Key Challenges</em></a></b></span></h4>
+<!--<div style="font-size:15px">-->
+<!--<table-->
+<!--  id="table"-->
+<!--  data-toggle="table"-->
+<!--  data-height=""-->
+<!--  data-url="exp.json"-->
+<!--  data-sort-name="pivotbert"-->
+<!--  data-sort-order="desc" -->
+<!--  style="font-size:15px; color: black"-->
+<!--  >-->
+<!--  <thead theadClasses="thead-light">-->
+<!--  <tr>-->
+<!--     <th data-field="date" data-sortable="true">Date</th>-->
+<!--    <th data-field="model" data-sortable="false">Model</th>-->
+<!--    <th data-field="bleu4" data-sortable="true" data-formatter="%s">BLEU-4</th>-->
+<!--    <th data-field="rouge2" data-sortable="true">ROUGE-2</th>-->
+<!--    <th data-field="meter" data-sortable="true">METER</th>-->
+<!--    <th data-field="cider" data-sortable="true">CIDEr</th>-->
+<!--    <th data-field="spice" data-sortable="true">SPICE</th>-->
+<!--    <th data-field="coverage" data-sortable="true">Coverage</th>-->
+<!--    <th data-field="pivotbert" data-sortable="true">PivotBERT</th>-->
+<!--  </tr>-->
+<!--  </thead> -->
+<!--</table>-->
+
+
+<!--</div>-->
+								<div class="col-md-12" id="ser"  align="center">
+										<img width="95%" src="challenge.png">
+										<br><br>
+
+										<div   align="left">
+										<b>Why is this problem hard?</b><br>
+
+First, it needs much relational commonsense knowledge about given concepts, and they are latent and compositional.
+
+We can see that for this particular real example in our dataset, we need know a list of facts and find the best composition of them for writing the sentence 
+“A woman in a gym exercises by waving ropes tied to a wall.”<br><br>
+
+Second, the dataset needs compositional generalization ability so that it can work for unseen combinations of concepts.
+For example, in the training time, we can see such examples, about apple, bag, put, tree, pick, basket, wash.
+However, in the testing time, the model needs to deal with a more challenging example like this one.
+The model has never seen the concept pear in the training, or the combinations of any two of them.
+
+
+</div>
+									</div>
+							</div>
+						</div>
+						
+					</div> <!-- /.box-content -->
+
 					<div class="box-content">
 						<div class="row">
 							<div class="col-md-12" id="exp">
@@ -256,7 +313,9 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 								<div class="col-md-12" id="exp">
 								<h4 class="widget-title"><span><b><a><em>Data Analysis</em></a></b></span></h4>
 								</div>
-								<div class="col-md-12" id="ser">
+								
+
+								<div class="col-md-6" id="ser">
 									<h3><span><b>A Case Study</b></span></h3>
 <!--										<div class="col-md-12" id="ser" style="font-size: 17px">-->
 <!-- Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.-->
@@ -265,8 +324,22 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 <!--									</div>-->
 
 									<div class="col-md-12" id="ser"  align="center">
-										<img width="100%" src="case.png" alt="One/two-hop relation frequency in the \textsc{CommonGen} dev.\&test sets on ConceptNet.">
-										<div class="col-md-12" style="text-align: center; font-size: 17px">A case study with a concept-set {give, lay, massage, table} for qualitative analysis of machine generations.</div>
+										<img width="100%" src="case.png" alt="">
+										<div class="col-md-12" style="text-align: left; font-size: 17px"><br>A case study with a concept-set {hand, sink, wash, soap} for qualitative analysis of machine generations.</div>
+									</div>
+
+								</div>
+								<div class="col-md-6" id="ser">
+									<h3><span><b>Transfer Learining Study</b></span></h3>
+<!--										<div class="col-md-12" id="ser" style="font-size: 17px">-->
+<!-- Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.-->
+<!--    We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.-->
+<!--    In both cases, we find most frequent relation types are about 1) <b>spatial knowledge</b> (e.g. AtLocation, LocatedNear), 2) <b>object properties</b> (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) <b>human behavior and social conventions</b> (e.g. CauseDesire, Motivated), 4) <b>temporal knowledge</b> (e.g. First/Last-SubEvent, Perquisite), and 5) <b>other general commonsense</b> (e.g. RelatedTo, HasContext, IsA).-->
+<!--									</div>-->
+
+									<div class="col-md-12" id="ser"  align="center">
+										<img width="100%" src="transfer.png" alt="">
+										<div class="col-md-12" style="text-align: left; font-size: 17px">We study how fine-tuned CommonGen (CG) models can benefit commonsense-centric downstream tasks such as Commonsense Question Answering (CSQA) with their generative commonsense reasoning ability. We use several trained CG models to generate choice-specific context and see their influences. Check Sec. 5.3. for more.  </div>
 									</div>
 
 								</div>
@@ -284,7 +357,6 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 	 									We use the <a href="https://www.mturk.com/" target="_blank">AMT</a> platform for collecting such sentences for covered the top-ranked 2,500 concept-sets in the sampled results from large visual caption copora.
 										Each of them is assigned to at least three different workers. 
 										Furthermore, we use the remaining concept-sets as the training examples, for which we use the associated captions as the target outputs.
-									    Note that we explicitly control the overlap between the training and dev/test examples by filtering training concept-sets that have more than two overlapping concepts with any example in the dev/test set.
 										There are on average 4 sentences for each example in dev and test sets, which provide a more diverse test-bed for further automatic and manual evaluation.  We highlight the ratio of novel concept compositions (i.e., concept, concept-pair, and concept-triple) in dev/test, which never (co-)occur in training examples. This makes CommonGen challenging in terms of compositional generalization ability.
 									</p>
 									</div>
