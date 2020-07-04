@@ -1,0 +1,250 @@
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition</title>
+    <meta name="generator" content="Jekyll v3.8.5" />
+    <meta property="og:title" content="TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Project page for “TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition”" />
+    <meta property="og:description" content="Project page for “TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition”" />
+    <link rel="canonical" href="https://inklab.usc.edu/triggerner/" />
+    <meta property="og:url" content="https://inklab.usc.edu/triggerner" />
+    <meta property="og:site_name" content="TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition" />
+    <script type="application/ld+json">
+    {"@type":"WebSite","headline":"TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition","url":"https://inklab.usc.edu/triggerner","name":"TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition","description":"Project page for “TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition”","@context":"https://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+  <!-- For event dropdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css">
+
+  <!-- For spinner -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+  <link rel="stylesheet" href="https://spin.js.org/spin.css">
+
+</head>
+
+<section class="hero banner banner--hero">
+    <div class="banner--hero__content">
+    <h1><span><b>TriggerNER</b></span></h1>
+    <h3><span>Learning with Entity Triggers as Explanations for Named Entity Recognition</span></h3>
+        <div class="authors mt-3">
+            <a>Bill Yuchen Lin<sup>1*</sup>,</a>
+            <a>Dong-Ho Lee<sup>1*</sup>,</a>
+            <a>Ming Shen<sup>1</sup>,</a>
+            <a>Ryan Moreno<sup>1</sup>,</a>
+            <a>Xiao Huang<sup>1</sup>,</a>
+            <a>Prashant Shiralkar<sup>2</sup>,</a>
+            <a>Xiang Ren<sup>1</sup></a>
+        </div>
+        <div class="affils mt-1">
+            <sup>1</sup> Department of Computer Science, University of Southern California<br>
+            <sup>2</sup> Amazon
+        </div>
+        <div class="buttons mt-4">
+            <a href="https://www.aclweb.org/anthology/2020.acl-main.752/" class="btn btn-outline-warning">Paper</a>
+            <a href="https://github.com/INK-USC/TriggerNER" class="btn btn-outline-warning">Code</a>
+            <a href="https://github.com/INK-USC/TriggerNER/tree/master/dataset" class="btn btn-outline-warning">Dataset</a>
+            <a href="" data-target="#contactUs" data-toggle="collapse" onclick="return false" class="btn btn-outline-warning">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<body>
+  <div class="container content-left">
+    <div class="row" >
+      <div class="col-sm-12">
+          <div id="tutorials" class="tutorials__content constrained constrained--med">
+              <div id="contactUs" class="collapse" data-parent="#tutorials" style="margin-top: 25px">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div ><a href="http://yuchenlin.xyz">
+                                           <img class="contact" src="memberpic/yuchen.jpg" alt="Avatar">
+                                              <div class="container">
+                                                  <p style="text-align:center"class="contact_name">Bill Yuchen Lin</p>
+                                              </div></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div><a href="http://danny-lee.info">
+                                             <img class="contact" src="memberpic/Dongho.jpg" alt="Avatar">
+                                              <div class="container">
+                                                  <p style="text-align:center" class="contact_name">Dong-Ho Lee</p>
+                                              </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div ><a href="http://www-bcf.usc.edu/~xiangren/">
+                                            <img class="contact" src="memberpic/Xiang.jpg" alt="Avatar">
+                                              <div class="container">
+                                                  <p style="text-align:center" class="contact_name">Xiang Ren</p>
+                                              </div></a>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="row"  style="margin-top: 25px" >
+      <div class="col-6">
+          <div class="tutorials__content constrained constrained--med">
+          <p>
+              We introduce <em><b>entity triggers</b></em>, an effective proxy of human explanaations for facilitating label-efficient learning of NER models.
+              We crowd-sourced 14k entity triggers for two well-studied NER datasets.
+          </p>
+              <ol class="formatted">
+                  <li>
+                     <em><b>Trigger Dataset:</b></em> We introduce the concept of “entity triggers,” a novel form of explanatory annotation for named entity recognition problems.
+                     We crowd-source and publicly release 14k annotated entity triggers on two popular datasets: CoNLL03 (generic domain), BC5CDR (biomedical domain).
+                  </li>
+                  </br>
+                  <li>
+                      <em><b>Novel learning framework:</b></em> We propose a novel learning framework, named Trigger Matching Network, which encodes entity triggers and softly grounds them
+                      on unlabeled sentences to increase the effectiveness of the base entity tagger</li>
+                  </br>
+                  <li>
+                      <em><b>NER Performance Improvement:</b></em> Experimental results show that the proposed trigger-based framework is significantly more cost-effective.
+                      The TMN uses 20% of the trigger-annotated sentences from the original CoNLL03 dataset, while achieving a comparable performance to the conventional model using 70% of the annotated sentences.
+                  </li>
+              </ol>
+          </div>
+      </div>
+
+      <div class="col-6">
+          <div class="constrained constrained--med">
+              <figure>
+                <img class="figure-img img-fluid" src="trigexample.png" alt="see caption" style="margin-left: 20px; width: 100%; float: right;">
+                <br>
+                <figcaption class="figure-caption" style="margin-left: 0px">
+                    <b>Trigger Example</b>
+                    <br>
+                    We show two individual entity triggers: t1 (“had ... lunch at”) and t2 (“where the food”). Both are
+                    associated to the same entity mention “Rumble Fish” (starting from 7th token) typed as restaurant (RES).</figcaption>
+              </figure>
+          </div>
+        <div class="constrained constrained--med">
+              <figure>
+                <img class="figure-img img-fluid" src="labelefficiency.png" alt="see caption" style="margin-top:-10px; width: 70%; float: left;">
+                <figcaption class="figure-caption" style="top: 25px; position: relative;">
+                    <b>Label Efficiency</b>
+                    <br>
+                    We stretch
+                    the curve of BLSTM-CRF parallel to the x-axis by
+                    1.5/2. Even if we assume annotating entity triggers cost
+                    150/200% the amount of human effort as annotating
+                    entities only, TMN is still much more effective.</figcaption>
+              </figure>
+            </br>
+          </div>
+      </div>
+    </div>
+
+      <hr>
+<div class="row"  style="margin-top: 25px" >
+      <div class="col-6">
+          <div class="tutorials__content constrained constrained--med">
+          <h2 style="color: #213744">Dataset<a href="https://openreview.net/forum?id=rJlUt0EYwS" class="btn btn-outline-danger btn-sm" style="margin-left: 30px;margin-bottom: 5px">Explore more! (Data Visualization)</a></h2>
+          </div>
+      </div>
+          <div class="tutorials__content constrained constrained--med">
+
+          </div>
+
+      </div>
+      <hr>
+      <div class="row"  style="margin-top: 25px" >
+      <div class="col-6">
+          <div class="tutorials__content constrained constrained--med">
+          <h2 style="color: #213744">Trigger Matching Networks</h2>
+
+              <p>
+              <em>Trigger Matching Networks (TMN)</em> has two-stage of training and inference:
+              <li><em><b>Training:</b></em> We first jointly train the TrigEncoder (via trigger classification) and the TrigMatcher (via contrastive loss).
+              Then, we reuse the training data trigger vectors as attention queries in the SeqTagger.</li><br>
+              <li><em><b>Inference:</b></em> It uses the TrigMatcher to retrieve the k nearest triggers and average their trigger vectors as the attention query for the trained SeqTagger.
+                  Thus, an unseen cue phrase (e.g., “head of ... team”) can be matched with a seen trigger (e.g., “leader of ... group”).
+          </div>
+      </div>
+
+      <div class="col-6" style="margin-top: 45px">
+          <div class="tutorials__content constrained constrained--med">
+          <!-- <h2 style="color: #213744">UI</h2> -->
+          <figure>
+                <img class="figure-img img-fluid" src="training.png" alt="see caption" style="margin-left: 20px; width: 100%; float: right;">
+                <br>
+                <figcaption class="figure-caption" style="margin-left: 0px">
+                    <b>Training process of the TMN framework.</b>
+                </figcaption>
+          </figure>
+
+
+         <!--  <figure>
+                <img class="figure-img img-fluid" src="ner_ui.gif" alt="see caption" style="margin-left: 0px; width: 100%;">
+                <br>
+                <figcaption class="figure-caption" style="margin-left: 0px; margin-top: -3px">
+                    <b>Capturing Natural Language and Trigger explanations for the NER task</b>
+                </figcaption>
+              </figure> -->
+                        <!-- <figure>
+                <img class="figure-img img-fluid" src="exp2.gif" alt="see caption" style="margin-left: 0px; width: 100%;">
+                <br>
+                <figcaption class="figure-caption" style="margin-left: 0px; margin-top: -3px">
+                    <b>Capturing Trigger explanation</b>
+                </figcaption>
+              </figure> -->
+          </div>
+      </div>
+    </div>
+    <hr>
+      <div class="row"  style="margin-top: 25px" >
+      <div class="col-6">
+          <div class="tutorials__content constrained constrained--med">
+          <h2 style="color: #213744">Interpretability</h2>
+          </div>
+      </div>
+          <div class="tutorials__content constrained constrained--med">
+              <figure>
+                <img class="figure-img img-fluid" src="heatmap.png" alt="see caption" style="width: 70%; display:block; margin-left: auto;margin-right: auto;">
+              </figure>
+
+              <p style="margin-left:10px; margin-top:10px;">
+                  <b>illustrating that the trigger attention scores help the TMN model recognize entities.</b><br>
+                  The training data has ‘per day’ as a trigger phrase for chemical type entities, and this trigger matches the phrase ‘once daily’ in an unseen sentence during the inference phase of TrigMatcher.
+                  This result not only supports our argument that trigger-enhanced models such as TMN can effectively learn, but they also demonstrate that trigger-enhanced models can
+                  provide reasonable interpretation, something that lacks in other neural NER models.</p>
+          </div>
+
+      </div>
+    <hr>
+    <div class="row"  style="margin-top: 25px" >
+      <div class="col-6">
+          <div class="tutorials__content constrained constrained--med">
+          <h2 style="color: #213744">To cite us</h2>
+          </div>
+      </div>
+          <div class="tutorials__content constrained constrained--med">
+            <pre style="margin-left:10px; margin-top:10px;">@inproceedings{TriggerNER2020,
+          title={TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition},
+          author={Bill Yuchen Lin and Dong-Ho Lee and Ming Shen and Ryan Moreno and Xiao Huang  and Prashant Shiralkar and Xiang Ren},
+          booktitle={Proceedings of ACL},
+          year={2020}}</pre>
+      </div>
+
+    </div>
+
+</body>
+</html>
