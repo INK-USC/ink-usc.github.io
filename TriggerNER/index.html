@@ -157,7 +157,7 @@
 <div class="row"  style="margin-top: 25px" >
       <div class="col-6">
           <div class="tutorials__content constrained constrained--med">
-          <h2 style="color: #213744">Dataset<a href="https://openreview.net/forum?id=rJlUt0EYwS" class="btn btn-outline-danger btn-sm" style="margin-left: 30px;margin-bottom: 5px">Explore more! (Data Visualization)</a></h2>
+          <h2 style="color: #213744">Dataset<a href="" class="btn btn-outline-danger btn-sm" style="margin-left: 30px;margin-bottom: 5px">Explore more! (Data Visualization)</a></h2>
           </div>
       </div>
           <div class="tutorials__content constrained constrained--med">
@@ -173,10 +173,10 @@
 
               <p>
               <em>Trigger Matching Networks (TMN)</em> has two-stage of training and inference:
-              <li><em><b>Training:</b></em> We first jointly train the TrigEncoder (via trigger classification) and the TrigMatcher (via contrastive loss).
-              Then, we reuse the training data trigger vectors as attention queries in the SeqTagger.</li><br>
-              <li><em><b>Inference:</b></em> It uses the TrigMatcher to retrieve the k nearest triggers and average their trigger vectors as the attention query for the trained SeqTagger.
-                  Thus, an unseen cue phrase (e.g., “head of ... team”) can be matched with a seen trigger (e.g., “leader of ... group”).
+              <li><em><b>Training:</b></em> We first jointly train the Trigger Encoder (via trigger classification) and the Trigger Matcher (via contrastive loss).
+              Then, we reuse the training data trigger vectors as attention queries in the Sequence Tagger.</li><br>
+              <li><em><b>Inference:</b></em> It uses the Trigger Matcher to retrieve the k nearest triggers and average their trigger vectors as the attention query for the trained Sequence Tagger.
+                  Thus, an unseen cue phrase (e.g., “the president of”) can be matched with a seen trigger (e.g., “the leader of”).
           </div>
       </div>
 
@@ -184,10 +184,10 @@
           <div class="tutorials__content constrained constrained--med">
           <!-- <h2 style="color: #213744">UI</h2> -->
           <figure>
-                <img class="figure-img img-fluid" src="training.png" alt="see caption" style="margin-left: 20px; width: 100%; float: right;">
+                <img class="figure-img img-fluid" src="overview.gif" alt="see caption" style="margin-left: 20px; width: 120%; float: right;">
                 <br>
-                <figcaption class="figure-caption" style="margin-left: 0px">
-                    <b>Training process of the TMN framework.</b>
+                <figcaption class="figure-caption" style="margin-left: 40px">
+                    <b>Training process of the TMN framework</b>
                 </figcaption>
           </figure>
 
@@ -218,7 +218,7 @@
       </div>
           <div class="tutorials__content constrained constrained--med">
               <figure>
-                <img class="figure-img img-fluid" src="heatmap.png" alt="see caption" style="width: 70%; display:block; margin-left: auto;margin-right: auto;">
+                <img class="figure-img img-fluid" src="heatmap.png" alt="see caption" style="width: 65%; display:block; margin-left: auto;margin-right: auto;">
               </figure>
 
               <p style="margin-left:10px; margin-top:10px;">
