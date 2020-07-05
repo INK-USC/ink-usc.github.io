@@ -24,13 +24,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
-  <!-- For event dropdown -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css">
-
-  <!-- For spinner -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
-  <link rel="stylesheet" href="https://spin.js.org/spin.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.4.17/dagre-d3.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap-theme.min.css"/>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="corenlp-brat.css"/>
+  <script type="text/javascript" src="https://nlp.stanford.edu/js/brat/client/lib/head.load.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://nlp.stanford.edu/js/brat/style-vis.css"/>
+  <script type="text/javascript" src="corenlp-brat.js"></script>
 
 </head>
 
@@ -154,17 +158,48 @@
     </div>
 
       <hr>
-<div class="row"  style="margin-top: 25px" >
-      <div class="col-6">
-          <div class="tutorials__content constrained constrained--med">
-          <h2 style="color: #213744">Dataset<a href="" class="btn btn-outline-danger btn-sm" style="margin-left: 30px;margin-bottom: 5px">Explore more! (Data Visualization)</a></h2>
+      <div class="row"  style="margin-top: 25px" >
+          <div class="col-6">
+              <div class="tutorials__content constrained constrained--med">
+              <h2 style="color: #213744">Dataset<a href="https://github.com/INK-USC/TriggerNER/tree/master/dataset" class="btn btn-outline-danger btn-sm" style="margin-left: 30px;margin-bottom: 5px">Explore more!</a></h2>
+              </div>
           </div>
       </div>
-          <div class="tutorials__content constrained constrained--med">
-
+          <div class="container">
+          <div class="row">
+            <!-- Text area input -->
+            <form id="form_annotate" accept-charset="UTF-8" onsubmit="return false;">
+            <div class="col-sm-12" style="margin-bottom: 5px;">
+              <label for="text" class="label">&mdash; Text to annotate &mdash;</label>
+              <select class="form-control" style="max-width: 1050px; width:800%;" id="text" placeholder="e.g., The quick brown fox jumped over the lazy dog." autofocus>
+                  <option value="1">Paris is the president of the student union .</option>
+                  <option value="2">Germany 's representative to the European Union 's veterinary committee Werner Zwingmann said on Wednesday consumers should buy sheepmeat from countries other than Britain until the scientific advice was clearer .</option>
+                  <option value="3">Spanish Farm Minister Loyola de Palacio had earlier accused Fischler at an EU farm ministers ' meeting of causing unjustified alarm through dangerous generalisation .</option>
+                  <option value="4">They offer protection against seizures in a range of models and seem to inhibit certain stages of drug dependence in preclinical assessments .</option>
+                  <option value="5">All of these positive GABA(A) modulators suppressed the expression of kindled seizures , whereas only alleopregnanolone and ganaxolone inhibited the development of kindling .</option>
+              </select>
+              <button id="submit" class="btn btn-block" style="margin-top: 7px;">Submit</button>
+            </div>
+            </form>
           </div>
 
-      </div>
+          <div class="row">
+            <!-- A panel for errors to show up in -->
+            <div id="errors" class="row">
+            </div>
+
+            <!-- Loading gif -->
+            <div id="loading" class="row" style="display:none">
+              <img src="loading.gif" height="100px" style="margin-left: 100px"/>
+            </div>
+
+            <!-- Annotation population area -->
+            <div id="annotations" class="row" style="display:block; width:850%;">
+            </div>
+          </div>
+
+        </div>
+
       <hr>
       <div class="row"  style="margin-top: 25px" >
       <div class="col-6">
@@ -190,22 +225,6 @@
                     <b>Training process of the TMN framework</b>
                 </figcaption>
           </figure>
-
-
-         <!--  <figure>
-                <img class="figure-img img-fluid" src="ner_ui.gif" alt="see caption" style="margin-left: 0px; width: 100%;">
-                <br>
-                <figcaption class="figure-caption" style="margin-left: 0px; margin-top: -3px">
-                    <b>Capturing Natural Language and Trigger explanations for the NER task</b>
-                </figcaption>
-              </figure> -->
-                        <!-- <figure>
-                <img class="figure-img img-fluid" src="exp2.gif" alt="see caption" style="margin-left: 0px; width: 100%;">
-                <br>
-                <figcaption class="figure-caption" style="margin-left: 0px; margin-top: -3px">
-                    <b>Capturing Trigger explanation</b>
-                </figcaption>
-              </figure> -->
           </div>
       </div>
     </div>

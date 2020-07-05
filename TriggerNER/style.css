@@ -726,3 +726,13 @@ td:hover .hoverlarge {
 		 padding: 5px;
 	}
 }
+select {
+    max-width: 100px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+select option {
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
