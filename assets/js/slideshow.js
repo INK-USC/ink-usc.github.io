@@ -1,6 +1,6 @@
 
 var slideIndex = 0;
-showSlides(slideIndex);
+// showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -10,7 +10,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-var timer = setInterval("plusSlides(1)", 7000);
+//var timer = setInterval("plusSlides(1)", 7000);
 
 function reset_timer(){
   clearInterval(timer);
@@ -56,7 +56,13 @@ function showSlides(slideIndex) {
   //dots[slideIndex-1].className += " active";
 }
 
-$(document).ready(function() {
-  initialize_slides();
+function adjust_news(){
+  var ele = document.getElementById("div-news")
+  var intro = document.getElementById("div-intro")
+  ele.style.maxHeight = intro.clientHeight
+}
 
+$(document).ready(function() {
+  //initialize_slides();
+  //adjust_news();
 });

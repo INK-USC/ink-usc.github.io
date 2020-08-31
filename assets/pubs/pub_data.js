@@ -106,18 +106,18 @@ export default {
             "raw": "<p><b><a href=\"https://openreview.net/forum?id=rJlUt0EYwS\" target=\"_blank\">Learning from Explanations with Neural Module Execution Tree</a></b><br/>\n\t\t\t\t\t\t\tZiqi Wang*, Yujia Qin*, Wenxuan Zhou, Jun Yan, Qinyuan Ye, Leonardo Neves, Zhiyuan Liu, Xiang Ren. <i>ICLR 2020</i> (poster).<br/>\n<a class=\"button pub\" href=\"http://inklab.usc.edu/project-NExT/\" target=\"_blank\">Project</a>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/NExT\" target=\"_blank\">Github</a>\n</p>"
         },
         {
-            "authors": "Wenxuan Zhou, Hongtao Lin, Bill Yuchen Lin, Ziqi Wang, Junyi Du, Leonardo Neves, Xiang Ren.",
-            "year": "2020",
-            "venue": "The Web Conference (WWW)",
-            "title": "NERO: A Neural Rule Grounding Framework for Label-Efficient Relation Extraction",
-            "raw": "<p><b><a href=\"https://dl.acm.org/doi/abs/10.1145/3366423.3380282\">NERO: A Neural Rule Grounding Framework for Label-Efficient Relation Extraction</a></b><br/>\n\t\t\t\t\t\t\tWenxuan Zhou, Hongtao Lin, Bill Yuchen Lin, Ziqi Wang, Junyi Du, Leonardo Neves, Xiang Ren. <i>The Web Conference (WWW) 2020</i> (oral). <b style=\"color: red\"><br>Best Paper award, Honorable Mention</b>.<br/>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/NERO\" target=\"_blank\">Github</a>\n</p>"
-        },
-        {
             "authors": "Bill Yuchen Lin, Xinyue Chen, Jamin Chen, Xiang Ren.",
             "year": "2019",
             "venue": "EMNLP",
             "title": "KagNet: Knowledge-Aware Graph Networks for Commonsense Reasoning",
             "raw": "<p><b><a href=\"https://arxiv.org/abs/1909.02151\" target=\"_blank\">KagNet: Knowledge-Aware Graph Networks for Commonsense Reasoning</a></b><br/>\n\t\t\t\t\t\t\t\t\t\tBill Yuchen Lin, Xinyue Chen, Jamin Chen, Xiang Ren. <i>EMNLP 2019</i> (long, oral).<br/>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/KagNet\" target=\"_blank\">Github</a>\n</p>"
+        },
+        {
+            "authors": "Wenxuan Zhou, Hongtao Lin, Bill Yuchen Lin, Ziqi Wang, Junyi Du, Leonardo Neves, Xiang Ren.",
+            "year": "2020",
+            "venue": "The Web Conference (WWW)",
+            "title": "NERO: A Neural Rule Grounding Framework for Label-Efficient Relation Extraction",
+            "raw": "<p><b><a href=\"https://dl.acm.org/doi/abs/10.1145/3366423.3380282\">NERO: A Neural Rule Grounding Framework for Label-Efficient Relation Extraction</a></b><br/>\n\t\t\t\t\t\t\tWenxuan Zhou, Hongtao Lin, Bill Yuchen Lin, Ziqi Wang, Junyi Du, Leonardo Neves, Xiang Ren. <i>The Web Conference (WWW) 2020</i> (oral). <b style=\"color: red\"><br>Best Paper award, Honorable Mention</b>.<br/>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/NERO\" target=\"_blank\">Github</a>\n</p>"
         },
         {
             "authors": "Cong Fu, Tong Chen, Meng Qu, Woojeong Jin, Xiang Ren.",
