@@ -1,0 +1,22 @@
+
+.inner.filter-header{
+    padding-bottom: 20px;
+}
+
+.filter {
+    display: inline-block; 
+    padding-right: 20px;
+}
+@media screen and (max-width: 736px)   {
+    .filter{
+        display: block; 
+        padding-right: 0px; 
+    }
+    input[type="text"], select{
+        height: 32px;
+    }
+    .inner.filter-header{
+        padding-bottom: 0px;
+    }
+    
+}

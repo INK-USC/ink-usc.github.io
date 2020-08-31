@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<!--
+	Introspect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34679733-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-34679733-4');
+	</script>
+
+	<title>INK Research Lab - USC Computer Science</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="INK Research Lab @ USC">
+        <meta name="author" content="INK Research Lab @ USC">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" /> 
+	<link rel="stylesheet" href="assets/css/filters.css" /> 
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<a href="index.html" class="logo"> <img width="55" style="padding: 0.5em 0 0 0" src="images/logo.png"> </a>
+					<nav id="nav">
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="index.html">Home</a>
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="people.html">People</a>
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="research.html">Research</a>
+
+							<a style="color:#FF0433;" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="publications.html"><u>Publications</u></a>
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="software.html">Software</a>
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="sponsors.html">Sponsors</a>
+ 						<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="teaching.html">Teaching</a>
+							
+							
+							<!-- <a href="elements.html">Resources</a> -->
+							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="contact.html">Join Us</a>
+					</nav>
+					<div class="inner">
+						<img class="usclogo" src="images/usc-shield-name-white.png" >
+					</div>	
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<!-- <section id="banner" style="height:10pt">
+				<div class="inner" style="height:10pt">
+					<h1 style="padding: -10 0 0 0">INK Lab @ USC/ISI: <span style="text-transform:none;">Intelligence and Knowledge Discovery</span></h1>
+				</div>
+			</section> -->
+
+		<!-- One -->   
+						
+			
+		<!-- Two -->
+			<section  style="background:white" id="two"> 
+				<div class="inner">
+					<h2>Publications</h2> 
+				</div>
+
+			    <div class="inner filter-header">
+					<div class="content">
+						<div style="display:inline-block; padding-right: 10px;" class="filter">
+							<b><i class="fa fa-filter" aria-hidden="true"></i></b>
+						</div>
+						<div class="filter">
+							<b>Title</b>
+						</div>
+						<div class="filter">					
+							<input v-model="title_filter" type="text">
+						</div>
+						<div class="filter">
+							<b>Years</b>
+						</div>
+						<div class="filter">					
+							<select v-model="year_filter">
+								<option v-for="year in all_years" v-bind:value="year"> {{ year }} </option>
+							</select>
+						</div>
+						<div  class="filter">
+							<b>Venue</b>
+						</div>
+						<div  class="filter">						
+							<select v-model="conf_filter" >
+								<option v-for="venue in all_venues" v-bind:value="venue"> {{ venue }} </option>
+							</select>
+						</div>
+
+					</div>
+					 <br>
+				</div>
+
+				<div class="inner" v-for="year_pubs in filtered_pubs_by_year">
+					<div class="content">
+						<h3>{{ year_pubs[0] }}</h3>
+						<ul style="font-size:14px; line-height:22px">
+							<span v-for="pub in year_pubs[1]"> 
+								<span v-html="pub.raw"></span>
+							</span> 
+						</ul>
+					</div>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<!-- <section id="three">
+				<div class="inner">
+					<article>
+						<div class="content">
+							<span class="icon fa-laptop"></span>
+							<header>
+								<h3>Tempus Feugiat</h3>
+							</header>
+							<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna lorem ullamcorper laoreet, lectus arcu.</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Learn More</a></li>
+							</ul>
+						</div>
+					</article>
+					<article>
+						<div class="content">
+							<span class="icon fa-diamond"></span>
+							<header>
+								<h3>Aliquam Nulla</h3>
+							</header>
+							<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed.</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Learn More</a></li>
+							</ul>
+						</div>
+					</article>
+					<article>
+					<div class="content">
+							<span class="icon fa-laptop"></span>
+							<header>
+								<h3>Sed Magna</h3>
+							</header>
+							<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula.</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Learn More</a></li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section> -->
+
+		<!-- Footer -->
+			<section id="footer" >
+				<div class="inner" style="padding: 0 0 0 0;">  
+								<div class="copyright" style="height: 0pt;" style="padding: 0 0 0 0;">
+									<div class="row" style="padding: 0 0 0 0;">
+										<div class="col-md-6 col-sm-6" style="padding: 0 0 0 0;">
+											<p class="small-text" style="color:white">&nbsp;&nbsp;&nbsp;Copyright 2018 &copy;. INK Lab @ USC/ISI</p>
+										</div> <!-- /.col-md-6 --> 
+									</div> <!-- /.row -->
+								</div> <!-- /.copyright -->
+							</div> <!-- /.container --> 
+				</div>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			<!-- <script src="assets/pubs/pub_data.js"></script> -->
+			<script type="module">
+				import pub_data from './assets/pubs/pub_data.js'
+				var app = new Vue({
+					el: '#two',
+					data: {
+						'pub_data': pub_data['pubs'],
+						'conf_filter': null,
+						'year_filter': null,
+						'title_filter': null,
+					},
+					computed: {
+						'filted_pubs': function(){
+							var pubs = []
+							this.pub_data.forEach(function(item, index){
+								var flg = true
+								if (this.title_filter){
+									if (!item.title.toLowerCase().includes(this.title_filter.toLowerCase())){
+										flg = false
+									}
+								}
+								if (this.conf_filter && flg){
+									if (item.venue.toLowerCase() != this.conf_filter.toLowerCase()){
+										flg = false
+									}
+								}
+								if (this.year_filter && flg){
+									if (item.year != this.year_filter){
+										flg = false
+									}
+								}
+								if (flg){
+									pubs.push(item)
+								}							
+							}, this)
+							return pubs	
+						},
+						'filtered_pubs_by_year': function(){
+							var pubs = {}
+							this.filted_pubs.forEach(function(item, index){
+								var year = item.year
+								if (!(year in pubs)){
+									pubs[year] = []
+								}
+								pubs[year].push(item)
+							}, this)
+							var pubarr = []
+							for (var key in pubs){
+								pubarr.push([key, pubs[key]])
+							}
+							pubarr.sort(function compare(kv1, kv2){
+								var v1 = kv1[0]
+								var v2 = kv2[0]
+								if (v1 == 'Preprint'){
+									v1 = 10000
+								}
+								if (v2 == 'Preprint'){
+									v2 = 10000
+								}
+								return v2 - v1
+							})
+							return pubarr
+						},
+						'all_venues': function(){
+							var arr = ["", 'ACL','ICLR','EMNLP','NAACL', 'WWW','NeurIPS','Arxiv']
+							return arr
+						},
+						'all_years': function(){
+							var arr = [""]
+							for (var item of this.pub_data){
+								if (!(arr.includes(item.year)))
+									arr.push(item.year)
+							}
+							return arr
+						}
+					}
+				})
+			</script>
+			
+	</body>
+</html>
