@@ -653,7 +653,7 @@ button.big-white:active {
 }
 .menu-wrapper .main-menu ul.sf-menu > li a {
   line-height: 54px;
-  color: #aaaaaa;
+  /* color; */
   font-size: 16px;
 }
 .menu-wrapper .main-menu ul.sf-menu > li a i {

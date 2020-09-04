@@ -161,46 +161,7 @@ bottom: .5em;
 
 			<div class="row">
 					<div class="col-md-12">
-						<div class="box-content">
-							<div class="row">
-								<div class="col-md-12" id="about">
-									<!-- <h2 class="widget-title">(Bill) Yuchen Lin</h2> -->
-								<h4 class="widget-title"><span><a href="#about" ><b><em>Introduction</em></b></a></span></h4>
-
-								<div class="col-md-5"> 
-									<p style="font-size:16px">
-
-									Building machines with commonsense to compose realistically plausible sentences is challenging.
-									CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.
-										Given a set of common concepts; the task is to generate a coherent sentence describing an everyday sce- nario using these concepts.
-<br> <br>
-CommonGen is challenging because it inherently requires 1) relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to work on unseen concept combinations. Our dataset, constructed through a combination of crowd-sourcing from AMT and existing caption corpora, consists of 30k concept-sets and 50k sentences in total.
-									</p>
-
-
-
-
-									<p style="text-align: left;"> 
-											 	<b>Links:</b> &nbsp; 
-									
-									<a target="_blank" href="https://yuchenlin.xyz/paper/commongen.pdf">[Paper]</a> &nbsp;
-									<a target="_blank" href="leaderboard.html">[Leaderboard]</a> &nbsp;
-									<a target="_blank" href="https://forms.gle/k181RNK8jPNpKvHD8">[Data]</a> &nbsp;
-									<a target="_blank" href="https://github.com/INK-USC/CommonGen">[Github]</a> &nbsp;  
-									<a target="_blank" href="http://inklab.usc.edu/">[INK Lab]</a> &nbsp; 
-									</p>  
-									
-								</div>
-								<div class="col-md-7"  align="center"> <img width="95%" src="intro.png" alt="USC/ISI">
-								 </div>
-									</div>
-
-								<div  class="col-md-12">
-								
-								</div>
-								</div>
-								
-								</div>
+						
 								
 								</div>
 								 
@@ -208,73 +169,114 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 								</div>
 								
 
-
-			<div class="row">
-			
-				<div class="col-md-12">
-				<div class="box-content">
-						<div class="row">
-							<div class="col-md-12" id="exp">
-								<h4 class="widget-title"><span><b><a><em>Key Challenges</em></a></b></span></h4>
-<!--<div style="font-size:15px">-->
-<!--<table-->
-<!--  id="table"-->
-<!--  data-toggle="table"-->
-<!--  data-height=""-->
-<!--  data-url="exp.json"-->
-<!--  data-sort-name="pivotbert"-->
-<!--  data-sort-order="desc" -->
-<!--  style="font-size:15px; color: black"-->
-<!--  >-->
-<!--  <thead theadClasses="thead-light">-->
-<!--  <tr>-->
-<!--     <th data-field="date" data-sortable="true">Date</th>-->
-<!--    <th data-field="model" data-sortable="false">Model</th>-->
-<!--    <th data-field="bleu4" data-sortable="true" data-formatter="%s">BLEU-4</th>-->
-<!--    <th data-field="rouge2" data-sortable="true">ROUGE-2</th>-->
-<!--    <th data-field="meter" data-sortable="true">METER</th>-->
-<!--    <th data-field="cider" data-sortable="true">CIDEr</th>-->
-<!--    <th data-field="spice" data-sortable="true">SPICE</th>-->
-<!--    <th data-field="coverage" data-sortable="true">Coverage</th>-->
-<!--    <th data-field="pivotbert" data-sortable="true">PivotBERT</th>-->
-<!--  </tr>-->
-<!--  </thead> -->
-<!--</table>-->
-
-
-<!--</div>-->
-								<div class="col-md-12" id="ser"  align="center">
-										<img width="95%" src="challenge.png">
+								<div class="box-content">
+									<div class="row">
+										<div class="col-md-12" id="exp">
+										<h4 class="widget-title"><span><b><a><em>Data Analysis</em></a></b></span></h4>
+										</div>
+										
+		
+										<div class="col-md-6" id="ser">
+											<h3><span><b>A Case Study</b></span></h3>
+		<!--										<div class="col-md-12" id="ser" style="font-size: 17px">-->
+		<!-- Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.-->
+		<!--    We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.-->
+		<!--    In both cases, we find most frequent relation types are about 1) <b>spatial knowledge</b> (e.g. AtLocation, LocatedNear), 2) <b>object properties</b> (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) <b>human behavior and social conventions</b> (e.g. CauseDesire, Motivated), 4) <b>temporal knowledge</b> (e.g. First/Last-SubEvent, Perquisite), and 5) <b>other general commonsense</b> (e.g. RelatedTo, HasContext, IsA).-->
+		<!--									</div>-->
+		
+											<div class="col-md-12" id="ser" align="center">
+												<img width="100%" src="case.png" alt="">
+												<div class="col-md-12" style="text-align: left; font-size: 17px"><br>A case study with a concept-set {hand, sink, wash, soap} for qualitative analysis of machine generations.</div>
+											</div>
+		
+										</div>
+										<div class="col-md-6" id="ser">
+											<h3><span><b>Transfer Learining Study</b></span></h3>
+		<!--										<div class="col-md-12" id="ser" style="font-size: 17px">-->
+		<!-- Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.-->
+		<!--    We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.-->
+		<!--    In both cases, we find most frequent relation types are about 1) <b>spatial knowledge</b> (e.g. AtLocation, LocatedNear), 2) <b>object properties</b> (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) <b>human behavior and social conventions</b> (e.g. CauseDesire, Motivated), 4) <b>temporal knowledge</b> (e.g. First/Last-SubEvent, Perquisite), and 5) <b>other general commonsense</b> (e.g. RelatedTo, HasContext, IsA).-->
+		<!--									</div>-->
+		
+											<div class="col-md-12" id="ser" align="center">
+												<img width="100%" src="transfer.png" alt="">
+												<div class="col-md-12" style="text-align: left; font-size: 17px">We study how fine-tuned CommonGen (CG) models can benefit commonsense-centric downstream tasks such as Commonsense Question Answering (CSQA) with their generative commonsense reasoning ability. We use several trained CG models to generate choice-specific context and see their influences. Check Sec. 5.3. for more.  </div>
+											</div>
+		
+										</div>
+										<div class="col-md-12" id="ana">
+		
+		
+		
+		
+		
+		
+												<h3><span><b>Statistics</b></span></h3>
+											 <div class="col-md-6" id="ser">
+		
+											 <p style="font-size: 17px">
+												 We use the <a href="https://www.mturk.com/" target="_blank">AMT</a> platform for collecting such sentences for covered the top-ranked 2,500 concept-sets in the sampled results from large visual caption copora.
+												Each of them is assigned to at least three different workers. 
+												Furthermore, we use the remaining concept-sets as the training examples, for which we use the associated captions as the target outputs.
+												There are on average 4 sentences for each example in dev and test sets, which provide a more diverse test-bed for further automatic and manual evaluation.  We highlight the ratio of novel concept compositions (i.e., concept, concept-pair, and concept-triple) in dev/test, which never (co-)occur in training examples. This makes CommonGen challenging in terms of compositional generalization ability.
+											</p>
+											</div>
+		
+											<div class="col-md-6" id="ser" align="center">
+												<img width="80%" src="stat.png" alt="USC/ISI">
+											</div>
+										</div>
+		
+		
 										<br><br>
-
-										<div   align="left">
-										<b>Why is this problem hard?</b><br>
-
-First, it needs much relational commonsense knowledge about given concepts, and they are latent and compositional.
-
-We can see that for this particular real example in our dataset, we need know a list of facts and find the best composition of them for writing the sentence 
-“A woman in a gym exercises by waving ropes tied to a wall.”<br><br>
-
-Second, the dataset needs compositional generalization ability so that it can work for unseen combinations of concepts.
-For example, in the training time, we can see such examples, about apple, bag, put, tree, pick, basket, wash.
-However, in the testing time, the model needs to deal with a more challenging example like this one.
-The model has never seen the concept pear in the training, or the combinations of any two of them.
-
-
-</div>
+		
+		
+										<div class="col-md-12" id="ser">
+											<h3><span><b>Connectivity Distribution of Concept-Sets</b></span></h3>
+												<div class="col-md-6" id="ser" style="font-size: 17px">
+												We here introduce deeper analysis of the dataset by utilizing the largest commonsense knowledge graph (KG), <a href="http://conceptnet.io/" target="_blank">ConceptNet</a> as an tool to study connectivity and relation types.
+											 Obviously, if the concepts inside a concept-set is more densely connected with each other on the KG, then it is easier to write a scene about them.
+											 In each 5-concept-set (i.e. a concept-set consists of five concepts), 
+											there are 10 unique pairs of concepts, the connections of which we are interested in. 
+											If we look at the one-hop links on the KG, about 60% of the 5-concept-sets have less than one link among all concept-pairs.
+											On the other hand, if we consider two-hop links, then nearly 50% of them are almost fully connected (i.e. each pair of concepts has connections).
+											These two observations together suggest that the CommonGen has a reasonable difficulty: the concepts are not too distant or too close, and reasoning about the associated scenes is thus neither too difficult nor too trivial. 
+											</div>
+		
+											<div class="col-md-6" id="ser" align="center">
+												<img width="90%" src="dist.png" alt="USC/ISI">
+		
+											</div>
+		
+										</div>
+		
+		
+										<br><br>
+										<div class="col-md-12" id="ser">
+											<br><br>
+											<h3><span><b>Relation Distribution of Concept-Sets</b></span></h3>
+												<div class="col-md-6" id="ser" style="font-size: 17px">
+		 Furthermore, the <a href="https://github.com/commonsense/conceptnet5/wiki/Relations" target="_blank">relation types</a> of such connections can also tell us what kinds of commonsense knowledge are potentially useful for relational reasoning towards generation.
+			We report the frequency of different relation types of the one/two-hop connections among concept-pairs in the dev and test examples.
+													<br><br>
+			In both cases, we find most frequent relation types are about 1) <b>spatial knowledge</b> (e.g. AtLocation, LocatedNear), 2) <b>object properties</b> (e.g. UsedFor, CapableOf,  PartOf, ReceiveAction), 3) <b>human behavior and social conventions</b> (e.g. CauseDesire, Motivated), 4) <b>temporal knowledge</b> (e.g. First/Last-SubEvent, Perquisite), and 5) <b>other general commonsense</b> (e.g. RelatedTo, HasContext, IsA). 
+											</div>
+		
+											<div class="col-md-6" id="ser" align="center">
+												<img width="85%&quot;" src="rel_cat.png" alt="USC/ISI">
+		
+											</div>
+		
+											<div class="col-md-12" id="ser" align="center">
+												<img width="95%" src="relation.png" alt="One/two-hop relation frequency in the \textsc{CommonGen} dev.\&amp;test sets on ConceptNet.">
+		
+											</div>
+		
+										</div>
 									</div>
-							</div>
-						</div>
-						
-					</div> <!-- /.box-content -->
-
-
-						
-				</div> <!-- /.col-md-8 -->
-				
-				
-
-			</div> <!-- /.row -->
+									<br><br>
+		
+								</div>
 
 <div class="box-content">
 								<div class="row">

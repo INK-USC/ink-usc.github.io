@@ -27,7 +27,7 @@
 		
 		<meta property="og:site_name" content="CommonGen | USC/ISI">
 		<meta property="og:title" content="CommonGen | A Constrained Text Generation Challenge for Generative Commonsense Reasoning">
-		<meta name=description content="Authors: Bill Yuchen Lin, Wangchunshu Zhou, Ming Shen,  Pei Zhou, Chandra Bhagavatula, Yejin Choi and Xiang Ren">
+		<meta name=description content="Authors: Bill Yuchen Lin, Ming Shen, Wangchunshu Zhou, Pei Zhou, Chandra Bhagavatula, Yejin Choi and Xiang Ren">
 		<meta name=keywords content="CommonGen, Yuchen Lin, Bill Lin, Natural Language Processing, Computational Linguistics, SJTU, USC, University of Southern California, Machine Learning, StatNLP, ADAPT Lab, NLP, ML, Cross-Cultural, Cross-lingual, Cross-region, Traffic Prediction, Kenny, Commonsense, Knowledge Graph, Relation">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,24 +45,10 @@ $('.dataTables_length').addClass('bs-select');
 });
 </script>
 
-<link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet">
+<!-- <link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet"> -->
 
-<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+<!-- <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script> -->
 
-<style type="text/css">
-table.dataTable thead .sorting:after,
-table.dataTable thead .sorting:before,
-table.dataTable thead .sorting_asc:after,
-table.dataTable thead .sorting_asc:before,
-table.dataTable thead .sorting_asc_disabled:after,
-table.dataTable thead .sorting_asc_disabled:before,
-table.dataTable thead .sorting_desc:after,
-table.dataTable thead .sorting_desc:before,
-table.dataTable thead .sorting_desc_disabled:after,
-table.dataTable thead .sorting_desc_disabled:before {
-bottom: .5em;
-}
-</style>
 		<!-- <link rel="stylesheet" id="usc-homepage-2017-style-css" href="https://www.usc.edu/wp-content/themes/usc-homepage-2017/assets/css/usc-homepage-2017.css?ver=4.1.0" type="text/css" media="screen,print"> -->
 		<link href="style.css" rel="stylesheet" media="screen">
 		<!-- MDBootstrap Datatables  -->
@@ -87,7 +73,8 @@ bottom: .5em;
 		<link href="js/bootstrap-table.min.css" rel="stylesheet">
 
 <script src="js/bootstrap-table.min.js"></script>
-		
+
+
     </head>
     <body>
 	
@@ -108,6 +95,54 @@ bottom: .5em;
 
 		<header class="site-header">
 			
+<style type="text/css">
+
+	.performanceTable {
+	  margin: 10px 0px;
+	  font-size: 1.2em;
+	}
+	.performanceTable .institution {
+	   margin: 0px 0px 0px 0px;
+	  font-style: italic;
+	  font-weight: 100 !important;
+	  font-family: 'Roboto', sans-serif, Arial;
+	}
+	.performanceTable .date {
+	  font-weight: normal;
+	  font-size: 1.1em;
+	  margin: 0px 0px 10px 0px;
+	}
+	.performanceTable .footnote {
+	  font-weight: normal;
+	  font-size: 0.9em;
+	  margin: 0 0 0 0;
+	}
+	.performanceTable .model {
+	  font-weight: bold;
+	  color:black;
+	  font-size: 1.1em;
+	  margin: 10px 0px 0px 0px;
+	}
+	.performanceTable tr.human-row {
+	  background: #f5f5f5;
+	}
+	.performanceTable td {
+	  text-align: center; 
+	  max-width: 250px;	
+	  vertical-align: middle;
+	  font-size: 1em;
+	}
+	.performanceTable th {
+	  text-align: center;
+	  max-width: 250px;
+	}
+	
+	p {
+	  font-size: 1.1em;
+	  font-weight: 400;
+	}
+	</style>
+			
 			<div class="container">
 				<div class="main-header">
 					<div class="row">
@@ -117,7 +152,7 @@ bottom: .5em;
 							<span style="color:aliceblue; font-size: 15pt; font-family: Roboto, Helvetica, Arial, Heveltica Neue, sans-serif"> A Constrained Text Generation Challenge <br> for Generative Commonsense Reasoning</span> <br>
 
 							<span style="color:aliceblue; font-size: 12pt; font-family: Roboto, Helvetica, Arial, Heveltica Neue, sans-serif">
-								<br> <a target="_blank" href="http://yuchenlin.xyz">Bill Yuchen Lin</a>, Wangchunshu Zhou, Ming Shen,  Pei Zhou, <a target="_blank" href="https://allenai.org/team/chandrab/">Chandra Bhagavatula</a>, <a target="_blank" href="https://homes.cs.washington.edu/~yejin/">Yejin Choi</a>, <a target="_blank" href="http://ink-ron.usc.edu/xiangren/">Xiang Ren</a><br>
+								<br> <a target="_blank" href="http://yuchenlin.xyz">Bill Yuchen Lin</a>, Wangchunshu Zhou, Ming Shen, Pei Zhou, <a target="_blank" href="https://allenai.org/team/chandrab/">Chandra Bhagavatula</a>, <a target="_blank" href="https://homes.cs.washington.edu/~yejin/">Yejin Choi</a>, <a target="_blank" href="http://ink-ron.usc.edu/xiangren/">Xiang Ren</a><br>
 							</span>
 							<br>
 						</div> 
@@ -138,7 +173,7 @@ bottom: .5em;
 								<nav>
 									<ul class="sf-menu"> 
 								<li ><a href="index.html">Introduction</a></li> 
-								<li ><a href="leaderboard.html">Leaderboard</a></li>
+								<li ><a href="leaderboard.html"><b>Leaderboard</b></a></li>
 								<li ><a href="analysis.html">Analysis</a></li>
 								<li ><a href="#misc">Misc.</a></li>
 										<!-- <li ><a href="#blog">Blogs</a></li>  -->
@@ -161,46 +196,7 @@ bottom: .5em;
 
 			<div class="row">
 					<div class="col-md-12">
-						<div class="box-content">
-							<div class="row">
-								<div class="col-md-12" id="about">
-									<!-- <h2 class="widget-title">(Bill) Yuchen Lin</h2> -->
-								<h4 class="widget-title"><span><a href="#about" ><b><em>Introduction</em></b></a></span></h4>
-
-								<div class="col-md-5"> 
-									<p style="font-size:16px">
-
-									Building machines with commonsense to compose realistically plausible sentences is challenging.
-									CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.
-										Given a set of common concepts; the task is to generate a coherent sentence describing an everyday sce- nario using these concepts.
-<br> <br>
-CommonGen is challenging because it inherently requires 1) relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to work on unseen concept combinations. Our dataset, constructed through a combination of crowd-sourcing from AMT and existing caption corpora, consists of 30k concept-sets and 50k sentences in total.
-									</p>
-
-
-
-
-									<p style="text-align: left;"> 
-											 	<b>Links:</b> &nbsp; 
-									
-									<a target="_blank" href="https://yuchenlin.xyz/paper/commongen.pdf">[Paper]</a> &nbsp;
-									<a target="_blank" href="leaderboard.html">[Leaderboard]</a> &nbsp;
-									<a target="_blank" href="https://forms.gle/k181RNK8jPNpKvHD8">[Data]</a> &nbsp;
-									<a target="_blank" href="https://github.com/INK-USC/CommonGen">[Github]</a> &nbsp;  
-									<a target="_blank" href="http://inklab.usc.edu/">[INK Lab]</a> &nbsp; 
-									</p>  
-									
-								</div>
-								<div class="col-md-7"  align="center"> <img width="95%" src="intro.png" alt="USC/ISI">
-								 </div>
-									</div>
-
-								<div  class="col-md-12">
-								
-								</div>
-								</div>
-								
-								</div>
+						
 								
 								</div>
 								 
@@ -208,73 +204,125 @@ CommonGen is challenging because it inherently requires 1) relational reasoning 
 								</div>
 								
 
-
-			<div class="row">
-			
-				<div class="col-md-12">
-				<div class="box-content">
-						<div class="row">
-							<div class="col-md-12" id="exp">
-								<h4 class="widget-title"><span><b><a><em>Key Challenges</em></a></b></span></h4>
-<!--<div style="font-size:15px">-->
-<!--<table-->
-<!--  id="table"-->
-<!--  data-toggle="table"-->
-<!--  data-height=""-->
-<!--  data-url="exp.json"-->
-<!--  data-sort-name="pivotbert"-->
-<!--  data-sort-order="desc" -->
-<!--  style="font-size:15px; color: black"-->
-<!--  >-->
-<!--  <thead theadClasses="thead-light">-->
-<!--  <tr>-->
-<!--     <th data-field="date" data-sortable="true">Date</th>-->
-<!--    <th data-field="model" data-sortable="false">Model</th>-->
-<!--    <th data-field="bleu4" data-sortable="true" data-formatter="%s">BLEU-4</th>-->
-<!--    <th data-field="rouge2" data-sortable="true">ROUGE-2</th>-->
-<!--    <th data-field="meter" data-sortable="true">METER</th>-->
-<!--    <th data-field="cider" data-sortable="true">CIDEr</th>-->
-<!--    <th data-field="spice" data-sortable="true">SPICE</th>-->
-<!--    <th data-field="coverage" data-sortable="true">Coverage</th>-->
-<!--    <th data-field="pivotbert" data-sortable="true">PivotBERT</th>-->
-<!--  </tr>-->
-<!--  </thead> -->
-<!--</table>-->
-
-
-<!--</div>-->
-								<div class="col-md-12" id="ser"  align="center">
-										<img width="95%" src="challenge.png">
-										<br><br>
-
-										<div   align="left">
-										<b>Why is this problem hard?</b><br>
-
-First, it needs much relational commonsense knowledge about given concepts, and they are latent and compositional.
-
-We can see that for this particular real example in our dataset, we need know a list of facts and find the best composition of them for writing the sentence 
-“A woman in a gym exercises by waving ropes tied to a wall.”<br><br>
-
-Second, the dataset needs compositional generalization ability so that it can work for unseen combinations of concepts.
-For example, in the training time, we can see such examples, about apple, bag, put, tree, pick, basket, wash.
-However, in the testing time, the model needs to deal with a more challenging example like this one.
-The model has never seen the concept pear in the training, or the combinations of any two of them.
-
-
-</div>
+								<div class="box-content">
+									<div class="row">
+										<div class="col-md-12" id="exp">
+										<h4 class="widget-title"><span><b><a>CommonGen Leaderboard</a></b></span></h4>
+										
+										<table class="table performanceTable">
+											<tbody>
+											<tr><th><p>Rank</p></th><th><p>Model</p></th><th><p>BLEU-4</p></th><th><p>METEOR</p>
+											</th><th><p>CIDEr</p></th><th><p style="color: black"><b>SPICE</b></p></th></tr>
+											<tr style="background-color: lightgray;"">
+												<td><p class="rank"> &nbsp;</p><span class="date badge badge-secondary"></span></td>
+												<td style="word-break:break-word;"><p class="model" >Human Upper Bound</p>
+												  <!-- <p class="institution">xx</p>
+												  <a href="" target="_blank">Link</a> -->
+												  <!-- <a href="https://arxiv.org/abs/2001.09099" target="_blank">Paper</a>,
+												  <a href="https://github.com/jayleicn/TVRetrieval" target="_blank">Code</a> -->
+												</td>
+												<td><u>44.90</u></td>
+												<td><u>36.20</u></td>
+												<td><u>43.53</u></td>
+												<td><u>63.50</u></td>
+											  </tr>
+											<tr>
+											  <td><p class="rank">1</p><span class="date badge badge-secondary">Aug 26, 2020</span></td>
+											  <td style="word-break:break-word;"><p class="model">KG-BART</p>
+												<p class="institution">University of Illinois at Chicago <br></p>
+												<a href="mailto:yliu279@uic.edu">Email</a> &nbsp; <a href="https://docs.google.com/document/d/1rTxA45-qfn9PwC_uGBnYeHro92tAQ7zNxakM-GbQmXg/edit?usp=sharing
+												" target="_blank">Document</a>
+												<!-- <a href="https://arxiv.org/abs/2001.09099" target="_blank">Paper</a>,
+												<a href="https://github.com/jayleicn/TVRetrieval" target="_blank">Code</a> -->
+											  </td>
+											  <td>30.9</td>
+											  <td>32.4</td>
+											  <td>16.83</td>
+											  <td>32.70</td>
+											</tr>
+											<tr>
+												<td><p>2</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												<td style="word-break:break-word;"><p class="model">T5-Large</p><p class="institution">
+												  Google AI*</p> 
+												  
+												  <a href="https://arxiv.org/abs/1910.10683" target="_blank">T5 Paper</a>
+												</td>
+												<td>28.60</td>
+												<td>30.10</td>
+												<td>14.96</td>
+												<td>31.60</td>
+											  </tr>
+											  <tr>
+												  <td><p>2</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												  <td style="word-break:break-word;"><p class="model">BART</p><p class="institution">
+													FAIR*</p> 
+													
+													<a href="https://arxiv.org/abs/1910.13461" target="_blank">BART Paper</a>
+												  </td>
+												  <td>26.30</td>
+												  <td>30.90</td>
+												  <td>13.92</td>
+												  <td>30.60</td>
+												</tr>
+												<tr>
+												  <td><p>2</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												  <td style="word-break:break-word;"><p class="model">UniLM</p><p class="institution">
+													Microsoft Research Asia*</p> 
+													
+													<a href="https://arxiv.org/abs/1905.03197v3" target="_blank">UniLM Paper</a>
+												  </td>
+												  <td>27.70</td>
+												  <td>29.70</td>
+												  <td>14.85</td>
+												  <td>30.20</td>
+												</tr>
+												<tr>
+												  <td><p>2</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												  <td style="word-break:break-word;"><p class="model">T5-Base</p><p class="institution">
+													Google AI*</p> 
+													
+													<a href="https://arxiv.org/abs/1910.10683" target="_blank">T5 Paper</a>
+												  </td>
+												  <td>16.40</td>
+												  <td>23.00</td>
+												  <td>9.16</td>
+												  <td>22.00</td>
+												</tr>
+												<tr>
+												  <td><p>2</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												  <td style="word-break:break-word;"><p class="model">BERT-Gen</p><p class="institution">
+													Microsoft Research Asia*</p> 
+													
+													<a href="https://github.com/microsoft/unilm/tree/master/s2s-ft" target="_blank">Code</a>
+												  </td>
+												  <td>21.10</td>
+												  <td>27.30</td>
+												  <td>12.49</td>
+												  <td>27.30</td>
+												</tr>
+												<tr>
+												  <td><p>2</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												  <td style="word-break:break-word;"><p class="model">GPT-2</p><p class="institution">
+													Open AI*</p> 
+													
+													<a href="https://github.com/openai/gpt-2" target="_blank">GPT-2 Paper</a>
+												  </td>
+												  <td>21.10</td>
+												  <td>26.20</td>
+												  <td>12.15</td>
+												  <td>25.90</td>
+												</tr>
+											  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+											</tbody>
+										  </table>
+										  <p>
+										</div>
+										<p>* These models were used as baseline methods in our paper, which were fine-tuned on the training data of CommonGen by <em>us</em>.</p>
+										<p><span style="color:red"><b>Submit to this leaderboard:</b></span> You can submit your prediction by sending email to <a href="mailto:yuchen.lin@usc.edu">yuchen.lin@usc.edu</a> with the title "CommonGen submission (your model name)" with the same format of this example prediction file.</p> 
 									</div>
-							</div>
-						</div>
-						
-					</div> <!-- /.box-content -->
-
-
-						
-				</div> <!-- /.col-md-8 -->
-				
-				
-
-			</div> <!-- /.row -->
+									<br><br>
+		
+								</div>
 
 <div class="box-content">
 								<div class="row">
