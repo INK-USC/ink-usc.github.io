@@ -89,20 +89,20 @@ function render(text) {
             // Use a slightly darker version of the bgColor for the border
             borderColor: 'darken'},
     {
-            type   : 'Trigger-1',
-            labels : ['Trigger-1', 'T-1'],
+            type   : 'T-1',
+            labels : ['T-1', 'T-1'],
             bgColor: '#E3E3E3',
             // Use a slightly darker version of the bgColor for the border
             borderColor: 'darken'},
     {
-            type   : 'Trigger-2',
-            labels : ['Trigger-2', 'T-2'],
+            type   : 'T-2',
+            labels : ['T-2', 'T-2'],
             bgColor: '#E3E3E3',
             // Use a slightly darker version of the bgColor for the border
             borderColor: 'darken'},
     {
-            type   : 'Trigger-3',
-            labels : ['Trigger-3', 'T-3'],
+            type   : 'T-3',
+            labels : ['T-3', 'T-3'],
             bgColor: '#E3E3E3',
             // Use a slightly darker version of the bgColor for the border
             borderColor: 'darken'}]
@@ -129,7 +129,7 @@ function render(text) {
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
           ['T1', 'Person', [[0, 5]]],
-          ['T2', 'Trigger-1', [[8, 25]]]
+          ['T2', 'T-1', [[8, 25]]]
       ],
     };
     triggerDatas.push(triggerData1);
@@ -158,7 +158,7 @@ function render(text) {
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
           ['T1', 'Location', [[0, 7]]],
-          ['T2', 'Trigger-1', [[8, 25]]],
+          ['T2', 'T-1', [[8, 25]]],
       ],
     };
     var triggerData2 = {
@@ -168,10 +168,10 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[26, 32]]],
+          ['T1', 'T-1', [[26, 32]]],
           ['T2', 'Organization', [[33, 47]]],
-          ['T3', 'Trigger-2', [[48, 50]]],
-          ['T4', 'Trigger-2', [[62, 71]]],
+          ['T3', 'T-2', [[48, 50]]],
+          ['T4', 'T-2', [[62, 71]]],
       ],
     };
     var triggerData3 = {
@@ -181,9 +181,9 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[62, 71]]],
+          ['T1', 'T-1', [[62, 71]]],
           ['T2', 'Person', [[71, 88]]],
-          ['T3', 'Trigger-2', [[89, 96]]],
+          ['T3', 'T-2', [[89, 96]]],
       ],
     };
     var triggerData4 = {
@@ -193,7 +193,7 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[138, 163]]],
+          ['T1', 'T-1', [[138, 163]]],
           ['T2', 'Location', [[164, 171]]],
       ],
     };
@@ -228,7 +228,7 @@ function render(text) {
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
           ['T1', 'Miscellaneous', [[0, 7]]],
-          ['T2', 'Trigger-1', [[8, 12]]],
+          ['T2', 'T-1', [[8, 12]]],
       ],
     };
 
@@ -239,10 +239,10 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[8, 20]]],
+          ['T1', 'T-1', [[8, 20]]],
           ['T2', 'Person', [[21, 39]]],
-          ['T3', 'Trigger-2', [[40, 43]]],
-          ['T4', 'Trigger-2', [[52, 59]]],
+          ['T3', 'T-2', [[40, 43]]],
+          ['T4', 'T-2', [[52, 59]]],
       ],
     };
 
@@ -253,8 +253,8 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[40, 43]]],
-          ['T2', 'Trigger-1', [[52, 59]]],
+          ['T1', 'T-1', [[40, 43]]],
+          ['T2', 'T-1', [[52, 59]]],
           ['T3', 'Person', [[60, 68]]],
       ],
     };
@@ -266,9 +266,9 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[69, 74]]],
+          ['T1', 'T-1', [[69, 74]]],
           ['T2', 'Organization', [[75, 77]]],
-          ['T3', 'Trigger-2', [[93, 102]]],
+          ['T3', 'T-2', [[93, 102]]],
 
       ],
     };
@@ -298,7 +298,7 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[10, 29]]],
+          ['T1', 'T-1', [[10, 29]]],
           ['T2', 'Disease', [[30, 38]]],
 
       ],
@@ -311,8 +311,8 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[71, 79]]],
-          ['T2', 'Trigger-2', [[87, 97]]],
+          ['T1', 'T-1', [[71, 79]]],
+          ['T2', 'T-2', [[87, 97]]],
           ['T3', 'Disease', [[97, 113]]],
       ],
     };
@@ -342,9 +342,9 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[13, 21]]],
+          ['T1', 'T-1', [[13, 21]]],
           ['T2', 'Chemical', [[22, 26]]],
-          ['T3', 'Trigger-2', [[29, 40]]],
+          ['T3', 'T-2', [[29, 40]]],
 
       ],
     };
@@ -356,7 +356,7 @@ function render(text) {
       entities : [
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
-          ['T1', 'Trigger-1', [[69, 77]]],
+          ['T1', 'T-1', [[69, 77]]],
           ['T2', 'Disease', [[78, 86]]],
       ],
     };
@@ -368,7 +368,7 @@ function render(text) {
           /* Format: [${ID}, ${TYPE}, [[${START}, ${END}]]]
               note that range of the offsets are [${START},${END}) */
           ['T1', 'Chemical', [[102, 119]]],
-          ['T2', 'Trigger-1', [[135, 144]]],
+          ['T2', 'T-1', [[135, 144]]],
       ],
     };
     var triggerData4 = {
@@ -380,7 +380,7 @@ function render(text) {
               note that range of the offsets are [${START},${END}) */
 
           ['T1', 'Chemical', [[124, 134]]],
-          ['T2', 'Trigger-1', [[135, 144]]],
+          ['T2', 'T-1', [[135, 144]]],
       ],
     };
     triggerDatas.push(triggerData1);
