@@ -2,8 +2,8 @@ export default {
     "pubs": [
         {
             "authors": "Xisen Jin, Junyi Du, Xiang Ren.",
-            "venue": "LifelongML@ICML2020",
             "year": "Preprint",
+            "venue": "LifelongML@ICML2020",
             "title": "Gradient Based Memory Editing for Task-Free Continual Learning",
             "raw": "<p><b><a href=\"https://arxiv.org/abs/2006.15294\" target=\"_blank\">Gradient Based Memory Editing for Task-Free Continual Learning</a></b><br> Xisen Jin, Junyi Du, Xiang Ren. <b class='conf_name'>LifelongML @ICML</b> (<a href=\"https://lifelongml.github.io/schedule/\" target=\"_blank\"><b>contributed talk</b></a>), 2020. <a href=\"https://github.com/INK-USC/GMED\" target=\"_blank\"></a><br/></p>"
         },
@@ -16,8 +16,8 @@ export default {
         },
         {
             "authors": "Xisen Jin, Junyi Du, Arka Sadhu, Ram Nevatia, Xiang Ren.",
-            "venue": "EMNLP 2020",
             "year": "2020",
+            "venue": "EMNLP",
             "title": "Visually Grounded Continual Learning of Compositional Phrases",
             "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00785\" target=\"_blank\">Visually Grounded Continual Learning of Compositional Phrases</a></b><br/>  \n\t\t\t\t\t\t\tXisen Jin, Junyi Du, Arka Sadhu, Ram Nevatia, Xiang Ren. <b class='conf_name'>EMNLP 2020</b> <br> (previously at Continual Learning@ICML 2020).<br> </p>"
         },
