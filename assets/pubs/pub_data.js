@@ -1,32 +1,11 @@
 export default {
     "pubs": [
         {
-            "authors": "Qinyuan Ye, Xiao Huang, Xiang Ren",
+            "authors": "Xisen Jin, Junyi Du, Xiang Ren.",
+            "venue": "LifelongML@ICML2020",
             "year": "Preprint",
-            "venue": "arXiv",
-            "title": "Teaching Machine Comprehension with Compositional Explanations",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00806\" target=\"_blank\">Teaching Machine Comprehension with Compositional Explanations</a></b><br/>\n\t\t\t\t\t\t\t Qinyuan Ye, Xiao Huang, Xiang Ren. arXiv 2020.  <br/><a class=\"button pub\" href=\"https://github.com/INK-USC/nl-explanation\" target=\"_blank\">Code &amp; Data</a></p>"
-        },
-        {
-            "authors": "Yanlin Feng, Xinyue Chen, Bill Yuchen Lin, Peifeng Wang, Jun Yan, Xiang Ren",
-            "year": "Preprint",
-            "venue": "arXiv",
-            "title": "Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00646\" target=\"_blank\">Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering</a></b><br/>\n\t\t\t\t\t\t\t Yanlin Feng, Xinyue Chen, Bill Yuchen Lin, Peifeng Wang, Jun Yan, Xiang Ren. arXiv 2020.  <br/>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/MHGRN\" target=\"_blank\">Github</a></p>"
-        },
-        {
-            "authors": "Pei Zhou, Rahul Khanna, Bill Yuchen Lin, Daniel Ho, Xiang Ren, Jay Pujara",
-            "year": "Preprint",
-            "venue": "arXiv",
-            "title": "<b>Can BERT Reason?</b> Logically Equivalent Probes for Evaluating the Inference Capabilities of Language Models",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00782\" target=\"_blank\"><b>Can BERT Reason?</b> Logically Equivalent Probes for Evaluating the Inference Capabilities of Language Models</a></b><br/>\n\t\t\t\t\t\t\t Pei Zhou, Rahul Khanna, Bill Yuchen Lin, Daniel Ho, Xiang Ren, Jay Pujara. arXiv 2020. <br></p>"
-        },
-        {
-            "authors": "Peifeng Wang, Nanyun Peng, Pedro Szekely, Xiang Ren",
-            "year": "Preprint",
-            "venue": "arXiv",
-            "title": "Connecting the Dots: A Knowledgeable Path Generator for Commonsense Question Answering",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00691\" target=\"_blank\">Connecting the Dots: A Knowledgeable Path Generator for Commonsense Question Answering</a></b><br/>\n\t\t\t\t\t\t\t Peifeng Wang, Nanyun Peng, Pedro Szekely, Xiang Ren. arXiv 2020.  <br/>\n<a class=\"button pub\" href=\"https://github.com/wangpf3/Commonsense-Path-Generator\" target=\"_blank\">Github</a><br></p>"
+            "title": "Gradient Based Memory Editing for Task-Free Continual Learning",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2006.15294\" target=\"_blank\">Gradient Based Memory Editing for Task-Free Continual Learning</a></b><br> Xisen Jin, Junyi Du, Xiang Ren. <b class='conf_name'>LifelongML @ICML</b> (<a href=\"https://lifelongml.github.io/schedule/\" target=\"_blank\"><b>contributed talk</b></a>), 2020. <a href=\"https://github.com/INK-USC/GMED\" target=\"_blank\"></a><br/></p>"
         },
         {
             "authors": "Woojeong Jin, Suji Kim, Xiang Ren",
@@ -37,24 +16,87 @@ export default {
         },
         {
             "authors": "Xisen Jin, Junyi Du, Arka Sadhu, Ram Nevatia, Xiang Ren.",
+            "venue": "EMNLP 2020",
             "year": "2020",
-            "venue": "Continual Learning @ICML",
-            "title": "Visually Grounded Continual Learning of Compositional Semantics",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00785\" target=\"_blank\">Visually Grounded Continual Learning of Compositional Semantics</a></b><br/>  \n\t\t\t\t\t\t\tXisen Jin, Junyi Du, Arka Sadhu, Ram Nevatia, Xiang Ren. <b class='conf_name'>Continual Learning @ICML 2020</b>.<br></p>"
+            "title": "Visually Grounded Continual Learning of Compositional Phrases",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00785\" target=\"_blank\">Visually Grounded Continual Learning of Compositional Phrases</a></b><br/>  \n\t\t\t\t\t\t\tXisen Jin, Junyi Du, Arka Sadhu, Ram Nevatia, Xiang Ren. <b class='conf_name'>EMNLP 2020</b> <br> (previously at Continual Learning@ICML 2020).<br> </p>"
         },
         {
-            "authors": "Xisen Jin, Junyi Du, Xiang Ren.",
+            "authors": "Yanlin Feng*, Xinyue Chen*, Bill Yuchen Lin, Peifeng Wang, Jun Yan, Xiang Ren",
             "year": "2020",
-            "venue": "LifelongML @ICML",
-            "title": "Gradient Based Memory Editing for Task-Free Continual Learning",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/2006.15294\" target=\"_blank\">Gradient Based Memory Editing for Task-Free Continual Learning</a></b><br/> \n\t\t\t\t\t\t\tXisen Jin, Junyi Du, Xiang Ren. <b class='conf_name'>LifelongML @ICML 2020</b> (<a href=\"https://lifelongml.github.io/schedule/\" target=\"_blank\"> <b>contributed talk</b></a>). <a href=\"https://github.com/INK-USC/GMED\" target=\"_blank\"></a><br></p>"
+            "venue": "EMNLP",
+            "title": "Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00646\" target=\"_blank\">Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering</a></b><br/>\n\t\t\t\t\t\t\t Yanlin Feng, Xinyue Chen, Bill Yuchen Lin, Peifeng Wang, Jun Yan, Xiang Ren. <b class='conf_name'>EMNLP 2020</b> <br/>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/MHGRN\" target=\"_blank\">Github</a></p>"
         },
         {
-            "authors": "Bill Yuchen Lin, Ming Shen, Pei Zhou, Chandra Bhagavatula, Yejin Choi, Xiang Ren",
+            "authors": "Woojeong Jin, Meng Qu, Xisen Jin, Xiang Ren.",
             "year": "2020",
-            "venue": "AKBC",
+            "venue": "EMNLP",
+            "title": "Recurrent Event Network for Reasoning over Temporal Knowledge Graphs",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/1904.05530\">Recurrent Event Network: Autoregressive Structure Inference over Temporal Knowledge Graphs</a></b><br/>\n\t\t\t\t\t\t\t\t\t\tWoojeong Jin, Meng Qu, Xisen Jin, Xiang Ren. <b class='conf_name'>EMNLP 2020</b><br>(previously at ICLR-RLGM)<br/>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/RENet\" target=\"_blank\">Github</a> <a class=\"button pub\" href=\"https://github.com/woojeongjin/dynamic-KG\" target=\"_blank\">Survey</a>\n<br></p>"
+        },
+        {
+            "authors": "Bill Yuchen Lin, Seyeon Lee, Rahul Khanna, Xiang Ren.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "Birds have four legs?! NumerSense: Probing Numerical Commonsense Knowledge of Pre-trained Language Models",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00683\" target=\"_blank\">Birds have four legs?! NumerSense: Probing Numerical Commonsense Knowledge of Pre-trained Language Models</a></b> <br> Bill Yuchen Lin, Seyeon Lee, Rahul Khanna, Xiang Ren. <b class='conf_name'>EMNLP</b> 2020. <br/><a href=\"https://inklab.usc.edu/NumerSense/\" class='button pub' target=\"_blank\">Project website</a> </p>"
+        },
+        {
+            "authors": "Deren Lei, Gangrong Jiang, Xiaotao Gu, Kexuan Sun, Yuning Mao, Xiang Ren.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "Learning Collaborative Agents with Rule Guidance for Knowledge Graph Reasoning",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00571\" target=\"_blank\">Learning Collaborative Agents with Rule Guidance for Knowledge Graph Reasoning</a></b><br>Deren Lei, Gangrong Jiang, Xiaotao Gu, Kexuan Sun, Yuning Mao, Xiang Ren. <b class=\"conf_name\">EMNLP</b> 2020. <br/>\n</p>"
+        },
+        {
+            "authors": "Yuning Mao, Yanru Qu, Yiqing Xie, Xiang Ren, Jiawei Han.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "Multi-document Summarization with Maximal Marginal Relevance-guided Reinforcement Learning",
+            "raw": "<p><b><a>Multi-document Summarization with Maximal Marginal Relevance-guided Reinforcement Learning</a></b><br>Yuning Mao, Yanru Qu, Yiqing Xie, Xiang Ren, Jiawei Han. <b class=\"conf_name\">EMNLP</b> 2020. <br/>\n</p>"
+        },
+        {
+            "authors": "Jiaming Shen, Wenda Qiu, Jingbo Shang, Michelle Vanni, Xiang Ren, Jiawei Han.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "SynSetExpan: An Iterative Framework for Joint Entity Set Expansion and Synonym Discovery",
+            "raw": "<p><b><a>SynSetExpan: An Iterative Framework for Joint Entity Set Expansion and Synonym Discovery</a></b><br>Jiaming Shen, Wenda Qiu, Jingbo Shang, Michelle Vanni, Xiang Ren, Jiawei Han. <b class=\"conf_name\">EMNLP</b> 2020. <br/>\n</p>"
+        },
+        {
+            "authors": "Qinyuan Ye, Xiao Huang, Xiang Ren.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "Teaching Machine Comprehension with Compositional Explanations",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00806\" target=\"_blank\">Teaching Machine Comprehension with Compositional Explanations</a></b><br>Qinyuan Ye, Xiao Huang, Xiang Ren. <b class=\"conf_name\">EMNLP</b> 2020 (<i>Findings</i>). <br/>(previously at Human In the Loop Learning@ICML 2020)<br><a href=\"https://github.com/INK-USC/nl-explanation\" class=\"button pub\" target=\"_blank\">Code &amp; Data</a><br/>\n\n</p>"
+        },
+        {
+            "authors": "Bill Yuchen Lin, Ming Shen, Pei Zhou, Chandra Bhagavatula, Yejin Choi, Xiang Ren.",
+            "year": "2020",
+            "venue": "EMNLP",
             "title": "<b>CommonGen</b>: A Constrained Text Generation Challenge for Generative Commonsense Reasoning",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/1911.03705\" target=\"_blank\"><b>CommonGen</b>: A Constrained Text Generation Challenge for Generative Commonsense Reasoning</a></b> <br/>\n\t\t\t\t\t\t\tBill Yuchen Lin, Ming Shen, Pei Zhou, Chandra Bhagavatula, Yejin Choi, Xiang Ren. <b class='conf_name'>AKBC 2020</b>.  <br/>\n<a class=\"button pub\" href=\"http://inklab.usc.edu/CommonGen/\" target=\"_blank\">Leaderboard</a>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/CommonGen\" target=\"_blank\">Code &amp; Data</a><br>\n</p>"
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/1911.03705\" target=\"_blank\"><b>CommonGen</b>: A Constrained Text Generation Challenge for Generative Commonsense Reasoning</a></b><br> Bill Yuchen Lin, Ming Shen, Pei Zhou, Chandra Bhagavatula, Yejin Choi, Xiang Ren. <b class='conf_name'>EMNLP</b> 2020 (<i>Findings</i>). <br/>(previously at AKBC 2020)<br><a href=\"http://inklab.usc.edu/CommonGen/\" target=\"_blank\" class='button pub'>Leaderboard</a> <a href=\"https://github.com/INK-USC/CommonGen\" class='button pub' target=\"_blank\">Code &amp; Data</a><br/>\n</p>"
+        },
+        {
+            "authors": "Pei Zhou, Rahul Khanna, Bill Yuchen Lin, Daniel Ho, Jay Pujara, Xiang Ren.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "RICA: Evaluating Robust Inference Capabilities Based on Commonsense Axioms",
+            "raw": "<p><b><a>RICA: Evaluating Robust Inference Capabilities Based on Commonsense Axioms</a></b><br>Pei Zhou, Rahul Khanna, Bill Yuchen Lin, Daniel Ho, Jay Pujara, Xiang Ren. <b class='conf_name'>EMNLP</b> 2020 (<i>Findings</i>) <br/>\n</p>"
+        },
+        {
+            "authors": "Peifeng Wang, Nanyun Peng, Pedro Szekely, Xiang Ren.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "Connecting the Dots: A Knowledgeable Path Generator for Commonsense Question Answering",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2005.00691\" target=\"_blank\">Connecting the Dots: A Knowledgeable Path Generator for Commonsense Question Answering</a></b><br>Peifeng Wang, Nanyun Peng, Pedro Szekely, Xiang Ren. <b class='conf_name'>EMNLP</b> 2020 (<i>Findings</i>)<br> <a href=\"https://github.com/wangpf3/Commonsense-Path-Generator\" class='button pub' target=\"_blank\">Code</a><br/>\n</p>"
+        },
+        {
+            "authors": "Hancheng Cao, Mengjie Cheng, Zhepeng Cen, Daniel McFarland, Xiang Ren.",
+            "year": "2020",
+            "venue": "EMNLP",
+            "title": "Will this Idea Spread Beyond Academia? Understanding Knowledge Transfer of Scientific Concepts across Text Corpora",
+            "raw": "<p><b><a>Will this Idea Spread Beyond Academia? Understanding Knowledge Transfer of Scientific Concepts across Text Corpora</a></b><br>Hancheng Cao, Mengjie Cheng, Zhepeng Cen, Daniel McFarland, Xiang Ren. <b class='conf_name'>EMNLP</b> 2020 (<i>Findings</i>) <br/>\n</p>"
         },
         {
             "authors": "Brendan Kennedy*, Xisen Jin*, Aida Mostafazadeh Davani, Morteza Dehghani, Xiang Ren.",
@@ -160,13 +202,6 @@ export default {
             "venue": "EMNLP",
             "title": "Reporting the Unreported: Event Extraction for Analyzing the Local Representation of Hate Crimes",
             "raw": "<p><b><a>Reporting the Unreported: Event Extraction for Analyzing the Local Representation of Hate Crimes</a></b><br/>\n\t\t\t\t\t\t\t\t\t\tAida Mostafazadeh Davani, Leigh Yeh, Mohammad Atari, Brendan Kennedy, Gwenyth Portillo Wightman, Elaine Gonzalez, Natalie Delong, Rhea Bhatia, Arineh Mirinjian, Xiang Ren and Morteza Dehghani. <b class='conf_name'>EMNLP 2019</b> (short).<br/>\n<a class=\"button pub\" href=\"https://github.com/aiida-/HateCrime\" target=\"_blank\">Github</a>\n</p>"
-        },
-        {
-            "authors": "Woojeong Jin, Changlin Zhang, Pedro Szekely, Xiang Ren.",
-            "year": "2019",
-            "venue": "Short version accepted to ICLR-RLGM",
-            "title": "Recurrent Event Network for Reasoning over Temporal Knowledge Graphs",
-            "raw": "<p><b><a href=\"https://arxiv.org/abs/1904.05530\">Recurrent Event Network for Reasoning over Temporal Knowledge Graphs</a></b><br/>\n\t\t\t\t\t\t\t\t\t\tWoojeong Jin, Changlin Zhang, Pedro Szekely, Xiang Ren. <b class='conf_name'>Short version accepted to ICLR-RLGM 2019.</b><br/>\n<a class=\"button pub\" href=\"https://github.com/INK-USC/RENet\" target=\"_blank\">Github</a> <a class=\"button pub\" href=\"https://github.com/woojeongjin/dynamic-KG\" target=\"_blank\">Survey</a>\n</p>"
         },
         {
             "authors": "Junyi Du, He Jiang, Jiaming Shen, Xiang Ren.",
