@@ -34,6 +34,16 @@
 		background-color: rgba(0, 0, 0, .5);
 		box-shadow: 0 0 1px rgba(255, 255, 255, .3);
 		}
+
+		@media screen and (max-width: 480px) {
+			#news > * {
+				padding: 0 0 0 0;
+			}
+
+			#news {
+				margin: 0 0 0 0.5em;
+			}
+		}
 	</style>
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -139,11 +149,12 @@
 							<a class="next" onclick="plusSlides(1); reset_timer();">&#10095;</a>
 						</div>
 					</div> -->
-					<div class="6u 12u$(xsmall)" style="border-right-style: 1px solid; margin-top: -30px; background-color: #f8f8f8">
-						<div class="content" style="overflow-y: scroll; max-height: 550px; padding-top: 20px; padding-right: 14px;" id="div-news">
-							<header>
+					<div class="6u 12u$(xsmall)" style="padding-top: 20px; margin-top: -20px; background-color: #f8f8f8;" id="news">
+							<header style="padding-right: 30px; margin-bottom: 0px;">
 								<h2>News</h2>
+								<hr>
 							</header>
+							<div class="content" style="overflow-y: scroll; padding-left: 10px; max-height: 500px; padding-right: 20px; margin-top: 0px;" id="div-news">
 							<ul>
 								<li><b>Sep, 2020</b> - INK lab has 12 papers accepted to EMNLP 2020 (7 to main conference and 5 to Findings of EMNLP).</li>
 								<li><b>Aug, 2020</b> - Xiang will serve as Area Chair for AAAI 2021.</li>
@@ -189,8 +200,7 @@
 					
 
 								</ul>
-						</div> 
-						
+						</div>
 					</div>
 				</div>
 					
