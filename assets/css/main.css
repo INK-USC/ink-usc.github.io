@@ -3583,10 +3583,12 @@
 		#banner h1 {
 			font-size: 2em;
 			margin: 0 0 0em 0;
-			padding: 0;
+			padding: 150px 0 0 0;
 			letter-spacing: 3px;
 			font-weight: 700;
 		}
+
+
 
 			#banner h1 span {
 				font-weight: 400;
@@ -3600,6 +3602,13 @@
 
 			#banner {
 				padding: 3em 0 7em 0;
+			}
+			#banner h1 {
+				font-size: 2em;
+				margin: 0 0 0em 0;
+				padding: 20px 0 0 0;
+				letter-spacing: 3px;
+				font-weight: 700;
 			}
 
 		}

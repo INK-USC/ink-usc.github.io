@@ -21,8 +21,7 @@
         <meta name="author" content="INK Research Lab @ USC">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" /> 
-	<link rel="stylesheet" href="assets/css/slideshow.css"/>
+
 	<style>
 		::-webkit-scrollbar {
 		-webkit-appearance: none;
@@ -44,8 +43,19 @@
 				margin: 0 0 0 0.5em;
 			}
 		}
-	</style>
 
+		#banner {
+			height: 400px;
+		}
+		@media screen and (max-width: 480px) {
+			#banner {
+				height: 200px
+			}
+		}
+
+	</style>
+<link rel="stylesheet" href="assets/css/main.css" /> 
+<link rel="stylesheet" href="assets/css/slideshow.css"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -83,9 +93,9 @@
 
 		<!-- Banner -->
 			<!-- <section id="banner" style="height:1.3em; background-image: linear-gradient(to bottom, #3a0008, #530718, #6e1224, #8a1e30, #a72a3d);"  > -->
-				<section id="banner" style="height:400px; opacity: 1; background-attachment: fixed; background-image: url('images/viterbi_compress.jpg'); background-position-y: -200px;" >
+				<section id="banner" style="opacity: 1; background-attachment: fixed; background-image: url('images/viterbi_compress.jpg'); background-position-y: -200px;" >
 					<div class="inner">
-						<h1 style="padding: 150px 0 0 0">Intelligence and Knowledge Discovery Research Lab @ USC</h1>
+						<h1 id="banner_title">Intelligence and Knowledge Discovery Research Lab @ USC</h1>
 					</div>
 			</section>
 
