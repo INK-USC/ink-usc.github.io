@@ -323,8 +323,12 @@ $('.dataTables_length').addClass('bs-select');
 										</div>
 										<p>* These models were used as baseline methods in our paper, which were fine-tuned on the training data of CommonGen by <em>us</em>.</p>
 										<p><span style="color:red"><b>Submit to this leaderboard:</b></span> You can submit your prediction by sending email to <a href="mailto:yuchen.lin@usc.edu">yuchen.lin@usc.edu</a> with the title "CommonGen submission (your model name)" and the same format of <a href="test_submission_example.jsonl" target="_blank">this example prediction file</a>.</p> 
+										
+										<p>We use SPICE for ranking all methods because SPICE correlates our human evaluation the most (please check our paper for more details.) </p>
 
 										<p>The above results are based on our latest human references (v1.1) and the previous version can be found <a href="leaderboard_v1.0.html" target="_blank">here</a>.</p>
+
+										<p>The difference between v1.1 and v1.0 is about the human references of the test examples. We add one more human reference for each example in the test set (previous 4, now 5). The train/dev data and test data's input are unchanged. </p>
 									</div>
 									<br><br>
 		
@@ -345,11 +349,22 @@ $('.dataTables_length').addClass('bs-select');
   &nbsp;&nbsp;&nbsp;&nbsp;year      = {2019} <br>
 } -->
 
-<pre><code>@article{lin20comgen,
-    author = {Bill Yuchen Lin  and Wangchunshu Zhou and Ming Shen and Pei Zhou and Chandra Bhagavatula and Yejin Choi and Xiang Ren},
-    title = {CommonGen: A Constrained Text Generation Challenge for Generative Commonsense Reasoning},
-    journal = {Findings of EMNLP},
-    year = {2020},
+<pre><code>@inproceedings{lin-etal-2020-commongen,
+    title = "{C}ommon{G}en: A Constrained Text Generation Challenge for Generative Commonsense Reasoning",
+    author = "Lin, Bill Yuchen  and
+      Zhou, Wangchunshu  and
+      Shen, Ming  and
+      Zhou, Pei  and
+      Bhagavatula, Chandra  and
+      Choi, Yejin  and
+      Ren, Xiang",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2020",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.findings-emnlp.165",
+    pages = "1823--1840", 
 }
 </code></pre>
 		</div>
