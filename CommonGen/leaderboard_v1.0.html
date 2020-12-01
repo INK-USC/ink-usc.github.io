@@ -211,8 +211,8 @@ $('.dataTables_length').addClass('bs-select');
 										
 										<table class="table performanceTable">
 											<tbody>
-											<tr><th><p>Rank</p></th><th><p>Model</p></th><th><p>BLEU-4</p></th> 
-											<th><p>CIDEr</p></th><th><p style="color: black"><b>SPICE</b></p></th></tr>
+											<tr><th><p>Rank</p></th><th><p>Model</p></th><th><p>BLEU-4</p></th><th><p>METEOR</p>
+											</th><th><p>CIDEr</p></th><th><p style="color: black"><b>SPICE</b></p></th></tr>
 											<tr style="background-color: lightgray;"">
 												<td><p class="rank"> &nbsp;</p><span class="date badge badge-secondary"></span></td>
 												<td style="word-break:break-word;"><p class="model" >Human Upper Bound</p>
@@ -221,9 +221,10 @@ $('.dataTables_length').addClass('bs-select');
 												  <!-- <a href="https://arxiv.org/abs/2001.09099" target="_blank">Paper</a>,
 												  <a href="https://github.com/jayleicn/TVRetrieval" target="_blank">Code</a> -->
 												</td>
-												<td><u>46.49</u></td>
-												<td><u>37.64</u></td> 
-												<td><u>52.43</u></td>
+												<td><u>44.90</u></td>
+												<td><u>36.20</u></td>
+												<td><u>43.53</u></td>
+												<td><u>63.50</u></td>
 											  </tr>
 											<tr>
 											  <td><p class="rank">1</p><span class="date badge badge-secondary">Aug 26, 2020</span></td>
@@ -232,9 +233,10 @@ $('.dataTables_length').addClass('bs-select');
 												<a href="mailto:yliu279@uic.edu">Email</a> &nbsp; <a href="https://arxiv.org/abs/2009.12677
 												" target="_blank">Paper</a>
 											  </td>
-											  <td>33.867</td> 
-											  <td>16.927</td>
-											  <td>29.634</td>
+											  <td>30.9</td>
+											  <td>32.4</td>
+											  <td>16.83</td>
+											  <td>32.70</td>
 											</tr>
 
 											<tr>
@@ -243,9 +245,10 @@ $('.dataTables_length').addClass('bs-select');
 												  <p class="institution">MSRA and Fudan University<br></p>
 												  <a href="mailto:fanzh18@fudan.edu.cn">Email</a> &nbsp; <a href="" target="_blank">Paper (COLING 2020)</a>
 												</td>
-												<td>35.945</td> 
-												<td>16.999</td>
-												<td>29.583</td>
+												<td>32.5</td>
+												<td>32.4</td>
+												<td>16.84</td>
+												<td>32.40</td>
 											  </tr>
 											  
 											<tr>
@@ -255,9 +258,10 @@ $('.dataTables_length').addClass('bs-select');
 												  
 												  <a href="https://arxiv.org/abs/1910.10683" target="_blank">T5 Paper</a>
 												</td>
-												<td>31.962</td> 
-												<td>15.128</td>
-												<td>28.855</td>
+												<td>28.60</td>
+												<td>30.10</td>
+												<td>14.96</td>
+												<td>31.60</td>
 											  </tr>
 											  <tr>
 												  <td><p>4</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
@@ -266,9 +270,10 @@ $('.dataTables_length').addClass('bs-select');
 													
 													<a href="https://arxiv.org/abs/1910.13461" target="_blank">BART Paper</a>
 												  </td>
-												  <td>31.827</td> 
-												  <td>13.976</td>
-												  <td>27.995</td>
+												  <td>26.30</td>
+												  <td>30.90</td>
+												  <td>13.92</td>
+												  <td>30.60</td>
 												</tr>
 												<tr>
 												  <td><p>5</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
@@ -277,45 +282,47 @@ $('.dataTables_length').addClass('bs-select');
 													
 													<a href="https://arxiv.org/abs/1905.03197v3" target="_blank">UniLM Paper</a>
 												  </td>
-												  <td>30.616</td> 
-												  <td>14.889</td>
-												  <td>27.429</td>
+												  <td>27.70</td>
+												  <td>29.70</td>
+												  <td>14.85</td>
+												  <td>30.20</td>
 												</tr>
 												<tr>
 												  <td><p>6</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
-												  <td style="word-break:break-word;"><p class="model">BERT-Gen</p><p class="institution">
-													Fine-tuned by USC-INK</p> 
-													
-													<a href="https://github.com/microsoft/unilm/tree/master/s2s-ft" target="_blank">Code</a>
-												  </td>
-												  <td>23.468</td> 
-												  <td>12.606</td>
-												  <td>24.822</td>
-												</tr>
-												<tr>
-												  <td><p>7</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
-												  <td style="word-break:break-word;"><p class="model">GPT-2</p><p class="institution">
-													Fine-tuned by USC-INK</p> 
-													
-													<a href="https://github.com/openai/gpt-2" target="_blank">GPT-2 Paper</a>
-												  </td>
-												  <td>26.833</td> 
-												  <td>12.187</td>
-												  <td>23.567</td>
-												</tr>
-												<tr>
-												  <td><p>8</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
 												  <td style="word-break:break-word;"><p class="model">T5-Base</p><p class="institution">
 													Fine-tuned by USC-INK</p> 
 													
 													<a href="https://arxiv.org/abs/1910.10683" target="_blank">T5 Paper</a>
 												  </td>
-												  <td>18.546</td> 
-												  <td>9.399</td>
-												  <td>19.871</td>
+												  <td>16.40</td>
+												  <td>23.00</td>
+												  <td>9.16</td>
+												  <td>22.00</td>
 												</tr>
-												
-												
+												<tr>
+												  <td><p>7</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												  <td style="word-break:break-word;"><p class="model">BERT-Gen</p><p class="institution">
+													Fine-tuned by USC-INK</p> 
+													
+													<a href="https://github.com/microsoft/unilm/tree/master/s2s-ft" target="_blank">Code</a>
+												  </td>
+												  <td>21.10</td>
+												  <td>27.30</td>
+												  <td>12.49</td>
+												  <td>27.30</td>
+												</tr>
+												<tr>
+												  <td><p>8</p><span class="date badge badge-secondary">Jun 1, 2020</span></td>
+												  <td style="word-break:break-word;"><p class="model">GPT-2</p><p class="institution">
+													Fine-tuned by USC-INK</p> 
+													
+													<a href="https://github.com/openai/gpt-2" target="_blank">GPT-2 Paper</a>
+												  </td>
+												  <td>21.10</td>
+												  <td>26.20</td>
+												  <td>12.15</td>
+												  <td>25.90</td>
+												</tr>
 											  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 											</tbody>
 										  </table>
@@ -323,8 +330,6 @@ $('.dataTables_length').addClass('bs-select');
 										</div>
 										<p>* These models were used as baseline methods in our paper, which were fine-tuned on the training data of CommonGen by <em>us</em>.</p>
 										<p><span style="color:red"><b>Submit to this leaderboard:</b></span> You can submit your prediction by sending email to <a href="mailto:yuchen.lin@usc.edu">yuchen.lin@usc.edu</a> with the title "CommonGen submission (your model name)" and the same format of <a href="test_submission_example.jsonl" target="_blank">this example prediction file</a>.</p> 
-
-										<p>The above results are based on our latest human references (v1.1) and the previous version can be found <a href="leaderboard_v1.0.html" target="_blank">here</a>.</p>
 									</div>
 									<br><br>
 		
