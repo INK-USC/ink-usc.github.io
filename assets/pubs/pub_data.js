@@ -1,6 +1,13 @@
 export default {
     "pubs": [
         {
+            "authors": "Wangchunshu Zhou*, Dong-Ho Lee*, Ravi Kiran Selvam, Seyeon Lee, Bill Yuchen Lin, Xiang Ren",
+            "year": "Preprint",
+            "venue": "SSL@NeurIPS",
+            "raw": "<p><b><a href=\"https://arxiv.org/abs/2011.07956\" target=\"_blank\">Gradient Based Memory Editing for Task-Free Continual Learning</a></b><br> Xisen Jin, Junyi Du, Xiang Ren. <b class='conf_name'>LifelongML@ICML 2020</b> (<a href=\"https://lifelongml.github.io/schedule/\" target=\"_blank\"><b>contributed talk</b></a>). <a href=\"https://github.com/INK-USC/GMED\" target=\"_blank\"></a><br/></p>"
+
+        },
+        {
             "authors": "Xisen Jin, Junyi Du, Xiang Ren.",
             "year": "Preprint",
             "venue": "LifelongML@ICML2020",
