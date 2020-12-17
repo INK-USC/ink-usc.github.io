@@ -1,0 +1,77 @@
+[
+    {
+		"model": "ESIM-Glove",
+		"a-yes": "58.2",
+		"a-multi": "45.8",
+		"a-all": "52.0",
+		"b-yes": "0.469",
+		"b-multi": "0.897",
+		"b-all": "0.683"
+    },
+
+    {
+		"model": "ESIM-ELMO",
+		"a-yes": "63.3",
+		"a-multi": "45.8",
+		"a-all": "54.5",
+		"b-yes": "0.515",
+		"b-multi": "0.897",
+		"b-all": "0.796"
+    },
+
+    {
+		"model": "BiDAF++",
+		"a-yes": "51.7",
+		"a-multi": "30.1",
+		"a-all": "40.9",
+		"b-yes": "0.478",
+		"b-multi": "0.898",
+		"b-all": "0.688"
+    },
+
+    {
+		"model": "BERT-Base (GRU)",
+		"a-yes": "67.6",
+		"a-multi": "41.5",
+		"a-all": "55.4",
+		"b-yes": "0.477",
+		"b-multi": "0.705",
+		"b-all": "0.583"
+    },
+
+    {
+		"model": "BERT-Large (GRU)",
+		"a-yes": "69.2",
+		"a-multi": "48.2",
+		"a-all": "59.4",
+		"b-yes": "0.486",
+		"b-multi": "0.651",
+		"b-all": "0.562"
+    },
+
+    {
+		"model": "BERT-Large++",
+		"a-yes": "71.1",
+		"a-multi": "49.5",
+		"a-all": "61.0",
+		"b-yes": "0.518",
+		"b-multi": "0.674",
+		"b-all": "0.590"
+    },
+	
+
+	{
+		"model": "Human Performance",
+		"a-yes": "81.3",
+		"a-multi": "77.4",
+		"a-all": "79.4",
+		"b-yes": "",
+		"b-multi": "",
+		"b-all": ""
+	}
+
+
+
+
+
+]
