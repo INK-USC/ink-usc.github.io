@@ -5,348 +5,413 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-	<head>
+
+<head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34679733-4"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-34679733-4');
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-34679733-4');
 	</script>
 
 	<title>INK Research Lab - USC Computer Science</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="INK Research Lab @ USC">
-        <meta name="author" content="INK Research Lab @ USC">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="INK Research Lab @ USC">
+	<meta name="author" content="INK Research Lab @ USC">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" /> 
+	<link rel="stylesheet" href="assets/css/main.css" />
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
- 
-    <style>
-    
-    table { 
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 80%;
-  table-layout: fixed;
-}
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 
-table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
-}
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: 0;
+			padding: 0;
+			width: 95%;
+			table-layout: fixed;
+		}
 
-table tr { 
-  padding: .35em;
-}
+		table caption {
+			font-size: 1.5em;
+			margin: .5em 0 .75em;
+		}
 
-table th,
-table td {
-  padding: .625em;
-  text-align: left;
-}
+		table tr {
+			padding: .35em;
+		}
 
-table th {
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
+		table th,
+		table td {
+			padding: .625em;
+			text-align: left;
+		}
 
-@media screen and (max-width: 900px) {
-  table {
-    border: 0;
-  }
+		table th {
+			font-size: .85em;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+		}
 
-  table caption {
-    font-size: 1.3em;
-  }
-  
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  
-  table tr { 
-    display: block;
-    margin-bottom: .625em;
-  }
-  
-  table td { 
-    display: block;
-    font-size: .8em;
-    text-align: center;
-  }
-  
-  table td::before {
-    /*
+		@media screen and (max-width: 900px) {
+			table {
+				border: 0;
+			}
+
+			table caption {
+				font-size: 1.3em;
+			}
+
+			table thead {
+				border: none;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+			table tr {
+				display: block;
+				margin-bottom: .625em;
+			}
+
+			table td {
+				display: block;
+				font-size: .8em;
+				text-align: center;
+			}
+
+			table td::before {
+				/*
     * aria-label has no advantage, it won't be read inside a table
     content: attr(aria-label);
     */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  table td:last-child {
-    border-bottom: 0;
-  }
-}
-.image-cropper {
-    width: 125px;
-    height: 125px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-bottom: 10px;	
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
 
-}
+			table td:last-child {
+				border-bottom: 0;
+			}
+		}
 
+		.image-cropper {
+			width: 125px;
+			height: 125px;
+			position: relative;
+			overflow: hidden;
+			border-radius: 50%;
+			margin-bottom: 10px;
 
-</style>
-<script language="javascript">
-				var ie4 = false; if(document.all) { ie4 = true; }
-			function getObject(id) { if (ie4) { return document.all[id]; } else { return document.getElementById(id); } }
-			function toggle(link, divId) { var lText = link.innerHTML; var d = getObject(divId);
-			 if (lText == '[show more]') { link.innerHTML = '[hide more]'; d.style.display = 'block'; }
-			 else { link.innerHTML = '[show more]'; d.style.display = 'none'; } }
-			   </script>
+		}
+	</style>
+	<script language="javascript">
+		var ie4 = false; if (document.all) { ie4 = true; }
+		function getObject(id) { if (ie4) { return document.all[id]; } else { return document.getElementById(id); } }
+		function toggle(link, divId) {
+			var lText = link.innerHTML; var d = getObject(divId);
+			if (lText == '[show more]') { link.innerHTML = '[hide more]'; d.style.display = 'block'; }
+			else { link.innerHTML = '[show more]'; d.style.display = 'none'; }
+		}
+	</script>
 
-	</head>
-	<body>
+</head>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="logo"> <img width="55" style="padding: 0.5em 0 0 0" src="images/logo.png"> </a>
-					<nav id="nav">
-							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="index.html">Home</a>
-							<a style="color:#FF0433;" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="people.html"><u>People</u></a>
-							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="research.html">Research</a>
-							
-							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="publications.html">Publications</a>
-							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="software.html">Software</a>
-							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="sponsors.html">Sponsors</a>
-						<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="teaching.html">Teaching</a>
-							<!-- <a href="elements.html">Resources</a> -->
-							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="contact.html">Join Us</a>
-					</nav>
-					<div class="inner">
-						<img class="usclogo" src="images/usc-shield-name-white.png" >
-					</div>	
-				</div>
-			</header>
-			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+<body>
 
-		<!-- Banner -->
-			<!-- <section id="banner" style="height:10pt">
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo"> <img width="55" style="padding: 0.5em 0 0 0" src="images/logo.png"> </a>
+			<nav id="nav">
+				<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="index.html">Home</a>
+				<a style="color:#FF0433;" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="people.html"><u>People</u></a>
+				<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="research.html">Research</a>
+
+				<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="publications.html">Publications</a>
+				<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="software.html">Software</a>
+				<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="sponsors.html">Sponsors</a>
+				<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="teaching.html">Teaching</a>
+				<!-- <a href="elements.html">Resources</a> -->
+				<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'"
+					onMouseOut="this.style.color='#d5d5d5'" href="contact.html">Join Us</a>
+			</nav>
+			<div class="inner">
+				<img class="usclogo" src="images/usc-shield-name-white.png">
+			</div>
+		</div>
+	</header>
+	<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+	<!-- Banner -->
+	<!-- <section id="banner" style="height:10pt">
 				<div class="inner" style="height:10pt">
 					<h1 style="padding: -10 0 0 0">INK Lab @ USC/ISI: <span style="text-transform:none;">Intelligence and Knowledge Discovery</span></h1>
 				</div>
 			</section> -->
 
-		<!-- One -->   
-						
-			
-		<!-- Two -->
-			<section id="two" style="background:white"> 
-				<!--<div class="inner">
+	<!-- One -->
+
+
+	<!-- Two -->
+	<section id="two" style="background:white">
+		<!--<div class="inner">
 						<h2>People @ INK</h2> <br><br><br>
 				</div>-->
-				<div class="inner"> 
-						<div class="content">
-							<header>
-								<h3>Faculty</h3>
-							</header> 
-							<table>
-								<tr>
-									<td style="text-align: center;"> <div style="width:130px" ><span class="image fit">
-											<div class="image-cropper"><img src="memberpic/Xiang.jpg" alt=""></div>
-											<span><a class="alt fit" style="font-size:18px; color:black" href="http://www-bcf.usc.edu/~xiangren/" target="_blank">Prof. Xiang Ren</a></span>
-											<div><a href="https://twitter.com/xiangrenNLP"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-												<a href="http://www-bcf.usc.edu/~xiangren/"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-										</span> 
-										</div></td>
-								</tr>
-							</table>
-						</div>  
-				</div> 
-					<div class="inner"> 
-							<div class="content">
-								<header>
-									<h3>Ph.D. Students</h3>
-                                </header>  
-                                <table>
-                                        <tr>
-                                                <td style="text-align: center;"> 
-                                                        <div style="width:130px; "><span class="image fit">
-                                                                <div class="image-cropper"><img src="memberpic/Woojeong.png" alt=""></div>
-																<span><a class="alt fit" style="font-size:18px; color:black"  href="https://woojeongjin.github.io" target="_blank" >Woojeong Jin</a></span>
-																<div><a href="https://twitter.com/woojeong_jin"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-																	<a href="https://woojeongjin.github.io"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-                                                        </span> 
-                                                        </div>  
-										</td>
-										<td style="text-align: center;">  
-											<div style="width:130px"><span class="image fit">
-													<div class="image-cropper"><img src="memberpic/xisen.jpg" alt=""></div>
-													<span><a class="alt fit" style="font-size:18px; color:black" href="http://xsjin.xyz" target="_blank" >Xisen Jin</a></span>
-													<div><a href="https://twitter.com/XisenJ"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-														<a href="http://xsjin.xyz"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-											</span> 
-											</div>  
-										</td>
-											<td style="text-align: center;">  
-											<div style="width:130px"><span class="image fit">
-													<div class="image-cropper"><img src="memberpic/yuchen.jpg" alt=""></div>
-													<span><a class="alt fit" style="font-size:18px; color:black" href="http://yuchenlin.xyz" target="_blank">(Bill) Yuchen Lin</a></span>
-													<div><a href="https://twitter.com/billyuchenlin"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-														<a href="http://yuchenlin.xyz"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-											</span> 
-											</div>  
-											</td>
-											<td style="text-align: center;">  
-												<div style="width:130px"><span class="image fit">
-														<div class="image-cropper"><img src="memberpic/soumya.jpg" alt=""></div>
-														<span><a class="alt fit" style="font-size:18px; color:black" href="https://soumyasanyal.github.io/" target="_blank" >Soumya Sanyal</a> 
-														</span>
-														<div><a href="https://twitter.com/ssanyal8"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-															<a href="https://soumyasanyal.github.io/"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-												</span> 
-												</div>  
-											</td>
+		<div class="inner">
+			<div class="content">
+				<header>
+					<h3>Faculty</h3>
+				</header>
+				<table>
+					<tr>
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Xiang.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="http://www-bcf.usc.edu/~xiangren/" target="_blank">Prof. Xiang
+											Ren</a></span>
+									<div><a href="https://twitter.com/xiangrenNLP"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="http://www-bcf.usc.edu/~xiangren/"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="content">
+				<header>
+					<h3>Ph.D. Students</h3>
+				</header>
+				<table>
+					<tr>
+						<td style="text-align: center;">
+							<div style="width:130px; "><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/shushan.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://shushanarakelyan.github.io/" target="_blank">Shushan Arakelyan</a></span>
+									<div><a href="https://twitter.com/sharakelyan"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="https://shushanarakelyan.github.io/"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
+									<span style="font-size: 14px; ">co-advised w/<br> <a href="https://www.isi.edu/people/galstyan/about">Aram Galstyan</a></span>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;">
+							<div style="width:130px; "><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/aaron.png" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://aarzchan.github.io/" target="_blank">Aaron Chan</a></span>
+									<div><a href="https://twitter.com/aarzchan"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="https://aarzchan.github.io/"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
 
-					 				</tr>
-                                         <tr>
-						 
-											<td style="text-align: center;">  
-												<div style="width:130px; "><span class="image fit">
-														<div class="image-cropper"><img src="memberpic/Jun.png" alt=""></div>
-														<span><a class="alt fit" style="font-size:18px; color:black"  href="https://junyann.github.io/" target="_blank" >Jun Yan</a></span>
-														<div><a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-															<a href="https://junyann.github.io/"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-												</span> 
-												</div>  
-										</td>
-
-                                                <td style="text-align: center;">  
-                                                        <div style="width:130px; "><span class="image fit">
-                                                                <div class="image-cropper"><img src="memberpic/Qinyuan.jpeg" alt=""></div>
-																<span><a class="alt fit" style="font-size:18px; color:black"  href="http://yeqy.xyz/" target="_blank" >Qinyuan Ye</a></span>
-																<div><a href="https://twitter.com/qinyuan_ye"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-																	<a href="http://yeqy.xyz/"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-                                                        </span> 
-                                                        </div>  
-                                        </td>
-                                            <td style="text-align: center;">  
-                                                            <div style="width:130px"><span class="image fit">
-                                                                    <div class="image-cropper"><img src="memberpic/Pei.png" alt=""></div>
-																	<span><a class="alt fit" style="font-size:18px; color:black" href="https://sites.google.com/g.ucla.edu/peizhou/home" target="_blank" >Pei Zhou</a> <br>
-																		<div><a href="https://twitter.com/peizNLP"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #00ACEE;"></i></a>    
-																			<a href="https://sites.google.com/g.ucla.edu/peizhou/home"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-																		<span style="font-size: 14px; ">co-advised with Jay Pujara</span>
-                                                                    </span>
-                                                            </span> 
-                                                            </div>  
-											</td>
-
-                                            <td style="text-align: center;"> </td>
-                                        </tr>
-
-
-                                    </table> 
-								
-							</div>  
-					</div> 
-					<div class="inner"> 
-							<div class="content">
-								<header>
-									<h3>M.S. Students</h3>
-								</header> 
-								<table>
-										<tr>
-											<td style="text-align: center;">  
-												<div style="width:130px;"><span class="image fit">
-														<div class="image-cropper"><img src="memberpic/Seyeon.jpg" alt=""></div>
-														<span><a class="alt fit" style="font-size:18px; color:black" href="" target="_blank" >Seyeon Lee</a></span>
-													
-												</span> 
-												</div>  
-												
-											</td>
-
-											<td style="text-align: center;"> 
-												<div style="width:130px;"><span class="image fit">
-													<div class="image-cropper"><img src="memberpic/Rahul.jpg" alt=""></div>
-													<span><a class="alt fit" style="font-size:18px; color:black" href="https://github.com/Rahul-Khanna" target="_blank" >Rahul Khanna</a></span>
-													<div>
-														<a href="https://github.com/Rahul-Khanna"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-											</span> 
-											</div>  
-											</td>
-
-											<td style="text-align: center;">  
-												<div style="width:130px"><span class="image fit">
-														<div class="image-cropper"><img src="memberpic/Suji.jpg" alt=""></div>
-														<span><a class="alt fit" style="font-size:18px; color:black" href="https://sujikim6.github.io/" target="_blank" >Suji Kim</a></span>
-														<div>
-															<a href="https://sujikim6.github.io/"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-												</span> 
-												</div>  
-											</td>
-											<td style="text-align: center;">  
-												
-											</td>
-
-											
-											</tr>
-											<tr>
-											<td style="text-align: center;">  
-												
-											</td>
-
-											<td style="text-align: center;">  
-												
-											</td>
-											
-											<td style="text-align: center;">  
-												
-											</td>
-											<td style="text-align: center;">  
-												
-											</td>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;">
+							<div style="width:130px; "><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Woojeong.png" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://woojeongjin.github.io" target="_blank">Woojeong Jin</a></span>
+									<div><a href="https://twitter.com/woojeong_jin"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="https://woojeongjin.github.io"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/xisen.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black" href="http://xsjin.xyz"
+											target="_blank">Xisen Jin</a></span>
+									<div><a href="https://twitter.com/XisenJ"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="http://xsjin.xyz"><i class="fa fa-globe fa-lg" aria-hidden="true"
+												style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/yuchen.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="http://yuchenlin.xyz" target="_blank">(Bill) Yuchen Lin</a></span>
+									<div><a href="https://twitter.com/billyuchenlin"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="http://yuchenlin.xyz"><i class="fa fa-globe fa-lg" aria-hidden="true"
+												style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
 
 
-										</tr>
-										
-									</table>
-							</div>  
-					</div> 
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/soumya.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://soumyasanyal.github.io/" target="_blank">Soumya Sanyal</a>
+									</span>
+									<div><a href="https://twitter.com/ssanyal8"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="https://soumyasanyal.github.io/"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;">
+							<div style="width:130px; "><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Jun.png" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://junyann.github.io/" target="_blank">Jun Yan</a></span>
+									<div><a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"
+												style="color: #00ACEE;"></i></a>
+										<a href="https://junyann.github.io/"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
 
-					<div class="inner"> 
-							<div class="content">
-								<header>
-									<h3>Undergrads</h3>
-								</header> 
-								<table>
-									<tr>
-											<!-- <td style="text-align: center;">  
+						<td style="text-align: center;">
+							<div style="width:130px; "><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Qinyuan.jpeg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black" href="http://yeqy.xyz/"
+											target="_blank">Qinyuan Ye</a></span>
+									<div><a href="https://twitter.com/qinyuan_ye"><i class="fa fa-twitter fa-lg"
+												aria-hidden="true" style="color: #00ACEE;"></i></a>
+										<a href="http://yeqy.xyz/"><i class="fa fa-globe fa-lg" aria-hidden="true"
+												style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Pei.png" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://sites.google.com/g.ucla.edu/peizhou/home" target="_blank">Pei
+											Zhou</a> <br>
+										<div><a href="https://twitter.com/peizNLP"><i class="fa fa-twitter fa-lg"
+													aria-hidden="true" style="color: #00ACEE;"></i></a>
+											<a href="https://sites.google.com/g.ucla.edu/peizhou/home"><i
+													class="fa fa-globe fa-lg" aria-hidden="true"
+													style="color: gray;"></i></a>
+										</div>
+										<span style="font-size: 14px; ">co-advised with <br> <a href="https://www.jaypujara.org/">Jay Pujara</a></span>
+									</span>
+								</span>
+							</div>
+						</td>
+					</tr>
+
+
+				</table>
+
+			</div>
+		</div>
+		<div class="inner">
+			<div class="content">
+				<header>
+					<h3>M.S. Students</h3>
+				</header>
+				<table>
+					<tr>
+						<td style="text-align: center;">
+							<div style="width:130px;"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Seyeon.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black" href=""
+											target="_blank">Seyeon Lee</a></span>
+
+								</span>
+							</div>
+
+						</td>
+
+						<td style="text-align: center;">
+							<div style="width:130px;"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Rahul.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://github.com/Rahul-Khanna" target="_blank">Rahul
+											Khanna</a></span>
+									<div>
+										<a href="https://github.com/Rahul-Khanna"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Suji.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="https://sujikim6.github.io/" target="_blank">Suji Kim</a></span>
+									<div>
+										<a href="https://sujikim6.github.io/"><i class="fa fa-globe fa-lg"
+												aria-hidden="true" style="color: gray;"></i></a>
+									</div>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;">
+
+						</td>
+
+						<td style="text-align: center;">
+
+						</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+
+		<div class="inner">
+			<div class="content">
+				<header>
+					<h3>Undergrads</h3>
+				</header>
+				<table>
+					<tr>
+						<!-- <td style="text-align: center;">  
 												<div style="width:130px"><span class="image fit">
 														<div class="image-cropper"><img src="memberpic/haochen.png" alt=""></div>
 														<span><a class="alt fit" style="font-size:18px; color:black" href="hhttps://www.linkedin.com/in/hchen0910/" target="_blank" >Hao Chen</a></span>
@@ -354,59 +419,70 @@ table th {
 												</div>  
 											</td> -->
 
-								
-										<td style="text-align: center;">  <div style="width:130px"><span class="image fit">
-											<div class="image-cropper"><img src="memberpic/Kelly.jpg" alt=""></div>
-											<span><a class="alt fit" style="font-size:18px; color:black" href="http://linkedin.com/in/kelly-dickson-666909170" target="_blank" >Kelly Dickson</a></span><div>
-												<a href="http://linkedin.com/in/kelly-dickson-666909170"><i class="fa fa-globe fa-lg" aria-hidden="true" style="color: gray;"></i></a></div>
-										</span> 
-										</div> 
-										</td>
-										<td style="text-align: center;">  
-												<div style="width:130px"><span class="image fit">
-														<div class="image-cropper"><img src="memberpic/MollyYue.jpg" alt=""></div>
-														<span><a class="alt fit" style="font-size:18px; color:black" href="" target="_blank" >Molly Yue</a></span>
-												</span> 
-												</div>  
-											</td>
-										<td style="text-align: center;"> </td> 
-										<td style="text-align: center;"> </td> 
 
-									</tr>
-
-								</table>
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/Kelly.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black"
+											href="http://linkedin.com/in/kelly-dickson-666909170" target="_blank">Kelly
+											Dickson</a></span>
+									<div>
+										<a href="http://linkedin.com/in/kelly-dickson-666909170"><i
+												class="fa fa-globe fa-lg" aria-hidden="true"
+												style="color: gray;"></i></a>
+									</div>
+								</span>
 							</div>
-					</div>
+						</td>
+						<td style="text-align: center;">
+							<div style="width:130px"><span class="image fit">
+									<div class="image-cropper"><img src="memberpic/MollyYue.jpg" alt=""></div>
+									<span><a class="alt fit" style="font-size:18px; color:black" href=""
+											target="_blank">Molly Yue</a></span>
+								</span>
+							</div>
+						</td>
+						<td style="text-align: center;"> </td>
+						<td style="text-align: center;"> </td>
+						<td style="text-align: center;"> </td>
+					</tr>
 
-					<div class="inner">
-							<div class="content" >
-								<header >
-									<h3 style="margin-bottom: 0pt">Visitors</h3>
-								</header>
-  <span onclick="show_more_news()" style="font-size: 10pt;"><a>Show/Hide.</a></span> <br/>
+				</table>
+			</div>
+		</div>
 
-											<!-- <a title="show/hide" id="more_news_link" href="javascript: void(0);" onclick="toggle(this, 'more_news');"  style="text-decoration: none; color: #900; ">[hide more]</a>
+		<div class="inner">
+			<div class="content">
+				<header>
+					<h3 style="margin-bottom: 0pt">Visitors</h3>
+				</header>
+				<span onclick="show_more_news()" style="font-size: 10pt;"><a>Show/Hide.</a></span> <br />
+
+				<!-- <a title="show/hide" id="more_news_link" href="javascript: void(0);" onclick="toggle(this, 'more_news');"  style="text-decoration: none; color: #900; ">[hide more]</a>
 											 <script language="javascript">toggle(getObject('more_news_link'), 'more_news');</script> -->
-											 <script>
-												function show_more_news() {
-													// var x = document.getElementById("old_news");
-													var elms = document.querySelectorAll("[class='info-visitor']");
-													for(var i = 0; i < elms.length; i++){
-														x = elms[i];
-														if (x.style.display === "none") {
-															x.style.display = "block";
-														} else {
-															x.style.display = "none";
-														}
-													}
-												}
-												</script>
-	
-	<span class="info-visitor"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="http://home.ustc.edu.cn/~xyyimian/" >Yu Xing</a>:  1st year master student at USC<br>
-	<span class="info-visitor"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="" >Deren Lei</a>:  Master student at USC<br>
-	<span class="info-visitor"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="https://www.linkedin.com/in/he-jiang-022a1483/" >He Jiang</a>:  3rd year PhD student at USC (01/2019 ~)<br>
+				<script>
+					function show_more_news() {
+						// var x = document.getElementById("old_news");
+						var elms = document.querySelectorAll("[class='info-visitor']");
+						for (var i = 0; i < elms.length; i++) {
+							x = elms[i];
+							if (x.style.display === "none") {
+								x.style.display = "block";
+							} else {
+								x.style.display = "none";
+							}
+						}
+					}
+				</script>
 
-									<!-- <span style="font-size:16px; align-content: center"><a class=""   target="_blank" >Shihan Ran</a>:  Visiting undergrad from FDU (06/18 ~ 12/18) <br>
+				<span class="info-visitor" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="http://home.ustc.edu.cn/~xyyimian/">Yu Xing</a>: 1st year master student
+					at USC<br>
+					<span class="info-visitor" style="display:none; font-size:16px; align-content: center"><a class=""
+							target="_blank" href="">Deren Lei</a>: Master student at USC<br>
+						
+
+							<!-- <span style="font-size:16px; align-content: center"><a class=""   target="_blank" >Shihan Ran</a>:  Visiting undergrad from FDU (06/18 ~ 12/18) <br>
 									<span style="font-size:16px; align-content: center"><a class="" href="https://akaisorani.github.io" target="_blank" >Yue Han</a>:  Visiting undergrad from HIT (2018 Summer) <br> 
 									<span style="font-size:16px; align-content: center"><a class="" href="http://corie.cn" target="_blank" >Jun Yan</a>:  Visiting undergrad from THU (2018 Summer) <br> 
 									<span style="font-size:16px; align-content: center"><a class="" href="#" target="_blank" >Qinyuan Ye</a>:  Visiting undergrad from THU (2018 Summer) <br> 
@@ -414,86 +490,158 @@ table th {
 
 
 
-							</div>
-					</div>
+			</div>
+		</div>
 
-					<br>
-					<div class="inner">
-						<div class="content">
-							<header>
-								<h3 style="margin-bottom: 0pt">Alumni</h3>
-							</header>
-<span onclick="show_more_alm()" style="font-size: 10pt;"><a>Show/Hide.</a></span> <br/>
-											 <script>
-												function show_more_alm() {
-													// var x = document.getElementById("old_news");
-													var elms = document.querySelectorAll("[class='info-alumni']");
-													for(var i = 0; i < elms.length; i++){
-														x = elms[i];
-														if (x.style.display === "none") {
-															x.style.display = "block";
-														} else {
-															x.style.display = "none";
-														}
-													}
-												}
-												</script>
-							<br>
-							<span class="info-alumni" style="display:none; align-content: center"> <h5>2020</h5> </span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Siddhant Agarwal</a>:  Visiting undergrad from Indian Institute of Technology<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Mrigank Raman</a>:  Visiting undergrad from Indian Institute of Technology<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Wangchunshu Zhou</a>:  Visiting undergrad from Beihang University<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Huihan Yao</a>:  Visiting undergrad from Peking University<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Ying Chen</a>:  Visiting undergrad from Tsinghua University<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Yixuan Fan</a>:  Visiting undergrad from Tsinghua University<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Tianyu Zhang</a>:  Visiting undergrad from Tsinghua University<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Wenchang Ma</a>:  Visiting undergrad from Tsinghua University<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Hansen Wang</a>:  Visiting undergrad from Tsinghua University<br></span>
+		<br>
+		<div class="inner">
+			<div class="content">
+				<header>
+					<h3 style="margin-bottom: 0pt">Alumni</h3>
+				</header>
+				<span onclick="show_more_alm()" style="font-size: 10pt;"><a>Show/Hide.</a></span> <br />
+				<script>
+					function show_more_alm() {
+						// var x = document.getElementById("old_news");
+						var elms = document.querySelectorAll("[class='info-alumni']");
+						for (var i = 0; i < elms.length; i++) {
+							x = elms[i];
+							if (x.style.display === "none") {
+								x.style.display = "block";
+							} else {
+								x.style.display = "none";
+							}
+						}
+					}
+				</script>
+				<br>
+				<span class="info-alumni" style="display:none; align-content: center">
+					<h5>2020</h5>
+				</span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a
+					class="" target="_blank" href="https://www.linkedin.com/in/he-jiang-022a1483/">He
+					Jiang</a>: 3rd year PhD student at USC (01/2019 ~)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Siddhant Agarwal</a>: Visiting undergrad from Indian Institute of
+					Technology<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Mrigank Raman</a>: Visiting undergrad from Indian Institute of
+					Technology<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Wangchunshu Zhou</a>: Visiting undergrad from Beihang University<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Huihan Yao</a>: Visiting undergrad from Peking University<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Ying Chen</a>: Visiting undergrad from Tsinghua University<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Yixuan Fan</a>: Visiting undergrad from Tsinghua University<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Tianyu Zhang</a>: Visiting undergrad from Tsinghua University<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Wenchang Ma</a>: Visiting undergrad from Tsinghua University<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Hansen Wang</a>: Visiting undergrad from Tsinghua University<br></span>
 
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="https://rpman.net/" >Junyi Du</a>: USC Master student<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="https://danny-lee.info/" >Dong-Ho Lee</a>: USC Master student<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="https://ryan-moreno.github.io/" >Ryan Moreno</a>: USC undergrad<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="" >Xiao Huang</a>: USC Master student<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="" >Ouyu Lan</a>: USC Master student --> Software Engineer at Google Inc.<br></span>
-							<br>
-							<span class="info-alumni" style="display:none; align-content: center"> <h5>2019</h5> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="https://rpman.net/">Junyi Du</a>: USC Master student<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="https://danny-lee.info/">Dong-Ho Lee</a>: USC Master student<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="https://ryan-moreno.github.io/">Ryan Moreno</a>: USC undergrad<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="">Xiao Huang</a>: USC Master student<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="">Ouyu Lan</a>: USC Master student --> Software Engineer at Google
+					Inc.<br></span>
+				<br>
+				<span class="info-alumni" style="display:none; align-content: center">
+					<h5>2019</h5>
+				</span>
 
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="https://www.linkedin.com/in/sankalp-garg-557241147/" >Sankalp Garg</a>:  Visiting undergrad from Indian Institute of Technology Delhi (05/2019 ~ 07/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="https://varuniyer.us" >Varun Iyer</a>:  Visiting undergrad from UMass Amherst (05/2019 ~ 08/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="http://ra1n.me">Yu Tang</a>:  Visiting undergrad from University of Illinois at Urbana-Champaign (05/2019 ~ 08/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Navodita Sharma</a>:  Visiting undergrad from Indian Institute of Technology Madras (05/2019 ~ 07/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Xinyue Chen</a>:  Visiting undergrad from Shanghai Jiao Tong University (07/2019 ~ 09/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Ziqi Wang</a>:  Visiting undergrad from Tsinghua University (07/2019 ~ 09/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Yanlin Feng</a>:  Visiting undergrad from Peking University (07/2019 ~ 09/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Yujia Qin</a>:  Visiting undergrad from Tsinghua University (07/2019 ~ 09/2019)<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Zhengwei Tao</a>:  Visiting master student from Peking University<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Cathy Miao</a>:  Visiting undergrad from Caltech<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Zhepeng Cen</a>:  Visiting undergrad from Tsinghua University (07/2019 ~ 09/2019)<br></span>
-							<br>
-							<span class="info-alumni" style="display:none; align-content: center"> <h5>2018</h5> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="https://www.linkedin.com/in/sankalp-garg-557241147/">Sankalp Garg</a>:
+					Visiting undergrad from Indian Institute of Technology Delhi (05/2019 ~ 07/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="https://varuniyer.us">Varun Iyer</a>: Visiting undergrad from UMass
+					Amherst (05/2019 ~ 08/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="http://ra1n.me">Yu Tang</a>: Visiting undergrad from University of
+					Illinois at Urbana-Champaign (05/2019 ~ 08/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Navodita Sharma</a>: Visiting undergrad from Indian Institute of Technology
+					Madras (05/2019 ~ 07/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Xinyue Chen</a>: Visiting undergrad from Shanghai Jiao Tong University (07/2019
+					~ 09/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Ziqi Wang</a>: Visiting undergrad from Tsinghua University (07/2019 ~
+					09/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Yanlin Feng</a>: Visiting undergrad from Peking University (07/2019 ~
+					09/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Yujia Qin</a>: Visiting undergrad from Tsinghua University (07/2019 ~
+					09/2019)<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Zhengwei Tao</a>: Visiting master student from Peking University<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Cathy Miao</a>: Visiting undergrad from Caltech<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Zhepeng Cen</a>: Visiting undergrad from Tsinghua University (07/2019 ~
+					09/2019)<br></span>
+				<br>
+				<span class="info-alumni" style="display:none; align-content: center">
+					<h5>2018</h5>
+				</span>
 
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="https://www.linkedin.com/in/jaminchen/" >Jamin Chen</a>:  USC undergrad<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" href="http://linkedin.com/in/priya-irukulapati-01082916b" >Priya Irukulapati</a>:  USC undergrad<br></span>
-							<span class="info-alumni"  style="display:none; font-size:16px; align-content: center"><a class="" href="http://www.tonichan.xyz/?page_id=2" target="_blank" >Toni Chan</a>:  Visiting undergrad from ZJU (11/2018 ~ 04/2019) --> Master student @ CMU<br></span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="" target="_blank" >Cong Fu</a>:  Visiting PhD student from ZJU (09/2018 ~ 05/2019) <br></span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="https://www.linkedin.com/in/hunter-lin/" target="_blank" >Hongtao Lin</a>:  USC master student (/2018 ~ 03/2019) --> Machine Learning Engineer at Pinterest<br>	</span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="https://www.linkedin.com/in/yozen-liu-531a67130/" target="_blank" >Yozen Liu</a>:  USC master student (/2018 ~ 03/2019) --> Research Scientist at Snapchat<br></span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="https://changlinzhang.github.io/" target="_blank" >Changlin Zhang</a>:  USC master student (/2018 ~ 06/2019)<br></span>
-						<!-- <span style="font-size:16px; align-content: center"><a class="" href="https://www.linkedin.com/in/hchen0910/" target="_blank" >Hao Chen</a>: USC undergrad (/18 ~ 03/19) <br>  -->
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="https://www.linkedin.com/in/yue-cao-lily/" target="_blank" >Yue Cao</a>: USC undergrad (/2018 ~ 03/2019)<br> </span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""   target="_blank" >Shihan Ran</a>:  Visiting undergrad from FDU (06/2018 ~ 12/2018) --> Master student @ UCSD<br></span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="https://akaisorani.github.io" target="_blank" >Yue Han</a>:  Visiting undergrad from HIT (2018 Summer) PhD student @ THU<br> </span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="http://corie.cn" target="_blank" >Jun Yan</a>:  Visiting undergrad from THU (2018 Summer) --> PhD student @ USC (INK Lab)<br> </span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="" target="_blank" >Qinyuan Ye</a>:  Visiting undergrad from THU (2018 Summer) --> PhD student @ USC (INK Lab) <br> </span>
-							<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class="" href="" target="_blank" >Maosen Zhang</a>:  Visiting undergrad from PKU (2018 Summer) --> PhD student @ Purdue<br> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="https://www.linkedin.com/in/jaminchen/">Jamin Chen</a>: USC
+					undergrad<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank" href="http://linkedin.com/in/priya-irukulapati-01082916b">Priya Irukulapati</a>:
+					USC undergrad<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="http://www.tonichan.xyz/?page_id=2" target="_blank">Toni Chan</a>: Visiting undergrad from
+					ZJU (11/2018 ~ 04/2019) --> Master student @ CMU<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="" target="_blank">Cong Fu</a>: Visiting PhD student from ZJU (09/2018 ~ 05/2019)
+					<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="https://www.linkedin.com/in/hunter-lin/" target="_blank">Hongtao Lin</a>: USC master
+					student (/2018 ~ 03/2019) --> Machine Learning Engineer at Pinterest<br> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="https://www.linkedin.com/in/yozen-liu-531a67130/" target="_blank">Yozen Liu</a>: USC
+					master student (/2018 ~ 03/2019) --> Research Scientist at Snapchat<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="https://changlinzhang.github.io/" target="_blank">Changlin Zhang</a>: USC master student
+					(/2018 ~ 06/2019)<br></span>
+				<!-- <span style="font-size:16px; align-content: center"><a class="" href="https://www.linkedin.com/in/hchen0910/" target="_blank" >Hao Chen</a>: USC undergrad (/18 ~ 03/19) <br>  -->
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="https://www.linkedin.com/in/yue-cao-lily/" target="_blank">Yue Cao</a>: USC undergrad
+					(/2018 ~ 03/2019)<br> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						target="_blank">Shihan Ran</a>: Visiting undergrad from FDU (06/2018 ~ 12/2018) --> Master
+					student @ UCSD<br></span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="https://akaisorani.github.io" target="_blank">Yue Han</a>: Visiting undergrad from HIT
+					(2018 Summer) PhD student @ THU<br> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="http://corie.cn" target="_blank">Jun Yan</a>: Visiting undergrad from THU (2018 Summer)
+					--> PhD student @ USC (INK Lab)<br> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="" target="_blank">Qinyuan Ye</a>: Visiting undergrad from THU (2018 Summer) --> PhD
+					student @ USC (INK Lab) <br> </span>
+				<span class="info-alumni" style="display:none; font-size:16px; align-content: center"><a class=""
+						href="" target="_blank">Maosen Zhang</a>: Visiting undergrad from PKU (2018 Summer) --> PhD
+					student @ Purdue<br> </span>
 
-						</div>
-				</div>
+			</div>
+		</div>
 
-			</section>
+	</section>
 
-		<!-- Three -->
-			<!-- <section id="three">
+	<!-- Three -->
+	<!-- <section id="three">
 				<div class="inner">
 					<article>
 						<div class="content">
@@ -534,24 +682,26 @@ table th {
 				</div>
 			</section> -->
 
-		<!-- Footer -->
-			<section id="footer" >
-				<div class="inner" style="padding: 0 0 0 0;">
-								<div class="copyright" style="height: 0pt;" style="padding: 0 0 0 0;">
-									<div class="row" style="padding: 0 0 0 0;">
-										<div class="col-md-6 col-sm-6" style="padding: 0 0 0 0;">
-											<p class="small-text" style="color:white">&nbsp;&nbsp;&nbsp;Copyright 2019 &copy;. INK Lab @ USC/ISI</p>
-										</div> <!-- /.col-md-6 -->
-									</div> <!-- /.row -->
-								</div> <!-- /.copyright -->
-							</div> <!-- /.container -->
-				</div>
-			</section>
+	<!-- Footer -->
+	<section id="footer">
+		<div class="inner" style="padding: 0 0 0 0;">
+			<div class="copyright" style="height: 0pt;" style="padding: 0 0 0 0;">
+				<div class="row" style="padding: 0 0 0 0;">
+					<div class="col-md-6 col-sm-6" style="padding: 0 0 0 0;">
+						<p class="small-text" style="color:white">&nbsp;&nbsp;&nbsp;Copyright 2019 &copy;. INK Lab @
+							USC/ISI</p>
+					</div> <!-- /.col-md-6 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.copyright -->
+		</div> <!-- /.container -->
+		</div>
+	</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
 </html>
