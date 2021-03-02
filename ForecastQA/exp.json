@@ -1,4 +1,26 @@
 [
+
+	{
+		"model": "Human Performance",
+		"a-yes": "81.3",
+		"a-multi": "77.4",
+		"a-all": "79.4",
+		"b-yes": "",
+		"b-multi": "",
+		"b-all": ""
+	}
+
+	{
+		"model": "Random",
+		"a-yes": "48.6",
+		"a-multi": "25.3",
+		"a-all": "37.8",
+		"b-yes": "0.684",
+		"b-multi": "0.827",
+		"b-all": "0.750"
+	}
+
+
     {
 		"model": "ESIM-Glove",
 		"a-yes": "58.2",
@@ -30,6 +52,16 @@
     },
 
     {
+		"model": "BERT-Base (closed-book)",
+		"a-yes": "65.2",
+		"a-multi": "41.5",
+		"a-all": "54.7",
+		"b-yes": "0.511",
+		"b-multi": "0.715",
+		"b-all": "0.606"
+    },
+
+    {
 		"model": "BERT-Base (GRU)",
 		"a-yes": "67.6",
 		"a-multi": "41.5",
@@ -37,6 +69,26 @@
 		"b-yes": "0.477",
 		"b-multi": "0.705",
 		"b-all": "0.583"
+    },
+
+    {
+		"model": "BERT-Base (Maxpool)",
+		"a-yes": "67.2",
+		"a-multi": "39.1",
+		"a-all": "54.2",
+		"b-yes": "0.453",
+		"b-multi": "0.701",
+		"b-all": "0.568"
+    },
+
+    {
+		"model": "BERT-Large (closed-book)",
+		"a-yes": "67.3",
+		"a-multi": "45.4",
+		"a-all": "57.6",
+		"b-yes": "0.447",
+		"b-multi": "0.653",
+		"b-all": "0.543"
     },
 
     {
@@ -50,6 +102,18 @@
     },
 
     {
+		"model": "BERT-Large (Maxpool)",
+		"a-yes": "68.8",
+		"a-multi": "46.9",
+		"a-all": "58.6",
+		"b-yes": "0.476",
+		"b-multi": "0.648",
+		"b-all": "0.556"
+    },
+
+    
+
+    {
 		"model": "BERT-Large++",
 		"a-yes": "71.1",
 		"a-multi": "49.5",
@@ -60,16 +124,7 @@
     },
 	
 
-	{
-		"model": "Human Performance",
-		"a-yes": "81.3",
-		"a-multi": "77.4",
-		"a-all": "79.4",
-		"b-yes": "",
-		"b-multi": "",
-		"b-all": ""
-	}
-
+	
 
 
 

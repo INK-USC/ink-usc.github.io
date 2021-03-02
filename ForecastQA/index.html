@@ -104,10 +104,50 @@
         <div class="col-md-12">
             <div style="text-align: center;">
                 <img src="example-1.png" style="max-width: 45%;">
-                <img src="question_types-1.png" style="max-width: 50%;">
+                <!-- <img src="question_types-1.png" style="max-width: 50%;"> -->
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+                <h4 class=""> Task Definition </h4>
+                <p class="text" style="text-align: justify">
+                Formally, the input of the ForecastQA task is a forecasting question with a corresponding ending timestamp ––the last possible date where the question remains a forecasting question. In addition, we have a set of possible choices, and a corpus of news articles; the output is a choice. Our task has a novel <strong>time constraint</strong> that any retrieved article must satisfy the condition that the retrieved article should be published before the time constraint. In other words, models only have access to articles that are published before the time constraint.
+                </p>
+                    <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+                <h4 class=""> Challenges </h4>
+                <p class="text" style="text-align: justify">
+                Due to the constrained open-domain setting and forecasting properties, our task encom- passes the following challenges: information re- trieval (IR) on limited sources, extraction and understanding of casual and temporal relations between events, and finally a forecasting judgement. Our novel constraint limits the accessible information and thus makes our task more challenging than standard QA; new IR methods are necessary to anticipate what knowledge will be useful for predictions from past information sources. Once useful articles have been retrieved, models should understand the retrieved articles and extract pertinent facts from them. Finally, they use the gleaned knowledge to infer the outcome of a future event. Unlike in other tasks, models cannot rely on the existence of an answer within the text, but must make an educated guess as to what will happen in the future.
+                </p>
+                    <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+                <h4 class=""> Dataset Construction </h4>
+                <p class="text" style="text-align: justify">
+                we collected our dataset to support ForecastQA, broken down into three sections (1) gathering a news corpus, (2) generating question-answer-timestamp triples with distractor choices, (3) verifying triple quality, and (4) collecting appropriate questions.
+                    
+                </p>
+                    <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div style="text-align: center;">
+                <img src="construction.png" style="max-width: 60%;">
+                <!-- <img src="question_types-1.png" style="max-width: 50%;"> -->
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="row" id="cite">
