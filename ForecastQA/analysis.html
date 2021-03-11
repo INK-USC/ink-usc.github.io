@@ -72,9 +72,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="analysis.html">Analysis</a>
             </li>
-            <li class="nav-item">
+         <!--    <li class="nav-item">
                 <a class="nav-link" href="leaderboard.html">Leaderboard</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="https://arxiv.org/abs/2005.00792">Paper</a>
             </li>
@@ -96,91 +96,53 @@
 
 <section class="hero banner banner--hero">
     <div class="banner--hero__content">
-        <h2><span><b>Leaderboard</b></span></h2>
-        <p style="font-size:medium; color: white">You may submit results to this leaderboard with an email titled "ForecastQA submission (your model name)" to woojeong.jin@usc.edu.</p>
+        <h2><span><b>Analysis</b></span></h2>
     </div>
 </section>
 
 <div class="container" id="app">
     <div class="row">
         <div class="col-md-12">
-        <h4>ForecastQA</h4><br>
-        <table
-          id="table"
-          class="table"
-          data-toggle="table"
-          data-height=""
-          data-url="exp.json"
-          data-sort-order="desc"
-          >
-          <thead theadClasses="thead-light">
-          <tr>
-              <th></th>
-              <th colspan="3" class="text-center" style="color:#4d4dff">Accuracy</th>
-              <th colspan="3" class="text-center" style="color:#4d4dff">Brier Score</th>
-          </tr>
-          <tr>
-            <th data-field="model" class="text-center"  data-sortable="false">Models</th>
-            <th data-field="a-yes" class="text-center"  data-sortable="false"><b>yes/no</b></th>
-            <th data-field="a-multi" class="text-center"  data-sortable="false">multi</th>
-            <th data-field="a-all" class="text-center"  data-sortable="false">all</th>
-            <th data-field="b-yes" class="text-center"  data-sortable="false">yes/no</th>
-            <th data-field="b-multi" class="text-center"  data-sortable="false">multi</th>
-            <th data-field="b-all" class="text-center"  data-sortable="false">all</th>
-          </tr>
-          </thead>
-        </table>
-        <br>
-
-<!--         </div>
+            <h4 class=""> Dataset Statistics </h4>
+            <p class="text" style="text-align: justify">ForecastQA dataset is composed of 10,392 questions, divided into the standard 80/10/10 split of train, dev, and test data. Our 10k questions are roughly evenly split between multiple-choice and yes-no binary questions. Over 17K distinct words were used to construct our questions and we have 218 unique time constraints associated with them.</p>
+                <br>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
-        <h4>COCO-shift</h4>
-        <br>
-        <table class="table">
-            <tr><th>Method</th><th>Final Log PPL</th><th>Final BLEU-1</th><th>Final BLEU-2</th></tr>
-            <tr class="active"><td>Vanilla Online + VLBERT</td><td>5.040</td><td>25.96</td><td>1.29</td></tr>
-            <tr class="active sep"><td>Vanilla Online + LXMERT</td><td>5.193</td><td>25.19</td><td>1.81</td></tr>
-
-            <tr><td>ER + VLBERT</td><td>2.307</td><td>58.06</td><td>32.22</td></tr>
-            <tr><td>ER-MIR + VLBERT</td><td>2.469</td><td>58.00</td><td>32.33</td></tr>
-            <tr class="sep"><td>ER-MIR-Max + VLBERT</td><td>2.473</td><td>58.14</td><td>32.48</td></tr>
-
-            <tr><td>ER + LXMERT</td><td>2.426</td><td>61.01</td><td>35.45</td></tr>
-            <tr><td>ER-MIR + LXMERT</td><td>2.374</td><td>60.79</td><td>35.10</td></tr>
-            <tr class="sep"><td>ER-MIR-MAX + LXMERT</td><td>2.378</td><td>61.06</td><td>35.24</td></tr>
-
-
-
-            <tr class="active"><td>Offline + VLBERT</td><td>1.443</td><td>48.93</td><td>44.16</td></tr>
-            <tr class="active sep"><td>Offline + LXMERT</td><td>1.503</td><td>67.53</td><td>42.79</td></tr>
-        </table>
-        <br>
-        <h4>Flickr-shift</h4>
-        <br>
-        <table class="table">
-            <tr><th>Method</th><th>Final Log PPL</th><th>Final BLEU-1</th><th>Final BLEU-2</th></tr>
-            <tr class="active"><td>Vanilla Online + VLBERT</td><td>5.691</td><td>25.01</td><td>3.01</td></tr>
-            <tr class="active sep"><td>Vanilla Online + LXMERT</td><td>6.107</td><td>24.77</td><td>3.09</td></tr>
-
-
-            <tr><td>ER + VLBERT</td><td>3.492</td><td>40.23</td><td>16.80</td></tr>
-            <tr><td>ER-MIR + VLBERT</td><td>3.504</td><td>40.27</td><td>16.81</td></tr>
-            <tr class="sep"><td>ER-MIR-Max + VLBERT</td><td>3.555</td><td>40.04</td><td>16.64</td></tr>
-
-            <tr><td>ER + LXMERT</td><td>3.197</td><td>44.34</td><td>20.73</td></tr>
-            <tr><td>ER-MIR + LXMERT</td><td>3.211</td><td>44.30</td><td>20.83</td></tr>
-            <tr class="sep"><td>ER-MIR-MAX + LXMERT</td><td>3.226</td><td>43.51</td><td>19.95</td></tr>
-
-
-            <tr class="active"><td>Offline + VLBERT</td><td>2.025</td><td>57.13</td><td>32.29</td></tr>
-            <tr class="active sep"><td>Offline + LXMERT</td><td>2.025</td><td>57.10</td><td>32.25</td></tr>
-        </table> -->
-
+            <div style="text-align: center;">
+                <img src="stat.png" style="max-width: 50%;">
+            </div>
+        </div>
     </div>
-
-
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class=""> Types of Questions </h4>
+            <p class="text" style="text-align: justify">To better understand the types of questions in ForecastQA, we examined popular beginnings of sentences and created a treemap plot. As is shown, nearly half of our questions start with the word will (44%), a result of over half of our questions being yes-no questions.</p>
+                <br>
+        </div>
     </div>
-    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="text-align: center;">
+                <img src="question_types-1.png" style="max-width: 50%;">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class=""> Types of Reasoning </h4>
+            <p class="text" style="text-align: justify">To examine the reasoning required to answer our questions we sampled 100 questions and manually annotated them with reasoning types. Due to the forecasting nature of our dataset, we are particularly interested in questions containing temporal reasoning and thus spend more time looking into these questions.</p>
+                <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="text-align: center;">
+                <img src="reasoning_types.png" style="max-width: 90%;">
+            </div>
+        </div>
+    </div>
 
 
 </div>
