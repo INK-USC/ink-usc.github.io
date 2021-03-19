@@ -91,34 +91,36 @@
     </div>
 </nav>
 
-    <div class="page-content">
-        <div class="wrapper">
+<div class="page-content">
+    <div class="wrapper">
 
-<section class="hero banner banner--hero">
-    <div class="banner--hero__content">
-        <h2><span><b>Data Explorer</b></span></h2>
-    </div>
-</section>
+        <section class="hero banner banner--hero">
+            <div class="banner--hero__content">
+                <h2><span><b>Data Explorer</b></span></h2>
+            </div>
+        </section>
 
-<div class="container" id="app">
-    <div class="row">
-        <div class="col-md-12">
-        <h4>Soon to be updated</h4><br>
+        <div class="container" id="app">
+            <div class="row">
+                <div class="col-md-12">
+                  <div class="input-inner" style="width: 100%">
+                    <input
+                      class="input-span"
+                      id="keyword"
+                      name="keyword"
+                      type="text"
+                      placeholder="Keyword"
+                    />
+                    <input id="submit" type="button" value="SEARCH" onclick="search()" />
+                  </div>
+                </div>
+            </div>
+            <div class="para-wrap" id="results">
 
-    </div>
-    </div>
-    <br>
-
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-<script>
-</script>
-
+            </div>
         </div>
     </div>
+</div>
 
     <footer class="footer">
     <div class="container">
@@ -133,6 +135,7 @@
     <script>
 </script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="main.js"></script>
 
 </body>
 
