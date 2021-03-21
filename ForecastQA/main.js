@@ -20,6 +20,7 @@ function search() {
       var xobj = new XMLHttpRequest();
       xobj.overrideMimeType("application/json");
       xobj.open('GET', 'converted_dev_questions.json', true);
+      // xobj.open('GET', 'https://inklab.usc.edu/ForecastQA/converted_dev_questions.json', true);
       xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
           return callback(JSON.parse(xobj.responseText));
@@ -40,6 +41,9 @@ function search() {
           if (question.indexOf(keyword_value) != -1){
               results.push(json_file.examples[i]);
           }
+          if (i === 20) {
+            break;
+          }
       }
 
 
@@ -47,18 +51,18 @@ function search() {
           var question = results[i].question;
           var choices = results[i].choices;
           var answer = results[i].answer;
-          app.innerHTML += `<div class="row"><div class="col-md-6"><pre>${question}</pre></div>`;
-          app.innerHTML += `<div class="col-md-6"><div class="row">`;
+          app.innerHTML += `<div class="row"><div class="col-md-12">${question}</div>`;
+          app.innerHTML += `<div class="col-md-12"><div class="row">`;
           for (var j = 0; j < choices.length; j++) {
               if (answer === choices[j]){
-                  app.innerHTML += `<pre style="color: red;">${choices[j]}</pre>`;
+                  app.innerHTML += `<strong>${choices[j]}</strong><br>`;
               }
               else{
-                  app.innerHTML += `<pre>${choices[j]}</pre>`;
+                  app.innerHTML += `${choices[j]}<br>`;
               }
-
           }
           app.innerHTML += `</div></div></div>`;
+          app.innerHTML += '<br>'
       }
 
     }
