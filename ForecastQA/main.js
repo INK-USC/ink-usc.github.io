@@ -41,7 +41,7 @@ function search() {
           if (question.indexOf(keyword_value) != -1){
               results.push(json_file.examples[i]);
           }
-          if (i === 20) {
+          if (i === 50) {
             break;
           }
       }
