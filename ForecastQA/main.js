@@ -2,10 +2,12 @@
 
 // Define elements.
 let /** $ElementType */ keyword = document.getElementById("keyword");
+let /** $ElementType */ keyword2 = document.getElementById("keyword2");
 
 function getInput() {
   return {
     keyword: keyword.value,
+    keyword2: keyword2.value,
   };
 }
 
@@ -42,27 +44,70 @@ function search() {
               results.push(json_file.examples[i]);
           }
       }
+      if (keyword_value.length != 0) {
 
+        if (results.length != 0){
+          app.innerHTML += `<div class="row"><div class="col-md-12"><h4>Questions with '${input.keyword}'</h4></div>`;
+        }
+      
+        for (var i = 0; i < results.length; i++){
+            if (i === 2) {
+              break;
+            }
+            var question = results[i].question;
+            var choices = results[i].choices;
+            var answer = results[i].answer;
+            app.innerHTML += `<div class="row"><div class="col-md-12"><h5>&nbsp;${question}</h5></div>`;
+            app.innerHTML += `<div class="col-md-12"><div class="row">`;
+            for (var j = 0; j < choices.length; j++) {
+                if (answer === choices[j]){
+                    app.innerHTML += `&emsp;<strong>${choices[j]}</strong><br>`;
+                }
+                else{
+                    app.innerHTML += `&emsp;${choices[j]}<br>`;
+                }
+            }
+            app.innerHTML += `</div></div></div>`;
+            app.innerHTML += '<br>'
+        }
+      }
 
-      for (var i = 0; i < results.length; i++){
-          if (i === 50) {
-            break;
+      var keyword_value2 = input.keyword2.toLowerCase();
+
+      console.log(keyword_value2);
+
+      var results2 = [];
+      for (var i = 0; i < json_file.examples.length; i++){
+          var question2 = json_file.examples[i].question.toLowerCase();
+          if (question2.indexOf(keyword_value2) != -1){
+              results2.push(json_file.examples[i]);
           }
-          var question = results[i].question;
-          var choices = results[i].choices;
-          var answer = results[i].answer;
-          app.innerHTML += `<div class="row"><div class="col-md-12">${question}</div>`;
-          app.innerHTML += `<div class="col-md-12"><div class="row">`;
-          for (var j = 0; j < choices.length; j++) {
-              if (answer === choices[j]){
-                  app.innerHTML += `<strong>${choices[j]}</strong><br>`;
-              }
-              else{
-                  app.innerHTML += `${choices[j]}<br>`;
-              }
-          }
-          app.innerHTML += `</div></div></div>`;
-          app.innerHTML += '<br>'
+      }
+      if (keyword_value2.length != 0) {
+          
+        if (results2.length != 0){
+          app.innerHTML += `<div class="row"><div class="col-md-12"><h4>Questions with '${input.keyword2}'</h4></div>`;
+        }
+        for (var i = 0; i < results2.length; i++){
+            if (i === 2) {
+              break;
+            }
+            var question2 = results2[i].question;
+            var choices2 = results2[i].choices;
+            var answer2 = results2[i].answer;
+            app.innerHTML += `<div class="row"><div class="col-md-12"><h5>&nbsp;${question2}</h5></div>`;
+            app.innerHTML += `<div class="col-md-12"><div class="row">`;
+            for (var j = 0; j < choices2.length; j++) {
+                if (answer2 === choices2[j]){
+                    app.innerHTML += `&emsp;<strong>${choices2[j]}</strong><br>`;
+                }
+                else{
+                    app.innerHTML += `&emsp;${choices2[j]}<br>`;
+                }
+            }
+            app.innerHTML += `</div></div></div>`;
+            app.innerHTML += '<br>'
+        }
       }
 
     }
