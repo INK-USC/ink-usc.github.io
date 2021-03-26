@@ -43,7 +43,7 @@ function search() {
         var results = [];
         for (var i = 0; i < json_file.examples.length; i++){
             var question = json_file.examples[i].question.toLowerCase();
-            if (question.indexOf(keyword_values[jj]) != -1){
+            if (question.split(" ").includes(keyword_values[jj])){
                 results.push(json_file.examples[i]);
             }
         }
