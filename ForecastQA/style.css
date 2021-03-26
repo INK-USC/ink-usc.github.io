@@ -452,10 +452,10 @@ td:hover .hoverlarge {
   margin-bottom: 5px;
   margin-right: 5px;
   border: solid 2px #8dcca9;
-  width: 100%;
+  width: 70%;
   outline: 0;
   padding: 0 1em;
-  line-height: 48px;
+  line-height: 36px;
 }
 .contact_name {
   display: block;

@@ -103,10 +103,10 @@
         <div class="container" id="app">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class=""> Search forecasting questions with a keyword! </h4>
+                    <h4 class=""> Search forecasting questions with keywords! </h4>
                     The bold choice is the answer. <br><br>
                 </div>
-                <div class="row" style="margin-left: 5px">
+                <!-- <div class="row" style="margin-left: 5px">
                     <div class="col-md-6">
                       <div class="input-inner" style="width: 100%;">
                         <input
@@ -116,7 +116,7 @@
                           type="text"
                           placeholder="Keyword 1"
                         />
-                        <!-- <input id="submit" type="button" value="SEARCH" onclick="search()" /> -->
+                       
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -132,7 +132,19 @@
                     </div>
                     <br>
                 </div>
-                <input id="submit" type="button" value="SEARCH" onclick="search()" style="margin-left: 20px"/>
+                <input id="submit" type="button" value="SEARCH" onclick="search()" style="margin-left: 20px"/> -->
+                <div class="col-md-12">
+                  <div class="input-inner" style="width: 100%">
+                    <input
+                      class="input-span"
+                      id="keyword"
+                      name="keyword"
+                      type="text"
+                      placeholder="Multiple keywords with a space."
+                    />
+                    <input id="submit" type="button" value="SEARCH" onclick="search()" />
+                  </div>
+                </div>
             </div>
             <div class="para-wrap" id="results">
 
