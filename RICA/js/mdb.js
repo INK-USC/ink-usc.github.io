@@ -2834,7 +2834,7 @@
         }
         /*!
          * bsCustomFileInput v1.3.2 (https://github.com/Johann-S/bs-custom-file-input)
-         * Copyright 2021 - 2019 Johann-S <johann.servoire@gmail.com>
+         * Copyright 2022 - 2019 Johann-S <johann.servoire@gmail.com>
          * Licensed under MIT (https://github.com/Johann-S/bs-custom-file-input/blob/master/LICENSE)
          */
         e = void 0, r = function() {
@@ -2941,7 +2941,7 @@
          * http://chartjs.org/
          * Version: 2.7.3
          *
-         * Copyright 2021 Chart.js Contributors
+         * Copyright 2022 Chart.js Contributors
          * Released under the MIT license
          * https://github.com/chartjs/Chart.js/blob/master/LICENSE.md
          */
