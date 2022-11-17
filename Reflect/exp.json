@@ -1,0 +1,72 @@
+[
+    {
+		"model": "BERT-Base",
+		"c-hit1": "31.98",
+		"c-hit2": "55.92",
+		"c-hit3": "70.58",
+		"a-hit1": "25.24",
+		"a-hit2": "48.66",
+		"a-hit3": "64.81"
+    },
+
+    {
+		"model": "RoBERTa-Base",
+		"c-hit1": "36.04",
+		"c-hit2": "60.42",
+		"c-hit3": "72.08",
+		"a-hit1": "28.39",
+		"a-hit2": "51.91",
+		"a-hit3": "67.29"
+    },
+
+	
+	{
+		"model": "BERT-Large",
+		"c-hit1": "37.63",
+		"c-hit2": "62.01",
+		"c-hit3": "76.77",
+		"a-hit1": "27.18",
+		"a-hit2": "52.89",
+		"a-hit3": "70.22"
+    },
+
+
+    {
+		"model": "RoBERTa-Large",
+		"c-hit1": "45.85",
+		"c-hit2": "66.70",
+		"c-hit3": "80.04",
+		"a-hit1": "35.66",
+		"a-hit2": "58.52",
+		"a-hit3": "74.44"
+    },
+
+    {
+		"model": "Fine-tuned BERT-Large",
+		"c-hit1": "41.78",
+		"c-hit2": "62.37",
+		"c-hit3": "74.56",
+		"a-hit1": "28.13",
+		"a-hit2": "53.94",
+		"a-hit3": "69.71"
+    },
+	{
+		"model": "Fine-tuned RoBERTa-Large",
+		"c-hit1": "47.79",
+		"c-hit2": "67.49",
+		"c-hit3": "78.09",
+		"a-hit1": "36.20",
+		"a-hit2": "59.44",
+		"a-hit3": "73.55"
+	},
+	{
+		"model": "Human Performance",
+		"c-hit1" : "89.7 / 96.3",
+		"c-hit3" : "88.3 / 93.7"
+	}
+
+
+
+
+
+]
