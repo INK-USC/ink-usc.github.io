@@ -231,15 +231,16 @@ bottom: .5em;
 								<div class="col-md-5"> 
 									<p style="font-size:16px">
 									Human communication relies on <i><b>common ground (CG)</b></i>, the mutual knowledge and beliefs shared by participants, to produce coherent and interesting conversations.
-									Existing response generation (RG) models, however, produce generic and dull responses in dialogues because they act <i><b>reflexively</b></i>, failing to explicitly model CG, both due to the lack of CG in training data and the standard RG training procedure.</p>
+									
+									Existing dialogue models, however, produce generic and dull responses because they act <i><b>reflexively</b></i>, both due to the lack of CG in training data and the standard RG training procedure.</p>
 									
 									
 
 									<p style="font-size:16px">
-									We introduce <b>Reflect</b>, a dataset that annotates dialogues with explicit CG (materialized as inferences approximating shared knowledge and beliefs) and solicits 9k <i><b>diverse</b></i> human-generated responses each following one common ground. Using <b>Reflect</b>, we showcase the limitations of current dialogue data and RG models: less than half of the responses in current data is rated as high quality (sensible, specific, and interesting) and models trained using this data have even lower quality, while most <b>Reflect</b> responses are judged high quality.</p>
+									We introduce <b>Reflect</b>, a dataset that annotates dialogues with explicit CG (materialized as inferences) and solicits <i><b>9k diverse</b></i> human-generated responses each following one common ground. </p>
 									
 									<p style="font-size:16px">
-									Next, we analyze whether CG can help models produce better quality responses by using <b>Reflect</b> CG to guide RG models. Surprisingly, we find that simply prompting GPT3 to "<i>think</i>" about CG generates 30% more quality responses, showing promising benefits to integrating CG into the RG process.</p>
+									We find that incorporating CG helps models such as BlenderBot and GPT-3 generate 30% more quality responses, showing promising benefits to integrating CG into the RG process.</p>
 
 
 									<!-- <b>RICA</b> is a <em>logically-grounded inference challenge</em> with focus on the ability to make robust commonsense inferences despite textual perturbations. 
@@ -287,12 +288,13 @@ bottom: .5em;
 												<h4 class="widget-title"><span><a href="#example" ><b><em>Data Construction</em></b></a></span></h4>
 												<div class="col-md-10" > 
 													<p style="font-size:16px">
-														We design a two-stage data collection process by <b>first</b> asking crowdsourcing workers to answer different inference questions eliciting beliefs about common ground (e.g., <i>what is the speaker feeling right now?</i>) Answers rely on common sense, and adopt the point of view of the conversational respondent. We use these QA pairs to approximate various (non-exhaustive) inference dimensions to extend the common ground (e.g., empathy and event causality). </p>
+														We design a two-stage data collection process by <b>first asking crowdsourcing workers to answer different inference questions eliciting beliefs about common ground</b> (e.g., <i>what is the speaker feeling right now?</i>) We use these QA pairs to approximate various (non-exhaustive) inference dimensions to extend the common ground (e.g., empathy and event causality). </p>
 													<p style="font-size:16px">	
-														Our <b>second</b> step converts these CG into dialogue responses by asking different workers to write a coherent response based on the answer/inference collected in the first stage. Our collected data Reflect contains 9k diverse responses from 600 dialogue contexts, based on 5 inference dimensions for CG.</p>
+														Our <b>second step converts these CG into dialogue responses by asking different workers to write a coherent response based on the answer/inference collected in the first stage</b>. Our collected data Reflect contains 9k diverse responses from 600 dialogue contexts, based on 5 inference dimensi.
+														ons for CG.</p>
 					
 					
-													<img width="100%" src="reflect_data.png" alt="USC/ISI">
+													<img width="100%" src="data_construction.gif" alt="USC/ISI">
 					
 												 </div>	
 												
@@ -313,19 +315,19 @@ bottom: .5em;
 								<h4 class="widget-title"><span><a href="#experiments" ><b><em>Experiments and Analysis</em></b></a></span></h4>
 								<div class="col-md-10" > 
 									<p style="font-size:16px">
-										Using Reflect, we first test our hypothesis that explicitly modeling CG and using CG to construct responses creates more engaging conversations. We conduct human evaluation to compare the quality of responses between Reflect and “reflex” style. As shown in the figure below, Reflect consists of dialogue responses that are on average more specific (20%) and interesting (13%) than the original data, while having slightly lower sensibility (4%) ratings. When comparing the percentages of responses that satisfy all three criteria, i.e., quality responses, we find that there are substantially more (18%) such responses in Reflect than in original data.</p>
+										We find through extensive human evaluation that <b>Reflect consists of dialogue responses that are on average more specific (20%) and interesting (13%) than the original data</b>, while having slightly lower sensibility (4%) ratings. When comparing the percentages of responses that satisfy all three criteria, i.e., quality responses, we find that there are substantially more (18%) such responses in Reflect than in original data.</p>
 										
 										<img width="100%" src="reflect_fig1.png" alt="USC/ISI">
 
 
 									<p style="font-size:16px">	
-										After showing that explicitly integrating inferencebased CG helps humans produce more specific and interesting dialogue responses, we now test if this also holds for neural RG models. The figure below shows that simply prompting GPT-3 with CG inference questions boosts the generated response quality by 30% and similarly for fine-tuning BlenderBot on Reflect. More details in paper.</p>
+										After showing that explicitly integrating inferencebased CG helps humans produce more specific and interesting dialogue responses, we now test if this also holds for neural RG models. The figure below shows that <b>simply prompting GPT-3 with CG inference questions boosts the generated response quality by 30% and similarly for fine-tuning BlenderBot</b> on Reflect. More details in paper.</p>
 
 
 									<img width="100%" src="reflect_fig2.png" alt="USC/ISI">
 
 									<p style="font-size:16px">	
-										We are curious to find out which inference dimension helps models the most (and which the least)? Here we show that, intriguingly, on some dimensions, GPT3-FS-InfQ can produce significantly better responses than human responses from Reflect, especially event-based: "<i>What might have happened before</i>"" and "<i>what might happen after?</i>" and emotion-based CG about the other speaker "<i>What is A (speaker1) feeling now?</i>". However, on "<i>How would you describe A</i>", humans responses grounded on this question are much better. </p>
+										We are curious to find out <b>which inference dimension helps models the most (and which the least)</b>? Here we show that, intriguingly, on some dimensions, GPT3-FS-InfQ can produce significantly better responses than human responses from Reflect, especially event-based and emotion-based CG about the other speaker. </p>
 
 
 									<img width="100%" src="reflect_fig3.png" alt="USC/ISI">
