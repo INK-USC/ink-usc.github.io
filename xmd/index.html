@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Dong-Ho Lee" name="author">
+
+  <title>XMD : An End-to-End Framework for Interactive Explanation-Based Debugging of NLP Models</title>
+  <meta content="XMD : An End-to-End Framework for Interactive Explanation-Based Debugging of NLP Models" name="description">
+  <meta content="xmd, model debugging, ink lab" name="keywords">
+
+  <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+  <meta property="og:type" content='website'/>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+          integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+          crossorigin="anonymous"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown"><a href="#" style="cursor:default"><span>XMD</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="">What is Rationale?</a></li>
+              <li><a href="#instance">Instance Explanation</a></li>
+              <li><a href="#task">Task Explanation</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#overview">About</a></li>
+          <li><a href="https://arxiv.org/abs/2210.16978">Paper</a></li>
+          <li><a href="https://ink-molly.usc.edu/xmd">Online Demo</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="justify-content-center">
+          <h1 data-aos="fade-up">XMD: An End-to-End Framework for Interactive Explanation-Based Debugging of NLP Models</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">University of Southern California</h2>
+          <h2 data-aos="fade-up" data-aos-delay="400">SONY R&D Center</h2>
+
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="overview" class="overview">
+      <div class="container" id="app">
+        <div class="row">
+            <div class="col-md-6">
+                    <h2 class="" style="color: #3597d4"> Overview </h2>
+                    <p class="text" style="text-align: justify">
+                      NLP models are susceptible to learning spurious biases (i.e., bugs) that work on some datasets but do not properly reflect the underlying task. Explanation-based model debugging aims to resolve spurious biases by showing human users explanations of model behavior, asking users to give feedback on the behavior, then using the feedback to update the model.
+                      While existing model debugging methods have shown promise, their prototype-level implementations provide limited practical utility.
+                    </p>
+            </div>
+            <div class="col-sm-12 col-xl-6 d-flex text-center" data-aos="zoom-out" data-aos-delay="200">
+              <img src="overview.png" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row" style="margin-top: 25px;">
+                <div class="col-xl">
+                    <h2 style="color: #3597d4">XMD</h2>
+                    <div id="xmd">
+
+                      <div class="card">
+                        <div class="card-header" id="setting">
+                          <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#expCollapseOne"
+                                      aria-expanded="false" aria-controls="expCollapseOne">
+                                  <h4 style="color: #213744">Start Framework (Upload Data > Label Setting > Explanation Generation)</h4>
+                              </button>
+                          </h5>
+                        </div>
+                        <div id="expCollapseOne" class="collapse" aria-labelledby="expHeadingOne" data-parent="#xmd">
+                          <div class="card-body">
+                              <div class="row">
+                                  <img src="assets/gif/setting.gif" alt="see caption" class="img-fluid" style="width: 100%; margin: 0 auto"/>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header" id="instance">
+                          <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#expCollapseTwo"
+                                      aria-expanded="false" aria-controls="expCollapseTwo">
+                                  <h4 style="color: #213744">Instance Explanation</h4>
+                              </button>
+                          </h5>
+                        </div>
+                        <div id="expCollapseTwo" class="collapse" aria-labelledby="expHeadingTwo" data-parent="#xmd">
+                          <div class="card-body">
+                              <div class="row">
+                                  <img src="assets/gif/instance.gif" alt="see caption" class="img-fluid" style="width: 100%; margin: 0 auto"/>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header" id="task">
+                          <h5 class="mb-0">
+                              <button class="btn btn-link" data-toggle="collapse" data-target="#expCollapseThree"
+                                      aria-expanded="false" aria-controls="expCollapseThree">
+                                  <h4 style="color: #213744">Task Explanation</h4>
+                              </button>
+                          </h5>
+                        </div>
+                        <div id="expCollapseThree" class="collapse" aria-labelledby="expHeadingThree" data-parent="#xmd">
+                          <div class="card-body">
+                              <div class="row">
+                                  <img src="assets/gif/task.gif" alt="see caption" class="img-fluid" style="width: 100%; margin: 0 auto"/>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+
+  </main>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
