@@ -1,3 +1,2397 @@
----
+<!-- ---
 layout: home
 ---
+ -->
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html class="min-height-full">
+  <head>
+    <meta charset="utf-8">
+    <title>INK Lab @ USC</title>
+    <meta name="description" content="" />
+    <meta property="og:title" content="INK Lab @ USC" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/42659108?v=4" />
+    <meta property="og:description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="bg-white min-height-full" >
+
+
+
+  <div class="container-lg py-1 text-center">
+    <!-- p-responsive -->
+    
+
+
+<!-- <img src="https://avatars.githubusercontent.com/u/42659108?v=4" class="circle mb-3" style="max-width: 150px;"> -->
+<!-- <h1 class=" mb-2 lh-condensed">INK Lab @ USC</h1> -->
+<hr style="height:5px;border:none;color:maroon;background-color:#333"><span style="font-size:40px; font-family:Garmond; color: maroon;"><b>Tailoring Self-Rationalizers with Multi-Reward Distillation</b></span>
+  <span style="font-size:30px; font-family:Garmond; color: darkred;">Sahana Ramnath<sup><span style="font-size:10px">🖤</span></sup>, Brihi Joshi<sup><span style="font-size:10px">🖤</span></sup>, Skyler Hallinan<sup><span style="font-size:10px">⬛</span></sup>, Ximing Lu<sup><span style="font-size:10px">⬛</span></sup><sup><span style="font-size:10px">♟️</span></sup>, <br>Liunian Harold Li<sup><span style="font-size:10px">🌑</span></sup>, Aaron Chan<sup><span style="font-size:10px">🖤</span></sup>, Jack Hessel<sup><span style="font-size:10px">♟️</span></sup>, Yejin Choi<sup><span style="font-size:10px">⬛</span></sup><sup><span style="font-size:10px">🖤</span></sup>, Xiang Ren<sup><span style="font-size:10px">🖤</span></sup><sup><span style="font-size:10px">♟️</span></sup></span>
+  <br> <sup><span style="font-size:10px">🖤</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of Southern California</span>, <sup><span style="font-size:10px">⬛</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of Washington</span>, <br><sup><span style="font-size:10px">♟️</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">Allen Institute for Artificial Intelligence</span>, <sup><span style="font-size:10px">🌑</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of California Los Angeles</span>
+<hr style="height:5px;border:none;color:maroon;background-color:#333;">
+<p class="mb-3 f4 text-gray">
+  
+</p>
+
+
+  <div class="f4 mb-6">
+    <div class="d-md-inline-block mx-3 mb-1 mb-md-0">
+      <svg height="20" class="octicon octicon-mark-github mr-2 v-align-middle" fill="#24292e" aria-label="GitHub" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+      <a href="https://github.com/INK-USC/RationaleMultiRewardDistillation" >
+        @<span style="font-size:20px; font-family:Garmond; color: blue;"><b>MaRio</b></span> 
+      </a>
+    </div>
+    <div class="d-md-inline-block mx-3 mb-1 mb-md-0">
+      <svg height="20" class="octicon octicon-mail mr-2 v-align-middle" fill="#24292e" aria-label="email" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"></path></svg>
+      <a href="mailto:sramnath@usc.edu" >
+        @sramnath@usc.edu
+      </a>
+    </div>    
+    <div class="image">
+      <img  src="arxiv.jpg" width=30 />
+      <a href="https://github.com/INK-USC/RationaleMultiRewardDistillation" >
+        <span style="font-size:20px; font-family:Garmond; color: darkgreen;"><b>preprint</b></span> 
+      </a>
+    </div>
+    
+    
+  </div>
+
+
+
+    <div >
+      
+    </div>
+
+    <div class="my-6">
+      <h2 >About <span style="font-size:30px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span></h2>
+<p class="f3 mb-4 text-left text-gray">
+	<span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> (<b>M</b>ulti-rew<b>A</b>rd <b>R</b>at<b>IO</b>nalization) is a method that tailors small-sized LMs (< 1B parameters) to be strong rationalizers, in terms of both improved downstream performance and improved desirable properties of the rationales themselves.  Instead of relying on human rationale labelling, <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> considers a setting where a small LM only has access to <i>rewards</i> that measures factors underlying rationale quality, e.g. a trained LM that judges the plausibility of a rationale and provides a numerical score.<br><br><span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> extends <a href='https://github.com/GXimingLu/Quark'><span style="font-size:18px; font-family:Garmond">Quark</span></a> to a multi-reward setup, where generations from an LM are binned according reward values; the LM learns distributions conditioned on 'control-tokens' corresponding to every reward and <i>high-quality</i> generations can be obtained via conditioning on the highest-reward token.
+ </p>
+
+<img style='border:3px solid #000000' src="mario_pipeline-1.png" width=1000 />
+
+ <!-- <iframe src="mario_pipeline.pdf" width="800px" height="2100px" frameBorder="0"></iframe> -->
+
+<br><br><br><br><h2 >Datasets used</h2>
+<p class="f3 mb-4 text-left text-gray">We experiment and provide results on five difficult question-answering datasets: <a href='https://allenai.org/data/strategyqa'>StrategyQA</a>, <a href='https://huggingface.co/datasets/quarel'>QuaRel</a>, <a href="https://huggingface.co/datasets/openbookqa"> OpenBookQA</a>, <a href="https://github.com/INK-USC/NumerSense/tree/main/data">NumerSense</a> and <a href="https://huggingface.co/datasets/qasc">QASC</a>. The table below gives examples from each dataset. We train all our models in an <b>I-RO</b> format, wherein the input to the LM is the question, and the output is the joint generation of the rationale and the predicted answer.
+</p>
+<img style='border:3px solid #000000' src="data_egs.png" width=1000 />
+
+
+<br><br><br><br><h2 >Rationale Properties</h2>
+<p class="f3 mb-4 text-left text-gray">In order to determine whether these generated rationales are of <i>good quality</i>, we focus on three properties that are necessary for any rationale to have, agnostic of the task it is meant for. 
+<br><br>First, we note that a rationale should be <a href="https://github.com/liujch1998/vera"><i><u><b>plausible</b></u></i></a>.
+We define <i>plausible</i> as the rationale making <i>sense</i> on its own -- whether it be common, logical or factual sense depending on the dataset at hand. 
+For example, if a rationale states 'Cows can fly', it is not plausible.
+<br><br>Next, we identify that a rationale should be <a href="https://aclanthology.org/2023.acl-long.687/"><i><u><b>diverse</b></u></i></a>, where the rationale is clean and not repetitive.
+<br><br>Lastly, we note that a rationale should be <a href="https://aclanthology.org/2021.emnlp-main.804/"><i><u><b>consistent</b></u></i></a> with the gold label for the input.
+<i>Consistency</i> is important to ensure that a rationale does not spew irrelevant information, and that it supports the gold answer. 
+Furthermore, we focus on consistency with respect to the gold label, as misleading rationales are unhelpful as both LM justifications, and for <a href="https://aclanthology.org/2023.acl-long.392/">human utility</a>.
+<!-- We formalise these properties as rewards in \textsection \ref{sec:experiments} and while these are necessary properties for any rationale, we also discuss other \textit{good-to-have} properties in \textsection \ref{sec:discussion}. -->
+<br><br>
+All of these properties are agnostic of the actual prediction made by the LM.
+Since our self-rationalization setup generates a rationale first, followed by its prediction, we aim to generate rationales with good quality, which should ideally improve the answer generated by the LM.
+Therefore, we focus on improving self-rationalization along these three properties, as well as on task accuracy. 
+Along with the above rationale properties, we also consider <i><u><b>task correctness</b></u></i> as a necessary property of rationales, that they should try to improve over as a byproduct.
+</p>
+
+<img style='border:3px solid #000000' src="property_egs.png" width=1000 />
+
+
+<br><br><br><br><h2 >Sample rationales by <span style="font-size:30px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> </h2>
+<img style='border:3px solid #000000' src="mario_vs_sft_egs.png" width=1000 />
+
+
+<br><br><br><br><h2 >Human Evaluation of our rationales</h2>
+<p class="f3 mb-4 text-left text-gray">We first present human preference studies comparing rationales generated by <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> and the supervised fine-tuned baseline <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span> for all five datasets. For each instance, we ask three distinct annotators from a pool of qualified annotators to compare the two rationales across three settings, for a given question and correct answer pair: plausibility and consistency, which are defined in the same manner as the rewards, and an overall <i>Preference</i> rating.
+Preference is meant to indicate that the annotators pick the rationale that they would find <a href="https://aclanthology.org/2022.naacl-main.47/">acceptable</a> for the given question.
+In the figure below, we plot the % of instances where majority of annotators prefer only <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s rationales, only <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span>'s rationales, both or none.
+We note human annotators prefer <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s <i>only</i> rationales for 83.15%, 75.3%, 71.49%, 67.44% and 66.6% of instances respectively for Strategyqa, QuaRel, OpenBookQA, NumerSense and QASC. 
+Human annotators also find <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s rationales to be considerably more plausible and consistent than <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span> (We do not perform human studies for diversity and accuracy since they are automatic/straightforward metrics). 
+We use <a href="https://www.mturk.com/">Amazon MTurk</a> for all our human studies.
+</p>
+
+<img style='border:3px solid #000000' src="human_eval.png" width=1000 />
+
+    </div>
+
+    <!-- <div class="my-6">
+      <!-- <h2 >Experience </h2>
+<div> 
+	<ul>
+		<li class="f4 text-gray text-left"> Predoctoral Researcher at <a href='https://research.google/teams/india-research-lab/'>Google Research, India</a> (2020 - 2022)  </li>
+		<li class="f4 text-gray text-left"> Teaching Assistant for <span style='color: magenta;'> Analog Systems and Lab </span> at <a href='https://www.iitm.ac.in/'>IIT Madras</a> (Jan 2020 - May 2020)</li>
+		<li class="f4 text-gray text-left"> Teaching Assistant for <span style='color: magenta;'> Data Analytics Lab </span> at <a href='https://www.iitm.ac.in/'>IIT Madras</a> (Aug 2019 - Dec 2019)</li>
+		<li class="f4 text-gray text-left"> Summer intern at <a href='https://research.ibm.com/labs/india/'>IBM Research, India</a>, <a href='https://research.ibm.com/collaborate/horizons-network/'> AI Horizons Network </a> program (May 2019 - July 2019)  </li>
+		<li class="f4 text-gray text-left"> Undergraduate student mentor at <a href='https://www.linkedin.com/company/iitmsaathi/?originalSubdomain=in'> Saathi, IITM </a> (Aug 2017 - May 2018)  </li>
+		<li class="f4 text-gray text-left">Summer intern at <a href='https://www.linkedin.com/company/mastercard/'> Mastercard Technology Pvt Ltd, Pune, India </a>, Team Enterprise Architecture (May 2017 - Aug 2017)  </li>
+	</ul>
+</div>
+
+ -->
+    </div> -->
+
+    <!--  -->
+
+    <!-- <div class="my-6">
+      <h2 >My Projects</h2>
+<p class="f4 mb-4 text-gray">GitHub repositories that I've built.</p>
+<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+  
+
+  
+
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/ink-usc.github.io">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          ink-usc.github.io
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">INK Research Lab Website</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#f1e05a"></span>
+        <span class="mr-3" itemprop="programmingLanguage">JavaScript</span>
+    
+    
+      <a href="https://github.com/INK-USC/ink-usc.github.io/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>2
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/ink-usc.github.io/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/predicting-big-bench">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          predicting-big-bench
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for paper "How Predictable Are Large Language Model Capabilities? A Case Study on BIG-bench"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/predicting-big-bench/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>0
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/predicting-big-bench/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/RationaleMultiRewardDistillation">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          RationaleMultiRewardDistillation
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code and Dataset for preprint titled "Tailoring Self-Rationalizers with Multi-Reward Distillation"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/RationaleMultiRewardDistillation/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>0
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/RationaleMultiRewardDistillation/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/CommonGen">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          CommonGen
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">A Constrained Text Generation Challenge Towards Generative Commonsense Reasoning</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/CommonGen/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>133
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/CommonGen/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>23
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/RationaleHumanUtility">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          RationaleHumanUtility
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Codebase for Human Utility of FTRs at ACL 2023</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/RationaleHumanUtility/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>5
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/RationaleHumanUtility/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/FiD-ICL">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          FiD-ICL
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">"FiD-ICL: A Fusion-in-Decoder Approach for Efficient In-Context Learning" (ACL 2023)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/FiD-ICL/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>6
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/FiD-ICL/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/G-PlanET">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          G-PlanET
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal"></div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/G-PlanET/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>4
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/G-PlanET/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>2
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/BITE">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          BITE
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code and data for paper "BITE: Textual Backdoor Attacks with Iterative Trigger Injection"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/BITE/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>6
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/BITE/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>1
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/NumerSense">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          NumerSense
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">The data and code for NumerSense (EMNLP2020)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/NumerSense/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>18
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/NumerSense/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>8
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/entity-robustness">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          entity-robustness
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code and data for paper "On the Robustness of Reading Comprehension Models to Entity Renaming" (NAACL'22)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/entity-robustness/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>11
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/entity-robustness/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/XMD">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          XMD
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">XMD: An End-to-End Framework for Interactive Explanation-Based Debugging of NLP Models</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#2c3e50"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Vue</span>
+    
+    
+      <a href="https://github.com/INK-USC/XMD/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>5
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/XMD/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>1
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/ER-Test">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          ER-Test
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for ER-Test, accepted to the Findings of EMNLP 2022</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/ER-Test/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>3
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/ER-Test/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/CrossTaskMoE">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          CrossTaskMoE
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for paper "Eliciting and Understanding Cross-task Skills with Task-level Mixture-of-Experts" (Findings of EMNLP 2022)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/CrossTaskMoE/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>2
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/CrossTaskMoE/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/AlpacaTag">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          AlpacaTag
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">AlpacaTag: An Active Learning-based Crowd Annotation Framework for Sequence Tagging (ACL 2019 Demo)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#e34c26"></span>
+        <span class="mr-3" itemprop="programmingLanguage">HTML</span>
+    
+    
+      <a href="https://github.com/INK-USC/AlpacaTag/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>137
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/AlpacaTag/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>22
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/VisCOLL">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          VisCOLL
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code and data for the project "Visually grounded continual learning of compositional semantics"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/VisCOLL/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>23
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/VisCOLL/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>4
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/GMED">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          GMED
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source code for "Gradient Based Memory Editing for Task-Free Continual Learning", 4th Lifelong ML Workshop@ICML 2020</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/GMED/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>15
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/GMED/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>1
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/Reflect">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          Reflect
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Data and Code for Paper "Reflect Not Reflex: Inference-Based Common Ground Improves Dialogue Response Quality" (EMNLP 2022)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/Reflect/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>11
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/Reflect/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/HGN">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          HGN
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Learning Contextualized Knowledge Structures for Commonsense Reasoning</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/HGN/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>17
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/HGN/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>2
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/RobustLR">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          RobustLR
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">A Diagnostic Benchmark for Evaluating Logical Robustness of Deductive Reasoners</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/RobustLR/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>4
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/RobustLR/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>3
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/RICA">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          RICA
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal"></div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/RICA/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>0
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/RICA/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/TriggerNER">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          TriggerNER
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition (ACL 2020)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/TriggerNER/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>170
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/TriggerNER/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>19
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/SalKG">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          SalKG
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">This is the official PyTorch implementation of our NeurIPS 2021 paper: "SalKG: Learning From Knowledge Graph Explanations for Commonsense Reasoning"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/SalKG/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>14
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/SalKG/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/FaiRR">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          FaiRR
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">FaiRR: Faithful and Robust Deductive Reasoning over Natural Language (ACL 2022)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/FaiRR/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>13
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/FaiRR/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>4
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/sparse-distillation">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          sparse-distillation
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for "Sparse Distillation: Speeding Up Text Classification by Using Bigger Student Models"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/sparse-distillation/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>12
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/sparse-distillation/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>3
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/ReCross">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          ReCross
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">ReCross: Unsupervised Cross-Task Generalization via Retrieval Augmentation</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/ReCross/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>21
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/ReCross/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>1
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/CrossFit">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          CrossFit
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for paper "CrossFit :weight_lifting:: A Few-shot Learning Challenge for Cross-task Generalization in NLP" (https://arxiv.org/abs/2104.08835)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/CrossFit/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>96
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/CrossFit/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>8
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/fewNER">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          fewNER
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Good Examples Make A Faster Learner: Simple Demonstration-based Learning for Low-resource NER (ACL 2022)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/fewNER/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>40
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/fewNER/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>3
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/DIG">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          DIG
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Discretized Integrated Gradients for Explaining Language Models (EMNLP 2021)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/DIG/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>22
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/DIG/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>3
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/RE-Net">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          RE-Net
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Recurrent Event Network: Autoregressive Structure Inference over Temporal Knowledge Graphs (EMNLP 2020)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/RE-Net/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>409
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/RE-Net/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>94
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/LEAN-LIFE">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          LEAN-LIFE
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Label Efficient Learning From Explanations</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/LEAN-LIFE/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>23
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/LEAN-LIFE/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>3
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/CLIF">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          CLIF
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for Findings at EMNLP 2021 paper: "Learn Continually, Generalize Rapidly: Lifelong Knowledge Accumulation for Few-shot Learning"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/CLIF/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>8
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/CLIF/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>1
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/IsoBN">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          IsoBN
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">IsoBN: Fine-Tuning BERT with Isotropic Batch Normalization</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/IsoBN/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>12
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/IsoBN/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/XCSR">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          XCSR
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code Repo for the ACL21 paper "Common Sense Beyond English: Evaluating and Improving Multilingual LMs for Commonsense Reasoning"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/XCSR/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>20
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/XCSR/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>2
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/expl-refinement">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          expl-refinement
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for the paper "Refining Language Model with Compositional Explanation" (NeurIPS 2021)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/expl-refinement/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>13
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/expl-refinement/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/MHGRN">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          MHGRN
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering (EMNLP 2020)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/MHGRN/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>237
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/MHGRN/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>44
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/RiddleSense">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          RiddleSense
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">RiddleSense: Reasoning about Riddle Questions Featuring Linguistic Creativity and Commonsense Knowledge</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/RiddleSense/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>10
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/RiddleSense/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>2
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/AutoTriggER">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          AutoTriggER
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal"></div>
+  </div>
+  <div class="d-flex f6">
+    
+    
+      <a href="https://github.com/INK-USC/AutoTriggER/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>0
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/AutoTriggER/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/rockner">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          rockner
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal"></div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/rockner/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>9
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/rockner/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>3
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/get-started-on-dl-experiments">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          get-started-on-dl-experiments
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal"></div>
+  </div>
+  <div class="d-flex f6">
+    
+    
+      <a href="https://github.com/INK-USC/get-started-on-dl-experiments/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>1
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/get-started-on-dl-experiments/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/CALM">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          CALM
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source code for ICLR 2021 paper : Pre-training Text-to-Text Transformers for Concept-Centric Common Sense</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/CALM/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>27
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/CALM/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>1
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/Upstream-Bias-Mitigation">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          Upstream-Bias-Mitigation
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code and data for NAACL 2021 paper "On Transferability of Bias Mitigation Effects in Language Model Fine-Tuning"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/Upstream-Bias-Mitigation/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>5
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/Upstream-Bias-Mitigation/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/temporal-gcn-lstm">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          temporal-gcn-lstm
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for Characterizing and Forecasting User Engagement with In-App Action Graphs: A Case Study of Snapchat</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/temporal-gcn-lstm/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>71
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/temporal-gcn-lstm/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>26
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/MACROSCORE">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          MACROSCORE
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">MACROSCORE - Scoring Scientific Research </div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#DA5B0B"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Jupyter Notebook</span>
+    
+    
+      <a href="https://github.com/INK-USC/MACROSCORE/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>1
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/MACROSCORE/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/deceive-KG-models">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          deceive-KG-models
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">An implementation of the experiments on KG robustness</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/deceive-KG-models/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>4
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/deceive-KG-models/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/hypter">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          hypter
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Zero-shot Learning by Generating Task-specific Adapters</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/hypter/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>12
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/hypter/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>1
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/NExT">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          NExT
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source Code for paper "Learning from Explanations with Neural Execution Tree", ICLR 2020</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/NExT/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>18
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/NExT/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>4
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/mrc-explanation">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          mrc-explanation
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source Code for "Teaching Machine Comprehension with Compositional Explanations" (Findings of EMNLP 2020)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/mrc-explanation/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>11
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/mrc-explanation/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/bias-mitigation-via-transfer-learning">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          bias-mitigation-via-transfer-learning
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source code for Arxiv paper: Efficiently Mitigating Classification Bias via Transfer Learning</div>
+  </div>
+  <div class="d-flex f6">
+    
+    
+      <a href="https://github.com/INK-USC/bias-mitigation-via-transfer-learning/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>2
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/bias-mitigation-via-transfer-learning/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/AFET">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          AFET
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">AFET: Automatic Fine-Grained Entity Typing (EMNLP'16)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/AFET/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>57
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/AFET/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>20
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/DualRE">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          DualRE
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source code for paper: "Learning Dual Retrieval Module for Semi-supervised Relation Extraction"</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/DualRE/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>36
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/DualRE/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>3
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/DArtNet">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          DArtNet
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Temporal Attribute Prediction via Joint Modeling of Multi-Relational Structure Evolution</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/DArtNet/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>19
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/DArtNet/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>4
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/KagNet">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          KagNet
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Knowledge-Aware Graph Networks for Commonsense Reasoning (EMNLP-IJCNLP 19)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/KagNet/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>263
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/KagNet/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>57
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/hierarchical-explanation-neural-sequence-models">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          hierarchical-explanation-neural-sequence-models
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source code for "Towards Hierarchical Importance Attribution: Explaining Compositional Semantics for Neural Sequence Models", ICLR 2020.</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/hierarchical-explanation-neural-sequence-models/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>29
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/hierarchical-explanation-neural-sequence-models/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>8
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/USC-DS-RelationExtraction">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          USC-DS-RelationExtraction
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Distantly Supervised Relation Extraction</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#f34b7d"></span>
+        <span class="mr-3" itemprop="programmingLanguage">C++</span>
+    
+    
+      <a href="https://github.com/INK-USC/USC-DS-RelationExtraction/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>413
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/USC-DS-RelationExtraction/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>111
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/NERO">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          NERO
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source Code for paper "NERO: A Neural Rule Grounding Framework for Label-Efficient Relation Extraction", WWW 2020</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/NERO/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>47
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/NERO/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>6
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/ConNet">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          ConNet
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal"></div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/ConNet/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>12
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/ConNet/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>2
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/shifted-label-distribution">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          shifted-label-distribution
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Source code for paper "Looking Beyond Label Noise: Shifted Label Distribution Matters in Distantly Supervised Relation Extraction" (EMNLP 2019)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#f34b7d"></span>
+        <span class="mr-3" itemprop="programmingLanguage">C++</span>
+    
+    
+      <a href="https://github.com/INK-USC/shifted-label-distribution/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>38
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/shifted-label-distribution/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>2
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/CPL">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          CPL
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Collaborative Policy Learning for Open Knowledge Graph Reasoning (EMNLP 2019)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/CPL/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>57
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/CPL/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>14
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/procedural-extraction">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          procedural-extraction
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Code for paper Eliciting Knowledge from Experts: Automatic Transcript Parsing for Cognitive Task Analysis, in proceedings of ACL 2019</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/procedural-extraction/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>6
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/procedural-extraction/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/Life-iNet-public">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          Life-iNet-public
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal"></div>
+  </div>
+  <div class="d-flex f6">
+    
+    
+      <a href="https://github.com/INK-USC/Life-iNet-public/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>0
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/Life-iNet-public/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>0
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/StructMineDataPipeline">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          StructMineDataPipeline
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Performs entity detection, distant supervision, candidate generation, and produces JSON files for typing systems (PLE, AFET, CoType)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#f34b7d"></span>
+        <span class="mr-3" itemprop="programmingLanguage">C++</span>
+    
+    
+      <a href="https://github.com/INK-USC/StructMineDataPipeline/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>44
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/StructMineDataPipeline/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>11
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/ReQuest">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          ReQuest
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Indirect Supervision for Relation Extraction Using Question-Answer Pairs (WSDM'18)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#f34b7d"></span>
+        <span class="mr-3" itemprop="programmingLanguage">C++</span>
+    
+    
+      <a href="https://github.com/INK-USC/ReQuest/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>25
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/ReQuest/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>5
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/PLE">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          PLE
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Label Noise Reduction in Entity Typing  (KDD'16)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#f34b7d"></span>
+        <span class="mr-3" itemprop="programmingLanguage">C++</span>
+    
+    
+      <a href="https://github.com/INK-USC/PLE/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>54
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/PLE/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>14
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+    
+      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+  <div>
+    <div class="d-flex flex-justify-between flex-items-start mb-1">
+      <h1 class="f4 lh-condensed mb-1">
+        <a href="https://github.com/INK-USC/ClusType">
+          <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg>
+          ClusType
+        </a>
+      </h1>
+    </div>
+    <div class="text-gray mb-2 ws-normal">Automatic Entity Recognition and Typing for Domain-Specific Corpora (KDD'15)</div>
+  </div>
+  <div class="d-flex f6">
+    
+        <span class="repo-language-color ml-0 mr-1" style="background-color:#3572A5"></span>
+        <span class="mr-3" itemprop="programmingLanguage">Python</span>
+    
+    
+      <a href="https://github.com/INK-USC/ClusType/stargazers" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-star mr-1" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>100
+      </a>
+    
+    
+      <a href="https://github.com/INK-USC/ClusType/network/members" class="d-inline-block link-gray mr-4">
+        <svg class="octicon octicon-git-branch mr-1" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>41
+      </a>
+    
+  </div>
+</div>
+
+      </div>
+    
+  
+</div>
+
+    </div>
+
+     -->
+
+    
+  </div>
+
+
+  </body>
+</html>
+
