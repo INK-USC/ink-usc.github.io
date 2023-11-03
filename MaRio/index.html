@@ -36,7 +36,7 @@ layout: home
 
 <!-- <img src="https://avatars.githubusercontent.com/u/42659108?v=4" class="circle mb-3" style="max-width: 150px;"> -->
 <!-- <h1 class=" mb-2 lh-condensed">INK Lab @ USC</h1> -->
-<hr style="height:5px;border:none;color:maroon;background-color:#333"><span style="font-size:40px; font-family:Garmond; color: maroon;"><b>Tailoring Self-Rationalizers with Multi-Reward Distillation</b></span>
+<hr style="height:5px;border:none;color:maroon;background-color:#333"><span style="font-size:40px; font-family:Garmond; color: maroon;"><b>Tailoring Self-Rationalizers with Multi-Reward Distillation</b></span><br>
   <span style="font-size:30px; font-family:Garmond; color: darkred;">Sahana Ramnath<sup><span style="font-size:10px">🖤</span></sup>, Brihi Joshi<sup><span style="font-size:10px">🖤</span></sup>, Skyler Hallinan<sup><span style="font-size:10px">⬛</span></sup>, Ximing Lu<sup><span style="font-size:10px">⬛</span></sup><sup><span style="font-size:10px">♟️</span></sup>, <br>Liunian Harold Li<sup><span style="font-size:10px">🌑</span></sup>, Aaron Chan<sup><span style="font-size:10px">🖤</span></sup>, Jack Hessel<sup><span style="font-size:10px">♟️</span></sup>, Yejin Choi<sup><span style="font-size:10px">⬛</span></sup><sup><span style="font-size:10px">🖤</span></sup>, Xiang Ren<sup><span style="font-size:10px">🖤</span></sup><sup><span style="font-size:10px">♟️</span></sup></span>
   <br> <sup><span style="font-size:10px">🖤</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of Southern California</span>, <sup><span style="font-size:10px">⬛</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of Washington</span>, <br><sup><span style="font-size:10px">♟️</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">Allen Institute for Artificial Intelligence</span>, <sup><span style="font-size:10px">🌑</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of California Los Angeles</span>
 <hr style="height:5px;border:none;color:maroon;background-color:#333;">
@@ -73,25 +73,23 @@ layout: home
     <div >
       
     </div>
-
+<br>
     <div class="my-6">
-      <h2 >About <span style="font-size:30px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span></h2>
-<p class="f3 mb-4 text-left text-gray">
+      <h2><span style="font-size:25px>About</span> <span style="font-size:30px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span></h2>
+<p class="f2 mb-4 text-left text-gray">
 	<span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> (<b>M</b>ulti-rew<b>A</b>rd <b>R</b>at<b>IO</b>nalization) is a method that tailors small-sized LMs (< 1B parameters) to be strong rationalizers, in terms of both improved downstream performance and improved desirable properties of the rationales themselves.  Instead of relying on human rationale labelling, <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> considers a setting where a small LM only has access to <i>rewards</i> that measures factors underlying rationale quality, e.g. a trained LM that judges the plausibility of a rationale and provides a numerical score.<br><br><span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> extends <a href='https://github.com/GXimingLu/Quark'><span style="font-size:18px; font-family:Garmond">Quark</span></a> to a multi-reward setup, where generations from an LM are binned according reward values; the LM learns distributions conditioned on 'control-tokens' corresponding to every reward and <i>high-quality</i> generations can be obtained via conditioning on the highest-reward token.
  </p>
 
 <img style='border:3px solid #000000' src="mario_pipeline-1.png" width=1000 />
 
- <!-- <iframe src="mario_pipeline.pdf" width="800px" height="2100px" frameBorder="0"></iframe> -->
-
 <br><br><br><br><h2 >Datasets used</h2>
-<p class="f3 mb-4 text-left text-gray">We experiment and provide results on five difficult question-answering datasets: <a href='https://allenai.org/data/strategyqa'>StrategyQA</a>, <a href='https://huggingface.co/datasets/quarel'>QuaRel</a>, <a href="https://huggingface.co/datasets/openbookqa"> OpenBookQA</a>, <a href="https://github.com/INK-USC/NumerSense/tree/main/data">NumerSense</a> and <a href="https://huggingface.co/datasets/qasc">QASC</a>. The table below gives examples from each dataset. We train all our models in an <b>I-RO</b> format, wherein the input to the LM is the question, and the output is the joint generation of the rationale and the predicted answer.
+<p class="f2 mb-4 text-left text-gray">We experiment and provide results on five difficult question-answering datasets: <a href='https://allenai.org/data/strategyqa'>StrategyQA</a>, <a href='https://huggingface.co/datasets/quarel'>QuaRel</a>, <a href="https://huggingface.co/datasets/openbookqa"> OpenBookQA</a>, <a href="https://github.com/INK-USC/NumerSense/tree/main/data">NumerSense</a> and <a href="https://huggingface.co/datasets/qasc">QASC</a>. The table below gives examples from each dataset. We train all our models in an <b>I-RO</b> format, wherein the input to the LM is the question, and the output is the joint generation of the rationale and the predicted answer.
 </p>
 <img style='border:3px solid #000000' src="data_egs.png" width=1000 />
 
 
 <br><br><br><br><h2 >Rationale Properties</h2>
-<p class="f3 mb-4 text-left text-gray">In order to determine whether these generated rationales are of <i>good quality</i>, we focus on three properties that are necessary for any rationale to have, agnostic of the task it is meant for. 
+<p class="f2 mb-4 text-left text-gray">In order to determine whether these generated rationales are of <i>good quality</i>, we focus on three properties that are necessary for any rationale to have, agnostic of the task it is meant for. 
 <br><br>First, we note that a rationale should be <a href="https://github.com/liujch1998/vera"><i><u><b>plausible</b></u></i></a>.
 We define <i>plausible</i> as the rationale making <i>sense</i> on its own -- whether it be common, logical or factual sense depending on the dataset at hand. 
 For example, if a rationale states 'Cows can fly', it is not plausible.
@@ -115,7 +113,7 @@ Along with the above rationale properties, we also consider <i><u><b>task correc
 
 
 <br><br><br><br><h2 >Human Evaluation of our rationales</h2>
-<p class="f3 mb-4 text-left text-gray">We first present human preference studies comparing rationales generated by <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> and the supervised fine-tuned baseline <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span> for all five datasets. For each instance, we ask three distinct annotators from a pool of qualified annotators to compare the two rationales across three settings, for a given question and correct answer pair: plausibility and consistency, which are defined in the same manner as the rewards, and an overall <i>Preference</i> rating.
+<p class="f2 mb-4 text-left text-gray">We first present human preference studies comparing rationales generated by <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> and the supervised fine-tuned baseline <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span> for all five datasets. For each instance, we ask three distinct annotators from a pool of qualified annotators to compare the two rationales across three settings, for a given question and correct answer pair: plausibility and consistency, which are defined in the same manner as the rewards, and an overall <i>Preference</i> rating.
 Preference is meant to indicate that the annotators pick the rationale that they would find <a href="https://aclanthology.org/2022.naacl-main.47/">acceptable</a> for the given question.
 In the figure below, we plot the % of instances where majority of annotators prefer only <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s rationales, only <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span>'s rationales, both or none.
 We note human annotators prefer <span style="font-size:22px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s <i>only</i> rationales for 83.15%, 75.3%, 71.49%, 67.44% and 66.6% of instances respectively for Strategyqa, QuaRel, OpenBookQA, NumerSense and QASC. 
