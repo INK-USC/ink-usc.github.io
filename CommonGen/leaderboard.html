@@ -140,7 +140,67 @@ $('.dataTables_length').addClass('bs-select');
 	p {
 	  font-size: 1.1em;
 	  font-weight: 400;
+	} 
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 20px;
+		color: rgba(0, 0, 0, 0.84);
+	  }
+  
+	th, td {
+		padding: 8px;
+		border: 1px solid #ddd;
+		text-align: center;
 	}
+
+	th {
+		border-bottom: 4px solid #1b11d6;
+		background-color: white;
+	}
+  
+	#leaderboardTable tr td:nth-child(2) {
+		color: #0f12e7;  font-weight: 800; /* or any other color that you want */
+	} 
+	#leaderboardTable tr td:nth-child(3) {
+		color: #6126e1;  font-weight: 600; /* or any other color that you want */
+	} 
+	#leaderboardTable tr td:nth-child(7) {
+		color: #e32b13;  font-weight: 800; /* or any other color that you want */
+	} 
+	#leaderboardTable tr td:nth-child(8) {
+		color: #37a408;  font-weight: 500; /* or any other color that you want */
+	} 
+	#leaderboardTable tr td:nth-child(9) {
+		color: #6d6868f8; font-weight: 700;  /* or any other color that you want */
+	}
+	.sort-button {
+		color: rgb(53, 53, 149);
+		cursor: pointer;  
+		font-size:15px;
+		text-decoration: underline;
+	}  
+
+	.tab-content {
+		display: none; 
+	}
+	  
+	  /* Show the tab content if it's active */
+	.tab-content.active {
+		display: block;
+		padding: 0 0 0 0;
+	}
+	  
+	/* Highlight the active tab button */
+	.tab-buttons .active {
+	/* Apply your custom active state styles here */
+	font-weight: 800;
+	font-size: large;
+	background-color: #56a6ed;
+	border: 1px solid #00c1bb;
+	}
+
 	</style>
 			
 			<div class="container">
@@ -204,6 +264,40 @@ $('.dataTables_length').addClass('bs-select');
 									</div> <!-- /.col-md-4 -->
 								</div>
 								
+
+								<div class="box-content">
+									<div class="row">
+										<div class="col-md-12" id="exp">
+										<h4 class="widget-title"><span><b><a>CommonGen-Lite Leaderboard (400 examples for LLM Evaluation)</a></b></span></h4>
+										</div>
+										<table id="leaderboardTable" border="1" class="dataframe" style="font-size: large;">
+											<thead>
+												<tr style="text-align: center; ">
+													<!-- Adding sort buttons to each column header -->
+													<th>Name</th> 
+													<th><a onclick="sortTable(1)" class="sort-button">  Length</a></th>
+													<th><a onclick="sortTable(2)" class="sort-button"> Coverage</a></th>
+													<th><a onclick="sortTable(3)" class="sort-button"> PoS</a></th>
+													<th><a onclick="sortTable(4)" class="sort-button">  Win Rate</a></th>  
+												</tr>
+												
+											</thead>
+											<tbody>
+												<tr style="background-color: rgb(244, 237, 237);"><td>Human References           </td><td>12.84</td><td> 100.00</td><td>100.00</td><td>-    </td></tr>
+												<tr><td>gpt-4-1106-preview        </td><td>14.90</td><td>  96.78</td><td> 90.22</td><td>50.78</td></tr>
+												<tr><td>gpt-4-0613                </td><td>14.13</td><td>  97.67</td><td> 90.44</td><td>50.11</td></tr>
+												<tr><td>gpt-3.5-turbo             </td><td>12.76</td><td>  91.67</td><td> 82.00</td><td>49.22</td></tr>
+												<tr><td>Yi-34b-chat               </td><td>13.45</td><td>  79.56</td><td> 72.89</td><td>39.44</td></tr>
+												<tr><td>vicuna-13b-v1.5           </td><td>15.02</td><td>  85.89</td><td> 77.56</td><td>27.11</td></tr>
+												<tr><td>tulu-2-dpo-70b            </td><td>17.89</td><td>  89.44</td><td> 80.67</td><td>23.00</td></tr>
+												<tr><td>Yi-6b-chat                </td><td>13.32</td><td>  71.22</td><td> 62.11</td><td>21.89</td></tr>
+												<tr><td>Mixtral-8x7B-Instruct-v0.1</td><td>20.15</td><td>  84.44</td><td> 72.11</td><td>17.89</td></tr>
+												<tr><td>zephyr-7b-beta            </td><td>15.76</td><td>  81.33</td><td> 69.56</td><td>16.89</td></tr>
+												<tr><td>Llama-2-7b-chat-hf        </td><td>16.06</td><td>  88.44</td><td> 73.22</td><td>15.22</td></tr>
+											</tbody>
+									</table>
+									</div>
+								</div>
 
 								<div class="box-content">
 									<div class="row">
@@ -554,5 +648,58 @@ $('.dataTables_length').addClass('bs-select');
 		
   <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278218365'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1278218365%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 		
+
+  <script>
+    // Sorting function
+    function sortTable(columnIndex, tableID="leaderboardTable") {
+        var table, rows, switching, i, x, y, shouldSwitch, switchcount = 0;
+        table = document.getElementById(tableID);
+        switching = true;
+        
+        // Set the sorting direction to ascending:
+        var dir = "asc"; 
+        
+        // Make a loop that will continue until no switching has been done:
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            
+            // Loop through all table rows (except the first, which contains table headers):
+            for (i = 2; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                // Get the two elements to compare, one from current row and one from the next:
+                x = rows[i].getElementsByTagName("TD")[columnIndex];
+                y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+                
+                // Check if the two rows should switch place, based on the direction, asc or desc:
+                if (dir == "asc") {
+                    if (parseFloat(x.innerHTML) < parseFloat(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                // If a switch has been marked, make the switch and mark that a switch has been done:
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                // Each time a switch is done, increase this count by 1:
+                switchcount ++;
+            } else {
+                // If no switching has been done AND the direction is "asc", set the direction to "desc" and run the while loop again.
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script> 
+
     </body>
 </html>
