@@ -15,8 +15,7 @@
 		  gtag('config', 'UA-153119114-2');
 		</script>
 
-        <title>CommonGen | USC/ISI </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>CommonGen | USC/ISI </title> 
         <meta name="author" content="CommonGen">
         <meta charset="UTF-8">
 
@@ -29,8 +28,7 @@
 		<meta property="og:title" content="CommonGen | A Constrained Text Generation Challenge for Generative Commonsense Reasoning">
 		<meta name=description content="Authors: Bill Yuchen Lin, Ming Shen, Wangchunshu Zhou, Pei Zhou, Chandra Bhagavatula, Yejin Choi and Xiang Ren">
 		<meta name=keywords content="CommonGen, Yuchen Lin, Bill Lin, Natural Language Processing, Computational Linguistics, SJTU, USC, University of Southern California, Machine Learning, StatNLP, ADAPT Lab, NLP, ML, Cross-Cultural, Cross-lingual, Cross-region, Traffic Prediction, Kenny, Commonsense, Knowledge Graph, Relation">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<script language="javascript">
 				var ie4 = false; if(document.all) { ie4 = true; }
 			function getObject(id) { if (ie4) { return document.all[id]; } else { return document.getElementById(id); } }
@@ -74,7 +72,7 @@ $('.dataTables_length').addClass('bs-select');
 
 <script src="js/bootstrap-table.min.js"></script>
 
-
+<meta name="viewport" content="width=1024">
     </head>
     <body>
 	
@@ -160,21 +158,18 @@ $('.dataTables_length').addClass('bs-select');
 		background-color: white;
 	}
   
-	#leaderboardTable tr td:nth-child(2) {
-		color: #0f12e7;  font-weight: 800; /* or any other color that you want */
-	} 
-	#leaderboardTable tr td:nth-child(3) {
-		color: #6126e1;  font-weight: 600; /* or any other color that you want */
-	} 
-	#leaderboardTable tr td:nth-child(7) {
+	#leaderboardTable tr td:nth-child(5) {
 		color: #e32b13;  font-weight: 800; /* or any other color that you want */
 	} 
-	#leaderboardTable tr td:nth-child(8) {
-		color: #37a408;  font-weight: 500; /* or any other color that you want */
+	#leaderboardTable tr td:nth-child(4) {
+		color: #6126e1;  font-weight: 600; /* or any other color that you want */
 	} 
-	#leaderboardTable tr td:nth-child(9) {
-		color: #6d6868f8; font-weight: 700;  /* or any other color that you want */
-	}
+	#leaderboardTable tr td:nth-child(3) {
+		color: #0f12e7;  font-weight: 800; /* or any other color that you want */
+	} 
+	#leaderboardTable tr td:nth-child(2) {
+		color: #37a408;  font-weight: 500; /* or any other color that you want */
+	}  
 	.sort-button {
 		color: rgb(53, 53, 149);
 		cursor: pointer;  
@@ -233,7 +228,7 @@ $('.dataTables_length').addClass('bs-select');
 								<nav>
 									<ul class="sf-menu"> 
 								<li ><a href="index.html">Introduction</a></li> 
-								<li ><a href="https://huggingface.co/nlp/viewer/?dataset=common_gen " target="_blank">Data Explorer</a></li>
+								
 								<li ><a href="leaderboard.html">Leaderboard</a></li>
 								<li ><a href="analysis.html">Analysis</a></li>
 								<li ><a href="#misc">Misc.</a></li>
@@ -297,12 +292,30 @@ $('.dataTables_length').addClass('bs-select');
 											</tbody>
 									</table>
 									</div>
+
+									<div class="col-md-12">
+										<br>
+										<div class="callout-box" style="font-size: large;">
+											<span><b>Metrics:</b> </span>
+											<ul>
+											<li><b>Length</b>: the number of words on average in the generated sentences. </li>
+											<li><b>Coverage</b>: the percentage of examples where all given concepts are covered by model outputs. </li>
+											<li><b>PoS</b>: the percentage of examples where the part-of-speech (PoS) of each given concept is correct in model outputs. </li>
+											<li><b>Win Rate</b>: the percentage of examples where GPT-4-turbo prefers the model outputs over the human-written references. </li>
+											</ul>
+											<span><b>Links:</b> </span>
+											<ul>
+												<li>HuggingFace Dataset: <a href="https://huggingface.co/datasets/allenai/commongen_lite">https://huggingface.co/datasets/allenai/commongen_lite</a></li>
+												<li>Github: <a href="https://github.com/allenai/CommonGen-Eval">https://github.com/allenai/CommonGen-Eval</a></li>
+											</ul>
+										</div>
+									</div>
 								</div>
 
 								<div class="box-content">
 									<div class="row">
 										<div class="col-md-12" id="exp">
-										<h4 class="widget-title"><span><b><a>CommonGen Leaderboard (v1.1)</a></b></span></h4>
+										<h4 class="widget-title"><span><b><a>CommonGen Leaderboard (v1.1) (Archived) </a></b></span></h4>
 										
 										<table class="table performanceTable">
 											<tbody>
