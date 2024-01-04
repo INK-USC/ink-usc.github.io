@@ -282,7 +282,7 @@ $('.dataTables_length').addClass('bs-select');
 													<th><a onclick="sortTable(1)" class="sort-button">  Length</a></th>
 													<th><a onclick="sortTable(2)" class="sort-button"> Coverage</a></th>
 													<th><a onclick="sortTable(3)" class="sort-button"> PoS</a></th>
-													<th><a onclick="sortTable(4)" class="sort-button">  Win/Tie Rate</a></th>  
+													<th><a onclick="sortTable(4)" class="sort-button">  Win+Tie Rate</a></th>  
 													<th><a onclick="sortTable(5)" class="sort-button">  Overall</a></th>  
 												</tr>
 												
@@ -311,7 +311,7 @@ $('.dataTables_length').addClass('bs-select');
 											<li><b>Length</b>: the number of words on average in the generated sentences. </li>
 											<li><b>Coverage</b>: the percentage of examples where ALL given concepts are covered by model outputs. </li>
 											<li><b>PoS</b>: the percentage of examples where the part-of-speech (PoS) of ALL given concepts are correct in model outputs. </li>
-											<li><b>Win/Tie Rate</b>: the percentage of examples where GPT-4-turbo prefers the model outputs over the human-written references. </li>
+											<li><b>Win+Tie Rate</b>: the percentage of examples where GPT-4-turbo prefers the model outputs over the human-written references (or there is a tie). </li>
 											<li><b>Overall Score</b>: the product of scores on Coverage, PoS, and Win/Tie Rate. </li>
 											</ul>
 											<span><b>Links:</b> </span>
