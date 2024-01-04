@@ -170,6 +170,10 @@ $('.dataTables_length').addClass('bs-select');
 	#leaderboardTable tr td:nth-child(2) {
 		color: #37a408;  font-weight: 500; /* or any other color that you want */
 	}  
+
+	/* odd and even with different background colors */
+	#leaderboardTable tr:nth-child(even) {background-color: #f6f0f0;}
+	#leaderboardTable tr:nth-child(odd) {background-color: #ffffff;}
 	.sort-button {
 		color: rgb(53, 53, 149);
 		cursor: pointer;  
@@ -278,7 +282,7 @@ $('.dataTables_length').addClass('bs-select');
 												
 											</thead>
 											<tbody>
-												<tr style="background-color: rgb(244, 237, 237);"><td>Human References           </td><td>12.84</td><td> 100.00</td><td>100.00</td><td>-    </td></tr>
+												<tr style="background-color: rgb(203, 202, 202);"><td>Human References           </td><td>12.84</td><td> 100.00</td><td>100.00</td><td>-    </td></tr>
 												<tr><td>gpt-4-1106-preview        </td><td>14.90</td><td>  96.78</td><td> 90.22</td><td>50.78</td></tr>
 												<tr><td>gpt-4-0613                </td><td>14.13</td><td>  97.67</td><td> 90.44</td><td>50.11</td></tr>
 												<tr><td>gpt-3.5-turbo             </td><td>12.76</td><td>  91.67</td><td> 82.00</td><td>49.22</td></tr>
