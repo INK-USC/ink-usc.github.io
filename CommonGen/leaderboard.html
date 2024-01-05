@@ -301,26 +301,23 @@ $('.dataTables_length').addClass('bs-select');
 												<tr><td>Yi-6b-chat                </td><td>13.32</td><td>  71.67</td><td>63.56</td><td>    22.11</td><td>    10.07</td></tr>
 												</tbody>
 									</table>
+									<br>
+									<div class="callout-box" style="font-size: large;">
+										<span><b>Metrics:</b> </span>
+										<ul>
+										<li><b>Length</b>: the number of words on average in the generated sentences. </li>
+										<li><b>Coverage</b>: the percentage of examples where ALL given concepts are covered by model outputs. </li>
+										<li><b>PoS</b>: the percentage of examples where the part-of-speech (PoS) of ALL given concepts are correct in model outputs. </li>
+										<li><b>Win+Tie Rate</b>: the percentage of examples where GPT-4-turbo prefers the model outputs over the human-written references (or there is a tie). </li>
+										<li><b>Overall Score</b>: the product of scores on Coverage, PoS, and Win/Tie Rate. </li>
+										</ul>
+										<span><b>Links:</b> </span>
+										<ul>
+											<li>HuggingFace Dataset: <a href="https://huggingface.co/datasets/allenai/commongen_lite">https://huggingface.co/datasets/allenai/commongen_lite</a></li>
+											<li>Github: <a href="https://github.com/allenai/CommonGen-Eval">https://github.com/allenai/CommonGen-Eval</a></li>
+										</ul>
 									</div>
-
-									<div class="col-md-12">
-										<br>
-										<div class="callout-box" style="font-size: large;">
-											<span><b>Metrics:</b> </span>
-											<ul>
-											<li><b>Length</b>: the number of words on average in the generated sentences. </li>
-											<li><b>Coverage</b>: the percentage of examples where ALL given concepts are covered by model outputs. </li>
-											<li><b>PoS</b>: the percentage of examples where the part-of-speech (PoS) of ALL given concepts are correct in model outputs. </li>
-											<li><b>Win+Tie Rate</b>: the percentage of examples where GPT-4-turbo prefers the model outputs over the human-written references (or there is a tie). </li>
-											<li><b>Overall Score</b>: the product of scores on Coverage, PoS, and Win/Tie Rate. </li>
-											</ul>
-											<span><b>Links:</b> </span>
-											<ul>
-												<li>HuggingFace Dataset: <a href="https://huggingface.co/datasets/allenai/commongen_lite">https://huggingface.co/datasets/allenai/commongen_lite</a></li>
-												<li>Github: <a href="https://github.com/allenai/CommonGen-Eval">https://github.com/allenai/CommonGen-Eval</a></li>
-											</ul>
-										</div>
-									</div>
+									</div> 
 								</div>
 
 								<div class="box-content">
