@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Lifelong-ICL Challenge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stress-Testing Long-Context Language Models with Lifelong ICL and Task Haystack</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Stress-Testing Long-Context Language Models 
+            with Lifelong ICL and Task Haystack</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://xiaoyue2002.github.io">Xiaoyue Xu</a><sup>*</sup><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://yeqy.xyz">Qinyuan Ye</a><sup>*</sup><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.seanre.com">Xiang Ren</a><sup>2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>University of Southern California</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a 
+                  href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/INK-USC/Lifelong-ICL"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce <b>Lifelong ICL</b>, a problem setting that challenges long-context language models (LMs) to learn from a sequence of language tasks through in-context
+            learning (ICL). We further introduce <b>Task Haystack</b>, an evaluation suite dedicated
+            to assessing and diagnosing how long-context LMs utilizes contexts in Lifelong
+            ICL. When given a task instruction and test inputs, long-context LMs are expected
+            to leverage the relevant demonstrations in the Lifelong ICL prompt, avoid distraction and interference from other tasks, and achieve test accuracies that are not
+            significantly worse than the Single-task ICL baseline.
+          </p>
+          <p>
+            Task Haystack draws inspiration from the widely-adopted “needle-in-a-haystack”
+            (NIAH) evaluation, but presents new and unique challenges. It demands that
+            models (1) utilize the contexts with deeper understanding, rather than resorting to
+            simple copying and pasting; (2) navigate through long streams of evolving topics
+            and tasks, which closely approximates the complexities of real-world usage of
+            long-context LMs. Additionally, Task Haystack inherits the controllability aspect
+            of NIAH, providing model developers with tools and visualizations to identify
+            model vulnerabilities effectively.
+          </p>
+          <p>
+            We benchmark 12 long-context LMs using Task Haystack. We find that <b>state-of-the-art closed models such as GPT-4o still struggle in this setting, failing 15% of
+            the cases on average, while all open models we evaluate further lack behind by a
+            large margin</b>. In our controlled analysis, we find that long-context LMs are subject
+            to <b>distractibility and recency bias</b>, and these two factors both contribute to the
+            failure cases. Further, we observe <b>declines in performance when task instructions
+            are paraphrased at test time or when ICL demonstrations are repeated excessively</b>,
+            raising concerns about the robustness, instruction understanding, and true context
+            utilization of current long-context LMs. We release our code and data to encourage
+            future research that investigates and addresses these limitations
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- Task Haystack Eval -->
+        <h2 class="title is-4">Lifelong ICL Challenge & Task Haystack Eval</h2>
+        
+        <div class="column has-text-centered">
+          <img src="./static/images/intro.pdf" alt="Description of Image 1" style="max-width:100%; height:auto;">
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            Lifelong ICL presents long-context LMs with a sequence of tasks, each containing a task instruction and a few demonstrations. At test time, the model is given a seen task instruction and then makes predictions on the test input directly. A 
+            long-context LM “passes” the Task Haystack test when its accuracies in Lifelong ICL (Task 1+2+3) 
+            are not significantly worse than accuracies of the single-task ICL baseline (Task 2 only).
+          </p>
+        </div>
+
+        <div class="column has-text-centered">
+          <img src="./static/images/pass_rate.pdf" alt="Description of Image 2" style="max-width:100%; height:auto;">
+        </div>
+        <!-- Re: Task Haystack Eval -->
+
+
+        <!-- Main Results -->
+        <h2 class="title is-4" style="margin-top: 30px;">Main Results</h3>
+          <div class="content has-text-justified">
+            <p>
+              We evaluate 10 open-source models and 2 commercial models. State-of-the-art closed models (GPT-4o) still struggle in this setting, and all open models we evaluate further lack behind by a large margin.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/niath_film-7b.pdf" alt="First Image Description" style="width: 100%; max-width: 500px; height: auto;">
+            <figcaption style="font-size: 14px;">Visualized Task Haystack Results on FILM-7B (32k)</figcaption>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./static/images/tradeoff.pdf" alt="Second Image Description" style="width: 100%; max-width: 500px; height: auto;">
+          </div>
+          <!-- Main Results Table -->
+          <div class="content has-text-centered">
+            <div class="table-container">
+              <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <thead>
+                  <tr>
+                    <th rowspan="2">Model</th>
+                    <th colspan="1">0-shot</th>
+                    <th colspan="3">16-task 1-shot (4k)</th>
+                    <th colspan="3">16-task 2-shot (8k)</th>
+                    <th colspan="3">16-task 4-shot (16k)</th>
+                    <th colspan="3">16-task 8-shot (32k)</th>
+                  </tr>
+                  <tr>
+                    <th>s-acc</th>
+                    <th>s-acc</th>
+                    <th>l-acc</th>
+                    <th>pass</th>
+                    <th>s-acc</th>
+                    <th>l-acc</th>
+                    <th>pass</th>
+                    <th>s-acc</th>
+                    <th>l-acc</th>
+                    <th>pass</th>
+                    <th>s-acc</th>
+                    <th>l-acc</th>
+                    <th>pass</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align: left;">Mistral-7B (32k)</td>
+                    <td>68.1</td>
+                    <td>73.9</td>
+                    <td>74.6</td>
+                    <td>91.2</td>
+                    <td>77.6</td>
+                    <td>74.6</td>
+                    <td>73.8</td>
+                    <td>78.6</td>
+                    <td>74.8</td>
+                    <td>67.5</td>
+                    <td>80.3</td>
+                    <td>74.2</td>
+                    <td>47.5</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">FILM-7B (32k)</td>
+                    <td>71.1</td>
+                    <td>76.7</td>
+                    <td>74.7</td>
+                    <td>77.5</td>
+                    <td>79.1</td>
+                    <td>75.1</td>
+                    <td>77.5</td>
+                    <td>79.6</td>
+                    <td>75.4</td>
+                    <td>72.5</td>
+                    <td>80.8</td>
+                    <td>74.9</td>
+                    <td>55.0</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Llama2-7B (32k)</td>
+                    <td>61.9</td>
+                    <td>69.8</td>
+                    <td>63.3</td>
+                    <td>77.5</td>
+                    <td>72.8</td>
+                    <td>64.5</td>
+                    <td>53.8</td>
+                    <td>75.6</td>
+                    <td>63.0</td>
+                    <td>41.2</td>
+                    <td>78.0</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Llama2-7B (80k)</td>
+                    <td>38.4</td>
+                    <td>47.6</td>
+                    <td>60.0</td>
+                    <td>100.0</td>
+                    <td>49.8</td>
+                    <td>60.2</td>
+                    <td>100.0</td>
+                    <td>56.3</td>
+                    <td>62.3</td>
+                    <td>96.3</td>
+                    <td>59.8</td>
+                    <td>61.5</td>
+                    <td>76.3</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Llama3-8B (1048k)</td>
+                    <td>51.2</td>
+                    <td>65.5</td>
+                    <td>68.1</td>
+                    <td>78.8</td>
+                    <td>70.0</td>
+                    <td>69.1</td>
+                    <td>76.2</td>
+                    <td>71.5</td>
+                    <td>70.1</td>
+                    <td>71.3</td>
+                    <td>73.6</td>
+                    <td>70.1</td>
+                    <td>57.5</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Llama3-70B (1048k)</td>
+                    <td>60.7</td>
+                    <td>79.1</td>
+                    <td>72.9</td>
+                    <td>68.8</td>
+                    <td>79.0</td>
+                    <td>74.4</td>
+                    <td>50.0</td>
+                    <td>80.3</td>
+                    <td>75.3</td>
+                    <td>57.5</td>
+                    <td>81.7</td>
+                    <td>75.7</td>
+                    <td>51.2</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Yi-6B (200k)</td>
+                    <td>51.3</td>
+                    <td>70.1</td>
+                    <td>57.9</td>
+                    <td>61.3</td>
+                    <td>73.0</td>
+                    <td>58.6</td>
+                    <td>51.2</td>
+                    <td>75.0</td>
+                    <td>58.4</td>
+                    <td>43.8</td>
+                    <td>75.5</td>
+                    <td>57.7</td>
+                    <td>38.8</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Yi-9B (200k)</td>
+                    <td>57.0</td>
+                    <td>74.5</td>
+                    <td>71.5</td>
+                    <td>71.2</td>
+                    <td>77.7</td>
+                    <td>72.9</td>
+                    <td>71.2</td>
+                    <td>78.0</td>
+                    <td>72.9</td>
+                    <td>63.7</td>
+                    <td>80.0</td>
+                    <td>72.9</td>
+                    <td>47.5</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Yi-34B (200k)</td>
+                    <td>63.1</td>
+                    <td>74.1</td>
+                    <td>71.7</td>
+                    <td>62.5</td>
+                    <td>74.1</td>
+                    <td>72.4</td>
+                    <td>60.0</td>
+                    <td>76.1</td>
+                    <td>72.9</td>
+                    <td>63.8</td>
+                    <td>78.2</td>
+                    <td>72.6</td>
+                    <td>53.8</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">Cmd-R-35B (128k)</td>
+                    <td>65.6</td>
+                    <td>73.0</td>
+                    <td>74.6</td>
+                    <td>81.2</td>
+                    <td>75.3</td>
+                    <td>75.5</td>
+                    <td>61.3</td>
+                    <td>78.9</td>
+                    <td>68.7</td>
+                    <td>58.8</td>
+                    <td>80.5</td>
+                    <td>75.3</td>
+                    <td>41.2</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">GPT-3.5-Turbo (16k)</td>
+                    <td>78.3</td>
+                    <td>81.6</td>
+                    <td>76.3</td>
+                    <td>73.8</td>
+                    <td>82.6</td>
+                    <td>79.6</td>
+                    <td>71.3</td>
+                    <td>83.2</td>
+                    <td>79.5</td>
+                    <td>62.5</td>
+                    <td>81.8</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">GPT-4o (128k)</td>
+                    <td>70.7</td>
+                    <td>85.8</td>
+                    <td>87.4</td>
+                    <td>86.3</td>
+                    <td>87.0</td>
+                    <td>87.8</td>
+                    <td>81.3</td>
+                    <td>87.0</td>
+                    <td>88.4</td>
+                    <td>83.8</td>
+                    <td>87.5</td>
+                    <td>89.1</td>
+                    <td>88.8</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <!--/ Re: Main Results -->
+
+
+        <!-- Controlled Experiments -->
+        <h2 class="title is-4" style="margin-top: 50px;">Controlled Experiments</h3>
+          <div class="content has-text-justified">
+            <p>
+              To understand the root causes behind these failures, we conduct controlled experiments that isolate factors like <b>recency bias</b>
+               (models favoring information at the context’s end) and <b>distractability</b> (models getting distracted by irrelevant
+              information). The results confirm that both factors contribute to the performance degradation on
+              Task Haystack. Additionally, model performance dropped when instructions were paraphrased at test
+              time and when few-shot ICL demonstrations of a single task were repeated multiple times. These
+              observations highlight the limitations of current long-context models in terms of their robustness,
+              language understanding, and context utilization.
+            </p>
+          </div>
+          <div class="content has-text-centered" style="margin: 0;">
+            
+            <!-- Table of Controlled Experiments -->
+              <div class="table-container" style="transform: scale(0.75); margin-top: -30px; margin-bottom: 0px;">
+                <table style="width: 100%;">
+                  <thead style="background-color: #f2f2f2;">
+                    <tr>
+                      <th style="text-align: left;" rowspan="2">Setting</th>
+                      <th style="text-align: left;" rowspan="3">Input Prompt Example</th>
+                      <th style="text-align: left;" colspan="3">Controlled Factors</th>
+                    </tr>
+                    <tr>
+                      <th style="text-align: left;">Long Ctx.</th>
+                      <th style="text-align: left;">Distraction</th>
+                      <th style="text-align: left;">Recency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: left;"><strong>Baseline (Single-task ICL)</strong></td>
+                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;">✖️</td>
+                      <td style="text-align: left;">✖️</td>
+                      <td style="text-align: left;">&#10004;</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Random</td>
+                      <td style="text-align: left;"><span style="background-color:#d5d5d3;">Random Text</span> <span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">&#10004;</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Repeat</td>
+                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">✖️</td>
+                      <td style="text-align: left;">&#10004;</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Repeat+Shuffle</td>
+                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#FFECB3;">🔄 T1 Train</span> <span style="background-color:#FFECB3;">🔄 T1 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">✖️</td>
+                      <td style="text-align: left;">&#10004;</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;"><strong>Recall (Lifelong ICL)</strong></td>
+                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#a6f6fc;">T2 Train</span> <span style="background-color:#F8BBD0;">T3 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">✖️</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Replay</td>
+                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#a6f6fc;">T2 Train</span> <span style="background-color:#F8BBD0;">T3 Train</span> <span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">&#10004;</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Remove</td>
+                      <td style="text-align: left;"><span style="background-color:#a6f6fc;">T2 Train</span> <span style="background-color:#F8BBD0;">T3 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">N/A</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Paraphrase</td>
+                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#a6f6fc;">T2 Train</span> <span style="background-color:#F8BBD0;">T3 Train</span> <span style="background-color:#fcdf8a;"><strong>🔁 T1 Test</strong></span></td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">&#10004;</td>
+                      <td style="text-align: left;">✖️</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            <!-- Figures of Controlled Experiments -->
+              <div style="margin-top: 0px;">
+                <img src="./static/images/control1.pdf" alt="First Image Description" style="width: 60%; height: auto;">
+                <p style="font-size: 14px;">Controlled Experiments Results on FILM-7B (32k) and Mistral-7B (32k).</p>
+              </div>
+          </div>
+
+          <h2 class="title is-4" style="margin-top: 50px;">Quick Start</h2>
+          <div class="content has-text-justified">
+            Visit our code repository for a quick start ! 
+            <a href="https://github.com/INK-USC/Lifelong-ICL" style="color: #3273dc; font-weight: bold;">https://github.com/INK-USC/Lifelong-ICL</a>
+          </div>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    
+
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
