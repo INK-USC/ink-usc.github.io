@@ -3,22 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Lifelong-ICL Challenge">
+        content="Lifelong-ICL and Task Haystack">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stress-Testing Long-Context Language Models with Lifelong ICL and Task Haystack</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TY3SPS2SLG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
+    gtag('config', 'G-TY3SPS2SLG');
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -38,6 +34,12 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    .content-container-2 {
+        width: 80%; /* 4/5 of the width */
+        margin: 0 auto; /* Center the container */
+    }
+</style>
 </head>
 <body>
 
@@ -46,8 +48,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Stress-Testing Long-Context Language Models 
-            with Lifelong ICL and Task Haystack</h1>
+          <h1 class="title is-1 publication-title" style="font-size: 36px;">Stress-Testing Long-Context Language Models 
+            <br>with Lifelong ICL and Task Haystack</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://xiaoyue2002.github.io">Xiaoyue Xu</a><sup>*</sup><sup>1</sup>,</span>
@@ -61,6 +63,8 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Tsinghua University,</span>
             <span class="author-block"><sup>2</sup>University of Southern California</span>
+            <br>
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
           </div>
 
           <div class="column has-text-centered">
@@ -68,7 +72,7 @@
               <!-- PDF Link. -->
               <span class="link-block">
                 <a 
-                  href="https://arxiv.org/pdf/2011.12948"
+                  href="TODO"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -76,15 +80,15 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+              <!-- <span class="link-block">
+                <a href="TODO"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/INK-USC/Lifelong-ICL"
@@ -119,7 +123,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h3 class="title is-4" style="margin-top: -30px;">Abstract</h3>
         <div class="content has-text-justified">
           <p>
             We introduce <b>Lifelong ICL</b>, a problem setting that challenges long-context language models (LMs) to learn from a sequence of language tasks through in-context
@@ -141,14 +145,12 @@
           </p>
           <p>
             We benchmark 12 long-context LMs using Task Haystack. We find that <b>state-of-the-art closed models such as GPT-4o still struggle in this setting, failing 15% of
-            the cases on average, while all open models we evaluate further lack behind by a
-            large margin</b>. In our controlled analysis, we find that long-context LMs are subject
-            to <b>distractibility and recency bias</b>, and these two factors both contribute to the
-            failure cases. Further, we observe <b>declines in performance when task instructions
-            are paraphrased at test time or when ICL demonstrations are repeated excessively</b>,
-            raising concerns about the robustness, instruction understanding, and true context
-            utilization of current long-context LMs. We release our code and data to encourage
-            future research that investigates and addresses these limitations
+            the cases on average, while all open-weight models we evaluate further lack behind by a
+            large margin</b>, failing up to 61% of the cases. In our controlled analysis, we identify factors such as <b>distraction</b>
+            and <b>recency bias</b> as contributors to these failure cases. Further, we observe <b>declines
+            in performance when task instructions are paraphrased at test time or when ICL
+            demonstrations are repeated excessively</b>, raising concerns about the robustness,
+            instruction understanding, and true context utilization of current long-context LMs.
           </p>
         </div>
       </div>
@@ -163,44 +165,44 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <!-- Task Haystack Eval -->
-        <h2 class="title is-4">Lifelong ICL Challenge & Task Haystack Eval</h2>
+        <h3 class="title is-4" style="margin-top: -20px; display: flex; flex-direction: column; align-items: center;">Lifelong ICL and Task Haystack</h3>
+        <!-- <h2 class="title is-3">Lifelong ICL and Task Haystack</h2> -->
         
         <div class="column has-text-centered">
-          <img src="./static/images/intro.pdf" alt="Description of Image 1" style="max-width:100%; height:auto;">
+          <img src="./static/images/lifelong_icl.jpg" alt="Lifelong ICL and Task Haystack" style="max-width:80%; height:auto;">
         </div>
 
         <div class="content has-text-justified">
           <p>
-            Lifelong ICL presents long-context LMs with a sequence of tasks, each containing a task instruction and a few demonstrations. At test time, the model is given a seen task instruction and then makes predictions on the test input directly. A 
+            Lifelong ICL presents long-context LMs with a sequence of tasks, each containing a task instruction and a few demonstrations. 
+            At test time, the model is given a seen task instruction and then makes predictions on the test input directly. A 
             long-context LM “passes” the Task Haystack test when its accuracies in Lifelong ICL (Task 1+2+3) 
             are not significantly worse than accuracies of the single-task ICL baseline (Task 2 only).
           </p>
+
         </div>
 
-        <div class="column has-text-centered">
-          <img src="./static/images/pass_rate.pdf" alt="Description of Image 2" style="max-width:100%; height:auto;">
-        </div>
-        <!-- Re: Task Haystack Eval -->
-
-
+        
         <!-- Main Results -->
-        <h2 class="title is-4" style="margin-top: 30px;">Main Results</h3>
+        <h3 class="title is-4" style="margin-top: 50px; display: flex; flex-direction: column; align-items: center;">Result Summary</h3>
+          <div class="has-text-centered" style="margin-top: 20px;">
+            <img src="./static/images/main_results.jpg" alt="Main Results" style="width: 80%; max-width: 700px; height: auto;">
+          </div>
           <div class="content has-text-justified">
             <p>
-              We evaluate 10 open-source models and 2 commercial models. State-of-the-art closed models (GPT-4o) still struggle in this setting, and all open models we evaluate further lack behind by a large margin.
+              We evaluate 10 open-weight models and 2 closed models. 
+              We visualize Lifelong ICL accuracy and pass rate as a function of single-task ICL accuracy.
+              State-of-the-art closed models (GPT-4o) still struggle in this setting, and all open models we evaluate further lack behind by a large margin.
             </p>
           </div>
-          <div class="content has-text-centered">
-            <img src="./static/images/niath_film-7b.pdf" alt="First Image Description" style="width: 100%; max-width: 500px; height: auto;">
-            <figcaption style="font-size: 14px;">Visualized Task Haystack Results on FILM-7B (32k)</figcaption>
-          </div>
-          <div class="content has-text-centered">
-            <img src="./static/images/tradeoff.pdf" alt="Second Image Description" style="width: 100%; max-width: 500px; height: auto;">
-          </div>
+
+
           <!-- Main Results Table -->
+          <details>
+            <summary>Full Result Table (Scale-Shot Setting)</summary>
           <div class="content has-text-centered">
             <div class="table-container">
-              <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <table class="table is-bordered is-striped is-narrow is-hoverable " style="width: 98%;">
                 <thead>
                   <tr>
                     <th rowspan="2">Model</th>
@@ -423,15 +425,77 @@
               </table>
             </div>
           </div>
+        </details>
         <!--/ Re: Main Results -->
 
 
+          <h3 class="title is-4" style="margin-top: 50px; display: flex; flex-direction: column; align-items: center;">Needle-in-a-haystack-style Visualization</h3>
+
+          <div class="content has-text-centered">
+            <style>
+              #models { display: flex; width: 96%; background: #ffffff; overflow-y: auto; height: auto;}
+              #models a { text-align: center; width: 8%; display: block; padding: 2px; background: #f5f5f5; margin: 2px; cursor: pointer; text-decoration: none; border-radius: 10px; color: black; font-size: 12px;}
+              #models a:hover { background: #ddd; }
+              #imageDisplay { justify-content: center; align-items: center; width: 100%; height: auto; max-height: 200px; margin-bottom: 5%;}
+            </style>
+
+            <div id="models">
+                <a onclick="showImage('static/images/niah_mistral.jpg', 'Mistral-7B-32K')">Mistral-7B
+                  (32K)</a>
+                <a onclick="showImage('static/images/niath_film-7b.pdf', 'FILM-7B-32K')">FILM-7B
+                  (32K)</a>
+                <a onclick="showImage('static/images/niath_llama2-7b-32k.pdf', 'Llama2-7B-32K')">Llama2-7B
+                  (32K)</a>
+                <a onclick="showImage('static/images/niath_llama2-7b-80k.pdf', 'Llama2-7B-80K')">Llama2-7B
+                  (80K)</a>
+                <a onclick="showImage('static/images/niath_llama3-8b-1048k.pdf', 'Llama3-8B-1048K')">Llama3-8B
+                  (1048K)</a>
+                <a onclick="showImage('static/images/niath_llama3-70b-1048k.pdf', 'Llama3-70B-1048K')">Llama3-70B (1048K)
+                <a onclick="showImage('static/images/niath_yi-6b-200k.pdf', 'Yi-6B-200K')" style="display: block;">&nbsp;Yi-6B&nbsp; (200k)
+                <a onclick="showImage('static/images/niath_yi-9b-200k.pdf', 'Yi-9B-200K')">&nbsp;Yi-9B&nbsp;
+                  (200K)</a>
+                <a onclick="showImage('static/images/niath_yi-34b-200k.pdf', 'Yi-34B-200K')">Yi-34B
+                  (200K)</a>
+                <a onclick="showImage('static/images/niath_command-r.pdf', 'Cmd-R-35B-128K')">Cmd-R-35B
+                  (128K)</a>
+                <a onclick="showImage('static/images/niath_gpt-3.5-turbo.pdf', 'GPT-3.5-Turbo')">GPT-3.5-Turbo
+                  (16K)</a>
+                <a onclick="showImage('static/images/niath_gpt-4o.pdf', 'GPT-4o')">GPT-4o
+                  (128K)</a>
+            </div>
+            <br>
+            <div id="imageDisplay">
+              <img id="modelImage" style="max-height: 240px;" src='static/images/niah_mistral.jpg'/>
+              <figcaption id="modelcaption" style="font-size: 14px;">Task Haystack Results of Mistral-7B (32K).</figcaption>
+            </div>
+            <script>
+              function showImage(imageFile, model) {
+                document.getElementById('modelImage').src = imageFile;
+                document.getElementById('modelcaption').textContent = "Task Haystack Results of " + model + ".";
+              }
+            </script>
+          </div>
+          <br>
+          <br>
+
+        <details>
+            <summary>Detailed Diagnostic Report of Mistral-7B (32k)</summary>
+        <br>
+        <div class="has-text-centered" style="margin-top: 20px;">
+          <img src="./static/images/niah_detailed_mistral.jpg" alt="Detailed Diagnostic Report" style="width: 80%; max-width: 600px; height: auto;">
+          <figcaption id="modelcaption" style="font-size: 14px;">Detailed Diagnostic Report of Mistral-7B (32K), N-task=16, N-shot=8.</figcaption>
+        </div>
+        </details>
+
+
         <!-- Controlled Experiments -->
-        <h2 class="title is-4" style="margin-top: 50px;">Controlled Experiments</h3>
+        <h3 class="title is-4" style="margin-top: 50px; display: flex; flex-direction: column; align-items: center;">Controlled Experiments</h3>
+
+        <!-- <h2 class="title is-4" style="margin-top: 50px;">Controlled Experiments</h3> -->
           <div class="content has-text-justified">
             <p>
-              To understand the root causes behind these failures, we conduct controlled experiments that isolate factors like <b>recency bias</b>
-               (models favoring information at the context’s end) and <b>distractability</b> (models getting distracted by irrelevant
+              To understand the causes behind the failure cases in Task Haystack, we conduct controlled experiments that isolate factors like <b>recency bias</b>
+               (models favoring information at the end of the context) and <b>distractability</b> (models getting distracted by irrelevant
               information). The results confirm that both factors contribute to the performance degradation on
               Task Haystack. Additionally, model performance dropped when instructions were paraphrased at test
               time and when few-shot ICL demonstrations of a single task were repeated multiple times. These
@@ -448,7 +512,7 @@
                     <tr>
                       <th style="text-align: left;" rowspan="2">Setting</th>
                       <th style="text-align: left;" rowspan="3">Input Prompt Example</th>
-                      <th style="text-align: left;" colspan="3">Controlled Factors</th>
+                      <th style="text-align: center;" colspan="3">Controlled Factors</th>
                     </tr>
                     <tr>
                       <th style="text-align: left;">Long Ctx.</th>
@@ -480,7 +544,7 @@
                     </tr>
                     <tr>
                       <td style="text-align: left;">Repeat+Shuffle</td>
-                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#FFECB3;">🔄 T1 Train</span> <span style="background-color:#FFECB3;">🔄 T1 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
+                      <td style="text-align: left;"><span style="background-color:#FFECB3;">T1 Train</span> <span style="background-color:#FFECB3;">🔀 T1 Train</span> <span style="background-color:#FFECB3;">🔀 T1 Train</span> <span style="background-color:#fcdf8a;"><strong>T1 Test</strong></span></td>
                       <td style="text-align: left;">&#10004;</td>
                       <td style="text-align: left;">✖️</td>
                       <td style="text-align: left;">&#10004;</td>
@@ -515,42 +579,27 @@
                     </tr>
                   </tbody>
                 </table>
+                <figcaption id="modelcaption" style="font-size: 18px;">🔀: Shuffle the order of few-shot examples 🔁: Use a paraphrased task instruction at test time.</figcaption>
               </div>
+              
 
             <!-- Figures of Controlled Experiments -->
               <div style="margin-top: 0px;">
-                <img src="./static/images/control1.pdf" alt="First Image Description" style="width: 60%; height: auto;">
-                <p style="font-size: 14px;">Controlled Experiments Results on FILM-7B (32k) and Mistral-7B (32k).</p>
+                <img src="./static/images/controlled_results.jpg" alt="First Image Description" style="width: 50%; height: auto;">
+                <img src="./static/images/repeat_results.jpg" alt="First Image Description" style="width: 42%; height: auto;">
+                <!-- <p style="font-size: 14px;">Controlled Experiments Results on FILM-7B (32k) and Mistral-7B (32k).</p> -->
+                <figcaption id="modelcaption" style="font-size: 14px;"> <strong>Left</strong>: Controlled Experiments Results on FILM-7B (32k) and Mistral-7B (32k); <strong>Right</strong>: Repeated ICL as "Multi-epoch" ICL.</figcaption>
               </div>
           </div>
 
-          <h2 class="title is-4" style="margin-top: 50px;">Quick Start</h2>
-          <div class="content has-text-justified">
-            Visit our code repository for a quick start ! 
-            <a href="https://github.com/INK-USC/Lifelong-ICL" style="color: #3273dc; font-weight: bold;">https://github.com/INK-USC/Lifelong-ICL</a>
+          <h3 class="title is-4" style="margin-top: 50px; display: flex; flex-direction: column; align-items: center;">BibTeX</h3>
+          <div class="container is-max-desktop content">
+            <pre><code>TODO</code></pre>
           </div>
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-    
-
 
   </div>
 </section>
 
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
-  </div>
-</section>
 
 
 <footer class="footer">
