@@ -5,7 +5,7 @@
   <meta name="description"
         content="Lifelong-ICL and Task Haystack">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stress-Testing Long-Context Language Models with Lifelong ICL and Task Haystack</title>
+  <title>Lifelong ICL and Task Haystack</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TY3SPS2SLG"></script>
@@ -27,7 +27,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.ico">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -440,32 +440,33 @@
             </style>
 
             <div id="models">
-                <a onclick="showImage('static/images/niah_mistral.jpg', 'Mistral-7B-32K')">Mistral-7B
+                <a onclick="showImage('static/images/niath_mistral-7b.jpg', 'Mistral-7B (32K)')">Mistral-7B
                   (32K)</a>
-                <a onclick="showImage('static/images/niath_film-7b.pdf', 'FILM-7B-32K')">FILM-7B
+                <a onclick="showImage('static/images/niath_film-7b.jpg', 'FILM-7B (32K)')">FILM-7B
                   (32K)</a>
-                <a onclick="showImage('static/images/niath_llama2-7b-32k.pdf', 'Llama2-7B-32K')">Llama2-7B
+                <a onclick="showImage('static/images/niath_llama2-7b-32k.jpg', 'Llama2-7B (32K)')">Llama2-7B
                   (32K)</a>
-                <a onclick="showImage('static/images/niath_llama2-7b-80k.pdf', 'Llama2-7B-80K')">Llama2-7B
+                <a onclick="showImage('static/images/niath_llama2-7b-80k.jpg', 'Llama2-7B (80K)')">Llama2-7B
                   (80K)</a>
-                <a onclick="showImage('static/images/niath_llama3-8b-1048k.pdf', 'Llama3-8B-1048K')">Llama3-8B
+                <a onclick="showImage('static/images/niath_llama3-8b-1048k.jpg', 'Llama3-8B (1048K)')">Llama3-8B
                   (1048K)</a>
-                <a onclick="showImage('static/images/niath_llama3-70b-1048k.pdf', 'Llama3-70B-1048K')">Llama3-70B (1048K)
-                <a onclick="showImage('static/images/niath_yi-6b-200k.pdf', 'Yi-6B-200K')" style="display: block;">&nbsp;Yi-6B&nbsp; (200k)
-                <a onclick="showImage('static/images/niath_yi-9b-200k.pdf', 'Yi-9B-200K')">&nbsp;Yi-9B&nbsp;
+                <a onclick="showImage('static/images/niath_llama3-70b-1048k.jpg', 'Llama3-70B (1048K)')">Llama3-70B (1048K)
+                <a onclick="showImage('static/images/niath_command-r.jpg', 'Cmd-R-35B (128K)')">Cmd-R-35B
+                    (128K)</a>
+                <a onclick="showImage('static/images/niath_yi-6b-200k.jpg', 'Yi-6B (200K)')" style="display: block;">&nbsp;Yi-6B&nbsp; (200k)
+                <a onclick="showImage('static/images/niath_yi-9b-200k.jpg', 'Yi-9B (200K)')">&nbsp;Yi-9B&nbsp;
                   (200K)</a>
-                <a onclick="showImage('static/images/niath_yi-34b-200k.pdf', 'Yi-34B-200K')">Yi-34B
+                <a onclick="showImage('static/images/niath_yi-34b-200k.jpg', 'Yi-34B (200K)')">Yi-34B
                   (200K)</a>
-                <a onclick="showImage('static/images/niath_command-r.pdf', 'Cmd-R-35B-128K')">Cmd-R-35B
-                  (128K)</a>
-                <a onclick="showImage('static/images/niath_gpt-3.5-turbo.pdf', 'GPT-3.5-Turbo')">GPT-3.5-Turbo
+
+                <a onclick="showImage('static/images/niath_gpt-3.5-turbo.jpg', 'GPT-3.5-Turbo')">GPT-3.5-Turbo
                   (16K)</a>
-                <a onclick="showImage('static/images/niath_gpt-4o.pdf', 'GPT-4o')">GPT-4o
+                <a onclick="showImage('static/images/niath_gpt-4o.jpg', 'GPT-4o')">GPT-4o
                   (128K)</a>
             </div>
             <br>
             <div id="imageDisplay">
-              <img id="modelImage" style="max-height: 240px;" src='static/images/niah_mistral.jpg'/>
+              <img id="modelImage" style="max-height: 240px;" src='static/images/niath_mistral-7b.jpg'/>
               <figcaption id="modelcaption" style="font-size: 14px;">Task Haystack Results of Mistral-7B (32K).</figcaption>
             </div>
             <script>
@@ -479,14 +480,37 @@
           <br>
 
         <details>
-            <summary>Detailed Diagnostic Report of Mistral-7B (32k)</summary>
+            <summary>Detailed Report of Mistral-7B (32k)</summary>
         <br>
         <div class="has-text-centered" style="margin-top: 20px;">
-          <img src="./static/images/niah_detailed_mistral.jpg" alt="Detailed Diagnostic Report" style="width: 80%; max-width: 600px; height: auto;">
-          <figcaption id="modelcaption" style="font-size: 14px;">Detailed Diagnostic Report of Mistral-7B (32K), N-task=16, N-shot=8.</figcaption>
+          <img src="./static/images/diagnose-mistral-7b.jpg" alt="Detailed Report" style="width: 80%; max-width: 600px; height: auto;">
+          <figcaption id="modelcaption" style="font-size: 14px;">Detailed Report of Mistral-7B (32K), N-task=16, N-shot=8.</figcaption>
         </div>
         </details>
-
+        <details>
+            <summary>Detailed Report of FILM-7B (32k)</summary>
+        <br>
+        <div class="has-text-centered" style="margin-top: 20px;">
+          <img src="./static/images/diagnose-film-7b.jpg" alt="Detailed Report" style="width: 80%; max-width: 600px; height: auto;">
+          <figcaption id="modelcaption" style="font-size: 14px;">Detailed Report of FILM-7B (32K), N-task=16, N-shot=8.</figcaption>
+        </div>
+        </details>
+        <details>
+          <summary>Detailed Report of GPT-3.5-Turbo (16k)</summary>
+      <br>
+      <div class="has-text-centered" style="margin-top: 20px;">
+        <img src="./static/images/diagnose-gpt-3.5-turbo.jpg" alt="Detailed Report" style="width: 80%; max-width: 600px; height: auto;">
+        <figcaption id="modelcaption" style="font-size: 14px;">Detailed Report of GPT-3.5-Turbo (16K), N-task=16, N-shot=4.</figcaption>
+      </div>
+      </details>
+      <details>
+        <summary>Detailed Report of GPT-4o (128k)</summary>
+      <br>
+      <div class="has-text-centered" style="margin-top: 20px;">
+        <img src="./static/images/diagnose-gpt-4o.jpg" alt="Detailed Report" style="width: 80%; max-width: 600px; height: auto;">
+        <figcaption id="modelcaption" style="font-size: 14px;">Detailed Report of GPT-4o (128k), N-task=16, N-shot=8.</figcaption>
+      </div>
+      </details>
 
         <!-- Controlled Experiments -->
         <h3 class="title is-4" style="margin-top: 50px; display: flex; flex-direction: column; align-items: center;">Controlled Experiments</h3>
