@@ -1,0 +1,89 @@
+layout: stacked
+style: light
+
+plugins:
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+
+# projects:
+#   sort_by: stars
+#   # sort_by options:
+#   #   - pushed
+#   #   - stars
+#   limit: 3
+#   exclude:
+#     archived: false
+#     forks: true
+#     projects: "Price_Of_Anarchy"
+#     # - repo-name
+
+# social_media:
+  # behance: your_username
+  # dribbble: your_username
+  # facebook: your_username
+  # hackerrank: your_username
+  # instagram: your_username
+  # keybase: your_username
+  # linkedin: sahana-ramnath
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
+  # twitter: sahana_ramnath
+  # unsplash: your_username
+  # vk: your_username
+  # website: http://your_website_url
+  # youtube: your_username
+
+# topics:
+#   - name: CSS
+#     web_url: https://github.com/topics/css
+#     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+
+#   - name: Web design
+
+#   - name: Sass
+#     web_url: https://github.com/topics/sass
+#     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+
+# papers:
+#   - name: "Are Machine Rationales (Not) Useful to Humans? Measuring and Improving Human Utility of Free-Text Rationales"
+#     web_url: https://arxiv.org/abs/2305.07095
+#     authors: Brihi Joshi, Ziyi Liu, Sahana Ramnath, Aaron Chan, Zhewei Tong, Shaoliang Nie, Qifan Wang, Yejin Choi, Xiang Ren
+#     location: ACL 2023
+
+#   - name: "HintedBT: Augmenting Back-Translation with Quality and Transliteration Hints"
+#     web_url: https://aclanthology.org/2021.emnlp-main.129
+#     authors: Sahana Ramnath, Melvin Johnson, Abhirut Gupta, Aravindan Raghuveer
+#     location: EMNLP 2021
+
+#   - name: "A Framework for Rationale Extraction for Deep QA models"
+#     web_url: https://arxiv.org/abs/2110.04620
+#     authors: Sahana Ramnath, Preksha Nema, Deep Sahni, Mitesh M. Khapra
+#     location: arXiv preprint 2021
+
+#   - name: "Towards Interpreting BERT for Reading Comprehension Based QA"
+#     web_url: https://aclanthology.org/2020.emnlp-main.261/
+#     authors: Sahana Ramnath, Preksha Nema, Deep Sahni, Mitesh M. Khapra
+#     location: EMNLP 2020
+
+#   - name: "Scene Graph based Image Retrieval–A case study on the CLEVR Dataset"
+#     web_url: https://arxiv.org/abs/1911.00850
+#     authors: Sahana Ramnath, Amrita Saha, Soumen Chakrabarti, Mitesh M. Khapra
+#     location: LINGIR workshop, ICCV 2019 (Best Paper Award) 
+
+introduction:
+
+priorposition:
+

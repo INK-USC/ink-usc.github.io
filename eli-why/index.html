@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ELI-Why: Evaluating the Pedagogical Utility of Language Model Explanations">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ELI-Why: Evaluating the Pedagogical Utility of Language Model Explanations</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/mario.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ELI-Why: Evaluating the Pedagogical Utility of Language Model Explanations</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://brihijoshi.github.io/">Brihi Joshi</a><sup>*1</sup>,</span>
+            <span class="author-block">
+              <a href="https://skylerhallinan.com/">Keyu He</a><sup>*1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sahanaramnath.github.io/">Sahana Ramnath</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sadrasabouri.github.io/">Sadra Sabouri</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://cs.stanford.edu/~katezhou/">Kaitlyn Zhou</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://soutirini.com/">Souti Chattopadhyay</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://swabhs.com/">Swabha Swayamdipta</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.seanre.com/">Xiang Ren</a><sup>1</sup>
+            </span>
+          </div>
+          <br>
+          <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>&nbsp;<img style="max-width: 150px; height: auto;" src="./static/images/usc.png"/></span>
+            <span class="author-block"><sup>2</sup>&nbsp;<img style="max-width: 80px; height: auto;" src="./static/images/stanford.png"/></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (TBD)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (TBD)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (TBD)</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data (TBD)</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><span style="font-size:30px; font-family:Garmond; color: #c50317;"><b>(Webpage currently under construction, please reach out to the lead authors for more details.)</b></span></h2>
+</div>
+</div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">About</span> <span style="font-size:30px; font-family:Garmond; color: #00aa3e;"><b>ELI-Why</b></span></h2>
+        <div class="content has-text-justified">
+
+          Language models today are widely used in education, yet their ability to tailor responses for learners with varied informational needs and knowledge backgrounds remains under-
+          explored. To this end, we introduce ELI-Why, a benchmark of 13.4K “Why” questions to evaluate the pedagogical capabilities of language models. We then conduct two extensive human
+          studies to assess the utility of language model-generated explanatory answers (explanations) on our benchmark, tailored to three distinct educational grades: elementary, high-school
+          and graduate school. In our first study, human raters assume the role of an “educator” to assess model explanations' fit to different educational grades. 
+          We find that GPT-4-generated explanations match their intended educational background only 50% of the time, compared to 79%
+          for lay human-curated explanations. In our second study, human raters assume the role of a learner to assess if an explanation fits their own
+          informational needs. Across all educational backgrounds, users deemed GPT-4-generated explanations 20% less suited on average to their
+          informational needs, when compared to explanations curated by lay people. Additionally, automated evaluation metrics reveal that explanations generated across different language model
+          families for different informational needs remain indistinguishable in their grade-level, limiting their pedagogical effectiveness.
+</div>
+</div>
+</div>
+</section>
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/mario_pipeline.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/pitch_figure.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">About</span> <span style="font-size:30px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span></h2>
+        <div class="content has-text-justified"> -->
+
+<!-- <span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> (<b>M</b>ulti-rew<b>A</b>rd <b>R</b>at<b>IO</b>nalization) is a method that tailors small-sized LMs (< 1B parameters) to be strong rationalizers, in terms of both improved downstream performance and improved desirable properties of the rationales themselves.  Instead of relying on human rationale labelling, <span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> considers a setting where a small LM only has access to <i>rewards</i> that measures factors underlying rationale quality, e.g. a trained LM that judges the plausibility of a rationale and provides a numerical score.<br><br><span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> extends <a href='https://github.com/GXimingLu/Quark'><span style="font-size:25px; font-family:Garmond">Quark</span></a> to a multi-reward setup, where generations from an LM are binned according reward values; the LM learns distributions conditioned on 'control-tokens' corresponding to every reward and <i>high-quality</i> generations can be obtained via conditioning on the highest-reward token.
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/mario_pipeline.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Datasets Used</h2>
+        <div class="content has-text-justified">
+          <p>We experiment and provide results on five difficult question-answering datasets: <a href='https://allenai.org/data/strategyqa'>StrategyQA</a>, <a href='https://huggingface.co/datasets/quarel'>QuaRel</a>, <a href="https://huggingface.co/datasets/openbookqa"> OpenBookQA</a>, <a href="https://github.com/INK-USC/NumerSense/tree/main/data">NumerSense</a> and <a href="https://huggingface.co/datasets/qasc">QASC</a>. The table below gives examples from each dataset. We train all our models in an <b>I-RO</b> format, wherein the input to the LM is the question, and the output is the joint generation of the rationale and the predicted answer.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/data_egs.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Rationale Properties</h2>
+        <div class="content has-text-justified">
+          <p>In order to determine whether these generated rationales are of <i>good quality</i>, we focus on three properties that are necessary for any rationale to have, agnostic of the task it is meant for. 
+            <br><br>First, we note that a rationale should be <a href="https://github.com/liujch1998/vera"><i><u><b>plausible</b></u></i></a>.
+            We define <i>plausible</i> as the rationale making <i>sense</i> on its own -- whether it be common, logical or factual sense depending on the dataset at hand. 
+            For example, if a rationale states 'Cows can fly', it is not plausible.
+            <br><br>Next, we identify that a rationale should be <a href="https://aclanthology.org/2023.acl-long.687/"><i><u><b>diverse</b></u></i></a>, where the rationale is clean and not repetitive.
+            <br><br>Lastly, we note that a rationale should be <a href="https://aclanthology.org/2021.emnlp-main.804/"><i><u><b>consistent</b></u></i></a> with the gold label for the input.
+            <i>Consistency</i> is important to ensure that a rationale does not spew irrelevant information, and that it supports the gold answer. 
+            Furthermore, we focus on consistency with respect to the gold label, as misleading rationales are unhelpful as both LM justifications, and for <a href="https://aclanthology.org/2023.acl-long.392/">human utility</a>.
+            <br><br>
+            All of these properties are agnostic of the actual prediction made by the LM.
+            Since our self-rationalization setup generates a rationale first, followed by its prediction, we aim to generate rationales with good quality, which should ideally improve the answer generated by the LM.
+            Therefore, we focus on improving self-rationalization along these three properties, as well as on task accuracy. 
+            Along with the above rationale properties, we also consider <i><u><b>task correctness</b></u></i> as a necessary property of rationales, that they should try to improve over as a byproduct.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/property_egs.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Rationale Generation Examples</h2>
+        <div class="content has-text-justified">
+          <p>The table below shows representative examples of rationales generated by training with <span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> in comparison with the supervised fine-tuned baseline <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span>. We also release the full set of rationale comparisons for all datasets in this <a href="https://drive.google.com/drive/folders/1bWBxdiwce8US5y_G6d9-Eki7ObllpR80?usp=sharing">drive folder</a>.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/mario_vs_sft_egs.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Human Preference of Rationale Generations</h2>
+        <div class="content has-text-justified">
+          <p>We first present human preference studies comparing rationales generated by <span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span> and the supervised fine-tuned baseline <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span> for all five datasets. For each instance, we ask three distinct annotators from a pool of qualified annotators to compare the two rationales across three settings, for a given question and correct answer pair: plausibility and consistency, which are defined in the same manner as the rewards, and an overall <i>Preference</i> rating.
+            Preference is meant to indicate that the annotators pick the rationale that they would find <a href="https://aclanthology.org/2022.naacl-main.47/">acceptable</a> for the given question.
+            In the figure below, we plot the % of instances where majority of annotators prefer only <span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s rationales, only <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span>'s rationales, both or none.
+            We note human annotators prefer <span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s <i>only</i> rationales for 83.15%, 75.3%, 71.49%, 67.44% and 66.6% of instances respectively for Strategyqa, QuaRel, OpenBookQA, NumerSense and QASC. 
+            Human annotators also find <span style="font-size:27px; font-family:Garmond; color: #00aa3e;"><b>MaRio</b></span>'s rationales to be considerably more plausible and consistent than <span style="font-size:20px; font-family:Garmond; color:darkgreen;"><b>SFT</b></span> (We do not perform human studies for diversity and accuracy since they are automatic/straightforward metrics). 
+            We use <a href="https://www.mturk.com/">Amazon MTurk</a> for all our human studies.
+            </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/human_eval_added_fix.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section> -->
+
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      TBA
+</code></pre>
+  </div>
+</section> -->
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Acknowledgements</h2>
+        <div class="content has-text-justified">
+          <p>This research is supported in part by the Office of the Director of National Intelligence (ODNI), Intelligence Advanced Research Projects Activity (IARPA), via the HIATUS Program contract #2022-22072200006. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies, either expressed or implied, of ODNI, IARPA, or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for governmental purposes notwithstanding any copyright annotation therein.
+            </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/human_eval_added_fix.png" alt="Italian Trulli">
+    </div>
+  </div>
+</section> -->
+
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/brihijoshi" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Template borrowed from the <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

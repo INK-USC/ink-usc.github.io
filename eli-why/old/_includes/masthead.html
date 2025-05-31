@@ -1,0 +1,55 @@
+{% if site.layout == 'stacked' %}
+  {% assign metadata_styles = 'd-md-inline-block mx-3 mb-1 mb-md-0' %}
+{% else %}
+  {% assign metadata_styles = 'd-flex flex-items-center mb-3' %}
+{% endif %}
+
+
+<!-- <img src="{{ user.avatar_url }}" class="circle mb-3" style="max-width: 150px;"> -->
+<!-- <h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %}</h1> -->
+<hr style="height:5px;border:none;color:maroon;background-color:#333"><span style="font-size:40px; font-family:Garmond; color: maroon;"><b>Tailoring Self-Rationalizers with Multi-Reward Distillation</b></span>
+  <span style="font-size:30px; font-family:Garmond; color: darkred;">Sahana Ramnath<sup><span style="font-size:10px">🖤</span></sup>, Brihi Joshi<sup><span style="font-size:10px">🖤</span></sup>, Skyler Hallinan<sup><span style="font-size:10px">⬛</span></sup>, Ximing Lu<sup><span style="font-size:10px">⬛</span></sup><sup><span style="font-size:10px">♟️</span></sup>, <br>Liunian Harold Li<sup><span style="font-size:10px">🌑</span></sup>, Aaron Chan<sup><span style="font-size:10px">🖤</span></sup>, Jack Hessel<sup><span style="font-size:10px">♟️</span></sup>, Yejin Choi<sup><span style="font-size:10px">⬛</span></sup><sup><span style="font-size:10px">🖤</span></sup>, Xiang Ren<sup><span style="font-size:10px">🖤</span></sup><sup><span style="font-size:10px">♟️</span></sup></span>
+  <br> <sup><span style="font-size:10px">🖤</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of Southern California</span>, <sup><span style="font-size:10px">⬛</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of Washington</span>, <br><sup><span style="font-size:10px">♟️</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">Allen Institute for Artificial Intelligence</span>, <sup><span style="font-size:10px">🌑</span></sup><span style="font-size:18px; font-family:Garmond; color: black;">University of California Los Angeles</span>
+<hr style="height:5px;border:none;color:maroon;background-color:#333;">
+<p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+  {{ user.bio }}
+</p>
+
+{% if include.metadata %}
+  <div class="f4 mb-6">
+    <div class="{{ metadata_styles }}">
+      {% octicon mark-github height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:GitHub %}
+      <a href="https://github.com/INK-USC/RationaleMultiRewardDistillation" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+        @<span style="font-size:20px; font-family:Garmond; color: blue;"><b>MaRio</b></span> 
+      </a>
+    </div>
+    <div class="{{ metadata_styles }}">
+      {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
+      <a href="mailto:sramnath@usc.edu" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+        @sramnath@usc.edu
+      </a>
+    </div>    
+    <div class="image">
+      <img  src="arxiv.jpg" width=30 />
+      <a href="https://github.com/INK-USC/RationaleMultiRewardDistillation" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+        <span style="font-size:20px; font-family:Garmond; color: darkgreen;"><b>preprint</b></span> 
+      </a>
+    </div>
+    {% if site.social_media %}
+      <div class="d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
+        {% for account in site.social_media %}
+          <div class="{% unless forloop.last == true %}mr-3{% endunless %} mb-3">
+            {% assign service_shortname = account[0] %}
+            {% assign service = site.data.social_media[service_shortname] %}
+            <a href="{{ service.profile_url_prefix }}{{ account[1] }}" class="tooltipped tooltipped-se" aria-label="{{ service.name }}: {{ account[1] }}">
+              {{ service.icon_svg }}<span class="d-none">{{ service.name }}</span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if user.hireable %}
+      <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
+    {% endif %}
+  </div>
+{% endif %}
