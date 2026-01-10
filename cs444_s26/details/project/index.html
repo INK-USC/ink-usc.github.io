@@ -118,7 +118,7 @@
           <div class="nav-category">Course Details</div>
           <ul class="nav-list">
             <!-- <li class="nav-list-item"><a href="/cs444_s26/details/brightspace/" class="nav-list-link">Brightspace</a></li> -->
-            <li class="nav-list-item"><a href="/cs444_s26/details/project/" class="nav-list-link">Class Project</a></li><li class="nav-list-item"><a href="/cs444_s26/details/policies/" class="nav-list-link">Policies and Well-being</a></li><li class="nav-list-item active"><a href="/cs444_s26/details/resources/" class="nav-list-link active">Readings</a></li></ul>
+            <li class="nav-list-item active"><a href="/cs444_s26/details/project/" class="nav-list-link active">Class Project</a></li><li class="nav-list-item"><a href="/cs444_s26/details/policies/" class="nav-list-link">Policies and Well-being</a></li><li class="nav-list-item"><a href="/cs444_s26/details/resources/" class="nav-list-link">Readings</a></li></ul>
  
         
       
@@ -160,19 +160,47 @@
         
       
       <div id="main-content" class="main-content" role="main">
+             <h2 id="Projecy">
         
-          <p>We will need you to submit all your code as a final deliverable. PLAGIARISM will be strictly penalized, see <a href="/cs444_s26/details/policies/#policy-on-plagiarism-and-collaboration">here</a> for more details.</p>
+        
+          <a href="#project" class="anchor-heading" aria-labelledby="project"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Class Project 
+        
+        
+      </h3>
+        
+          <p>Students will design and carry out a research project that aims to answer a question in natural language
+            processing (Learning Objective O4). Students will work individually or in team of two or three. The focus of
+            the class project can be research-focused or application-focused. A research-focused project will develop
+            models and analyze data of an existing problem in NLP, or formulate a new problem altogether. An
+            application-focused project will train (possibly only fine-tuning) and deploy NLP models to new application
+            areas, while not necessarily developing any novel research question to be answered. Students will leverage
+            tools, concepts, and techniques presented in the class. The project involves identifying a communication or
+            exploration need that language could resolve, data sources available to inform the problem and method,
+            and the techniques needed to approach it. The grading distribution for deliverables of the course project as
+            well as expectations for each deliverable are detailed below.
+            The deliverables include a project proposal (1 page single space) plus a project proposal pitch at the class, a
+            mid project report (4-5 pages single space), final presentation (timed, with time for questions) and a final
+            report (7-8 pages single space for the main document, up to 15 with appendix/figures). The final report will
+            be due on the day of the University-scheduled final examination. Reports will be graded based on clarity,
+            and completeness. The project is total 55% of final grade with the following breakdown:</p>
       <h3 id="project-pitch-5">
         
         
-          <a href="#project-pitch-5" class="anchor-heading" aria-labelledby="project-pitch-5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project Pitch (5%)
+          <a href="#project-pitch-5" class="anchor-heading" aria-labelledby="project-pitch-5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project Pitch + Proposal (10%)
         
         
       </h3>
     
 
-<p>Every student pitches a 5-minute project idea for which all the other students vote. This will help the students choose project teams. The pitch should outline the problem being solved and why should we care about it. There should be a clear connection to language models as a path to addressing the problem (i.e., it must involve language of some kind). It should also provide an idea of what the inputs and the outputs are, ideally with real-world examples. It is important to name the project idea for ease of voting.</p>
-      <h3 id="project-team-formation">
+<p>The project proposal (1 page, 10pt font size (using the <a href="https://github.com/acl-org/acl-style-files">*CL paper submission template</a>)) should outline the type of project (research-focused or
+  application-focused), and then answer the following questions clearly in a sentence and/or a few
+  paragraphs each, as appropriate: What are you trying to do? Articulate your objectives using absolutely no
+  jargon. How is it done today, and what are the limits of current practice? What is new in your approach and
+  why do you think it will be successful? Who cares? If you are successful, what difference will it make? What
+  are the risks? What could go wrong, and how will you pivot early on if that happens? How much will it cost?
+  That is, what resources will you need in terms of time and computation? Are these reasonable for a
+  semester and what access you have? Identify two milestones along the way to your finished project.</p>
+      <!-- <h3 id="project-team-formation">
         
         
           <a href="#project-team-formation" class="anchor-heading" aria-labelledby="project-team-formation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project Team Formation
@@ -181,17 +209,17 @@
       </h3>
     
 
-<p>Projects are to be done in teams of 2. Based on enrollment, we will make some exceptions if people are left behind.</p>
-      <h3 id="project-proposal-10">
+<p>Projects are to be done in teams of 2. Based on enrollment, we will make some exceptions if people are left behind.</p> -->
+      <!-- <h3 id="project-proposal-10">
         
         
           <a href="#project-proposal-10" class="anchor-heading" aria-labelledby="project-proposal-10"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project proposal (10%).
         
         
       </h3>
-    
+     -->
 
-<p>Student teams should submit a ~1-page proposal (using the <a href="https://github.com/acl-org/acl-style-files">*CL paper submission template</a>) for their project by Week 5. The proposal should:</p>
+<!-- <p>Student teams should submit a ~1-page proposal  for their project by Week 5. The proposal should:</p>
 <ul>
   <li>state and motivate the problem by providing a problem or <strong>task definition</strong> (preferably with example inputs and expected outputs),</li>
   <li>situate the problem within <strong>related work</strong> (this might help you find sources of data for training a model for your task),
@@ -204,17 +232,24 @@
   <li>provide a brief description of the approach to be followed to verify the hypothesis (such as proposed models and baselines, no need to provide all the modeling details at this point).</li>
 </ul>
 
-<p>We highly encourage students to work towards a problem involving predictive models, hence it’s worth thinking about the five key ingredients of supervised learning: <strong>data</strong>, model, loss function, optimization algorithm and inference / <strong>evaluation</strong>.</p>
+<p>We highly encourage students to work towards a problem involving predictive models, hence it’s worth thinking about the five key ingredients of supervised learning: <strong>data</strong>, model, loss function, optimization algorithm and inference / <strong>evaluation</strong>.</p> -->
       <h3 id="project-progress-report-10">
         
         
-          <a href="#project-progress-report-10" class="anchor-heading" aria-labelledby="project-progress-report-10"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project progress report (10%).
+          <a href="#project-progress-report-10" class="anchor-heading" aria-labelledby="project-progress-report-10"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Project Midterm report (15%).
         
         
       </h3>
     
-
-<p>Student teams should submit a ~3-page progress report (using the *CL paper submission template) for their project by the end of Week 9. This report should:</p>
+<p>The project midterm report (4-5 pages) should cover these questions in detail: What are you trying to do?
+  Articulate your objectives using absolutely no jargon. Who cares? If you are successful, what difference will
+  it make? Additionally, it should cover related work in detail, as well as document the proposed method and
+  what is new in that approach, as well as how you plan to conduct experiments, what hypotheses these
+  experiments test, and how you will evaluate the quality of the results. If you have preliminary results to
+  report, they should be discussed here. Additionally, you should revisit your milestones from the proposal
+  and document your progress with respect to these, and propose updated milestones for the remainder of
+  the semester.</p>
+<!-- <p>Student teams should submit a ~3-page progress report (using the *CL paper submission template) for their project by the end of Week 9. This report should:</p>
 
 <ul>
   <li>once again describe the project’s goals (it is okay if this has changed slightly since the proposal, based on the feedback),</li>
@@ -223,7 +258,7 @@
   <li>must outline a concrete plan of what will be done before the final report.</li>
 </ul>
 
-<p>While the initial results might be inconclusive, you are expected to have made non-trivial progress by this point. The project proposal may be extended for this report. Please take into consideration the earlier feedback you received, and address those inline (you may highlight these in a different text color if you wish to draw the grader’s attention).</p>
+<p>While the initial results might be inconclusive, you are expected to have made non-trivial progress by this point. The project proposal may be extended for this report. Please take into consideration the earlier feedback you received, and address those inline (you may highlight these in a different text color if you wish to draw the grader’s attention).</p> -->
       <h3 id="project-final-presentation-15">
         
         
@@ -232,8 +267,24 @@
         
       </h3>
     
+<p>The project final presentation (~10min presentation + 3min FAQ) will be given by your team in class and
+  graded on clarity, completeness, and presentation quality (by instructor and TA). Each member of the group
+  should present for about equal time. Your presentation should convey: the main takeaway you have reached
+  or aim to reach with your project; a brief motivation which can include some background; the key insight
+  that overcomes the problems presented in the motivation with what was done before this project; the
+  technical details behind the insight; and an overview of what remains to be done before the final report.
+  The project final report (7-8 pages) should answer all the following questions in detail, and is expected to
+  include revised content from the midterm report based on feedback your team received at that time. What
+  were you trying to do? Articulate your objectives using absolutely no jargon. Who cares? If you were
+  Page 3 of 9
+  successful, what difference would it make? How is it done today, and what are the limits of current practice?
+  What is new in your approach and why did you think it would be successful? How did you conduct
+  experiments? What hypotheses did those experiments test? How did you evaluate the quality of the
+  results? What are the results of your experiments? What did you discover? Were you able to support your
+  hypotheses? What are the main takeaways of your project? What would you do next if you wanted to keep
+  working in this space? What new questions can you formulate given the work this semester?</p>
 
-<p>Please prepare for a 15-20 mins presentation + 5-10 mins QA. Too long / too short presentations will be penalized. There should be some more progress since the progress report. Please show up for other presentations + ask questions - this will be part of your participation grade. After the presentation, please upload your project slides for grading</p>
+<!-- <p>Please prepare for a 15-20 mins presentation + 5-10 mins QA. Too long / too short presentations will be penalized. There should be some more progress since the progress report. Please show up for other presentations + ask questions - this will be part of your participation grade. After the presentation, please upload your project slides for grading</p>
       <h3 id="project-final-report-15">
         
         
@@ -260,7 +311,7 @@
 
 <p>Please use the appendix for any additional details which do not fit 8 pages, as well as point to the appendix from the main report. Please include a (Github) link to the code. All projects will be graded taking into consideration prior feedback given throughout the project.</p>
 
-        
+         -->
 
         
 
