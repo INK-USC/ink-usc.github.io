@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+      <meta charset="utf-8" />
+      <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+      <link href="/favicon-32x32.png" rel="icon" type="image/png" />
+      <link href="/cs444_s26/assets/css/just-the-docs-default.css" rel="stylesheet" />
+      <script src="/cs444_s26/assets/js/vendor/lunr.min.js" type="text/javascript"></script>
+      <script src="/cs444_s26/assets/js/just-the-docs.js" type="text/javascript"></script>
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <!-- Begin Jekyll SEO tag v2.8.0 -->
+      <title>USC CSCI 444 Spring 2026 - NLP | USC CSCI 444 Spring 2026</title>
+      <meta content="Jekyll v3.10.0" name="generator" />
+      <meta content="USC CSCI 444 Spring 2026 - NLP" property="og:title" />
+      <meta content="Xiang Ren" name="author" />
+      <meta content="en_US" property="og:locale">
+      <meta content="🐝 Spring 2026" name="description">
+      <meta content="🐝 Spring 2026" property="og:description">
+      <link href="/cs444_s26/" rel="canonical" />
+      <meta content="/cs444_s26/" property="og:url" />
+      <meta content="USC CSCI 444 Spring 2026" property="og:site_name" />
+      <meta content="website" property="og:type" />
+      <meta content="summary" name="twitter:card" />
+      <meta content="USC CSCI 444 Spring 2026 - NLP" property="twitter:title" />
+      <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Course","author":{"@type":"Person","name":"Xiang Ren"},"description":"🐝 Spring 2026","headline":"USC CSCI 444 Spring 2026 - NLP","name":"Natural Language Processing","url":"/cs444_s26/"}</script>
+      <!-- End Jekyll SEO tag -->
+      </meta>
+      </meta>
+      </meta>
+</head>
+
+<body data-spy="scroll" data-target="#site-nav" position="relative">
+      <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+            <symbol id="svg-link" viewbox="0 0 24 24">
+                  <title>Link</title>
+                  <svg class="feather feather-link" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+            </symbol>
+            <symbol id="svg-search" viewbox="0 0 24 24">
+                  <title>Search</title>
+                  <svg class="feather feather-search" fill="none" height="24" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                  </svg>
+            </symbol>
+            <symbol id="svg-menu" viewbox="0 0 24 24">
+                  <title>Menu</title>
+                  <svg class="feather feather-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="3" x2="21" y1="12" y2="12"></line>
+                        <line x1="3" x2="21" y1="6" y2="6"></line>
+                        <line x1="3" x2="21" y1="18" y2="18"></line>
+                  </svg>
+            </symbol>
+            <symbol id="svg-arrow-right" viewbox="0 0 24 24">
+                  <title>Expand</title>
+                  <svg class="feather feather-chevron-right" fill="none" height="24" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+            </symbol>
+            <symbol id="svg-doc" viewbox="0 0 24 24">
+                  <title>Document</title>
+                  <svg class="feather feather-file" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                        <polyline points="13 2 13 9 20 9"></polyline>
+                  </svg>
+            </symbol>
+      </svg>
+      <div class="side-bar">
+            <div class="site-header">
+                  <a class="site-title lh-tight" href="/cs444_s26/">
+                        USC CSCI 444 Spring 2026
+
+                  </a>
+                  <a class="site-button" href="#" id="menu-button">
+                        <svg class="icon" viewbox="0 0 24 24">
+                              <use xlink:href="#svg-menu"></use>
+                        </svg>
+                  </a>
+            </div>
+            <nav aria-label="Main" class="site-nav" id="site-nav" role="navigation">
+                  <!-- -->
+                  <ul class="nav nav-list">
+                        <li class="nav-item nav-list-item"><a class="nav-link nav-list-link"
+                                    href="#announcements">Announcements</a></li>
+                        <li class="nav-item nav-list-item"><a class="nav-link nav-list-link" href="#summary">Summary</a>
+                        </li>
+                        <li class="nav-item nav-list-item"><a class="nav-link nav-list-link"
+                                    href="#calendar--syllabus">Calendar + Syllabus</a></li>
+                        <li class="nav-item nav-list-item"><a class="nav-link nav-list-link"
+                                    href="#assignments-and-grading">Assignments and Grading</a></li>
+                        <li class="nav-item nav-list-item"><a class="nav-link nav-list-link" href="#late-days">Late
+                                    Days</a></li>
+                        <li class="nav-item nav-list-item"><a class="nav-link nav-list-link"
+                                    href="#pre-requisites">Pre-Requisites</a></li>
+ 
+                  </ul>
+                  <div class="nav-category">Course Details</div>
+                  <ul class="nav-list">
+                        <li class="nav-list-item"><a class="nav-list-link" href="/cs444_s26/details/project/">Class
+                                    Project</a></li>
+                        <li class="nav-list-item"><a class="nav-list-link" href="/cs444_s26/details/policies/">Policies
+                                    and Well-being</a></li>
+                        <li class="nav-list-item"><a class="nav-list-link"
+                                    href="/cs444_s26/details/resources/">Readings</a></li>
+                  </ul>
+            </nav>
+            <footer class="site-footer">
+                  This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a
+                  documentation theme for Jekyll.
+            </footer>
+      </div>
+      <div class="main" id="top">
+            <div class="main-header" id="main-header">
+                  <div class="search">
+                        <div class="search-input-wrap">
+                              <input aria-label="Search USC CSCI 444 Spring 2026" autocomplete="off"
+                                    class="search-input" id="search-input" placeholder="Search USC CSCI 444 Spring 2026"
+                                    tabindex="0" type="text" />
+                              <label class="search-label" for="search-input"><svg class="search-icon"
+                                          viewbox="0 0 24 24">
+                                          <use xlink:href="#svg-search"></use>
+                                    </svg></label>
+                        </div>
+                        <div class="search-results" id="search-results"></div>
+                  </div>
+                  <nav aria-label="Auxiliary" class="aux-nav">
+                        <ul class="aux-nav-list">
+                              <li class="aux-nav-list-item">
+                                    <a class="site-button" href="">
+                                    </a>
+                              </li>
+                        </ul>
+                  </nav>
+            </div>
+            <div class="main-content-wrap" id="main-content-wrap">
+                  <div class="main-content" id="main-content" role="main">
+                        <h1 class="no_toc mb-2" id="csci-444-fall-2025-nlp">
+                              <a aria-labelledby="csci-444-fall-2025-nlp" class="anchor-heading"
+                                    href="#csci-444-fall-2025-nlp"><svg aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> CSCI 444 Spring 2026: NLP
+
+
+                        </h1>
+                        <!-- 🐝 Spring 2026 -->
+                        <p class="fs-6 fw-300">🐝 Spring 2026 ⏰ Mon / Wed 10:00 - 11:50a 📍 <a
+                                    href="https://maps.usc.edu/?id=1928&amp;reference=DMC#!m/552622?s/">DMC</a> 151</p>
+                        <div class="staffer">
+                              <img alt="" class="staffer-image" src="/memberpic/Xiang.jpg" />
+                              <div>
+                                    <h3 class="staffer-name">
+
+
+
+
+                                          Instructor: <a href="https://inklab.usc.edu//">Xiang Ren</a>
+                                    </h3>
+                                    <p><a href="mailto:xiangren@usc.edu">xiangren@usc.edu</a></p>
+                                    <p class="staffer-meta">Office Hours: Friday 9-9:45 AM Location GCS SB5 (lower level 2) <!-- Monday 9-9:45am, GCS LL2 SB5 -->
+                                    </p>
+                              </div>
+                        </div>
+
+                        <div class="staffer">
+                              <img alt="" class="staffer-image" src="/memberpic/hirona.jpg" />
+                              <div>
+                                    <h3 class="staffer-name">
+
+
+
+
+                                          TA: <a >Hirona Arai</a>
+                                    </h3>
+                                    <p><a href="mailto:hjarai@usc.edu">hjarai@usc.edu</a></p>
+                                    <p class="staffer-meta">Office Hours: Wed 1-1:50 PM Location GCS SB5 (lower level 2) <!-- Monday 9-9:45am, GCS LL2 SB5 -->
+                                    </p>
+                              </div>
+                        </div>
+                        <h2 id="announcements">
+                              <a aria-labelledby="announcements" class="anchor-heading" href="#announcements"><svg
+                                          aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> Announcements
+
+
+                        </h2>
+                        <!-- <p>See <a href="/cs444_s26/details/resources/syllabus.pdf">Syllabus</a> posted.</p> -->
+                        <p>See <a href="https://brightspace.usc.edu/d2l/home/261081">Brightspace</a>.</p>
+
+
+                        <h2 id="summary">
+                              <a aria-labelledby="summary" class="anchor-heading" href="#summary"><svg
+                                          aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> Summary
+
+
+                        </h2>
+                        <p>This class is all about language models: the fundamentals, spanning from simple architectures
+                              to modern Transformer-based neural architectures underlying large language models.</p>
+                        <h2 id="calendar--syllabus">
+                              <a aria-labelledby="calendar--syllabus" class="anchor-heading"
+                                    href="#calendar--syllabus"><svg aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> Calendar + Syllabus
+
+
+                        </h2>
+                        <div class="table-wrapper">
+                              <table>
+                                    <thead>
+                                          <tr>
+                                                <th width="5%">Week</th>
+                                                <th width="5%">Date</th>
+                                                <th width="30%">Class Topics</th>
+                                                <th width="40%">Readings</th>
+                                                <th width="13%">Work Due</th>
+                                          </tr>
+                                    </thead>
+                                    <tbody>
+                                          <tr>
+                                                <td rowspan="2">1</td>
+                                                <td>Jan 12</td>
+                                                <td>Introduction and Course Overview; n-gram models</td>
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+
+                                                </td>
+                                                
+                                          </tr>
+                                          <tr>
+                                                <td>Jan 14</td>
+                                                <td class>
+                                                      n-gram models (cont.)
+                                                </td>
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/2.pdf">J&amp;M,
+                                                            Chap 2; </a><br>
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/4.pdf">J&amp;M,
+                                                            Chap 4; </a>
+                                                     
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">2</td>
+                                                <td>Jan 19</td>
+                                    
+                                                <td class="cal-content">
+                                                      <span style="color:green">Martin Luther King’s Birthday Holiday</span>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+
+
+
+
+                                                      HW1 Released
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Jan 21</td>
+                                                <td>Logistic Regression</td>
+                                                
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf">J&amp;M,
+                                                            Chap 3; </a>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">3</td>
+                                                <td>Jan 26</td>
+                                                <td>Distributional Semantics and Word Embeddings</td>
+                                                
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/5.pdf">J&amp;M,
+                                                            Chap 5; </a><br>
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">J&amp;M,
+                                                                  Chap 7; </a>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                                     
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Jan 28</td>
+                                                <td>Distributional Semantics and Word Embeddings (cont.)</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec04-word-embeddings.pdf">Word
+                                                            Embeddings</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">4</td>
+                                                <td>Feb 2</td>
+                                                <td>Word2Vec</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec05-word2vec.pdf">word2vec</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf">J&amp;M,
+                                                            Chap 6; </a>
+                                                      
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Feb 4</td>
+                                                <td></td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec06-ffnn.pdf">Feedforward
+                                                            Nets</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      
+                                                </td>
+                                                <td class="cal-content">
+
+
+
+
+                                                      HW1 Due
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">5</td>
+                                                <td>Feb 9</td>
+                                                <td>Feedforward Networks and Recurrent Neural Networks</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec07-backprop.pdf">Backpropagation
+                                                            and Recurrent Neural Networks</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf">J&amp;M,
+                                                            Chap 9; </a>
+                                                      <!-- <a href="https://web.stanford.edu/~jurafsky/slp3/13.pdf">J&amp;M,
+                                                            Chap 13; </a> -->
+                                                </td>
+                                                <td class="cal-content">
+
+
+
+
+                                                      HW2 Released
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Feb 11</td>
+                                                <td></td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec08-rnns.pdf">Recurrent
+                                                            Neural Nets</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      
+                                                </td>
+                                                <td class="cal-content">
+                                                      <span style="color:blue">Project Proposal Pitch Due</span>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">6</td>
+                                                <td>Feb 16</td>
+                                                <!-- <td></td> -->
+                                                <td class="cal-content">
+                                                      <span style="color:green">Presidents Day</span>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Feb 18</td>
+                                                <td>Sequence-to-sequence modeling</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec09-seq2seq.pdf">Seq2Seq
+                                                            and Attention</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf">J&amp;M,
+                                                            Chap 8; </a><br>
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf">J&amp;M,
+                                                                  Chap 9; </a>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">7</td>
+                                                <td>Feb 23</td>
+                                                <td>Transformer Networks</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec10-transformers.pdf">Transformers
+                                                            - Building Blocks</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/10.pdf">J&amp;M,
+                                                            Chap 10; </a>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Feb 25</td>
+                                                <td></td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://colab.research.google.com/drive/1Xsg4HXW0zHnvRl1vgl_CjQm8E_VeYV8d?usp=sharing">PyTorch
+                                                            for Transformers (Lecture by Johnny Wei)</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">8</td>
+                                                <td>Mar 2</td>
+                                                <td>Transformer Language Models</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec11-transformer-LMs.pdf">Transformer
+                                                            Language Models</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/11.pdf">J&amp;M
+                                                            Chap 11; </a>
+                                                </td>
+                                                <td class="cal-content">
+
+
+                                                      HW2 Due
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Mar 4</td>
+                                                <td></td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec12-tokenization.pdf">Tokenization</a>
+                                                </td> -->
+                                                <td class="cal-content">
+
+                                                </td>
+                                                <td class="cal-content">
+
+
+
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">9</td>
+                                                <td>Mar 9</td>
+                                                <td>Language Generation and in-context learning</td>
+                                                <!-- <td class="cal-content">
+                                                      <span style="color:blue">Flipped Classroom - Project
+                                                            Discussions</span>
+                                                </td> -->
+                                                      <td class="cal-content">
+                                                            <a href="https://web.stanford.edu/~jurafsky/slp3/12.pdf">J&amp;M,
+                                                                  Chap 12; </a>
+                                                </td>
+                                                <td class="cal-content">
+
+
+
+
+                                                      Paper review due
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Mar 11</td>
+                                                <td>Flipped Classroom - Project
+                                                      Discussions</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec13-generation.pdf">Language
+                                                            Generation</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      <!-- <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">J&amp;M,
+                                                            Chap 7.4; </a>
+                                                      <a href="https://web.stanford.edu/~jurafsky/slp3/12.pdf">J&amp;M,
+                                                            Chap 12.4; </a> -->
+                                                </td>
+                                                <td class="cal-content">
+                                                HW3 Released
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">10</td>
+                                                <td>Mar 16</td>
+                                                <!-- <td></td> -->
+                                                <td class="cal-content">
+                                                      <span style="color:green">Spring Break</span>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Mar 18</td>
+                                                <!-- <td></td> -->
+                                                <td class="cal-content">
+                                                      <span style="color:green">Spring Break</span>
+                                                </td>
+                                                <td class="cal-content">
+                                                      <a href="https://aclanthology.org/P16-2096.pdf">Hovy & Spruit, 2016</a> 
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">11</td>
+                                                <td>Mar 23</td>
+                                                <td>Large Language Models (LLMs)</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec14-generation-pdf">Language
+                                                            Generation ()</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                    
+                                                </td>
+                                                <td class="cal-content">
+                                                      <span style="color:blue">Project Midterm Report Due </span>
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Mar 25</td>
+                                                <td></td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec15-pretraining-llms.pdf">Pre-Training
+                                                            LLMs</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      
+                                                </td>
+                                                <td class="cal-content">
+                                                      
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">12</td>
+                                                <td>Mar 30</td>
+                                                <td>Pre-training and post-training
+                                                      language models; model evaluation</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec16-post-training-llms.pdf">Post-Training
+</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      <a href="https://arxiv.org/abs/2211.05100">Bloom - BigScience </a><br>
+                                                      <a href="https://arxiv.org/abs/2103.00020">Clip- Radford et al., 2021</a>
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Apr 1</td>
+                                                <td class="cal-content">
+                                                      <span style="color:teal">Paper Presentation and Discussion I</span>
+                                                </td>
+                                                <td class="cal-content">
+                                                     
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">13</td>
+                                                <td>Apr 6</td>
+                                                <td>Cutting Edge Topics in NLP</td>
+                                                <!-- <td class="cal-content">
+                                                      <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec17-evaluation.pdf">Evaluating
+                                                            LLMs</a>
+                                                </td> -->
+                                                <td class="cal-content">
+                                                      
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Apr 8</td>
+                                                <td class="cal-content">
+                                                      <span style="color:teal">Paper Presentation and Discussion II</span>
+                                                </td>                                                
+                                                <td class="cal-content">
+                                                    
+                                                </td>
+                                                <td class="cal-content">
+                                                      HW 3 Due
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">14</td>
+                                                <td>Apr 13</td>
+                                                <td>Cutting Edge Topics in NLP</td>
+                                                <td class="cal-content">
+                                                      <!-- <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">J&amp;M,
+                                                            Chap 7.7; </a> -->
+                                                </td>
+                                                <td class="cal-content">
+
+
+
+
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Apr 15</td>
+                                                <td class="cal-content">
+                                                      <span style="color:teal">Paper Presentation and Discussion III</span>
+                                                </td>                                                
+                                                <td class="cal-content">
+                                                     
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">15</td>
+                                                <td>Apr 20</td>
+                                                <td> <span style="color:blue">Semester Project Presentations I</span></td>
+                                                      <!-- <a
+                                                            href="https://swabhs.com/2503-csci444-nlp/assets/slides/25f-csci444-nlp-lec18-responsible-llms.pdf">Responsible
+                                                            Language Modeling</a> -->
+                                                </td>
+                                                <td class="cal-content">
+                                                      <!-- <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">J&amp;M,
+                                                            Chap 7.7; </a> -->
+                                                </td>
+                                                <td class="cal-content">
+
+
+
+
+                                                      <span style="color:blue">Project Presentations due</span>
+
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Apr 22</td>
+                                                <td> <span style="color:blue">Semester Project Presentations II</span></td>
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">16</td>
+                                                <td>Apr 27</td>
+                                                <td> <span style="color:blue">Semester Project Presentations III</span></td>
+
+                                                <!-- <td></td> -->
+                                               
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td>Apr 29</td>
+                                                <td> <span style="color:blue">Semester Project Presentations IV</span></td>
+
+                                                <!-- <td></td> -->
+                                               
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                </td>
+                                          </tr>
+                                          <tr>
+                                                <td rowspan="2">FINAL</td>
+                                                <td>May 11</td>
+                                                <td></td>
+                                                
+                                                <td class="cal-content">
+                                                </td>
+                                                <td class="cal-content">
+                                                      <span style="color:blue">Project Final Report due</span>
+                                                      Serves as final exam
+                                                </td>
+                                          </tr>
+                                          
+                                    </tbody>
+                              </table>
+                        </div>
+                        <p>This calendar is subject to change. More details, e.g. lecture slides will be added as the
+                              semester continues. All work (except the project final report) is due on the specified
+                              date by <strong class="label label-red">11:59 PM PT</strong>.
+                              See <a href="/cs444_s26/details/resources/syllabus.pdf">the syllabus</a> for more
+                              details.</p>
+                        <h2 id="assignments-and-grading">
+                              <a aria-labelledby="assignments-and-grading" class="anchor-heading"
+                                    href="#assignments-and-grading"><svg aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> Assignments and Grading
+
+
+                        </h2>
+                        <p>There will be three components to course grades:</p>
+                        <ul>
+                              <li><strong>Homeworks (18%).</strong>
+                                    <ul>
+                                          <li>6% X 3: There will be three coding homework assignments based on the
+                                                topics of the class.</li>
+                                    </ul>
+                              </li>
+                              
+                              <li><strong><a href="details/project/">Semester Project</a> (55%).</strong>
+                                    <ul>
+                                          <li>Each student will do a group class project based on the topics covered in
+                                                the class. Students will propose their own project, do the research and
+                                                build a proof-of-concept, create a demonstration (e.g. video) of the
+                                                proof-of-concept, and present the project in their report.</li>
+                                          <li><a href="details/project/#project-proposal-10">Proposal + Pitch</a>: 10%</li>
+                                          <li><a href="details/project/#project-progress-report-10">Midterm Report</a>:
+                                                15%</li>
+                                          <li><a href="details/project/#project-final-presentation-15">Final Project
+                                                      Presentation</a>: 15%</li>
+                                          <li><a href="details/project/#project-final-report-15">Project + Final Write-up</a>: 15%
+                                          </li>
+                                    </ul>
+                              </li>
+                              <li><strong>Paper Review
+                                          (12%).</strong><!--The project teams will present a scientific publication related to their project to the class. All members of the team are expected to identify the central points of the research, and present that research to the class, as well as answer questions from the instructor, TAs and fellow students. * One member of team---randomly picked by the instructors a couple of hours before the presentation---will be the presenter, so please prepare accordingly! The presenter is responsible for the entire team’s grade, so please ensure both you and your teammates are prepared! The total time of each team's presentation is 5 minutes (3 min presentation + 2 min QA) - we will be very strict about this. If you are NOT presenting, you could participate in Q/A - bonus points will be awarded to folks who ask insightful questions (announce your name before you ask a question).  Each team will prepare 3 slides (via Google slides) to be shared with their assigned TAs by 11:59 PM the day before the presentation. Failure to share will cause a loss of grade.   * Content of the slides:     * Slide 1: Main Research Question in the paper,     * Slide 2: Main Results Summarized,     * Slide 3: How this influences your project. -->
+                                    <ul>
+                                          <li>Students will write a <em>research paper review</em> to explain concepts underlying natural language processing in their own words (Learning Objective <strong>O2</strong>) and present the paper in class. The course explores topics through a series of assigned readings in the form of research papers and book chapters. Also, the semester project would require a literature review. Students will select one reading option and submit a <strong>two-page summary of that reading</strong>  and <strong>present the papers in teams of 3</strong>  and drive discussion in the class. Reviews will be assessed based on answering a small set of questions, to be released at the time of the paper assignment, clearly and correctly. In most cases, each question will warrant at minimum a paragraph to answer.  </li>
+                                    </ul>
+                              </li>
+                              <li><strong>Class Participation (15%)</strong>
+                                    <ul>
+                                          <li>Each student’s engagements in course discussions during class and during
+                                                project discussions.</li>
+                                    </ul>
+                              </li>
+                        </ul>
+                      
+                        <p>All written assignments related to the final project should use the standard <a
+                                    href="https://github.com/acl-org/acl-style-files">*ACL paper submission
+                                    template</a>.</p>
+                        <h2 id="late-days">
+                              <a aria-labelledby="late-days" class="anchor-heading" href="#late-days"><svg
+                                          aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> Late Days
+
+
+                        </h2>
+                        <p>The course will allow for a budget of 5 Late Day Tokens per student. These tokens can be expended on
+                              homeworks, the paper review, and project deliverables (NOT presentations or final project
+                              report) to extend the deadline, one day at a time, for a student without incurring a late penalty. These
+                              tokens should be used with no justification or explanation for taking the late time required (i.e., you do not
+                              need to explain your reason). Going over budget (e.g., turning things in late with no Late Day Tokens to
+                              expend) will incur grade penalties of 5% per day late. To ensure reasonable grading turnarounds and
+                              discussions of solutions, any assignment turned in 8 days late or more will receive an automatic zero
+                              regardless of the use of Late Day Tokens.
+                              For project teams, Late Day Token expenditures are on a per-student basis (i.e., if a team of 2 turns in their
+                              midterm report one day late, a member expending a Late Day Token will receive a 0% late penalty, while a
+                              member not expending a Late Day Token will receive a 5% late penalty).
+                              There are no refunds for late days: unused late days cannot be converted into credit of any kind.</p>
+                        <p><strong>Note:</strong> Please familiarize yourself with the <a
+                                    href="details/policies/#policies">academic policies</a> and read the <a
+                                    href="details/policies/#student-well-being">note about student well-being</a>.</p>
+                        <h2 id="pre-requisites">
+                              <a aria-labelledby="pre-requisites" class="anchor-heading" href="#pre-requisites"><svg
+                                          aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> Pre-Requisites
+
+
+                        </h2>
+                        <p>Students are required to have taken</p>
+                        <ul>
+                              <li>CSCI 170 and</li>
+                              <li>1 from (CSCI 104 or CSCI 114) and</li>
+                              <li>1 from (MATH 225 or EE 141) and</li>
+                              <li>1 from (EE 364 or MATH 407 or BUAD 310 or ISE 225)
+                                    Recommended Preparation: Fluency with Python programming on the level of ITP 216 or
+                                    TAC 216</li>
+                        </ul>
+                        <!-- <h2 id="similar-classes">
+                              <a aria-labelledby="similar-classes" class="anchor-heading" href="#similar-classes"><svg
+                                          aria-hidden="true" viewbox="0 0 16 16">
+                                          <use xlink:href="#svg-link"></use>
+                                    </svg></a> Similar Classes
+
+
+                        </h2>
+                        <ul>
+                              <li>Graduate-level Applied NLP <a href="https://swabhs.com/f24-csci544-appliednlp/">Fall
+                                          2024 CSCI 544</a>
+                                    <ul>
+                                          <li>See <a
+                                                      href="https://swabhs.com/f24-csci544-appliednlp/#highlighted-544-projects">highlighted
+                                                      class projects here</a>.</li>
+                                    </ul>
+                              </li>
+                              <li>Undergraduate-level Special Topics: Language Models in NLP <a
+                                          href="https://swabhs.com/sp24-csci499-lm4nlp/">Spring 2024 CSCI 499</a>
+                                    <ul>
+                                          <li>See <a
+                                                      href="https://swabhs.com/f24-csci544-appliednlp/details/project/#example-projects">previous
+                                                      class projects here</a>.</li>
+                                    </ul>
+                              </li>
+                              <li>Undergraduate-level Special Topics: Language Models in NLP <a
+                                          href="https://swabhs.com/fall23-csci499-lm4nlp/">Fall 2023 CSCI 499</a>
+                                    <ul>
+                                          <li>See <a
+                                                      href="https://swabhs.com/fall23-csci499-lm4nlp/details/class-projects/">previous
+                                                      class projects here</a>.</li>
+                                    </ul>
+                              </li>
+                        </ul> -->
+                  </div>
+            </div>
+            <div class="search-overlay"></div>
+      </div>
+      <script crossorigin="anonymous"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script crossorigin="anonymous"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script crossorigin="anonymous"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
