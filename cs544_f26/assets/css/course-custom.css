@@ -1,0 +1,64 @@
+/* Schedule deadline badges, adapted to the existing Just the Docs theme. */
+
+.deadline-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0.18rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.deadline-homework {
+  color: #274c77;
+  background: #e8f0fb;
+  border-color: #c7d9ef;
+}
+
+.deadline-homework-due {
+  color: #51327a;
+  background: #eee7f7;
+  border-color: #d5c5e8;
+}
+
+.deadline-project {
+  color: #2c3f36;
+  background: #e3ebe6;
+  border-color: #c3d4ca;
+}
+
+.deadline-final {
+  color: #6b2e24;
+  background: #f4e7e0;
+  border-color: #dfc2b4;
+  font-weight: 700;
+}
+
+.due-cell {
+  line-height: 1.35;
+}
+
+.academic-break {
+  color: #7a4b2a;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.staffer .staffer-image.ta-photo {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+
+@media (max-width: 50rem) {
+  .deadline-badge {
+    padding: 0.15rem 0.45rem;
+    font-size: 0.7rem;
+  }
+}
