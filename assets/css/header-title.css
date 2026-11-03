@@ -1,0 +1,36 @@
+/* Lab name in the black top bar. fitHeaderTitle() in header-title.js sets its left/width/size
+   so it's centered in the free space between the INK logo and the menu (or USC logo). */
+#header .header-title {
+  position: fixed;
+  left: 117px; /* just right of the INK logo, which ends at ~101px */
+  top: 40px; /* middle of the 5em (80px) bar */
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: none;
+  white-space: nowrap;
+  text-wrap: balance;
+}
+
+/* Phones: no room beside the logos, so the bar grows and the name gets its own line underneath */
+@media screen and (max-width: 736px) {
+  body {
+    padding-top: 120px;
+  }
+
+  #header {
+    height: 120px;
+  }
+
+  #header .header-title {
+    left: 16px;
+    top: 100px; /* middle of the extra 40px under the logos */
+    font-size: 12px;
+  }
+}
