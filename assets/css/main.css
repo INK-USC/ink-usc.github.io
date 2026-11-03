@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+3:400,600,700|Pacifico");
 
 /*
 	Introspect by TEMPLATED
@@ -1589,7 +1589,7 @@
 	}
 
 	body, input, select, textarea {
-		font-family: "Lato", sans-serif;
+		font-family: "Source Sans 3", sans-serif;
 		font-size: 12pt;
 		font-weight: 300;
 		line-height: 2;
