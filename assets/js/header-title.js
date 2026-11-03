@@ -23,12 +23,12 @@ function fitHeaderTitle() {
   title.style.left = left + "px";
   title.style.width = width + "px";
 
-  // Always one line, as big as fits the width (and no taller than the bar:
+  // Always one line, as big as fits the width, up to 36px (and no taller than the bar:
   // the whole black bar on wider screens, the 40px strip under the logos on phones)
   var barHeight = phone ? 40 : document.getElementById("header").offsetHeight;
   title.style.top = (phone ? 100 : barHeight / 2) + "px";
   title.style.whiteSpace = "nowrap";
-  for (var size = barHeight - 4; size > 8; size -= 0.5) {
+  for (var size = Math.min(barHeight - 4, 36); size > 8; size -= 0.5) {
     title.style.fontSize = size + "px";
     if (title.scrollWidth <= title.clientWidth) break; // no overflow
   }

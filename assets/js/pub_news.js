@@ -1,6 +1,7 @@
 
-// Home page news: "N papers accepted at CONF YEAR!" lines, counted automatically
+// Home page news: "N papers accepted at CONF YEAR on TOPICS!" lines, counted automatically
 // from publications.html. Adding a paper there updates these lines by itself.
+// The topic comes from the paper's <meta ... topic="..."> (1-2 words); papers without one still count.
 
 // Month of each conference, shown as "MM/YYYY" in the news (newest first).
 // A conference missing from this list still shows up, with just the year; add it here to set the month.
@@ -69,8 +70,10 @@ function buildPubNews(html) {
     if (!(year >= NEWS_FROM_YEAR) || /^arxiv/i.test(venue) || /workshop/i.test(confText) || venue.indexOf("@") >= 0) continue;
 
     var key = confName(venue) + " " + year;
-    if (!counts[key]) counts[key] = { conf: confName(venue), year: year, n: 0 };
+    if (!counts[key]) counts[key] = { conf: confName(venue), year: year, n: 0, topics: [] };
     counts[key].n += 1;
+    var topic = (meta.getAttribute("topic") || "").trim();
+    if (topic && counts[key].topics.indexOf(topic) < 0) counts[key].topics.push(topic);
   }
 
   var news = Object.keys(counts).map(function (key) {
@@ -87,7 +90,8 @@ function buildPubNews(html) {
   news.forEach(function (c) {
     var date = c.month ? (c.month < 10 ? "0" : "") + c.month + "/" + c.year : c.year;
     addNewsLine(lines, date, "<b>" + c.n + (c.n == 1 ? " paper" : " papers") +
-      "</b> accepted at <b>" + c.conf + " " + c.year + "</b>!");
+      "</b> accepted at <b>" + c.conf + " " + c.year + "</b>" +
+      (c.topics.length ? " on " + c.topics.join(", ") : "") + "!");
     HIGHLIGHTS.forEach(function (h) {
       if (h.conf == c.conf + " " + c.year) addNewsLine(lines, date, h.html);
     });
