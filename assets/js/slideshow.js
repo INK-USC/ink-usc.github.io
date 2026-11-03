@@ -1,5 +1,5 @@
 
-// Home page banner slideshow: fade to the next photo every second
+// Home page banner slideshow: fade to the next photo every 3 seconds
 var bannerSlides = document.getElementsByClassName("banner-slide");
 var bannerIndex = 0;
 
@@ -28,30 +28,14 @@ function fitHeaderTitle() {
   title.style.left = left + "px";
   title.style.width = width + "px";
 
-  // Biggest size that fits on one line, and on two balanced lines; use whichever is bigger.
-  // Caps let the text fill the bar's full height: the whole black bar on wider screens,
-  // the 40px strip under the logos on phones (line-height is 1, so size = line height).
+  // Always one line, as big as fits the width (and no taller than the bar:
+  // the whole black bar on wider screens, the 40px strip under the logos on phones)
   var barHeight = phone ? 40 : document.getElementById("header").offsetHeight;
   title.style.top = (phone ? 100 : barHeight / 2) + "px";
-  var oneLine = largestFit("nowrap", barHeight - 4, phone ? 12 : 13, 1);
-  var twoLines = largestFit("normal", (barHeight - 4) / 2, 11, 2);
-  if (oneLine >= twoLines) {
-    title.style.whiteSpace = "nowrap";
-    title.style.fontSize = oneLine + "px";
-  } else {
-    title.style.whiteSpace = "normal";
-    title.style.fontSize = twoLines + "px";
-  }
-
-  function largestFit(wrap, max, min, lines) {
-    title.style.whiteSpace = wrap;
-    for (var size = max; size >= min; size -= 0.5) {
-      title.style.fontSize = size + "px";
-      var lineHeight = parseFloat(getComputedStyle(title).lineHeight);
-      // (+3px: scrollHeight rounds up, but a whole extra line would add ~lineHeight)
-      if (title.scrollWidth <= title.clientWidth && title.scrollHeight <= lineHeight * lines + 3) return size;
-    }
-    return 0;
+  title.style.whiteSpace = "nowrap";
+  for (var size = barHeight - 4; size > 8; size -= 0.5) {
+    title.style.fontSize = size + "px";
+    if (title.scrollWidth <= title.clientWidth) break; // no overflow
   }
 }
 
@@ -65,5 +49,5 @@ if (bannerSlides.length > 1) {
     bannerSlides[bannerIndex].classList.remove("active");
     bannerIndex = (bannerIndex + 1) % bannerSlides.length;
     bannerSlides[bannerIndex].classList.add("active");
-  }, 1000);
+  }, 3000);
 }
