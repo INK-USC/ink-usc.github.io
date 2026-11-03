@@ -3168,7 +3168,8 @@
 			line-height: inherit;
 			margin: 0;
 			padding: 0;
-			position: absolute;
+			position: fixed;
+			left: 1.5em;
 			top: 0;
 			color: #990000;
 			font-size: 1.75em;
