@@ -122,6 +122,7 @@
   height: 33.33vw; /* same 3:1 shape as the cropped-wide photos (1920x640) */
   background-image: none;
   overflow: hidden;
+  padding: 0; /* the theme's banner padding made it taller than 3:1 on phones, cropping the photos' sides */
 }
 
 .banner-slide {
