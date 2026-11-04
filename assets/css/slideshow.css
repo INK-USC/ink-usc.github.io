@@ -116,3 +116,32 @@
   @media only screen and (max-width: 300px) {
     .mySlides .prev, .mySlides .next,.mySlides .text {font-size: 11px}
   }
+
+/* Home page banner slideshow */
+#banner {
+  height: 33.33vw; /* same 3:1 shape as the cropped-wide photos (1920x640) */
+  background-image: none;
+  overflow: hidden;
+  padding: 0; /* the theme's banner padding made it taller than 3:1 on phones, cropping the photos' sides */
+}
+
+.banner-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.banner-slide.active {
+  opacity: 1;
+}
+
+/* Less space between the photo and "Welcome to the INK Lab" (was 104px) */
+#one {
+  padding-top: 2em;
+}

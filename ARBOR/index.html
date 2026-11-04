@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ARBOR: Locating Reasoning Failures in Long Chains of Thought through Reasoning State Tracking. Paper, code, data and an interactive demo of reasoning-state trees.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="ARBOR: Locating Reasoning Failures in Long Chains of Thought">
+  <meta property="og:description" content="A tree of reasoning states for every chain of thought, and eleven failure rows you can see demoed on a tree.">
+  <meta property="og:image" content="https://inklab.usc.edu/ARBOR/static/images/tree-thumb.png">
+  <meta property="og:url" content="https://inklab.usc.edu/ARBOR/">
+  <title>ARBOR: Locating Reasoning Failures in Long Chains of Thought</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <style>
+    .arbor { font-variant: small-caps; letter-spacing: .02em; }
+    .publication-title .l1 { white-space: nowrap; } @media (max-width: 1023px) { .publication-title .l1 { white-space: normal; } }
+    .tagline { font-size: 1.2rem; color: #4a4a4a; margin: .6rem auto 1.2rem; max-width: 46rem; }
+    .demo-cta { margin: 1.1rem 0 .4rem; }
+    .demo-cta .button { font-size: 1.15rem; padding: 1.4rem 1.8rem; }
+    .fig-caption { font-size: .92rem; color: #4a4a4a; text-align: left; margin: .6rem auto 0; max-width: 60rem; }
+    .fig-caption b.red { color: #dc2626; } .fig-caption b.orange { color: #e97132; } .fig-caption b.purple { color: #7c3aed; } .fig-caption b.green { color: #15803d; }
+    .rows-table td, .rows-table th { vertical-align: middle; }
+    .rows-table tr.group td { background: #f5f5f5; font-style: italic; color: #4a4a4a; }
+    .rows-table tr.row { cursor: pointer; }
+    .rows-table tr.row:hover td { background: #f0f6ff; }
+    .rows-table td.rid { white-space: nowrap; font-weight: 600; }
+    .rows-table td.def { color: #363636; }
+    .rows-table td.ex { color: #4a4a4a; font-size: .9rem; }
+    .rows-table td.ex q { font-style: italic; }
+    .rows-table td.go { white-space: nowrap; text-align: right; }
+    .rows-table .button.is-small { font-size: .82rem; }
+    .thumb-card { display: block; border: 1px solid #dbdbdb; border-radius: 10px; overflow: hidden; max-width: 420px; margin: 0 auto; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+    .thumb-card img { display: block; width: 100%; }
+    .thumb-card .cap { padding: .6rem .9rem; font-size: .9rem; color: #363636; background: #fafafa; border-top: 1px solid #ededed; }
+    .demo-lead { max-width: 46rem; margin: 0 auto 1.4rem; }
+    .pill { display: inline-block; border: 1px solid #dbdbdb; border-radius: 999px; padding: 0 .55rem; font-size: .8rem; color: #4a4a4a; background: #fff; }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size: 32px;"><span class="l1"><span class="arbor">Arbor</span>: Locating Reasoning Failures in Long Chains of Thought</span><br>through Reasoning State Tracking</h1>
+          <div class="tagline">Every chain of thought becomes a tree of reasoning states, and every failure is a relation between a step and the state before it.</div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://huihanlhh.github.io">Huihan Li</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://siyuanwangw.github.io/">Siyuan Wang</a><sup>2</sup>,</span>
+            <span class="author-block">Naga Vamsi Ramana Dinavahi<sup>1</sup>,</span>
+            <span class="author-block">Xiaohui Liu<sup>3</sup>,</span>
+            <span class="author-block"><a href="https://www.seanre.com">Xiang Ren</a><sup>1</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Southern California,</span>
+            <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong,</span>
+            <span class="author-block"><sup>3</sup>New York University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="demo-cta">
+              <a href="#demo" class="button is-rounded is-link">
+                <span class="icon"><i class="fas fa-project-diagram"></i></span>
+                <span>Explore the demo: eleven failures, each on a tree</span>
+              </a>
+            </div>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2610.22717" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span><span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/INK-USC/ARBOR" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://doi.org/10.5281/zenodo.23405752" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-database"></i></span><span>Data (Zenodo)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-quote-right"></i></span><span>BibTeX</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Abstract</h3>
+        <div class="content has-text-justified">
+          <p>Large reasoning models solve complex problems through long chains of thought, in which prior work has documented failure modes such as repetition, underthinking, and unsupported deductions. Existing methods detect these failures from <em>local</em> signals: textual similarity to nearby steps, switch tokens, or an LLM's judgment of a step's correctness. However, what a step contributes to the solution depends on the state that earlier steps have established, so identifying failures requires a <em>global</em> view that tracks that state across the trajectory.</p>
+          <p>Therefore, we propose <span class="arbor">Arbor</span>, a reasoning-failure attribution framework that represents each trajectory as a <em>tree of reasoning states</em>, built as each step creates, verifies, prunes, or revisits a state, and attributes each failure to a relation between a step and the state preceding it. Using <span class="arbor">Arbor</span>, we refine the three failure modes into distinct subtypes that harm reasoning through different mechanisms and at different costs. We find that the tree state <span class="arbor">Arbor</span> maintains before a step separates failure steps from the at-risk steps at which the failure did not occur. We discuss how <span class="arbor">Arbor</span> integrates with existing mitigations at inference time and in training data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <div class="hero-body has-text-centered">
+      <img src="./static/images/teaser.png" alt="A reasoning trace and its tree of reasoning states" style="max-width: 100%; height: auto;">
+      <p class="fig-caption"><b>A trajectory as a tree of reasoning states.</b> We define reasoning failures relative to the <em>state of the reasoning</em>, the intermediate results established, the branches open and the constraints in force when a step occurs. We represent each trajectory as a tree of reasoning states, in which nodes are intermediate results, each edge records the node a step derives from, and where a step attaches identifies a failure.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4 has-text-centered">How <span class="arbor">Arbor</span> works</h3>
+        <div class="columns is-vcentered">
+          <div class="column is-5 has-text-centered">
+            <img src="./static/images/figure3.png" alt="ARBOR's three stages: parse, replay, detect" style="max-width: 100%; max-height: 520px; height: auto;">
+          </div>
+          <div class="column is-7">
+            <div class="content has-text-justified">
+              <p><b>Three stages.</b> <span class="arbor">Arbor</span> (Attributing Reasoning failures By Operations on Reasoning-state trees) turns a trajectory into a tree of reasoning states in three stages: a <em>parser</em> maps each step to an operation on a schema-grounded payload; a deterministic <em>engine</em> resolves the step to a node of the tree built so far and applies one mutation; and a <em>failure row</em> is a predicate on the step, the node it resolves to and the tree before it. Only the parser calls a model; the same parse always replays to the same tree and the same labels, and every label names the earlier node it is defined against.</p>
+              <p><b>Eleven failure rows.</b> Prior work has documented three recurring failure modes in long chains of thought: <em>repetition</em>, in which the model re-reasons about results it has already established; <em>underthinking</em>, in which it abandons a line of reasoning that could still succeed; and <em>unsupported deduction</em>, steps the preceding context does not entail. Each mode, however, covers steps that arise through different mechanisms and harm reasoning in different ways. <span class="arbor">Arbor</span> splits the three modes into eleven rows; the table below lists them, each with a trajectory in which you can watch it happen.</p>
+              <p><b>Three tasks.</b> We instantiate the framework on three reasoning tasks with distinct reasoning structures: ZebraLogic, constraint satisfaction; the 24 Game, search over arithmetic compositions; and PlanBench, sequential action planning under preconditions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demo" style="background: #fafbfd;">
+  <div class="container is-max-desktop">
+    <h3 class="title is-3 has-text-centered">See each failure on a tree</h3>
+    <p class="demo-lead has-text-centered">Every row below opens one trajectory at the thought that carries the failure. The page lands on that thought and the node it created, and each click reveals one sentence of the story and points to the next click: where the state came from, what happened in between, and what followed.</p>
+    <div class="columns is-vcentered">
+      <div class="column is-5">
+        <a class="thumb-card" href="./demo/R1_que765_com1.html">
+          <img src="./static/images/tree-thumb.png" alt="A tree of reasoning states from the demo: nodes with plain-English labels">
+          <div class="cap"><b>A tree of reasoning states from the demo.</b> Nodes are intermediate results, labelled in plain words. Click to open the R1 Re-Derivation page, or pick a row below.</div>
+        </a>
+      </div>
+      <div class="column is-7">
+        <div class="content">
+          <p><b>A guided walkthrough of each failure.</b> Each page is an interactive, guided tour: it shows how every thought maps to a change on the tree, the state each node holds, and the relation that makes a step a failure. Follow the prompts click by click and the failure unfolds one step at a time.</p>
+          <p><b>Then explore.</b> Click any node to see the thoughts that built it, or any thought to see where it landed on the tree. The <span class="pill">final answer</span> button shows how the trajectory ends against the correct solution, and <span class="pill">reset view</span> starts the walk again.</p>
+        </div>
+      </div>
+    </div>
+
+    <table class="table is-fullwidth is-hoverable rows-table" style="margin-top: 1.2rem; background: transparent;">
+      <thead>
+        <tr><th>Row</th><th>Definition: the model …</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr class="group"><td colspan="3">Repetition</td></tr>
+        <tr class="row" data-href="./demo/R1_que765_com1.html"><td class="rid">R1 Re-Derivation</td><td class="def">derives again a result it has already derived, after deriving or verifying others.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R1_que765_com1.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R2_que977_com2.html"><td class="rid">R2 Derive-after-Prune</td><td class="def">derives from a hypothesis it has already rejected.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R2_que977_com2.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R3_blocksworld_3__blocksworld_3_48__com0.html"><td class="rid">R3 Redundant Re-Verification</td><td class="def">verifies a result again although nothing it depends on has changed.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R3_blocksworld_3__blocksworld_3_48__com0.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R4_que1267_com2.html"><td class="rid">R4 Subgoal Churn</td><td class="def">posts a subgoal again after working on others, without progress on it.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R4_que1267_com2.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="group"><td colspan="3">Underthinking</td></tr>
+        <tr class="row" data-href="./demo/R5_que828_com0.html"><td class="rid">R5 Branch Abandonment</td><td class="def">abandons a hypothesis that can still reach a correct solution, even if it later returns.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R5_que828_com0.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R6_que1201_com2.html"><td class="rid">R6 Subgoal Abandonment</td><td class="def">drops a subgoal that is still achievable and never completes it.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R6_que1201_com2.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R7_que765_com2.html"><td class="rid">R7 Post-Answer Attempt</td><td class="def">begins searching elsewhere, or re-verifying, while holding a correct complete solution.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R7_que765_com2.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="group"><td colspan="3">Unsupported deduction</td></tr>
+        <tr class="row" data-href="./demo/R8_que1013_com0.html"><td class="rid">R8 Premature Finalization</td><td class="def">commits an answer that its established results or the task contradict.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R8_que1013_com0.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R9_blocksworld_3__blocksworld_3_91__com1.html"><td class="rid">R9 Infeasible Derivation</td><td class="def">derives a result that its established results do not permit.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R9_blocksworld_3__blocksworld_3_91__com1.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R10_blocksworld__blocksworld_109__com0.html"><td class="rid">R10 False Rejection</td><td class="def">rejects a hypothesis that can still reach a correct solution, for a false reason.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R10_blocksworld__blocksworld_109__com0.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+        <tr class="row" data-href="./demo/R11_que977_com2.html"><td class="rid">R11 False Verdict</td><td class="def">records a verification outcome that its established results contradict.</td><td class="go"><a class="button is-small is-rounded is-dark" href="./demo/R11_que977_com2.html"><span class="icon"><i class="fas fa-project-diagram"></i></span><span>see it on a tree</span></a></td></tr>
+      </tbody>
+    </table>
+    <p class="has-text-centered" style="color: #4a4a4a; font-size: .9rem;">All examples are Qwen3-8B (thinking) trajectories.</p>
+  </div>
+</section>
+
+<section class="section" id="bibtex">
+  <div class="container is-max-desktop content">
+    <h3 class="title is-4">BibTeX</h3>
+    <pre><code>@article{li2026arbor,
+  title   = {{ARBOR}: Locating Reasoning Failures in Long Chains of Thought through Reasoning State Tracking},
+  author  = {Li, Huihan and Wang, Siyuan and Dinavahi, Naga Vamsi Ramana and Liu, Xiaohui and Ren, Xiang},
+  journal = {arXiv preprint arXiv:2610.22717},
+  year    = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/abs/2610.22717"><i class="ai ai-arxiv"></i></a>
+      <a class="icon-link" href="https://github.com/INK-USC/ARBOR"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>The code is released under the MIT license and the data under CC BY 4.0. This website borrows the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of the Nerfies page, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('tr.row[data-href]').forEach(function (tr) {
+    tr.addEventListener('click', function (e) { if (e.target.closest('a')) return; window.location.href = tr.dataset.href; });
+  });
+</script>
+</body>
+</html>

@@ -22,6 +22,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" /> 
+	<link rel="stylesheet" href="assets/css/header-title.css" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -37,13 +38,14 @@
 			<header id="header">
 				<div class="inner">
 					<a href="index.html" class="logo"> <img width="55" style="padding: 0.5em 0 0 0" src="images/logo.png"> </a>
+					<h1 class="header-title">INK Lab</h1>
 					<nav id="nav">
 							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="index.html">Home</a>
 							<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="people.html">People</a>
 							<a style="color:#FF0433" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="research.html"><u>Research</u></a>
 							
                         <a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="publications.html">Publications</a>
-												<a style="color:#d5d5d5;" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="software.html">Software</a>
+												<!-- <a style="color:#d5d5d5;" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="software.html">Software</a> -->
 												<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="sponsors.html">Sponsors</a>
 						<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="teaching.html">Teaching</a>
 						<a style="color:#d5d5d5" onMouseOver="this.style.color='#FF0433'" onMouseOut="this.style.color='#d5d5d5'" href="contact.html">Join Us</a>
@@ -74,6 +76,215 @@
 				</div> -->
 				<div class="inner"> 
 						<div class="content">
+<p>At INK Lab, we work on a wide range of research topics in natural language processing. Below are some of our broader research interests, each with a few representative recent papers. For our full list of papers, please see our <a href="publications.html">Publications</a> page.</p>
+
+<h2 style="margin: 0em 0em 0em 0em">Reasoning and Inference-Time Methods for LLMs</h2>
+<hr style="margin: 0em 0em 1em 0em">
+
+<ul style="font-size:16px; line-height:25px">
+	<p><b><a href="https://openreview.net/forum?id=C1UD4FLFPL" target="_blank">Segment-Level Attribution for Selective Learning of Long Reasoning Traces</a></b><br />
+		Siyuan Wang, Yanchen Liu, Xiang Ren. <b>ICLR</b> 2026.
+	<a class="button pub" href="https://github.com/SiyuanWangw/SegmentSelectiveSFT" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/355d36f5f0922d050d9b6eaa3511d301-Paper-Conference.pdf" target="_blank">Lookahead tree-based rollouts for enhanced trajectory-level exploration in reinforcement learning with verifiable rewards</a></b><br />
+		Shangyu Xing, Siyuan Wang, Chenyuan Yang, Xin-Yu Dai, Xiang Ren. <b>ICLR</b> 2026.
+	<a class="button pub" href="https://github.com/starreeze/latr" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.emnlp-main.157/" target="_blank">Diagnosing Memorization in Chain-of-Thought Reasoning, One Token at a Time</a></b><br />
+		Huihan Li, You Chen, Siyuan Wang, Yixin He, Ninareh Mehrabi, Rahul Gupta, Xiang Ren. <b>EMNLP</b> 2025.
+	<a class="button pub" href="https://github.com/INK-USC/STIM" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.emnlp-main.1285/" target="_blank">Stepwise Informativeness Search for Efficient and Effective LLM Reasoning</a></b><br />
+		Siyuan Wang, Enda Zhao, Xiang Ren. <b>EMNLP</b> 2025.
+	<a class="button pub" href="https://github.com/SiyuanWangw/Informativeness-Search" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.emnlp-main.1077/" target="_blank">Mixing Inference-time Experts for Enhancing LLM Reasoning</a></b><br />
+		Soumya Sanyal, Tianyi Xiao, Xiang Ren. <b>EMNLP</b> 2025.
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2024.emnlp-main.974/" target="_blank">Symbolic Working Memory Enhances Language Models for Complex Rule Application</a></b><br />
+		Siyuan Wang, Zhongyu Wei, Yejin Choi, Xiang Ren. <b>EMNLP</b> 2024.
+	<a class="button pub" href="https://github.com/SiyuanWangw/RuleApplication" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/pdf?id=eskQMcIbMS" target="_blank">From Decoding to Meta-Generation: Inference-time Algorithms for Large Language Models</a></b><br />
+		Sean Welleck, Amanda Bertsch, Matthew Finlayson, Hailey Schoelkopf, Alex Xie, Graham Neubig, Ilia Kulikov, Zaid Harchaoui. <b>TMLR</b> 2024. <font color="red"><b>Survey Certification</b></font>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2024.acl-long.406/" target="_blank">Can LLMs Reason with Rules? Logic Scaffolding for Stress-Testing and Improving LLMs</a></b><br />
+		Siyuan Wang, Zhongyu Wei, Yejin Choi, Xiang Ren. <b>ACL</b> 2024.
+	<a class="button pub" href="https://github.com/SiyuanWangw/ULogic" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+</ul>
+
+<h2 style="margin: 0em 0em 0em 0em">Interpretability, Memorization and Training Data</h2>
+<hr style="margin: 0em 0em 1em 0em">
+
+<ul style="font-size:16px; line-height:25px">
+	<p><b><a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/8d9bbba8cac9cabb54e85ee7f21441c8-Paper-Conference.pdf" target="_blank">Function induction and task generalization: An interpretability study with off-by-one addition</a></b><br />
+		Qinyuan Ye, Robin Jia, Xiang Ren. <b>ICLR</b> 2026.
+	<a class="button pub" href="https://github.com/INK-USC/function-induction" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=C1UD4FLFPL" target="_blank">Demystifying Language Model Forgetting with Low-rank Example Associations</a></b><br />
+		Xisen Jin, Xiang Ren. <b>NeurIPS</b> 2025.
+	<a class="button pub" href="https://github.com/AuCson/low-rank-forgetting" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/pdf?id=CNWlNF8VOm" target="_blank">The Surprising Effectiveness of Membership Inference with Simple N-Gram Coverage</a></b><br />
+		Skyler Hallinan, Jaehun Jung, Melanie Sclar, Ximing Lu, Abhilasha Ravichander, Sahana Ramnath, Yejin Choi, Sai Praneeth Karimireddy, Niloofar Mireshghallah, Xiang Ren. <b>COLM</b> 2025.
+	<a class="button pub" href="https://github.com/shallinan1/NGramCoverageAttack" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/pdf?id=n6mTO5JS4j" target="_blank">Teaching Models to Understand (but not Generate) High-risk Data</a></b><br />
+		Ryan Yixiang Wang, Matthew Finlayson, Luca Soldaini, Swabha Swayamdipta, Robin Jia. <b>COLM</b> 2025.
+	<a class="button pub" href="https://github.com/ryanyxw/llm-decouple" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=XrsOu4KgDE" target="_blank">Attributing Culture-Conditioned Generations to Pretraining Corpora</a></b><br />
+		Huihan Li, Arnav Goel, Keyu He, Xiang Ren. <b>ICLR</b> 2025.
+	<a class="button pub" href="https://github.com/huihanlhh/CultureGenAttr" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=bzNwexOPWm" target="_blank">What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement</a></b><br />
+		Xisen Jin, Xiang Ren. <b>ICML</b> 2024. <font color="red"><b>Spotlight</b></font>
+	<a class="button pub" href="https://inklab.usc.edu/lm-forgetting-prediction/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+	</p>
+
+</ul>
+
+<h2 style="margin: 0em 0em 0em 0em">Model Security, Provenance and Accountability</h2>
+<hr style="margin: 0em 0em 1em 0em">
+
+<ul style="font-size:16px; line-height:25px">
+	<p><b><a href="https://openreview.net/forum?id=C1UD4FLFPL" target="_blank">Every Language Model Has a Forgery-Resistant Signature</a></b><br />
+		Matthew Finlayson, Xiang Ren, Swabha Swayamdipta. <b>ICLR</b> 2026.
+	</p>
+
+	<p><b><a href="https://openreview.net/pdf?id=FZp6cheXt2" target="_blank">Better Language Model Inversion by Compactly Representing Next-Token Distributions</a></b><br />
+		Murtaza Nazir, Matthew Finlayson, John Xavier Morris, Xiang Ren, Swabha Swayamdipta. <b>NeurIPS</b> 2025.
+	<a class="button pub" href="https://github.com/Dill-Lab/PILS" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.emnlp-main.318/" target="_blank">Rethinking Backdoor Detection Evaluation for Language Models</a></b><br />
+		Jun Yan, Wenjie Jacky Mo, Xiang Ren, Robin Jia. <b>EMNLP</b> 2025.
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=oRcYFm8vyB" target="_blank">Logits of API-Protected LLMs Leak Proprietary Information</a></b><br />
+		Matthew Finlayson, Xiang Ren, Swabha Swayamdipta. <b>COLM</b> 2024.
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2024.naacl-long.337/" target="_blank">Backdooring Instruction-Tuned Large Language Models with Virtual Prompt Injection</a></b><br />
+		Jun Yan, Vikas Yadav, Shiyang Li, Lichang Chen, Zheng Tang, Hai Wang, Vijay Srinivasan, Xiang Ren, Hongxia Jin. <b>NAACL</b> 2024.
+	<a class="button pub" href="https://poison-llm.github.io/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=dONpC9GL1o" target="_blank">Closing the Curious Case of Neural Text Degeneration</a></b><br />
+		Matthew Finlayson, John Hewitt, Alexander Koller, Swabha Swayamdipta, Ashish Sabharwal. <b>ICLR</b> 2024.
+	<a class="button pub" href="https://github.com/mattf1n/basis-aware-threshold" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+</ul>
+
+<h2 style="margin: 0em 0em 0em 0em">Explanations and Human&ndash;AI Interaction</h2>
+<hr style="margin: 0em 0em 1em 0em">
+
+<ul style="font-size:16px; line-height:25px">
+	<p><b><a href="https://aclanthology.org/2026.acl-long.673.pdf" target="_blank">Believing without Seeing: Quality Scores for Contextualizing Vision-Language Model Explanations</a></b><br />
+		Keyu He, Tejas Srinivasan, Brihi Joshi, Xiang Ren, Jesse Thomason, Swabha Swayamdipta. <b>ACL</b> 2026.
+	<a class="button pub" href="https://github.com/dill-lab/vlm-quality-scores" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.emnlp-main.1300/" target="_blank">Amulet: Putting Complex Multi-Turn Conversations on the Stand with LLM Juries</a></b><br />
+		Sahana Ramnath, Anurag Mudgil, Brihi Joshi, Skyler Hallinan, Xiang Ren. <b>EMNLP</b> 2025.
+	<a class="button pub" href="https://github.com/INK-USC/Amulet-DA-and-Maxim" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.findings-acl.1306/" target="_blank">ELI-Why: Evaluating the Pedagogical Utility of Language Model Explanations</a></b><br />
+		Brihi Joshi, Keyu He, Sahana Ramnath, Sadra Sabouri, Kaitlyn Zhou, Souti Chattopadhyay, Swabha Swayamdipta, Xiang Ren. <b>ACL Findings</b> 2025.
+	<a class="button pub" href="https://inklab.usc.edu/eli-why/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.naacl-long.556/" target="_blank">REL-A.I.: An Interaction-Centered Approach To Measuring Human-LM Reliance</a></b><br />
+		Kaitlyn Zhou, Jena D. Hwang, Xiang Ren, Nouha Dziri, Dan Jurafsky, Maarten Sap. <b>NAACL</b> 2025. <font color="red"><b>Best Paper Runner-Up</b></font>
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2025.naacl-long.451/" target="_blank">CAVE: Controllable Authorship Verification Explanations</a></b><br />
+		Sahana Ramnath, Kartik Pandey, Elizabeth Boschee, Xiang Ren. <b>NAACL</b> 2025.
+	<a class="button pub" href="https://github.com/INK-USC/Controllable-AV-Explanations" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=t8eO0CiZJV" target="_blank">Tailoring Self-Rationalizers with Multi-Reward Distillation</a></b><br />
+		Sahana Ramnath, Brihi Joshi, Skyler Hallinan, Ximing Lu, Liunian Harold Li, Aaron Chan, Jack Hessel, Yejin Choi, Xiang Ren. <b>ICLR</b> 2024.
+	<a class="button pub" href="https://github.com/INK-USC/RationaleMultiRewardDistillation" target="_blank"><i class="fa fa-github"></i> Code</a> <a class="button pub" href="https://inklab.usc.edu/MaRio/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+	</p>
+
+</ul>
+
+<h2 style="margin: 0em 0em 0em 0em">Language Agents and Evaluation</h2>
+<hr style="margin: 0em 0em 1em 0em">
+
+<ul style="font-size:16px; line-height:25px">
+	<p><b><a href="https://dl.acm.org/doi/pdf/10.1145/3786335.3813182" target="_blank">OpaqueToolsBench: Learning Nuances of Tool Behavior Through Interaction</a></b><br />
+		Skyler Hallinan, Thejas Venkatesh, Xiang Ren, Sai Praneeth Karimireddy, Ashwin Paranjape, Yuhao Zhang, Jack Hessel. <b>ACM CAIS</b> 2026.
+	<a class="button pub" href="https://github.com/shallinan1/OpaqueToolsBench" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=j6PTT6NB2O" target="_blank">Stress-Testing Long-Context Language Models with Lifelong ICL and Task Haystack</a></b><br />
+		Xiaoyue Xu, Qinyuan Ye, Xiang Ren. <b>NeurIPS</b> 2024.
+	<a class="button pub" href="https://github.com/INK-USC/Lifelong-ICL" target="_blank"><i class="fa fa-github"></i> Code</a> <a class="button pub" href="https://inklab.usc.edu/lifelong-icl/" target="_blank"><i class="fa fa-globe"></i> Website</a>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=BROvXhmzYK" target="_blank">SELF-DISCOVER: Large Language Models Self-Compose Reasoning Structures</a></b><br />
+		Pei Zhou, Jay Pujara, Xiang Ren, Xinyun Chen, Heng-Tze Cheng, Quoc V Le, Ed H. Chi, Denny Zhou, Swaroop Mishra, Steven Zheng. <b>NeurIPS</b> 2024.
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2024.findings-naacl.233/" target="_blank">Instruction-following Evaluation through Verbalizer Manipulation</a></b><br />
+		Shiyang Li, Jun Yan, Hai Wang, Zheng Tang, Xiang Ren, Vijay Srinivasan, Hongxia Jin. <b>NAACL Findings</b> 2024.
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=dFcXJgnrGB" target="_blank">PlaSma: Procedural Knowledge Models for Language-based Planning and Re-Planning</a></b><br />
+		Faeze Brahman, Chandra Bhagavatula, Valentina Pyatkin, Jena D. Hwang, Xiang Lorraine Li, Hirona Jacqueline Arai, Soumya Sanyal, Keisuke Sakaguchi, Xiang Ren, Yejin Choi. <b>ICLR</b> 2024.
+	<a class="button pub" href="https://github.com/allenai/PlaSma" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+</ul>
+
+<h2 style="margin: 0em 0em 0em 0em">Language, Culture and Society</h2>
+<hr style="margin: 0em 0em 1em 0em">
+
+<ul style="font-size:16px; line-height:25px">
+	<p><b><a href="https://aclanthology.org/2026.acl-long.1597.pdf" target="_blank">DRInQ: Evaluating Conversational Implicature with Controlled Context Variation</a></b><br />
+		Hirona Jacqueline Arai, Xiang Ren. <b>ACL</b> 2026.
+	<a class="button pub" href="https://github.com/hjarai/drinq" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+	<p><b><a href="https://arxiv.org/abs/2605.24384" target="_blank">Side-by-side Comparison Amplifies Dialect Bias in Language Models</a></b><br />
+		Kritee Kondapally, Claire J Smerdon, Pooja C Patel, Ogheneyoma Akoni, Jevon Torres, Jaspreet Ranjit, Matthew Finlayson, Swabha Swayamdipta. <b>ACM FAccT</b> 2026.
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2026.findings-emnlp.1383.pdf" target="_blank">Translating the Untranslatable: An Operationalizable Ontology for Untranslatability</a></b><br />
+		Jacob Bremerman, Brihi Joshi, Hirona Jacqueline Arai, Xiang Ren, Jonathan May. <b>EMNLP Findings</b> 2026.
+	</p>
+
+	<p><b><a href="https://aclanthology.org/2024.emnlp-main.724/" target="_blank">OATH-Frames: Characterizing Online Attitudes Towards Homelessness with LLM Assistants</a></b><br />
+		Jaspreet Ranjit, Brihi Joshi, Rebecca Dorn, Laura Petry, Olga Koumoundouros, Jayne Bottarini, Peichen Liu, Eric Rice, Swabha Swayamdipta. <b>EMNLP</b> 2024. <font color="red"><b>Outstanding Paper Award</b></font>
+	</p>
+
+	<p><b><a href="https://openreview.net/forum?id=DbsLm2KAqP" target="_blank">CULTURE-GEN: Revealing Global Cultural Perception in Language Models through Natural Language Prompting</a></b><br />
+		Huihan Li, Liwei Jiang, Nouha Dziri, Xiang Ren, Yejin Choi. <b>COLM</b> 2024.
+	<a class="button pub" href="https://github.com/huihanlhh/Culture-Gen" target="_blank"><i class="fa fa-github"></i> Code</a>
+	</p>
+
+</ul>
+
+<h2 style="margin: 0em 0em 1em 0em">Earlier Research</h2>
+
 <h2 style="margin: 0em 0em 0em 0em">Learning from Distant, High-level Human Supervision</h2>
 <hr style="margin: 0em 0em 1em 0em">
 
@@ -109,12 +320,11 @@
 				<a class="button pub" href="https://github.com/INK-USC/NERO" target="_blank">Github</a>
 			</p>
 
-			<p><b><a href="acl19_alpaca.pdf" target="_blank">AlpacaTag: An Active Learning-based Crowd Annotation Framework for Sequence Tagging</a></b><br />
+			<p><b><a href="papers/acl19_alpaca.pdf" target="_blank">AlpacaTag: An Active Learning-based Crowd Annotation Framework for Sequence Tagging</a></b><br />
 				Bill Yuchen Lin*, Dong-Ho Lee*, Frank F. Xu, Ouyu Lan, Xiang Ren. <b>ACL</b> 2019, (System Demo).
 				<a class="button pub" href="http://inklab.usc.edu/AlpacaTag" target="_blank">Project</a> |
 				<a class="button pub" href="https://github.com/INK-USC/AlpacaTag/wiki" target="_blank">Wiki</a> |
-				<a class="button pub" href="https://github.com/INK-USC/AlpacaTag" target="_blank">Github</a> |
-				<a class="button pub" href="http://ink-ron.usc.edu:22033/static/file/poster.pdf" target="_blank">Poster</a> 
+				<a class="button pub" href="https://github.com/INK-USC/AlpacaTag" target="_blank">Github</a>  
 			</p>
 
 			<p><b><a href="https://arxiv.org/abs/1707.00166" target="_blank">Heterogeneous Supervision for Relation Extraction: A Representation Learning Approach</a></b><br />
@@ -156,7 +366,7 @@
 					Project</a>    <a class="button pub"
 					href="http://inklab.usc.edu/CommonGen/" target="_blank">
 					Data</a>    <a class="button pub"
-					href="https://huggingface.co/datasets/common_gen" target="_blank">Huggingface</a>    <a
+					href="https://huggingface.co/datasets/allenai/common_gen" target="_blank">Huggingface</a>    <a
 					class="button pub"
 					href="https://inklab.usc.edu/CommonGen/leaderboard.html" target="_blank">
 					Leaderboard</a>    <a class="button pub code label label-info"
@@ -195,12 +405,13 @@
 			
 
 			 <p><b>
-				<a class="pub_title" href="https://yuchenlin.xyz/opencsr_naacl21_draft.pdf" target="_blank">Differentiable
+				<a class="pub_title" href="https://aclanthology.org/2021.naacl-main.366/" target="_blank">Differentiable
 					Open-Ended Commonsense Reasoning</a> </b>
 				<br />
 				Bill Yuchen Lin, Haitian Sun, Bhuwan Dhingra, Manzil Zaheer, Xiang Ren, William W. Cohen 
 				<b class="conf_name">NAACL</b> 2021
 				<meta title="Differentiable Open-Ended Commonsense Reasoning" venue="NAACL" year="2021" />
+			<a class="button pub" href="https://open-csr.github.io/" target="_blank"><i class="fa fa-globe"></i> Website</a>
 			</p>
 
 			<p>
@@ -300,7 +511,7 @@
 
 			<p><b><a href="https://arxiv.org/abs/1904.05530">Recurrent Event Network for Reasoning over Temporal Knowledge Graphs</a></b><br />
 				Woojeong Jin, Changlin Zhang, Pedro Szekely, Xiang Ren. <b>ICLR-RLGM</b> 2019. 
-			<a class="button pub" href="https://github.com/INK-USC/RENet" target="_blank">Github</a> | <a class="button pub" href="https://github.com/woojeongjin/dynamic-KG" target="_blank">Survey</a>
+			 <a class="button pub" href="https://github.com/woojeongjin/dynamic-KG" target="_blank">Survey</a>
 			</p>
 				
 			<p><b><a href="papers/emnlp19_kagnet.pdf" target="_blank">KagNet: Knowledge-Aware Graph Networks for Commonsense Reasoning</a></b><br />
@@ -382,6 +593,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/header-title.js"></script>
 
 	</body>
 </html>
