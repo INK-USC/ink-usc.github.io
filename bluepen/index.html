@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BluePen</title>
+<meta name="description" content="An interactive look at BluePen: learning what to ask and when to stop for personalized AI interactions.">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="motivation.css"><script src="motivation.js" defer></script><link rel="stylesheet" href="overview.css"><script src="overview.js?v=bluepen-sections-1" defer></script><script src="data.js" defer></script><script src="training-user.js" defer></script><script src="app.js?v=consistent-roles-1" defer></script>
+<link rel="stylesheet" href="template.css"><link rel="stylesheet" href="method.css?v=conversation-focus-2"><link rel="stylesheet" href="typography.css?v=consistent-roles-1"><link rel="stylesheet" href="results.css"><script src="results-data.js" defer></script><script src="results.js" defer></script><script src="evaluation.js" defer></script>
+<link rel="stylesheet" href="examples.css"><script src="examples-data.js" defer></script><script src="examples.js?v=consistent-roles-1" defer></script>
+<link rel="stylesheet" href="navigation.css?v=horizontal-tabs-1"><script src="navigation.js?v=horizontal-tabs-1" defer></script>
+<link rel="stylesheet" href="narrative.css?v=bibtex-1">
+<link rel="stylesheet" href="animation-readability.css">
+</head>
+<body>
+<a class="skip" href="#motivation">Skip to the motivation</a>
+
+<main id="top">
+<section class="hero wrap">
+<h1>Learning How to Ask: Closing the User Information Gap through Multi-Turn Interactions</h1>
+<p class="authors"><a href="https://brihijoshi.github.io/" target="_blank" rel="noopener">Brihi Joshi</a>, <a href="https://jamesnulliu.github.io/" target="_blank" rel="noopener">Yanchen Liu</a>, <a href="https://swabhs.com/" target="_blank" rel="noopener">Swabha Swayamdipta</a>, <a href="https://www.seanre.com/" target="_blank" rel="noopener">Xiang Ren</a></p>
+<div class="institution"><img class="usc-logo" src="assets/usc-logo.png" width="196" height="65" alt="USC, University of Southern California"></div>
+<div class="hero-actions resource-links" aria-label="Project resources"><a class="button resource-placeholder" href="" aria-disabled="true" title="Link coming soon"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span>PDF</a><a class="button resource-placeholder" href="" aria-disabled="true" title="Link coming soon"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m5 3 14 18M19 3 5 21"/><path d="m8 3 11 14M5 7l11 14" opacity=".5"/></svg></span>arXiv</a><a class="button resource-placeholder" href="" aria-disabled="true" title="Link coming soon"><span class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.82c.56.1.76-.24.76-.54v-2.08c-3.12.68-3.78-1.32-3.78-1.32-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.22.71-1.5-2.49-.29-5.1-1.25-5.1-5.54 0-1.23.44-2.23 1.15-3.01-.11-.28-.5-1.43.11-2.97 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.22 2.69.11 2.97.71.78 1.15 1.78 1.15 3.01 0 4.3-2.62 5.25-5.12 5.53.4.35.76 1.03.76 2.07v3.08c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg></span>GitHub</a><a class="button resource-placeholder" href="" aria-disabled="true" title="Link coming soon"><span class="resource-icon" aria-hidden="true"><span class="resource-emoji">🤗</span></span>Hugging Face</a></div>
+</section>
+<nav class="page-contents wrap" aria-label="Table of contents">
+<ul id="contents-links">
+<li><a href="#top" aria-current="location">Overview</a></li>
+<li><a href="#motivation">Motivation</a></li>
+<li><a href="#method">BluePen</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+</nav>
+<div class="task-opening wrap"><p>Better personalization starts with gaining the right information about you.<br><strong>What should it ask</strong>, and <strong>when has it learned enough</strong>?</p></div>
+<section id="motivation" class="motivation-section wrap" aria-labelledby="motivation-title">
+<div class="section-heading"><h2 id="motivation-title">Motivation</h2></div>
+<div class="narrative motivation-lead">
+<div class="narrative-row"><p>Personalization often starts from <strong>known user information</strong>, such as demographics, interaction history, or observed behavior<sup class="citation-mark"><a href="#ref-lamp" aria-label="Reference 1: Salemi et al., 2024">1</a></sup>. For a new user, however, the information that matters may still be missing. Preferences may emerge through interaction history over time, but we can also <strong>ask the user directly</strong>. Learning to conduct these conversations presents two challenges.</p><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation" id="ref-lamp"><span class="citation-number">1</span><a href="https://aclanthology.org/2024.acl-long.399/" target="_blank" rel="noopener noreferrer"><span class="citation-author">Salemi et al., 2024</span><span class="citation-title">LaMP: When Large Language Models Meet Personalization</span></a></div></aside></div>
+</div>
+<figure class="motivation-demo" aria-label="Four-turn book recommendation conversation">
+  <div class="motivation-toolbar"><div class="motivation-legend"><span><span aria-hidden="true">🤖</span> Assistant</span><span><span aria-hidden="true">👩🏻</span> Reader</span></div><button id="motivation-play" class="motivation-control" aria-pressed="false">Play</button></div>
+  <div class="motivation-conversation"><article class="motivation-turn is-current" data-turn-card="0">
+  <button class="motivation-turn-select" data-motivation-turn="0" aria-pressed="true" aria-label="Turn 1: Genre"><span class="motivation-turn-number">1</span>Turn 1</button>
+  <div class="motivation-turn-messages"><div class="motivation-message"><span aria-hidden="true">🤖</span><p>To start, do you prefer fantasy or romance?</p></div><div class="motivation-message motivation-user"><span aria-hidden="true">👩🏻</span><p>I usually read fantasy.</p></div></div>
+  <p class="motivation-turn-gain">+ Genre</p>
+</article><article class="motivation-turn is-future" data-turn-card="1">
+  <button class="motivation-turn-select" data-motivation-turn="1" aria-pressed="false" aria-label="Turn 2: Setting"><span class="motivation-turn-number">2</span>Turn 2</button>
+  <div class="motivation-turn-messages"><div class="motivation-message"><span aria-hidden="true">🤖</span><p>Do you prefer modern or medieval settings?</p></div><div class="motivation-message motivation-user"><span aria-hidden="true">👩🏻</span><p>I like stories set in medieval worlds.</p></div></div>
+  <p class="motivation-turn-gain">+ Setting</p>
+</article><article class="motivation-turn is-future" data-turn-card="2">
+  <button class="motivation-turn-select" data-motivation-turn="2" aria-pressed="false" aria-label="Turn 3: Characters"><span class="motivation-turn-number">3</span>Turn 3</button>
+  <div class="motivation-turn-messages"><div class="motivation-message"><span aria-hidden="true">🤖</span><p>Do you prefer simple or complex characters?</p></div><div class="motivation-message motivation-user"><span aria-hidden="true">👩🏻</span><p>Hmm, I’m not sure about that.</p></div></div>
+  <p class="motivation-turn-gain is-empty">No new information</p>
+</article><article class="motivation-turn is-future" data-turn-card="3">
+  <button class="motivation-turn-select" data-motivation-turn="3" aria-pressed="false" aria-label="Turn 4: Magic systems"><span class="motivation-turn-number">4</span>Turn 4</button>
+  <div class="motivation-turn-messages"><div class="motivation-message"><span aria-hidden="true">🤖</span><p>Do you prefer hard or soft magic systems?</p></div><div class="motivation-message motivation-user"><span aria-hidden="true">👩🏻</span><p>Ugh, I’m not sure.</p></div></div>
+  <p class="motivation-turn-gain is-empty">No new information</p>
+</article></div>
+  <div class="motivation-summary">
+    <div class="motivation-information"><h3>Information gained</h3><div class="motivation-facts"><span class="motivation-fact" data-fact="genre"><span>Genre</span><strong>Fantasy</strong></span><span class="motivation-fact is-unknown" data-fact="setting"><span>Setting</span><strong>—</strong></span></div></div>
+    <div class="motivation-effort"><div class="motivation-effort-heading"><h3>Effort</h3><p><strong id="motivation-count">1</strong> <span id="motivation-count-unit">interaction</span></p></div><svg class="motivation-graph" viewBox="0 0 450 184" role="img" aria-labelledby="motivation-graph-title motivation-graph-desc">
+<title id="motivation-graph-title">Information gained versus interaction effort</title>
+<desc id="motivation-graph-desc">Illustrative curve: information increases through turn 2, then stays flat as interactions increase to 4.</desc>
+<text x="32" y="17" class="motivation-graph-label">Information gained</text>
+<rect class="motivation-graph-plateau" x="220" y="30" width="200" height="100" rx="4"/>
+<path d="M32 30V130H432" class="motivation-graph-axis"/>
+<path d="M220 30V130" class="motivation-graph-divider"/>
+<path d="M32 130L120 88L220 46L320 46L420 46" class="motivation-graph-guide"/>
+<path d="M32 130L120 88L220 46L320 46L420 46" class="motivation-graph-line" pathLength="1"/>
+<g class="motivation-graph-points"><circle cx="120" cy="88" r="4"/><circle cx="220" cy="46" r="4"/><circle cx="320" cy="46" r="4"/><circle cx="420" cy="46" r="4"/></g>
+<circle class="motivation-graph-cursor" cx="0" cy="0" r="7"/>
+<g class="motivation-graph-label" text-anchor="middle"><text x="120" y="151">1</text><text x="220" y="151">2</text><text x="320" y="151">3</text><text x="420" y="151">4</text><text x="232" y="177">Effort (interactions)</text></g>
+</svg></div>
+  </div>
+  <span id="motivation-status" class="motivation-sr-only" role="status" aria-live="polite" aria-atomic="true">Turn 1. Genre learned. 1 interaction.</span>
+<figcaption class="motivation-caption">Stopping too early can leave important preferences unresolved, whereas continuing unnecessarily adds effort without improving the recommendation.</figcaption>
+</figure>
+<div class="narrative motivation-narrative">
+<div class="narrative-row challenge-row"><div class="narrative-copy"><h3 class="challenge-heading"><span>Challenge 1: Learning which questions are useful</span></h3><p>The quality of a final recommendation provides feedback on the conversation as a whole, without identifying which questions uncovered important preferences. Prior work selects questions using <strong>explicit models of user preferences</strong><sup class="citation-mark"><a href="#ref-bayesian" aria-label="Reference 2: Bose et al., 2026">2</a>,<a href="#ref-bed" aria-label="Reference 3: Choudhury et al., 2026">3</a></sup> or estimates their contribution through <strong>simulated future conversations</strong><sup class="citation-mark"><a href="#ref-collab" aria-label="Reference 4: Wu et al., 2025">4</a></sup>. These approaches require a preference model or repeated simulations, which can be computationally expensive.</p></div><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation" id="ref-bayesian"><span class="citation-number">2</span><a href="https://arxiv.org/abs/2602.15012" target="_blank" rel="noopener noreferrer"><span class="citation-author">Bose et al., 2026</span><span class="citation-title">Cold-Start Personalization via Bayesian Adaptive Questioning</span></a></div><div class="margin-citation" id="ref-bed"><span class="citation-number">3</span><a href="https://arxiv.org/abs/2508.21184" target="_blank" rel="noopener noreferrer"><span class="citation-author">Choudhury et al., 2026</span><span class="citation-title">BED-LLM: Bayesian Experimental Design</span></a></div><div class="margin-citation" id="ref-collab"><span class="citation-number">4</span><a href="https://arxiv.org/abs/2502.00640" target="_blank" rel="noopener noreferrer"><span class="citation-author">Wu et al., 2025</span><span class="citation-title">CollabLLM: From Passive Responders to Active Collaborators</span></a></div></aside></div>
+<div class="narrative-row challenge-row"><div class="narrative-copy"><h3 class="challenge-heading"><span>Challenge 2: Learning when to stop</span></h3><p>A <strong>fixed interaction budget</strong> cannot adapt to how much information different users reveal<sup class="citation-mark"><a href="#ref-prefdisco" aria-label="Reference 5: Li et al., 2026">5</a></sup>. One user may share several relevant preferences immediately, while another needs targeted follow-ups. Value-of-information approaches instead estimate whether another question’s <strong>expected benefit outweighs its cost to the user</strong><sup class="citation-mark"><a href="#ref-voi" aria-label="Reference 6: Dong et al., 2026">6</a></sup>. However, predicting the usefulness of an unseen answer and the effort required from the user is difficult. The model must learn to stop before further questioning adds effort without improving personalization.</p></div><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation" id="ref-prefdisco"><span class="citation-number">5</span><a href="https://openreview.net/forum?id=O1hfVE0UxG" target="_blank" rel="noopener noreferrer"><span class="citation-author">Li et al., 2026</span><span class="citation-title">PrefDisco: Proactive Personalized Reasoning</span></a></div><div class="margin-citation" id="ref-voi"><span class="citation-number">6</span><a href="https://aclanthology.org/2026.acl-long.1987/" target="_blank" rel="noopener noreferrer"><span class="citation-author">Dong et al., 2026</span><span class="citation-title">Value of Information: Human–Agent Communication</span></a></div></aside></div>
+</div>
+</section>
+<section id="method" class="method-section wrap">
+<div class="section-heading"><h2>BluePen</h2></div>
+<section class="method-subsection" id="training" aria-labelledby="training-heading">
+<h3 class="method-subheading" id="training-heading">Training</h3>
+<div class="narrative ">
+<div class="narrative-row"><p>BluePen<sup class="citation-mark"><a href="#bluepen-name-note" aria-label="Footnote: the name BluePen">*</a></sup> learns both <strong>what to ask</strong> and <strong>when to stop</strong>. It samples conversations with each simulated user, then uses the completed conversations and <strong>privileged user information</strong> to critique individual questions.</p><aside class="margin-notes" aria-label="BluePen name footnote"><div class="margin-citation" id="bluepen-name-note" role="note"><span class="citation-number">*</span><span class="citation-title">“Blue Pen” or Blue Pencil-ing refers to the traditional copy-editing practice where editors marked private feedback on journalist and interviewers’ copy in a light blue that did not register on early photocopiers or photographic film scans.</span></div></aside></div>
+<div class="narrative-row"><p>The same model uses these critiques for <strong>self-distillation</strong><sup class="citation-mark"><a href="#ref-sdpo" aria-label="Reference 7: Hübotter et al., 2026">7</a></sup>, providing <strong>token-level guidance</strong> on what to ask without exposing the hidden user profile to the interviewer.</p><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation" id="ref-sdpo"><span class="citation-number">7</span><a href="https://arxiv.org/abs/2601.20802" target="_blank" rel="noopener noreferrer"><span class="citation-author">Hübotter et al., 2026</span><span class="citation-title">Reinforcement Learning via Self-Distillation</span></a></div></aside></div>
+<div class="narrative-row"><p>We combine this guidance with <strong>GRPO</strong><sup class="citation-mark"><a href="#ref-grpo" aria-label="Reference 8: Shao et al., 2024">8</a></sup>, using downstream task rewards and conversation-length penalties. GRPO trains both question and <strong>stopping tokens</strong>, so the model learns to <strong>end the conversation when it has enough information</strong> for personalization.</p><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation" id="ref-grpo"><span class="citation-number">8</span><a href="https://arxiv.org/abs/2402.03300" target="_blank" rel="noopener noreferrer"><span class="citation-author">Shao et al., 2024</span><span class="citation-title">DeepSeekMath: Group Relative Policy Optimization</span></a></div></aside></div>
+</div>
+<figure class="pipeline" id="pipeline" aria-labelledby="pipeline-heading">
+<div class="pipeline-top"><div><h4 id="pipeline-heading">BluePen</h4></div><button id="pipeline-play" class="pipeline-play" aria-pressed="false">Play</button></div>
+<div class="pipeline-scroll" tabindex="0" role="region" aria-label="Training pipeline diagram; scroll horizontally on small screens"><svg class="pipeline-svg" viewBox="0 0 1200 570" role="img" aria-labelledby="pipeline-title pipeline-desc">
+<title id="pipeline-title">BluePen: the full training pipeline</title>
+<desc id="pipeline-desc">Sample conversations and score their outcomes. Review individual questions with gold user context. Use the critique to form a self-teacher distribution. Combine token-level critique loss with GRPO, then update the interviewer.</desc>
+<defs>
+<marker id="pipe-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#8d9892"/></marker>
+<marker id="pipe-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#008581"/></marker>
+<marker id="pipe-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b48d34"/></marker>
+<g id="pipe-bot" aria-hidden="true"><text x="20" y="35" text-anchor="middle" font-size="34">🤖</text></g>
+<g id="pipe-user" aria-hidden="true"><text x="20" y="35" text-anchor="middle" font-size="34">👩🏻</text></g>
+</defs>
+<path d="M355 60V515M889 60V515" stroke="#e4e8e1" fill="none"/>
+<g class="pipe-part" data-phase="0">
+<rect class="pipe-halo" x="30" y="48" width="312" height="465" rx="12"/>
+<text class="pipe-heading" x="54" y="81">1. Sample conversations</text>
+<use href="#pipe-user" x="88" y="103"/><text x="108" y="169" text-anchor="middle">Alice</text>
+<use href="#pipe-bot" x="214" y="103"/><text x="234" y="169" text-anchor="middle">Model</text>
+<path class="pipe-wire" d="M143 127H202M234 180V195H85V211M180 195V211M234 195H276V211"/>
+<text class="pipe-tau" x="86" y="232" text-anchor="middle">τ1</text><rect class="pipe-message" style="--delay:0.0s" x="78" y="245" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.14s" x="62" y="262" width="54" height="10" rx="2" fill="#f9e6d6"/><rect class="pipe-message" style="--delay:0.28s" x="78" y="279" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.42000000000000004s" x="62" y="296" width="54" height="10" rx="2" fill="#f9e6d6"/><rect x="61" y="313" width="74" height="27" rx="5" fill="#d3e9e7"/><text class="pipe-stop" x="98" y="332" text-anchor="middle">STOP</text><path class="pipe-wire" d="M98 342V352"/><rect x="66" y="356" width="64" height="24" rx="4" fill="#f1f3ef"/><text class="pipe-small" x="98" y="373" text-anchor="middle">evaluate</text><rect x="66" y="388" width="64" height="27" rx="4" fill="#fff2cb"/><text x="98" y="407" text-anchor="middle">r<tspan baseline-shift="sub" font-size="11">1</tspan></text><text class="pipe-tau" x="181" y="232" text-anchor="middle">τ2</text><rect class="pipe-message" style="--delay:0.0s" x="173" y="245" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.14s" x="157" y="262" width="54" height="10" rx="2" fill="#f9e6d6"/><rect class="pipe-message" style="--delay:0.28s" x="173" y="279" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.42000000000000004s" x="157" y="296" width="54" height="10" rx="2" fill="#f9e6d6"/><rect class="pipe-message" style="--delay:0.56s" x="173" y="313" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.7000000000000001s" x="157" y="330" width="54" height="10" rx="2" fill="#f9e6d6"/><rect x="156" y="347" width="74" height="27" rx="5" fill="#d3e9e7"/><text class="pipe-stop" x="193" y="366" text-anchor="middle">STOP</text><path class="pipe-wire" d="M193 376V386"/><rect x="161" y="390" width="64" height="24" rx="4" fill="#f1f3ef"/><text class="pipe-small" x="193" y="407" text-anchor="middle">evaluate</text><rect x="161" y="422" width="64" height="27" rx="4" fill="#fff2cb"/><text x="193" y="441" text-anchor="middle">r<tspan baseline-shift="sub" font-size="11">2</tspan></text><text class="pipe-tau" x="276" y="232" text-anchor="middle">τ3</text><rect class="pipe-message" style="--delay:0.0s" x="268" y="245" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.14s" x="252" y="262" width="54" height="10" rx="2" fill="#f9e6d6"/><rect class="pipe-message" style="--delay:0.28s" x="268" y="279" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.42000000000000004s" x="252" y="296" width="54" height="10" rx="2" fill="#f9e6d6"/><rect class="pipe-message" style="--delay:0.56s" x="268" y="313" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.7000000000000001s" x="252" y="330" width="54" height="10" rx="2" fill="#f9e6d6"/><rect class="pipe-message" style="--delay:0.8400000000000001s" x="268" y="347" width="54" height="10" rx="2" fill="#d0ddf3"/><rect class="pipe-message" style="--delay:0.9800000000000001s" x="252" y="364" width="54" height="10" rx="2" fill="#f9e6d6"/><rect x="251" y="381" width="74" height="27" rx="5" fill="#d3e9e7"/><text class="pipe-stop" x="288" y="400" text-anchor="middle">STOP</text><path class="pipe-wire" d="M288 410V420"/><rect x="256" y="424" width="64" height="24" rx="4" fill="#f1f3ef"/><text class="pipe-small" x="288" y="441" text-anchor="middle">evaluate</text><rect x="256" y="456" width="64" height="27" rx="4" fill="#fff2cb"/><text x="288" y="475" text-anchor="middle">r<tspan baseline-shift="sub" font-size="11">3</tspan></text></g>
+<g class="pipe-part" data-phase="1">
+<rect class="pipe-halo" x="374" y="48" width="496" height="240" rx="12"/>
+<text class="pipe-heading" x="394" y="81">2. Privileged critiques</text>
+<rect x="393" y="100" width="215" height="77" rx="9" fill="#f1f3ef"/>
+<text x="500" y="123" text-anchor="middle">Question + dialogue</text><rect x="411" y="136" width="179" height="28" rx="4" fill="#d0ddf3"/><rect x="471" y="139" width="51" height="23" fill="#fff2cb"/><text class="pipe-serif" x="500" y="156" text-anchor="middle">… genre …</text>
+<rect x="632" y="100" width="217" height="77" rx="9" fill="#f9e6d6"/><text x="740" y="123" text-anchor="middle">Gold user context</text><text class="pipe-small" x="740" y="145" text-anchor="middle"><tspan x="740">Reading history</tspan><tspan x="740" dy="21">and preferences</tspan></text>
+<path class="pipe-wire" d="M500 179L564 197M740 179L683 197"/>
+<rect x="508" y="198" width="226" height="34" rx="6" fill="#d3e9e7"/><use href="#pipe-bot" transform="translate(470 194) scale(.75)"/><text class="pipe-teal-label" x="621" y="221" text-anchor="middle">Self-reviewer</text>
+<rect x="393" y="244" width="456" height="35" rx="6" fill="#e4f1ed"/><text class="pipe-quote" x="621" y="267" text-anchor="middle">“Genre is already known; ask about pacing.”</text>
+<rect x="268" y="313" width="54" height="10" rx="2" fill="none" stroke="#008581" stroke-width="2"/>
+<path class="pipe-signal pipe-teal-wire" d="M323 318H368V140H390"/>
+</g>
+<g class="pipe-part" data-phase="2">
+<rect class="pipe-halo" x="374" y="304" width="496" height="209" rx="12"/>
+<text class="pipe-heading" x="394" y="335">3. Self-distill critiques</text>
+<use href="#pipe-bot" transform="translate(402 352) scale(.72)"/><text class="pipe-serif" x="446" y="375">Student</text><text class="pipe-small" x="405" y="399">Conversation prefix</text>
+<use href="#pipe-bot" transform="translate(666 352) scale(.72)"/><text class="pipe-serif" fill="#008581" x="710" y="375">Self-teacher</text><text class="pipe-small" x="668" y="399">Prefix + critique</text>
+<path class="pipe-signal pipe-teal-wire pipe-dashed" d="M850 262H879V348H810"/>
+<path d="M426 456H552M687 456H813" fill="none" stroke="#9da59e"/>
+<text x="405" y="451">p</text><text x="666" y="451" fill="#008581">q</text>
+<g class="pipe-bars" fill="#6c93bd"><rect x="436" y="414" width="23" height="42"/><rect x="476" y="435" width="23" height="21"/><rect x="516" y="445" width="23" height="11"/></g>
+<g class="pipe-bars" fill="#008581"><rect x="697" y="444" width="23" height="12"/><rect x="737" y="414" width="23" height="42"/><rect x="777" y="431" width="23" height="25"/></g>
+<path class="pipe-signal pipe-teal-wire" d="M653 442H568"/><text class="pipe-small" fill="#008581" x="610" y="432" text-anchor="middle">align</text>
+<text class="pipe-serif" x="621" y="487" text-anchor="middle">JSD(p ∥ stopgrad(q))</text><text class="pipe-small" x="621" y="508" text-anchor="middle">Token-level feedback</text>
+</g>
+<g class="pipe-part" data-phase="3">
+<rect class="pipe-halo" x="904" y="48" width="270" height="465" rx="12"/>
+<text class="pipe-heading" x="922" y="81">4. Combine signals</text>
+<path class="pipe-signal pipe-gold-wire" d="M98 416V530H23V25H904V139H926M193 450V530H98M288 484V530H193"/>
+<rect x="928" y="110" width="226" height="59" rx="8" fill="#fff2cb"/><text class="pipe-serif" x="1041" y="136" text-anchor="middle">Terminal rewards</text><text x="1041" y="157" text-anchor="middle">r₁, r₂, r₃</text>
+<path class="pipe-signal pipe-gold-wire" d="M1041 172V193M1041 248V272"/>
+<text x="1041" y="217" text-anchor="middle">Group-relative</text><text x="1041" y="240" text-anchor="middle">advantages</text>
+<rect x="928" y="278" width="226" height="47" rx="8" fill="#fff2cb"/><text class="pipe-serif" x="1041" y="308" text-anchor="middle">GRPO loss</text>
+<path class="pipe-signal pipe-teal-wire" d="M847 484H900V395H925"/>
+<rect x="928" y="371" width="226" height="47" rx="8" fill="#d3e9e7"/><text class="pipe-serif" fill="#008581" x="1041" y="402" text-anchor="middle">Critique loss</text>
+<path class="pipe-signal pipe-teal-wire" d="M1041 420V447"/><path class="pipe-signal pipe-gold-wire" d="M1157 301H1181V480H1157"/>
+<rect x="916" y="452" width="249" height="48" rx="8" fill="#edf0eb"/><text class="pipe-formula" x="1040" y="484" text-anchor="middle">L = L<tspan baseline-shift="sub" font-size="12">GRPO</tspan> + λL<tspan baseline-shift="sub" font-size="12">CRIT</tspan></text>
+<path class="pipe-signal pipe-teal-wire pipe-dashed" d="M916 480H892V551H343V126H258"/>
+<rect x="531" y="537" width="185" height="27" fill="#fffefa"/><text class="pipe-small" x="623" y="556" text-anchor="middle">Update the interviewer</text>
+</g></svg></div>
+<p class="pipeline-swipe">Swipe to explore the diagram ↔</p>
+<div class="pipeline-steps" aria-label="Pipeline stages"><button data-pipeline-step="0" aria-pressed="false"><span>01</span> Sample conversations</button><button data-pipeline-step="1" aria-pressed="false"><span>02</span> Privileged critiques</button><button data-pipeline-step="2" aria-pressed="false"><span>03</span> Self-distill critiques</button><button data-pipeline-step="3" aria-pressed="false"><span>04</span> Combine signals</button></div>
+<figcaption class="pipeline-caption"><div aria-live="polite" aria-atomic="true"><strong id="pipeline-caption-title">Training objective</strong><p id="pipeline-caption-text">Follow the gold path for conversation-level rewards and the teal path for question-level feedback.</p></div></figcaption>
+</figure>
+<div class="update-connector" aria-hidden="true"><svg viewBox="0 0 1000 92" preserveAspectRatio="none"><defs><marker id="update-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#008581" stroke-width="1.5"/></marker></defs><path d="M800 0 C800 65 180 20 180 88" fill="none" stroke="#008581" stroke-width="1.6" stroke-dasharray="6 6" marker-end="url(#update-arrow)"/></svg></div>
+<div class="method-shell" id="training-update">
+<div class="method-top"><h4>One training update</h4><span class="training-user-label">Exercise prediction for User 566</span></div>
+<div class="method-body"><aside class="method-steps" aria-label="Training stages">
+<button class="step active" data-step="0" aria-label="Step 1: Sample conversations" aria-current="step"><span class="step-no">01</span><span><strong>Sample conversations</strong><small>Task rewards per conversation</small></span></button>
+<button class="step " data-step="1" aria-label="Step 2: Generate critiques"><span class="step-no">02</span><span><strong>Generate critiques</strong><small>Completed dialogue + hidden context</small></span></button>
+<button class="step " data-step="2" aria-label="Step 3: Self-distill"><span class="step-no">03</span><span><strong>Self-distill</strong><small>Token-level teacher targets</small></span></button>
+<button class="step " data-step="3" aria-label="Step 4: Update the model"><span class="step-no">04</span><span><strong>Update the model</strong><small>GRPO + critique loss</small></span></button>
+<div class="step-aside"><small>The interviewer, self-critic, and self-teacher share the same pre-update parameters.</small></div>
+</aside><div class="method-stage" id="method-stage" aria-live="polite"></div></div>
+<div class="method-footer"><span id="stage-caption">Exercise prediction for User 566</span><div><button class="icon-button" id="prev-step" aria-label="Previous method step">←</button><span id="step-counter">1 / 4</span><button class="icon-button" id="next-step" aria-label="Next method step">→</button><button class="play-button" id="play-method" aria-pressed="false">Play</button></div></div>
+</div>
+
+</section>
+<section class="method-subsection evaluation-section" id="evaluation" aria-labelledby="evaluation-heading">
+<h3 class="method-subheading" id="evaluation-heading">Evaluation</h3>
+<div class="narrative ">
+<div class="narrative-row"><p>The trained model interacts with a <strong>new user</strong> and generates <code>[END_OF_CONVERSATION]</code> when ready to stop. A <strong>frozen task-specific model</strong> uses the completed conversation for downstream personalization.</p></div>
+</div>
+<figure class="evaluation-demo" id="evaluation-demo" aria-label="Interaction, stopping, and downstream personalization">
+<div class="evaluation-toolbar"><span>New user <span aria-hidden="true">↔</span> BluePen</span><button class="pipeline-play" id="evaluation-play" aria-pressed="false">Play</button></div>
+<div class="evaluation-flow">
+<div class="evaluation-conversation">
+<div class="eval-turn is-current" data-eval-phase="0"><div class="eval-message"><span aria-hidden="true">🤖</span><p>To start, do you prefer fantasy or romance?</p></div><div class="eval-message eval-user"><span aria-hidden="true">👩🏻</span><p>I usually read fantasy.</p></div></div>
+<div class="eval-turn" data-eval-phase="1"><div class="eval-message"><span aria-hidden="true">🤖</span><p>Do you prefer modern or medieval settings?</p></div><div class="eval-message eval-user"><span aria-hidden="true">👩🏻</span><p>I like stories set in medieval worlds.</p></div></div>
+<div class="eval-stop" data-eval-phase="2"><span>🤖 BluePen</span><code>[END_OF_CONVERSATION]</code></div>
+</div>
+<div class="eval-transfer" data-eval-phase="3"><svg viewBox="0 0 140 70" aria-hidden="true"><path d="M8 35H125M115 25L125 35L115 45" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/></svg><span>Completed<br>conversation</span></div>
+<div class="eval-output" data-eval-phase="3"><span class="eval-book" aria-hidden="true">📚</span><h4>Downstream personalization</h4><p>Rank candidate books</p><div class="eval-preferences"><span>Fantasy</span><span>Medieval setting</span></div><small>Frozen task-specific model</small></div>
+</div>
+<div class="evaluation-steps" aria-label="Evaluation stages"><button data-eval-step="0" aria-pressed="true">Ask</button><button data-eval-step="1" aria-pressed="false">Follow up</button><button data-eval-step="2" aria-pressed="false">Stop</button><button data-eval-step="3" aria-pressed="false">Personalize</button></div>
+<p class="sr-only" id="evaluation-status" aria-live="polite"></p>
+</figure>
+</section>
+</section>
+<section class="results-section wrap" id="results" aria-labelledby="results-heading">
+<div class="section-heading"><h2 id="results-heading">Results</h2></div>
+<div class="narrative results-narrative">
+<div class="narrative-row"><p>We evaluate BluePen on three tasks: <strong>exercise prediction</strong><sup class="citation-mark"><a href="#ref-exercise" aria-label="Reference 9: Wan et al., 2025">9</a></sup>, <strong>medical question answering</strong><sup class="citation-mark"><a href="#ref-mediq" aria-label="Reference 10: Li et al., 2024">10</a></sup>, and <strong>book recommendation</strong><sup class="citation-mark"><a href="#ref-books" aria-label="Reference 11: Hou et al., 2026">11</a></sup>. Each task requires the model to elicit different information from users. We evaluate on <strong>held-out users</strong>, with simulator behavior controls matched across methods.</p><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation" id="ref-exercise"><span class="citation-number">9</span><a href="https://openreview.net/forum?id=tVRtDIwDmQ" target="_blank" rel="noopener noreferrer"><span class="citation-author">Wan et al., 2025</span><span class="citation-title">Personalized Dialogue with Curiosity Reward</span></a></div><div class="margin-citation" id="ref-mediq"><span class="citation-number">10</span><a href="https://openreview.net/forum?id=W4pIBQ7bAI" target="_blank" rel="noopener noreferrer"><span class="citation-author">Li et al., 2024</span><span class="citation-title">MediQ: Interactive Clinical Reasoning</span></a></div><div class="margin-citation" id="ref-books"><span class="citation-number">11</span><a href="https://aclanthology.org/2026.acl-long.147/" target="_blank" rel="noopener noreferrer"><span class="citation-author">Hou et al., 2026</span><span class="citation-title">Amazon Reviews 2023 / BLaIR</span></a></div></aside></div>
+</div>
+<div class="results-box">
+<section class="results-subsection" aria-labelledby="main-results-heading">
+<h3 id="main-results-heading">Main results</h3>
+<div class="narrative ">
+<div class="narrative-row"><p>BluePen achieves the highest downstream scores among conversation-based methods across all three tasks. It improves over the strongest baseline by <strong>4.21 points on ExercisePred</strong>, <strong>7.42 points on MediQ</strong>, and <strong>1.64 points on BookRec</strong>. These comparisons are against GRPO for ExercisePred and MediQ, and DPO for BookRec. BluePen uses fewer turns than these baselines on MediQ and BookRec, and slightly more on ExercisePred.</p><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation figure-reference"><a href="#main-results-table"><span class="citation-author">Table 1</span><span class="citation-title">Main results</span></a></div></aside></div>
+</div>
+<div class="main-table-scroll" role="region" aria-label="Main results table" tabindex="0">
+<table class="main-results-table" id="main-results-table"><caption class="sr-only">Downstream personalization scores and conversation lengths from the paper’s main table.</caption>
+<thead><tr><th scope="col" rowspan="2">Method</th><th scope="colgroup" colspan="2">ExercisePred</th><th scope="colgroup" colspan="2">MediQ</th><th scope="colgroup" colspan="2">BookRec</th></tr><tr><th scope="col">Score ↑</th><th scope="col">Turns ↓</th><th scope="col">Score ↑</th><th scope="col">Turns ↓</th><th scope="col">Score ↑</th><th scope="col">Turns ↓</th></tr></thead>
+<tbody id="main-results-body"></tbody></table></div>
+<p class="results-caption">Mean ± SD over five runs. <span class="improvement-key">Shading</span> marks BluePen’s improvements over the best baseline; * indicates p &lt; 0.05 for scores. Click a baseline name for details.</p>
+<details class="results-details"><summary>Metrics and evaluation</summary><p>Scores are multiplied by 100: probability of the gold exercise strategy for ExercisePred, probability of the gold answer for MediQ, and Hit@1 for BookRec. Turns count question–response pairs, excluding the stop sequence. Each task uses 200 held-out users or instances, and all interviewers start from Qwen2.5-7B-Instruct. Bold values are best among conversation-based methods; underlined values are best among baselines. The oracle has direct access to the gold profile.</p></details>
+</section>
+<section class="results-subsection stopping-results" aria-labelledby="stopping-results-heading">
+<h3 id="stopping-results-heading">Stopping criteria results</h3>
+<div class="narrative ">
+<div class="narrative-row"><p>To examine <strong>when the model stops</strong>, we score shorter conversation prefixes and then <strong>force the model to continue</strong> beyond its chosen stopping point, Q. Ideally, once the model stops, <strong>additional questions should not improve downstream personalization</strong>. Stopping two turns earlier reduces BluePen’s performance across all three tasks. Adding two more turns produces little further benefit: approximately <strong>+1.0%, +1.0%, and −0.3%</strong> relative to its stopping-point score on ExercisePred, MediQ, and BookRec, respectively.</p><aside class="margin-notes" aria-label="References for this paragraph"><div class="margin-citation figure-reference"><a href="#stopping-figure"><span class="citation-author">Stopping experiment</span><span class="citation-title">Performance around the voluntary stopping point Q</span></a></div></aside></div>
+</div>
+<div class="stopping-protocol" aria-label="Earlier prefixes, voluntary stopping, and forced continuation"><div><span>Q−2</span><span>Q−1</span><small>Earlier prefixes</small></div><div class="protocol-stop"><strong>Q</strong><small>Voluntary stop</small></div><div class="protocol-forced"><span>Q+1</span><span>Q+2</span><small>Forced questions and replies</small></div></div>
+<figure class="stopping-figure" id="stopping-figure"><div class="stopping-legend" aria-label="Curve legend"><span><i class="legend-zero"></i>Zero-shot</span><span><i class="legend-grpo"></i>GRPO</span><span><i class="legend-bluepen"></i>BluePen</span></div><p class="stopping-axis-title">Change in downstream personalization w.r.t. Q (%)</p><div id="stopping-curves" class="stopping-curves"></div><p class="stopping-axis-bottom">Turns relative to voluntary stopping</p><figcaption>Each curve is relative to its own score at Q (0%).</figcaption></figure>
+<details class="results-details"><summary>How the curves are measured</summary><p>These are the paper’s trajectory-weighted curves, using complete, successfully scored continuations at all five positions. Each curve shows 100 × (mean score at the selected position − mean score at Q) / mean score at Q. Methods have different retained user cohorts; the results describe this continuation experiment, rather than proving an optimal stopping point for every user.</p></details>
+</section>
+</div></section>
+<section id="examples" class="examples-section wrap" aria-labelledby="examples-heading">
+<div class="section-heading"><h2 id="examples-heading">Examples</h2></div>
+<div class="pair-tabs" id="pair-tabs" role="tablist" aria-label="Conversation examples"></div>
+<div id="pair-panel" role="tabpanel" tabindex="0"></div>
+</section>
+<section id="bibtex" class="bibtex-section wrap" aria-labelledby="bibtex-heading">
+<div class="section-heading"><h2 id="bibtex-heading">BibTeX</h2></div>
+<pre class="bibtex-box" aria-label="BibTeX citation"><code>TBD</code></pre>
+</section>
+</main>
+</body>
+</html>

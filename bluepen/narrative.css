@@ -1,0 +1,52 @@
+/* Readable prose with paragraph-aligned references, without narrowing figures. */
+.narrative{margin:0 0 32px;color:#454c47}
+.narrative-row{display:grid;grid-template-columns:minmax(0,1fr) 196px;column-gap:38px;align-items:start;margin-bottom:25px}
+.narrative-row:last-child{margin-bottom:0}
+.narrative-row>p,.narrative-copy>p{font-size:19px;line-height:1.72;margin:0;max-width:72ch;text-wrap:pretty}
+.narrative-row strong{font-weight:600;color:#235d49}
+.narrative-row code{font-size:.88em;color:#235d49;overflow-wrap:anywhere}
+.motivation-narrative{margin-top:36px;margin-bottom:0}
+.margin-notes{font-size:14px;line-height:1.4;padding-top:5px;color:#79837b;min-width:0}
+.margin-citation{display:grid;grid-template-columns:14px minmax(0,1fr);gap:7px;margin:0 0 15px;scroll-margin-top:30px}
+.margin-citation:last-child{margin-bottom:0}
+.citation-number{font-size:12px;color:#859389;padding-top:2px}
+.margin-citation a{display:block;text-decoration:none;color:inherit}
+.citation-author{display:block;color:#566c60;margin-bottom:3px}
+.citation-title{display:block;color:#7a827d;font-size:13px;line-height:1.4}
+.margin-citation a:hover .citation-author{text-decoration:underline;text-underline-offset:3px;color:#235d49}
+.margin-citation:target{background:#f1f7f2;border-radius:4px;outline:5px solid #f1f7f2}
+.margin-citation a:focus-visible,.citation-mark a:focus-visible{outline:2px solid #317c5e;outline-offset:3px}
+.citation-mark{font-size:.64em;line-height:0;margin-left:3px;vertical-align:super}
+.citation-mark a{color:#3e8565;text-decoration:none;padding:2px}
+.citation-mark a:hover{text-decoration:underline}
+.figure-reference{display:block;padding-left:21px}
+.results-narrative{margin-bottom:34px}
+.results-subsection .narrative{margin-bottom:25px}
+.results-subsection .narrative-row{grid-template-columns:minmax(0,1fr) 170px;column-gap:30px}
+@media(min-width:1500px){.narrative-row{grid-template-columns:minmax(0,1fr) 210px;column-gap:46px}}
+@media(max-width:899px){.narrative-row,.results-subsection .narrative-row{grid-template-columns:minmax(0,1fr);gap:13px;margin-bottom:27px}.margin-notes{display:flex;flex-wrap:wrap;gap:12px 24px;border-left:2px solid #e1e9e2;padding:1px 0 1px 13px}.margin-citation{flex:1 1 160px;margin:0;max-width:270px;scroll-margin-top:90px}.figure-reference{padding-left:0}.narrative-row>p,.narrative-copy>p{max-width:none;font-size:18px;line-height:1.7}.citation-title{font-size:13px}.margin-notes:empty{display:none}}
+@media(max-width:650px){.narrative{margin-bottom:26px}.motivation-narrative{margin-top:28px;margin-bottom:0}.narrative-row>p,.narrative-copy>p{font-size:18px;line-height:1.65}.margin-notes{gap:12px}.margin-citation{flex-basis:100%;max-width:none}.margin-citation a{max-width:340px}}
+
+/* Highlight the two research challenges without enclosing the prose in cards. */
+.challenge-row{margin-top:32px;margin-bottom:32px}
+.challenge-heading{font-size:22px;line-height:1.4;font-weight:600;color:#235d49;margin:0 0 14px}
+.challenge-heading>span{background:linear-gradient(transparent 66%,#e5f2e9 66%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.challenge-row>.margin-notes{padding-top:45px}
+@media(max-width:899px){.challenge-row>.margin-notes{padding-top:1px}.challenge-row{margin-top:28px;margin-bottom:28px}}
+@media(max-width:650px){.challenge-heading{font-size:21px;line-height:1.4;margin-bottom:12px}}
+
+/* A brief introduction to the task before the motivation. */
+.task-opening{padding-top:32px;color:#454c47}
+.task-opening p{margin:0;font-size:25px;line-height:1.5;text-wrap:pretty}
+.task-opening strong{font-weight:600;color:#235d49;background:linear-gradient(transparent 68%,#e5f2e9 68%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+@media(max-width:650px){.task-opening{padding-top:26px}.task-opening p{font-size:22px;line-height:1.45}}
+
+/* Consistent dividers align with each section's content. */
+main > section.wrap > .section-heading{border-top:1px solid #dce4df;padding-top:30px}
+#examples{border-top:0}
+#evaluation{border-top:1px solid #dce4df;padding-top:30px}
+.motivation-lead{margin-bottom:30px}
+@media(max-width:650px){main > section.wrap > .section-heading,#evaluation{padding-top:24px}.motivation-lead{margin-bottom:24px}}
+
+.bibtex-section{padding-bottom:54px}
+.bibtex-box{margin:0;padding:24px;background:#f5f5f5;border:1px solid #e1e5e2;border-radius:6px;font-size:18px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;color:#454c47}

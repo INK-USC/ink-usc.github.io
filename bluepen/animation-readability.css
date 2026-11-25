@@ -1,0 +1,36 @@
+/* Keep animated figure labels readable at desktop and mobile sizes. */
+.pipeline-svg{min-width:1030px;font-size:19px}
+.pipeline-svg .pipe-small{font-size:18px;fill:#526158}
+.pipeline-svg .pipe-stop{font-size:18px}
+.pipeline.has-focus .pipe-part{opacity:.68}
+.pipeline.has-focus .pipe-part.is-current{opacity:1}
+.pipeline-steps button,.pipeline-play,.evaluation-steps button{font-size:16px}
+.pipeline-steps button span{font-size:14px;color:#65736a}
+.pipeline-caption p{font-size:16px;line-height:1.6}
+.pipeline-caption{min-height:0}
+.pipeline-swipe{font-size:14px}
+.method-shell .method-top{height:auto;min-height:55px}
+.method-shell .step strong{font-size:16px;line-height:1.35}
+.method-shell .step small,.method-shell .step-aside small{font-size:14px;line-height:1.5}
+.method-shell .step-no{font-size:14px}
+.method-shell .scene-kicker,.method-shell .micro,.method-shell .mini-label{font-size:14px;letter-spacing:.3px}
+.method-shell .scene-description,.method-shell .bubble{font-size:17px;line-height:1.55}
+.method-shell .speaker,.method-shell .training-turn-label,.method-shell .training-conversation-card header span{font-size:14px}
+.method-shell .context-details,.method-shell .technical,.method-shell .prob-row,.method-shell .loss p,.method-shell .equation small{font-size:15px;line-height:1.5}
+.method-shell .method-footer>span,.method-shell .play-button,.method-shell #step-counter{font-size:15px}
+.method-shell .training-stop span,.method-shell .training-stop code,.method-shell .training-group code{font-size:15px}
+.method-shell .training-conversation-card header button{font-size:15px}
+.eval-message p,.eval-output p{font-size:17px;line-height:1.55}
+.eval-output small,.eval-preferences span,.eval-transfer span,.eval-stop span{font-size:15px}
+.eval-stop code{font-size:16px}
+.eval-output,.eval-transfer{opacity:.65}
+.eval-output.is-reached,.eval-transfer.is-reached{opacity:1}
+.motivation-demo .motivation-message p{font-size:17px}
+.motivation-demo .motivation-caption{font-size:15px}
+.motivation-demo .motivation-graph-label{font-size:15px}
+@media(max-width:650px){
+ .pipeline-steps button,.evaluation-steps button{font-size:15px}
+ .method-shell .method-footer{flex-wrap:wrap;gap:10px}
+ .method-shell .prob-row{grid-template-columns:minmax(65px,90px) minmax(0,1fr) 40px}
+ .motivation-demo .motivation-message p{font-size:16px;min-height:0}
+}
